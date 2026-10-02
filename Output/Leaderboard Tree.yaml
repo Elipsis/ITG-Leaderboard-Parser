@@ -115,9 +115,9 @@
       leaderboards:
         Medium:
         - player: Elipsis
-          percentage: '95.59'
-          grade: Tier05
-          date: '2026-09-25 21:18:25'
+          percentage: '97.45'
+          grade: Tier04
+          date: '2026-10-02 18:19:12'
         - player: VEC
           percentage: '50.68'
           grade: Tier17
@@ -7359,7 +7359,7 @@
         - player: MMM
           percentage: '70.24'
           grade: Tier13
-          date: '2017-05-03 14:37:55'
+          date: '2017-05-03 14:37:54'
         Hard:
         - player: Elipsis
           percentage: '96.55'

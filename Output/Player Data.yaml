@@ -1,6 +1,5 @@
 - player_name: Elipsis
   initials:
-  - ..
   - '...'
   total_scores: 756
   top_scores: 676
@@ -2414,6 +2413,14 @@
     date: '2011-03-21 20:37:02'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: KUNG FU FIGHTING
+    difficulty: Medium
+    percentage: '97.45'
+    grade: Tier04
+    date: '2026-10-02 18:19:12'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: Jam & Marmalade
     difficulty: Hard
@@ -3724,14 +3731,6 @@
     percentage: '95.61'
     grade: Tier05
     date: '2012-02-06 20:57:34'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 1st Mix
-    song: KUNG FU FIGHTING
-    difficulty: Medium
-    percentage: '95.59'
-    grade: Tier05
-    date: '2026-09-25 21:18:25'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
@@ -29207,7 +29206,7 @@
     difficulty: Easy
     percentage: '70.24'
     grade: Tier13
-    date: '2017-05-03 14:37:55'
+    date: '2017-05-03 14:37:54'
     position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
@@ -34853,8 +34852,8 @@
     position: 3
 - player_name: Seitoko
   initials:
-  - SNOW
   - RAIN
+  - SNOW
   total_scores: 7
   top_scores: 0
   scores:

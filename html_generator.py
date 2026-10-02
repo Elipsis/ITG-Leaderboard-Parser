@@ -143,16 +143,6 @@ def build_player_profiles(players, folder_whitelist):
     for player_id, player in enumerate(players):
         player_name = player["player_name"]
         scores = player.get("scores", [])
-        scores_by_date = sorted(scores, key=date_sort_key, reverse=True)
-        machine_records = [score for score in scores_by_date if score.get("position") == 1]
-        top_scores = sorted(
-            scores,
-            key=lambda score: (
-                float(score.get("percentage") or 0),
-                date_sort_key(score),
-            ),
-            reverse=True,
-        )
         difficulty_counts = Counter(score.get("difficulty") for score in scores)
         mix_counts = Counter(score.get("section") for score in scores)
         ordered_difficulties = [
@@ -174,9 +164,7 @@ def build_player_profiles(players, folder_whitelist):
                 {"label": section, "count": mix_counts[section]}
                 for section in folder_whitelist
             ],
-            "all": scores_by_date[:PLAYER_PROFILE_SCORE_LIMIT],
-            "machine_records": machine_records[:PLAYER_PROFILE_SCORE_LIMIT],
-            "top_scores": top_scores[:PLAYER_PROFILE_SCORE_LIMIT],
+            "scores": scores,
         })
 
     return profiles, player_profile_ids
@@ -202,6 +190,7 @@ def generate_html_with_jinja():
         latest_plays=latest_plays,
         player_profiles=player_profiles,
         player_profile_ids=player_profile_ids,
+        player_profile_score_limit=PLAYER_PROFILE_SCORE_LIMIT,
     )
     
     # Export completed build to disk

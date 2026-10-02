@@ -508,12 +508,12 @@ def itg2_purge(score_list):
 def export_sections_to_yaml(section_list, filename=CATALOG):
     with open(filename, "w", encoding="utf-8") as f:
         yaml.safe_dump(section_list, f, default_flow_style=False, sort_keys=False)
-    print(f"Successfully exported nested library to {filename}")
+    print(f"Successfully exported nested song leaderboards to {filename}")
 
 def export_players_to_yaml(section_list, filename=PLAYERS):
     with open(filename, "w", encoding="utf-8") as f:
         yaml.safe_dump(section_list, f, default_flow_style=False, sort_keys=False)
-    print(f"Successfully exported nested library to {filename}")
+    print(f"Successfully exported player datato {filename}")
 
 
 def main():

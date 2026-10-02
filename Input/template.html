@@ -171,6 +171,11 @@
         .player-profile-counts { width: 100%; border-collapse: collapse; }
         .player-profile-counts td { padding: 7px 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
         .player-profile-counts td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+        .player-profile-filter-button { display: flex; justify-content: space-between; width: 100%; padding: 0; border: 0; background: transparent; color: var(--text-main); font: inherit; text-align: left; cursor: pointer; }
+        .player-profile-filter-button:hover, .player-profile-filter-button.active { color: #ffd18a; }
+        .player-profile-filter-button.active { font-weight: 700; }
+        .player-profile-score-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .player-profile-filter-status { color: var(--text-muted); font-size: 0.9rem; }
         .player-profile-section { margin-top: 24px; }
         .bar-beginner { background: var(--diff-beginner); }
         .bar-easy { background: var(--diff-easy); }
@@ -418,24 +423,23 @@
             </section>
         </div>
         <section class="player-profile-section">
-            <h3>Latest Scores</h3>
-            <div class="statistics-controls" role="group" aria-label="Player latest score filter">
-                <button type="button" class="active" data-profile-play-mode="all" onclick="showProfilePlays('all')">All</button>
-                <button type="button" data-profile-play-mode="machine_records" onclick="showProfilePlays('machine_records')">Machine Records Only</button>
+            <div class="player-profile-score-heading">
+                <h3 id="playerScoresTitle">Latest Scores</h3>
+                <div class="statistics-controls" role="group" aria-label="Player score view">
+                    <button type="button" class="active" data-profile-score-view="latest" onclick="showProfileScoreView('latest')">Latest</button>
+                    <button type="button" data-profile-score-view="top" onclick="showProfileScoreView('top')">Top</button>
+                </div>
             </div>
+            <div class="statistics-controls" role="group" aria-label="Player score scope">
+                <button type="button" class="active" data-profile-score-scope="all" onclick="showProfileScoreScope('all')">All</button>
+                <button type="button" data-profile-score-scope="machine_records" onclick="showProfileScoreScope('machine_records')">Machine Records Only</button>
+                <button type="button" id="clearPlayerScoreFilters" onclick="clearPlayerScoreFilters()" disabled>Clear Filters</button>
+            </div>
+            <p id="playerProfileFilterStatus" class="player-profile-filter-status" aria-live="polite"></p>
             <div class="latest-play-table-wrap">
                 <table class="latest-play-table">
-                    <thead><tr><th>Date</th><th>Section</th><th>Folder</th><th>Song</th><th>Difficulty</th><th>Score</th><th data-profile-position>Position</th></tr></thead>
-                    <tbody id="playerLatestScores"></tbody>
-                </table>
-            </div>
-        </section>
-        <section class="player-profile-section">
-            <h3>Top Scores by Percentage</h3>
-            <div class="latest-play-table-wrap">
-                <table class="latest-play-table">
-                    <thead><tr><th>Rank</th><th>Score</th><th>Song</th><th>Difficulty</th><th>Folder</th><th>Date</th></tr></thead>
-                    <tbody id="playerTopScores"></tbody>
+                    <thead><tr id="playerScoreHeaders"></tr></thead>
+                    <tbody id="playerScores"></tbody>
                 </table>
             </div>
         </section>
@@ -445,8 +449,12 @@
 <script id="player-profile-data" type="application/json">{{ player_profiles | tojson }}</script>
 <script>
     const playerProfiles = JSON.parse(document.getElementById('player-profile-data').textContent);
+    const playerProfileScoreLimit = {{ player_profile_score_limit }};
     let currentView = 'library';
     let currentPlayerProfile = null;
+    let currentProfileScoreView = 'latest';
+    let currentProfileScoreScope = 'all';
+    let currentProfileFilters = {difficulty: null, section: null};
 
     function switchView(viewName) {
         if (viewName !== 'player-profile') currentView = viewName;
@@ -475,13 +483,12 @@
         currentPlayerProfile = profile;
         document.getElementById('playerProfileName').textContent = profile.player_name;
         document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
-        populatePlayerRows('playerDifficultyCounts', profile.difficulty_counts, row => [row.label, row.count], 2);
-        populatePlayerRows('playerMixCounts', profile.mix_counts, row => [row.label, row.count], 2);
-        showProfilePlays('all');
-        populatePlayerRows('playerTopScores', profile.top_scores, (score, index) => [
-            `#${index + 1}`, `${score.percentage}%`, score.song, score.difficulty,
-            score.folder, score.date,
-        ], 6);
+        currentProfileScoreView = 'latest';
+        currentProfileScoreScope = 'all';
+        currentProfileFilters = {difficulty: null, section: null};
+        populateProfileFilterRows('playerDifficultyCounts', profile.difficulty_counts, 'difficulty');
+        populateProfileFilterRows('playerMixCounts', profile.mix_counts, 'section');
+        renderProfileScores();
         switchView('player-profile');
     }
 
@@ -514,26 +521,117 @@
         });
     }
 
-    function showProfilePlays(mode) {
+    function populateProfileFilterRows(bodyId, entries, kind) {
+        const body = document.getElementById(bodyId);
+        body.replaceChildren();
+        entries.forEach(entry => {
+            const row = document.createElement('tr');
+            const labelCell = document.createElement('td');
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'player-profile-filter-button';
+            button.dataset.profileFilterKind = kind;
+            button.dataset.profileFilterValue = entry.label;
+            button.setAttribute('aria-pressed', 'false');
+            const label = document.createElement('span');
+            label.textContent = entry.label;
+            button.appendChild(label);
+            labelCell.appendChild(button);
+            const countCell = document.createElement('td');
+            countCell.textContent = entry.count;
+            row.append(labelCell, countCell);
+            body.appendChild(row);
+        });
+    }
+
+    function compareProfileDates(first, second) {
+        const firstKnown = first.date && first.date !== 'Unknown Date';
+        const secondKnown = second.date && second.date !== 'Unknown Date';
+        if (firstKnown !== secondKnown) return firstKnown ? -1 : 1;
+        return (second.date || '').localeCompare(first.date || '');
+    }
+
+    function updateProfileScoreControls() {
+        document.querySelectorAll('[data-profile-score-view]').forEach(button => {
+            button.classList.toggle('active', button.dataset.profileScoreView === currentProfileScoreView);
+        });
+        document.querySelectorAll('[data-profile-score-scope]').forEach(button => {
+            button.classList.toggle('active', button.dataset.profileScoreScope === currentProfileScoreScope);
+        });
+        document.querySelectorAll('[data-profile-filter-kind]').forEach(button => {
+            const isActive = currentProfileFilters[button.dataset.profileFilterKind] === button.dataset.profileFilterValue;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+        const hasFilters = Boolean(currentProfileFilters.difficulty || currentProfileFilters.section);
+        document.getElementById('clearPlayerScoreFilters').disabled = !hasFilters;
+        const activeFilters = [currentProfileFilters.difficulty, currentProfileFilters.section].filter(Boolean);
+        document.getElementById('playerProfileFilterStatus').textContent = activeFilters.length
+            ? `Filters: ${activeFilters.join(' + ')}`
+            : 'No score filters';
+    }
+
+    function renderProfileScores() {
         if (!currentPlayerProfile) return;
-        document.querySelectorAll('[data-profile-play-mode]').forEach(button => {
-            button.classList.toggle('active', button.dataset.profilePlayMode === mode);
+        const isLatest = currentProfileScoreView === 'latest';
+        const isAll = currentProfileScoreScope === 'all';
+        const entries = currentPlayerProfile.scores.filter(score =>
+            (!currentProfileFilters.difficulty || score.difficulty === currentProfileFilters.difficulty)
+            && (!currentProfileFilters.section || score.section === currentProfileFilters.section)
+            && (isAll || score.position === 1)
+        );
+        entries.sort(isLatest
+            ? compareProfileDates
+            : (first, second) => Number(second.percentage) - Number(first.percentage) || compareProfileDates(first, second));
+        const visibleEntries = entries.slice(0, playerProfileScoreLimit);
+        const headers = isLatest
+            ? ['Date', 'Section', 'Folder', 'Song', 'Difficulty', 'Score']
+            : ['Rank', 'Score', 'Section', 'Folder', 'Song', 'Difficulty', 'Date'];
+        if (isAll) headers.push('Position');
+        const headerRow = document.getElementById('playerScoreHeaders');
+        headerRow.replaceChildren();
+        headers.forEach(label => {
+            const header = document.createElement('th');
+            header.textContent = label;
+            headerRow.appendChild(header);
         });
-        const isAll = mode === 'all';
-        document.querySelectorAll('[data-profile-position]').forEach(cell => {
-            cell.hidden = !isAll;
-        });
-        const entries = currentPlayerProfile[mode];
-        populatePlayerRows('playerLatestScores', entries, score => {
-            const cells = [score.date, score.section, score.folder, score.song, score.difficulty, `${score.percentage}%`];
+        document.getElementById('playerScoresTitle').textContent = isLatest ? 'Latest Scores' : 'Top Scores by Percentage';
+        const getCells = isLatest
+            ? score => [score.date, score.section, score.folder, score.song, score.difficulty, `${score.percentage}%`]
+            : (score, index) => [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, score.song, score.difficulty, score.date];
+        populatePlayerRows('playerScores', visibleEntries, (score, index) => {
+            const cells = getCells(score, index);
             if (isAll) cells.push(`#${score.position}`);
             return cells;
-        }, isAll ? 7 : 6);
+        }, headers.length);
+        updateProfileScoreControls();
+    }
+
+    function showProfileScoreView(view) {
+        currentProfileScoreView = view;
+        renderProfileScores();
+    }
+
+    function showProfileScoreScope(scope) {
+        currentProfileScoreScope = scope;
+        renderProfileScores();
+    }
+
+    function togglePlayerProfileFilter(kind, value) {
+        currentProfileFilters[kind] = currentProfileFilters[kind] === value ? null : value;
+        renderProfileScores();
+    }
+
+    function clearPlayerScoreFilters() {
+        currentProfileFilters = {difficulty: null, section: null};
+        renderProfileScores();
     }
 
     document.addEventListener('click', event => {
         const playerLink = event.target.closest('.player-link');
         if (playerLink) openPlayerProfile(playerLink.dataset.playerId);
+        const filterButton = event.target.closest('.player-profile-filter-button');
+        if (filterButton) togglePlayerProfileFilter(filterButton.dataset.profileFilterKind, filterButton.dataset.profileFilterValue);
     });
 
     function showStatisticsMode(mode) {

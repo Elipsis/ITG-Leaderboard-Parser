@@ -5,6 +5,9 @@ on:
     paths:
       - 'Input/Stats.xml'
 
+permissions:
+  contents: write
+
 jobs:
   run-parser:
     runs-on: ubuntu-latest

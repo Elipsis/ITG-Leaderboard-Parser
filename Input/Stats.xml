@@ -91959,7 +91959,7 @@
 <StageAward></StageAward>
 <PeakComboAward></PeakComboAward>
 <Modifiers>1.5x, Overhead, metal</Modifiers>
-<DateTime>2017-05-03 14:37:54</DateTime>
+<DateTime>2017-05-03 14:37:55</DateTime>
 <PlayerGuid>f8c0834e2b7259d9</PlayerGuid>
 <MachineGuid>02200529</MachineGuid>
 <ProductID>5</ProductID>
@@ -92057,7 +92057,7 @@
 <Disqualified>0</Disqualified>
 </HighScore>
 <HighScore>
-<Name>...</Name>
+<Name>..</Name>
 <Grade>Tier07</Grade>
 <Score>66437855</Score>
 <PercentDP>0.900000</PercentDP>
@@ -92680,7 +92680,7 @@
 <Disqualified>0</Disqualified>
 </HighScore>
 <HighScore>
-<Name>...</Name>
+<Name>..</Name>
 <Grade>Tier04</Grade>
 <Score>77945665</Score>
 <PercentDP>0.960317</PercentDP>
@@ -149835,7 +149835,7 @@
 <Disqualified>0</Disqualified>
 </HighScore>
 <HighScore>
-<Name>...</Name>
+<Name>..</Name>
 <Grade>Tier09</Grade>
 <Score>63025634</Score>
 <PercentDP>0.842537</PercentDP>

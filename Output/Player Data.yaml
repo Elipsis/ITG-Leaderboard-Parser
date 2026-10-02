@@ -6,8 +6,8 @@
   - JILL
 - player_name: Elipsis
   initials:
-  - ..
   - '...'
+  - ..
 - player_name: MXI
   initials:
   - MXI
@@ -23,9 +23,6 @@
 - player_name: CRIP
   initials:
   - CRIP
-- player_name: ZEL
-  initials:
-  - ZEL
 - player_name: TLOD
   initials:
   - TLOD
@@ -35,30 +32,30 @@
 - player_name: ZBRA
   initials:
   - ZBRA
-- player_name: WYDE
+- player_name: ZEL
   initials:
-  - WYDE
+  - ZEL
 - player_name: GARY
   initials:
   - GARY
 - player_name: A
   initials:
   - A
-- player_name: JAG
-  initials:
-  - JAG
-- player_name: EAR
-  initials:
-  - EAR
 - player_name: CLC
   initials:
   - CLC
+- player_name: JAG
+  initials:
+  - JAG
 - player_name: D
   initials:
   - D
 - player_name: AYH
   initials:
   - AYH
+- player_name: EAR
+  initials:
+  - EAR
 - player_name: BBBB
   initials:
   - BBBB
@@ -78,6 +75,9 @@
 - player_name: ASH
   initials:
   - ASH
+- player_name: WYDE
+  initials:
+  - WYDE
 - player_name: JULZ
   initials:
   - JULZ
@@ -108,21 +108,9 @@
 - player_name: NMC
   initials:
   - NMC
-- player_name: MDK
-  initials:
-  - MDK
-- player_name: LMFC
-  initials:
-  - LMFC
-- player_name: KERI
-  initials:
-  - KERI
 - player_name: IIII
   initials:
   - IIII
-- player_name: ENNU
-  initials:
-  - ENNU
 - player_name: B
   initials:
   - B
@@ -135,30 +123,33 @@
 - player_name: SHAZ
   initials:
   - SHAZ
-- player_name: SAM
-  initials:
-  - SAM
-- player_name: N
-  initials:
-  - N
 - player_name: MX
   initials:
   - MX
 - player_name: MMMM
   initials:
   - MMMM
+- player_name: MDK
+  initials:
+  - MDK
+- player_name: LMFC
+  initials:
+  - LMFC
 - player_name: KSSS
   initials:
   - KSSS
+- player_name: KERI
+  initials:
+  - KERI
 - player_name: GTFO
   initials:
   - GTFO
 - player_name: GG
   initials:
   - GG
-- player_name: BAAA
+- player_name: ENNU
   initials:
-  - BAAA
+  - ENNU
 - player_name: ???
   initials:
   - ???
@@ -177,12 +168,18 @@
 - player_name: TOMB
   initials:
   - TOMB
+- player_name: SAM
+  initials:
+  - SAM
 - player_name: NJC
   initials:
   - NJC
 - player_name: NDOG
   initials:
   - NDOG
+- player_name: N
+  initials:
+  - N
 - player_name: MK
   initials:
   - MK
@@ -210,9 +207,9 @@
 - player_name: CAL5
   initials:
   - CAL5
-- player_name: BETH
+- player_name: BAAA
   initials:
-  - BETH
+  - BAAA
 - player_name: ANA
   initials:
   - ANA
@@ -222,9 +219,6 @@
 - player_name: AKH
   initials:
   - AKH
-- player_name: SMA
-  initials:
-  - SMA
 - player_name: OLD
   initials:
   - OLD
@@ -276,15 +270,12 @@
 - player_name: DBAG
   initials:
   - DBAG
-- player_name: DANO
-  initials:
-  - DANO
 - player_name: BOO
   initials:
   - BOO
-- player_name: BOB
+- player_name: BETH
   initials:
-  - BOB
+  - BETH
 - player_name: B000
   initials:
   - B000

@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-import pandas as pd
+import re
 import yaml
 import html_generator
 from operator import attrgetter
@@ -10,12 +10,14 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 
 #INPUTS
-SONG_WHITELIST = SCRIPT_DIR / "Input" / "Song Folder Whitelist.txt"
+FOLDER_WHITELIST = SCRIPT_DIR / "Input" / "Song Folder Whitelist.yaml"
+ITG2_WHITELIST = SCRIPT_DIR / "Input" / "ITG2 Whitelist.txt"
 PLAYER_ALIASES = SCRIPT_DIR / "Input" / "Profile Initials.yaml"
 
 #OUTPUTS
 CATALOG = SCRIPT_DIR / "Output" / "Leaderboard Tree.yaml"
 PLAYERS = SCRIPT_DIR / "Output" / "Player Data.yaml"
+ITG2_BLACKLIST = SCRIPT_DIR / "Output" / "ITG2 Purges.txt"
 
 class XML_Record:
     def __init__(self, inits, folder, song, difficulty, percentage, grade, date):
@@ -68,6 +70,21 @@ class Folder:
     def __str__(self):
         return f"{self.name} containing {self.num_songs} songs"
 
+class Section:
+    def __init__(self, name):
+        self.name = name
+        self.folders = []
+
+    def add_folder(self, folder):
+        self.folders.append(folder)
+
+    @property
+    def num_folders(self):
+        return len(self.folders)
+
+    def __str__(self):
+        return f"{self.name} containing {self.num_folders} folders"
+    
 class Leaderboard:
     def __init__(self, difficulty):
         self.difficulty = difficulty
@@ -111,6 +128,12 @@ class Player:
     def __str__(self):
         return f"{self.name} ({self.inits}) with {self.total_scores} scores"
 
+def section_representer(dumper, data):
+    return dumper.represent_dict ({
+        "section_name": data.name,
+        "folders":data.folders
+    })
+
 def folder_representer(dumper, data):
     return dumper.represent_dict ({
         "folder_name": data.name,
@@ -141,6 +164,7 @@ def entry_representer(dumper, data):
         "date": data.date
     })
 
+yaml.add_representer(Section, section_representer, Dumper=yaml.SafeDumper)
 yaml.add_representer(Folder, folder_representer, Dumper=yaml.SafeDumper)
 yaml.add_representer(Song, song_representer, Dumper=yaml.SafeDumper)
 yaml.add_representer(Player, player_representer, Dumper=yaml.SafeDumper)
@@ -163,6 +187,30 @@ def find_friendly_name(player):
 
     return friendlies.get(player, player)
 
+def generate_section_list():
+    with open(FOLDER_WHITELIST, "r", encoding="utf-8") as f:
+        whitelist_data = yaml.safe_load(f)
+
+    count = 0
+    section_list = []
+
+    if isinstance(whitelist_data, dict):
+        for section_name, whitelisted_folders in whitelist_data.items():
+            new_section = Section(section_name)
+            
+            if isinstance(whitelisted_folders, list):
+                for folder_name in whitelisted_folders:
+                    # Append every folder directly from the whitelist file
+                    new_section.add_folder(Folder(folder_name))
+            
+            new_section.folders.sort(key=sort_folders_by_mix, reverse=False)
+            
+            section_list.append(new_section)
+            count = count + 1
+                
+    return section_list
+
+
 def generate_folder_list(scores):
     unique_folders = set()
 
@@ -175,6 +223,16 @@ def generate_folder_list(scores):
         unique_folder_list.append(Folder(folder))
 
     return (unique_folder_list)
+
+def extract_folder_list(section_list):
+
+    folder_list = []
+    
+    for section in section_list:
+        for folder in section.folders:
+            folder_list.append(folder)
+
+    return folder_list
 
 def generate_song_list(score_data):
     unique_songs = set()
@@ -287,6 +345,25 @@ def populate_leaderboards(score_data, folder_list):
 
     return count
 
+#Shitty google method.  I just want 10th mix in the right place.
+def sort_folders_by_mix(folder):
+    name = folder.name
+    
+    # 1. Isolate the explicit integer value from the mix string
+    match = re.search(r'(\d+)', name)
+    # CHANGED: Fallback to 1 (the first game) if no number exists, instead of 999
+    mix_number = int(match.group(1)) if match else 1
+    
+    # 2. Strip numbers and common ordinal suffixes (st, nd, rd, th)
+    series_clean = re.sub(r'\d+(st|nd|rd|th)?', '', name, flags=re.IGNORECASE)
+    series_clean = series_clean.lower().strip()
+    
+    # 3. Floating catch-all: Keep custom packs like "Unofficial" at the very bottom
+    is_catchall = 1 if series_clean.startswith('un') else 0
+
+    # Return the multi-layered evaluation coordinate tuple
+    return (is_catchall, series_clean, mix_number, name)
+
 def datefix(scores):
     invalid = 0
     date_format = "%Y-%m-%d %H:%M:%S"
@@ -303,28 +380,58 @@ def datefix(scores):
             invalid = invalid + 1
     return invalid
 
-def whitelist_purge(score_list):
-    # Open the whitelist file and read every line into a list
-    with open(SONG_WHITELIST, "r", encoding="utf-8") as f:
-        song_whitelist = f.read().splitlines()
+def folder_purge(score_list):
+    with open(FOLDER_WHITELIST, "r", encoding="utf-8") as f:
+        whitelist_data = yaml.safe_load(f)
+    
+    allowed_folders = set()
+    if isinstance(whitelist_data, dict):
+        for category, folders in whitelist_data.items():
+            if isinstance(folders, list):
+                allowed_folders.update(folders)
 
     purged_scores = []
 
     for score in score_list:
-        if score.folder in song_whitelist:
+        if score.folder in allowed_folders:
             purged_scores.append(score)
 
     return purged_scores
 
+def itg2_purge(score_list):
+    with open(FOLDER_WHITELIST, "r", encoding="utf-8") as f:
+        whitelist_data = yaml.safe_load(f)
 
-def export_folders_to_yaml(folder_list, filename=CATALOG):
+    itg2_valid_songs = ITG2_WHITELIST.read_text(encoding="utf-8").splitlines()
+
+    purged_scores = []
+    purged_songs = set()
+
+    for score in score_list:
+        if score.folder == "In The Groove 2":
+            if score.song in itg2_valid_songs:
+                purged_scores.append (score)
+            else:
+                purged_songs.add(score.song)
+        else:
+            purged_scores.append (score)
+
+    #Output purged songs to file
+    with open(ITG2_BLACKLIST, "w", encoding="utf-8") as f:
+        f.write("\n".join(sorted(purged_songs)))
+
+    return purged_scores
+
+
+
+def export_sections_to_yaml(section_list, filename=CATALOG):
     with open(filename, "w", encoding="utf-8") as f:
-        yaml.safe_dump(folder_list, f, default_flow_style=False, sort_keys=False)
+        yaml.safe_dump(section_list, f, default_flow_style=False, sort_keys=False)
     print(f"Successfully exported nested library to {filename}")
 
-def export_players_to_yaml(folder_list, filename=PLAYERS):
+def export_players_to_yaml(section_list, filename=PLAYERS):
     with open(filename, "w", encoding="utf-8") as f:
-        yaml.safe_dump(folder_list, f, default_flow_style=False, sort_keys=False)
+        yaml.safe_dump(section_list, f, default_flow_style=False, sort_keys=False)
     print(f"Successfully exported nested library to {filename}")
 
 
@@ -358,13 +465,24 @@ def main():
     print("Evaluated " + str(score_counter) + " score entries.")
     print("Successfully discovered " + str(len(xml_score_data)) + " passing scores with names!")
 
-    xml_score_data = whitelist_purge(xml_score_data)
+    xml_score_data = folder_purge(xml_score_data)
     print("Reduced scores to " + str(len(xml_score_data)) + " scores in whitelisted folders.")
+
+    xml_score_data = itg2_purge(xml_score_data)
+    print("Reduced scores to " + str(len(xml_score_data)) + " scores from invalid ITG2 song records.")
 
     print("Marked " + str(datefix(xml_score_data)) + " dates older than 2011 as invalid.")
 
-    folder_list = generate_folder_list(xml_score_data)
-    folder_list.sort(key=attrgetter('name'), reverse=False)
+    section_list = generate_section_list()
+
+ #   folder_list = generate_folder_list(xml_score_data)
+ #   folder_list.sort(key=attrgetter('name'), reverse=False)
+ #   print("Successfully identified " + str(len(folder_list)) + " unique folders.")
+
+    folder_list = extract_folder_list(section_list)
+
+    # folder_list = generate_folder_list(xml_score_data)
+    folder_list.sort(key=sort_folders_by_mix, reverse=False)
     print("Successfully identified " + str(len(folder_list)) + " unique folders.")
 
     song_list = generate_song_list(xml_score_data)
@@ -404,7 +522,7 @@ def main():
  #   print ("Oldest Score: " + str(oldest [0]))
  #   print ("Newest Score: " + str(oldest [-1]))
 
-    export_folders_to_yaml(folder_list)
+    export_sections_to_yaml(section_list)
     export_players_to_yaml(player_list)
 
     html_generator.generate_html_with_jinja()

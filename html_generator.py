@@ -6,10 +6,14 @@ from jinja2 import Environment, FileSystemLoader
 
 # Directories
 SCRIPT_DIR = Path(__file__).resolve().parent
+
+#OUTPUT
 CATALOG_PATH = SCRIPT_DIR / "Output" / "Leaderboard Tree.yaml"
 PLAYERS_PATH = SCRIPT_DIR / "Output" / "Player Data.yaml"
 FOLDER_WHITELIST_PATH = SCRIPT_DIR / "Input" / "Song Folder Whitelist.yaml"
-OUTPUT_HTML = SCRIPT_DIR / "Output" / "Leaderboard.html"
+
+#HTML
+OUTPUT_HTML = SCRIPT_DIR / "docs" / "Leaderboard.html"
 
 DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge")
 DIFFICULTY_RANK = {difficulty: rank for rank, difficulty in enumerate(DIFFICULTY_ORDER)}

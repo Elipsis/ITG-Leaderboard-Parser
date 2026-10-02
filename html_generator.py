@@ -13,7 +13,7 @@ PLAYERS_PATH = SCRIPT_DIR / "Output" / "Player Data.yaml"
 FOLDER_WHITELIST_PATH = SCRIPT_DIR / "Input" / "Song Folder Whitelist.yaml"
 
 #HTML
-OUTPUT_HTML = SCRIPT_DIR / "docs" / "Leaderboard.html"
+OUTPUT_HTML = SCRIPT_DIR / "docs" / "index.html"
 
 DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge")
 DIFFICULTY_RANK = {difficulty: rank for rank, difficulty in enumerate(DIFFICULTY_ORDER)}

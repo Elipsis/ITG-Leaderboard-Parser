@@ -1,0 +1,46 @@
+name: Run ITG Leaderboard Parser
+
+on:
+  push:
+    paths:
+      - 'Input/Stats.xml' # Only triggers when this specific file changes
+
+jobs:
+  run-parser:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Pull down the repository files to the GitHub runner
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    # 2. Set up the Python environment
+    - name: Set up Python
+      uses: actions/checkout@v4
+      with:
+        python-version: '3.10'
+
+    # 3. Install any required Python dependencies
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    # 4. Execute your leaderboard script
+    - name: Run Leaderboard Script
+      run: |
+        python "itg leaderboard.py"
+
+    # 5. Automatically commit and push any generated updates (e.g., Output folder changes)
+    - name: Commit and Push Leaderboard Updates
+      run: |
+        git config --global user.name "GitHub Actions Runner"
+        git config --global user.email "actions@github.com"
+        git add .
+        # The conditional statement ensures the action doesn't crash if the script ran but nothing changed
+        if git diff --total-changes --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Automated leaderboard update: $(date)"
+          git push
+        fi

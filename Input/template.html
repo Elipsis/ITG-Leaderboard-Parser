@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In The Groove - Machine Leaderboard</title>
+    <style>
+        :root {
+            --bg-dark: #0f111a;
+            --bg-card: #1a1d2e;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-blue: #3b82f6;
+            --accent-gold: #f59e0b;
+            --diff-beginner: #38bdf8;
+            --diff-easy: #4ade80;
+            --diff-medium: #facc15;
+            --diff-hard: #f87171;
+            --diff-challenge: #c084fc;
+            --diff-edit: #a1a1aa;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 {
+            margin: 0 0 10px 0; font-size: 2.5rem; letter-spacing: 1px;
+            background: linear-gradient(to right, #3b82f6, #86efac);
+            background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .controls { display: flex; gap: 15px; margin-bottom: 25px; justify-content: center; align-items: center; flex-wrap: wrap; }
+        .tab-btn {
+            background-color: var(--bg-card); border: 2px solid transparent; color: var(--text-main);
+            padding: 10px 24px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.2s ease;
+        }
+        .tab-btn.active { background-color: var(--accent-blue); box-shadow: 0 0 12px rgba(59, 130, 246, 0.4); }
+        .search-bar { background-color: var(--bg-card); border: 1px solid #334155; color: var(--text-main); padding: 11px 16px; border-radius: 8px; width: 300px; font-size: 0.95rem; }
+        .search-bar:focus { outline: none; border-color: var(--accent-blue); }
+        .view-panel { display: none; }
+        .view-panel.active { display: block; }
+        .folder-section { margin-bottom: 35px; background-color: rgba(26, 29, 46, 0.4); padding: 20px; border-radius: 12px; border: 1px solid #2d314d; }
+        .folder-title { margin-top: 0; font-size: 1.4rem; border-bottom: 2px solid #2d314d; padding-bottom: 8px; color: #f1f5f9; }
+        .song-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 15px; }
+        .song-card { background-color: var(--bg-card); border: 1px solid #2d314d; padding: 16px; border-radius: 8px; display: flex; flex-direction: column; justify-content: flex-start; transition: border-color 0.2s; }
+        .song-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .song-title { font-weight: 600; font-size: 1.1rem; line-height: 1.3; color: #ffffff; }
+        .badge-btn { display: inline-block; font-size: 0.75rem; font-weight: bold; padding: 5px 10px; border-radius: 6px; color: #000; margin-left: 5px; text-transform: uppercase; border: 2px solid transparent; cursor: pointer; transition: all 0.15s ease; }
+        .badge-btn:hover { filter: brightness(1.2); transform: translateY(-1px); }
+        .badge-btn.active-toggle { border-color: #ffffff; box-shadow: 0 0 8px rgba(255,255,255,0.3); }
+        .diff-beginner { background-color: var(--diff-beginner); }
+        .diff-easy { background-color: var(--diff-easy); }
+        .diff-medium { background-color: var(--diff-medium); }
+        .diff-hard { background-color: var(--diff-hard); }
+        .diff-challenge { background-color: var(--diff-challenge); color: #fff; }
+        .diff-edit { background-color: var(--diff-edit); }
+        .leaderboard-drawer { display: none; margin-top: 12px; padding: 12px; border-radius: 6px; background-color: rgba(15, 17, 26, 0.6); border-left: 4px solid transparent; }
+        .leaderboard-drawer.active-drawer { display: block; animation: slideDown 0.2s ease-out; }
+        .drawer-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0; font-weight: bold; }
+        .title-beginner { color: var(--diff-beginner); border-color: var(--diff-beginner) !important; }
+        .title-easy { color: var(--diff-easy); border-color: var(--diff-easy) !important; }
+        .title-medium { color: var(--diff-medium); border-color: var(--diff-medium) !important; }
+        .title-hard { color: var(--diff-hard); border-color: var(--diff-hard) !important; }
+        .title-challenge { color: var(--diff-challenge); border-color: var(--diff-challenge) !important; }
+        .title-edit { color: var(--diff-edit); border-color: var(--diff-edit) !important; }
+        .score-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left; background: transparent; border: none; }
+        .score-table th { background-color: rgba(255, 255, 255, 0.05); padding: 8px 12px; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); }
+        .score-table td { padding: 8px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
+        .score-table tr:last-child td { border-bottom: none; }
+        .score-table tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.01); }
+        .standings-table { width: 100%; border-collapse: collapse; background-color: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid #2d314d; }
+        .standings-table th { background-color: #24283f; color: #f1f5f9; text-align: left; padding: 14px 18px; font-weight: 600; }
+        .standings-table td { padding: 14px 18px; border-bottom: 1px solid #2d314d; }
+        .text-center { text-align: center; }
+        .bold { font-weight: bold; }
+        .text-gold { color: var(--accent-gold); }
+        .text-muted { color: var(--text-muted); }
+        .font-mono { font-family: ui-monospace, SFMono-Regular, monospace; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🕺 IN THE GROOVE 💃</h1>
+        <p class="text-muted">Machine High Score Database & Player Profiles</p>
+    </header>
+    <div class="controls">
+        <button id="btn-library" class="tab-btn active" onclick="switchView('library')">Library Tree</button>
+        <button id="btn-standings" class="tab-btn" onclick="switchView('standings')">Player Standings</button>
+        <input type="text" id="globalSearch" class="search-bar" placeholder="Search songs or charts..." oninput="handleSearch()">
+    </div>
+
+    <!-- Panel A: Library View -->
+    <div id="libraryView" class="view-panel active">
+        {% for folder in catalog %}
+        {% set folder_index = loop.index0 %}
+        <div class="folder-section" data-folder-target="{{ folder.folder_name.lower() }}">
+            <h2 class="folder-title">📁 {{ folder.folder_name }}</h2>
+            <div class="song-grid">
+                {% for song in folder.songs %}
+                {% set song_index = loop.index0 %}
+                <div class="song-card" data-search-target="{{ song.song_title.lower() }}">
+                    <div class="song-header">
+                        <span class="song-title">{{ song.song_title }}</span>
+                        <div class="song-diffs">
+                            {% for diff in song.difficulties %}
+                            <button class="badge-btn diff-{{ diff.lower() }}" 
+                                    onclick="toggleLeaderboard('drawer-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}', this)">
+                                {{ diff }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    {% for diff, entries in song.leaderboards.items() %}
+                    <div id="drawer-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}" class="leaderboard-drawer title-{{ diff.lower() }}">
+                        <p class="drawer-title title-{{ diff.lower() }}">🏆 {{ diff }} Standings</p>
+                        <table class="score-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10%">Rank</th>
+                                    <th style="width: 40%">Player</th>
+                                    <th style="width: 25%">Score</th>
+                                    <th style="width: 25%">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for entry in entries %}
+                                <tr>
+                                    <td class="bold text-muted">#{{ loop.index }}</td>
+                                    <td class="bold text-gold">{{ entry.player }}</td>
+                                    <td class="bold font-mono">{{ entry.percentage }}% <span style="font-size:0.75rem; font-weight:normal;" class="text-muted">({{ entry.grade }})</span></td>
+                                    <td class="text-muted font-mono" style="font-size:0.8rem;">{{ entry.date }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Panel B: Standings View -->
+    <div id="standingsView" class="view-panel">
+        <table class="standings-table">
+            <thead>
+                <tr>
+                    <th style="width: 10%" class="text-center">Rank</th>
+                    <th style="width: 40%">Player Identity</th>
+                    <th style="width: 30%">Connected Initials</th>
+                    <th style="width: 20%" class="text-center">Associated Records</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in players %}
+                <tr>
+                    <td class="text-center bold">
+                        {% if loop.index == 1 %}🥇
+                        {% elif loop.index == 2 %}🥈
+                        {% elif loop.index == 3 %}🥉
+                        {% else %}#{{ loop.index }}
+                        {% endif %}
+                    </td>
+                    <td class="bold text-gold">{{ player.player_name }}</td>
+                    <td class="text-muted font-mono">{{ player.initials | join(', ') }}</td>
+                    <td class="text-center bold font-mono">
+                        {% if player.scores is defined %}{{ player.scores | length }}{% else %}0{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    function switchView(viewName) {
+        const searchInput = document.getElementById('globalSearch');
+        document.getElementById('libraryView').classList.toggle('active', viewName === 'library');
+        document.getElementById('standingsView').classList.toggle('active', viewName === 'standings');
+        document.getElementById('btn-library').classList.toggle('active', viewName === 'library');
+        document.getElementById('btn-standings').classList.toggle('active', viewName === 'standings');
+        if (viewName === 'standings') {
+            searchInput.style.visibility = 'hidden';
+        } else {
+            searchInput.style.visibility = 'visible';
+            handleSearch();
+        }
+    }
+
+    function toggleLeaderboard(drawerId, buttonElement) {
+        const targetDrawer = document.getElementById(drawerId);
+        const parentCard = buttonElement.closest('.song-card');
+        const wasActive = targetDrawer.classList.contains('active-drawer');
+        
+        parentCard.querySelectorAll('.leaderboard-drawer').forEach(drawer => {
+            drawer.classList.remove('active-drawer');
+        });
+        parentCard.querySelectorAll('.badge-btn').forEach(btn => {
+            btn.classList.remove('active-toggle');
+        });
+
+        if (!wasActive) {
+            targetDrawer.classList.add('active-drawer');
+            buttonElement.classList.add('active-toggle');
+        }
+    }
+
+    function handleSearch() {
+        const query = document.getElementById('globalSearch').value.toLowerCase().trim();
+        const folders = document.querySelectorAll('.folder-section');
+        folders.forEach(folder => {
+            const cards = folder.querySelectorAll('.song-card');
+            let visibleSongsInFolder = 0;
+            cards.forEach(card => {
+                const songTitle = card.getAttribute('data-search-target');
+                if (songTitle.includes(query)) {
+                    card.style.display = 'flex';
+                    visibleSongsInFolder++;
+                } else {
+                    card.style.display = 'none';
+                    card.querySelectorAll('.leaderboard-drawer').forEach(d => d.classList.remove('active-drawer'));
+                    card.querySelectorAll('.badge-btn').forEach(b => b.classList.remove('active-toggle'));
+                }
+            });
+            if (visibleSongsInFolder > 0 || query === '') {
+                folder.style.display = 'block';
+            } else {
+                folder.style.display = 'none';
+            }
+        });
+    }
+</script>
+</body>
+</html>

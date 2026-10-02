@@ -19,6 +19,8 @@ CATALOG = SCRIPT_DIR / "Output" / "Leaderboard Tree.yaml"
 PLAYERS = SCRIPT_DIR / "Output" / "Player Data.yaml"
 ITG2_BLACKLIST = SCRIPT_DIR / "Output" / "ITG2 Purges.txt"
 
+DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit")
+
 class XML_Record:
     def __init__(self, inits, folder, song, difficulty, percentage, grade, date):
         self.inits = inits
@@ -91,7 +93,7 @@ class Leaderboard:
         self.entries = []
 
     def add_entry(self, someRecord):
-        newEntry = Entry(someRecord.inits, someRecord.percentage, someRecord.grade, someRecord.date)
+        newEntry = Leaderboard_Entry(someRecord.inits, someRecord.percentage, someRecord.grade, someRecord.date)
         self.entries.append(newEntry)
 
     @property
@@ -101,13 +103,24 @@ class Leaderboard:
     def sort(self):
         self.entries.sort(key=attrgetter('percentage', 'date'), reverse=True)
 
-class Entry:
+class Leaderboard_Entry:
     def __init__(self, inits, percentage, grade, date):
         self.inits = inits
         self.percentage = percentage
         self.grade = grade
         self.date = date
         self.player = find_friendly_name(inits)
+
+class Player_Entry:
+    def __init__(self, section, folder, song, difficulty, percentage, grade, date, position):
+        self.section = section
+        self.folder = folder
+        self.song = song
+        self.difficulty = difficulty
+        self.percentage = percentage
+        self.grade = grade
+        self.date = date
+        self.position = position
 
 class Player:
     def __init__(self, name):
@@ -124,6 +137,14 @@ class Player:
     @property
     def total_scores(self):
         return len(self.scores)
+
+    @property
+    def top_scores(self):
+        tops = 0
+        for score in self.scores:
+            if score.position == 1:
+                tops = tops + 1
+        return tops
 
     def __str__(self):
         return f"{self.name} ({self.inits}) with {self.total_scores} scores"
@@ -150,18 +171,33 @@ def song_representer(dumper, data):
 def player_representer(dumper, data):
     return dumper.represent_dict ({
         "player_name": data.name,
-        "initials": data.inits
+        "initials": data.inits,
+        "total_scores": data.total_scores,
+        "top_scores": data.top_scores,
+        "scores": data.scores
     })
 
 def leaderboard_representer(dumper, data):
     return dumper.represent_list(data.entries)
 
-def entry_representer(dumper, data):
+def leaderboard_entry_representer(dumper, data):
     return dumper.represent_dict({
         "player": data.player,
-        "percentage": round(data.percentage, 2),  # Rounds to clean up floats
+        "percentage": f"{data.percentage:.2f}",
         "grade": data.grade,
         "date": data.date
+    })
+
+def player_entry_representer(dumper, data):
+    return dumper.represent_dict({
+        "section": data.section,
+        "folder": data.folder,
+        "song": data.song,
+        "difficulty": data.difficulty,
+        "percentage": f"{data.percentage:.2f}",
+        "grade": data.grade,
+        "date": data.date,
+        "position": data.position 
     })
 
 yaml.add_representer(Section, section_representer, Dumper=yaml.SafeDumper)
@@ -169,7 +205,8 @@ yaml.add_representer(Folder, folder_representer, Dumper=yaml.SafeDumper)
 yaml.add_representer(Song, song_representer, Dumper=yaml.SafeDumper)
 yaml.add_representer(Player, player_representer, Dumper=yaml.SafeDumper)
 yaml.add_representer(Leaderboard, leaderboard_representer, Dumper=yaml.SafeDumper)
-yaml.add_representer(Entry, entry_representer, Dumper=yaml.SafeDumper)
+yaml.add_representer(Leaderboard_Entry, leaderboard_entry_representer, Dumper=yaml.SafeDumper)
+yaml.add_representer(Player_Entry, player_entry_representer, Dumper=yaml.SafeDumper)
 
 def get_unique_machine_inits(score_data):
     unique_players = set()
@@ -209,7 +246,6 @@ def generate_section_list():
             count = count + 1
                 
     return section_list
-
 
 def generate_folder_list(scores):
     unique_folders = set()
@@ -283,36 +319,54 @@ def associate_player_scores(XML_scores, player_list):
 
     return associations
 
-
-def associate_songs_to_folders(score_list, folder_list, song_list):
-
+def associate_songs_to_folders(score_list, folder_list):
     associations = 0
     for score in score_list:
         matching_folder = next((folder for folder in folder_list if folder.name == score.folder), None)
-        matching_song = next((song for song in song_list if song.name == score.song), None)
+        if not matching_folder:
+            continue
 
-        if matching_song not in matching_folder.songs:
-            matching_folder.add_song(matching_song)
+        matching_song = next((song for song in matching_folder.songs if song.name == score.song), None)
+
+        if not matching_song:
+            matching_folder.add_song(Song(score.song))
             associations = associations + 1
 
     return associations
 
-def associate_difficulties_to_songs(score_list, song_list):
+def associate_difficulties_to_songs(score_list, folder_list):
 
     associations = 0
     for score in score_list:
-        matching_song = next((song for song in song_list if song.name == score.song), None)
+        matching_folder = next((folder for folder in folder_list if folder.name == score.folder), None)
+        if not matching_folder:
+            continue
+
+        matching_song = next((song for song in matching_folder.songs if song.name == score.song), None)
+        if not matching_song:
+            continue
 
         if score.difficulty not in matching_song.difficulties:
             matching_song.add_difficulty(score.difficulty)
             associations = associations + 1
 
+    for folder in folder_list:
+        for song in folder.songs:
+            song.difficulties.sort(
+                key=lambda difficulty: (
+                    DIFFICULTY_ORDER.index(difficulty)
+                    if difficulty in DIFFICULTY_ORDER
+                    else len(DIFFICULTY_ORDER)
+                )
+            )
+
     return associations
 
-def generate_leaderboards(song_list):
+def generate_leaderboards(folder_list):
     count = 0
-    for song in song_list:
-        count = count + song.generate_leaderboards()
+    for folder in folder_list:
+        for song in folder.songs:
+            count = count + song.generate_leaderboards()
 
     return count
 
@@ -344,6 +398,33 @@ def populate_leaderboards(score_data, folder_list):
                 leaderboard.sort()
 
     return count
+
+def populate_player_data(section_list, player_list):
+    count = 0
+    
+    for section in section_list:
+        for folder in section.folders:
+            for song in folder.songs:
+                for leaderboard in song.leaderboards.values():
+                    for index, entry in enumerate(leaderboard.entries, start=1):
+                        matching_player = next((player for player in player_list if entry.inits in player.inits), None)
+                        if matching_player:
+                            matching_player.add_score(Player_Entry(
+                                section.name, 
+                                folder.name, 
+                                song.name, 
+                                leaderboard.difficulty, 
+                                entry.percentage, 
+                                entry.grade, 
+                                entry.date,
+                                index
+                            ))
+                            count = count + 1
+
+    for player in player_list:
+        player.scores.sort(key=attrgetter("percentage", "song"), reverse=True)
+    return count
+
 
 #Shitty google method.  I just want 10th mix in the right place.
 def sort_folders_by_mix(folder):
@@ -485,42 +566,32 @@ def main():
     folder_list.sort(key=sort_folders_by_mix, reverse=False)
     print("Successfully identified " + str(len(folder_list)) + " unique folders.")
 
-    song_list = generate_song_list(xml_score_data)
-    song_list.sort(key=attrgetter('name'), reverse=False)
-    print("Successfully identified " + str(len(song_list)) + " unique songs.")
-
     machine_player_list = get_unique_machine_inits(xml_score_data)
     print("Successfully discovered " + str(len(machine_player_list)) + " unique name entries.")
 
     player_list = generate_player_list(machine_player_list)
     print("Merged down to " + str(len(player_list)) + " unique human players.")
 
-    count_player_scores_associated = associate_player_scores(xml_score_data, player_list)
-    player_list.sort(key=attrgetter('total_scores', 'name'), reverse=True)
-    print("Associated " + str(count_player_scores_associated) + " scores to player profiles.")
+   # count_player_scores_associated = associate_player_scores(xml_score_data, player_list)
+   # player_list.sort(key=attrgetter('total_scores', 'name'), reverse=True)
+   # print("Associated " + str(count_player_scores_associated) + " scores to player profiles.")
     
-    count_songs_associated = associate_songs_to_folders(xml_score_data, folder_list, song_list)
+    count_songs_associated = associate_songs_to_folders(xml_score_data, folder_list)
     print("Associated " + str(count_songs_associated) + " songs to parent folders.")
 
-    count_difficulties_associated = associate_difficulties_to_songs(xml_score_data, song_list)
+    count_difficulties_associated = associate_difficulties_to_songs(xml_score_data, folder_list)
     print("Associated " + str(count_difficulties_associated) + " difficulties to parent songs.")
 
-    count_leaderboards_generated = generate_leaderboards(song_list)
+    count_leaderboards_generated = generate_leaderboards(folder_list)
     print("Created " + str(count_leaderboards_generated) + " empty leaderboards")
 
     count_populations = populate_leaderboards(xml_score_data, folder_list)
     print("Added " + str(count_populations) + " XML scores to " + str(count_leaderboards_generated) + " leaderboards.")
 
-#    for player in player_list:
-#        print(player)
-
-    #toppest = sorted(score_data, key=attrgetter('percentage', 'date'), reverse=True)
-    #oldest = sorted(score_data, key=attrgetter('date'), reverse=False)
-
-    #print ("Top Score: " + str(toppest[0]))
-    #print ("Bottom Score: " + str(toppest[-1]))
- #   print ("Oldest Score: " + str(oldest [0]))
- #   print ("Newest Score: " + str(oldest [-1]))
+    count_player_scores_associated = populate_player_data(section_list, player_list)
+    print("Associated " + str(count_player_scores_associated) + " scores to player profiles.")
+    player_list.sort(key=attrgetter('top_scores', 'name'), reverse=True)
+    
 
     export_sections_to_yaml(section_list)
     export_players_to_yaml(player_list)

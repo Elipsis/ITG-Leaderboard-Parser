@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In The Groove - Machine Leaderboard</title>
+    <title>Mordhaus Machine Leaderboard</title>
     <style>
         :root {
             --bg-dark: #0f111a;
@@ -143,8 +143,8 @@
 <body>
 <div class="container">
     <header>
-        <h1>🕺 IN THE GROOVE 💃</h1>
-        <p class="text-muted">Machine High Score Database & Player Profiles</p>
+        <h1>Mordhaus Machine Leaderboard</h1>
+        <p class="text-muted">High Score Database & Player Profiles</p>
     </header>
     <div class="controls">
         <button id="btn-library" class="tab-btn active" onclick="switchView('library')">Library Tree</button>
@@ -231,24 +231,26 @@
         <table class="standings-table">
             <thead>
                 <tr>
-                    <th style="width: 10%" class="text-center">Rank</th>
-                    <th style="width: 40%">Player Identity</th>
-                    <th style="width: 30%">Connected Initials</th>
-                    <th style="width: 20%" class="text-center">Associated Records</th>
+                    <th class="sortable-b" style="cursor: pointer;">Rank</th>
+                    <th class="sortable-b" style="cursor: pointer;">Profile (Initials)</th>
+                    <th class="sortable-b" style="cursor: pointer;">Top Scores</th>
+                    <th class="sortable-b" style="cursor: pointer;">Total Scores</th>
                 </tr>
             </thead>
             <tbody>
                 {% for player in players %}
                 <tr>
-                    <td class="text-center bold">
+                    <td data-sort="{{ loop.index }}">
                         {% if loop.index == 1 %}🥇
                         {% elif loop.index == 2 %}🥈
                         {% elif loop.index == 3 %}🥉
                         {% else %}#{{ loop.index }}
                         {% endif %}
                     </td>
-                    <td class="bold text-gold">{{ player.player_name }}</td>
-                    <td class="text-muted font-mono">{{ player.initials | join(', ') }}</td>
+                    <td class="bold text-gold">{{ player.player_name }} ({{ player.initials | join(', ') }})</td>
+                    <td class="text-center bold font-mono">
+                        {{ player.top_scores }}
+                    </td>
                     <td class="text-center bold font-mono">
                         {% if player.scores is defined %}{{ player.scores | length }}{% else %}0{% endif %}
                     </td>
@@ -333,6 +335,42 @@
             if (query === '') section.open = false; // Reset Section when field is cleared
         });
     }
+</script>
+<script>
+document.addEventListener('click', function (e) {
+    if (!e.target.matches('th.sortable-b')) return;
+    
+    const th = e.target;
+    const table = th.closest('table');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.rows);
+    const columnIndex = Array.from(th.parentNode.children).indexOf(th);
+    const isAscending = th.classList.contains('sort-asc');
+    
+    // Toggle sort state classes
+    th.classList.toggle('sort-asc', !isAscending);
+    th.classList.toggle('sort-desc', isAscending);
+    
+    // Core sorting engine
+    rows.sort((rowA, rowB) => {
+        const cellA = rowA.cells[columnIndex];
+        const cellB = rowB.cells[columnIndex];
+        
+        let valA = cellA.getAttribute('data-sort') || cellA.textContent.trim();
+        let valB = cellB.getAttribute('data-sort') || cellB.textContent.trim();
+        
+        if (!isNaN(valA) && !isNaN(valB)) {
+            return isAscending ? parseFloat(valA) - parseFloat(valB) : parseFloat(valB) - parseFloat(valA);
+        }
+        
+        return isAscending 
+            ? valA.toString().localeCompare(valB, undefined, {numeric: true}) 
+            : valB.toString().localeCompare(valA, undefined, {numeric: true});
+    });
+    
+    // Re-append rows in the new sorted order
+    rows.forEach(row => tbody.appendChild(row));
+});
 </script>
 </body>
 </html>

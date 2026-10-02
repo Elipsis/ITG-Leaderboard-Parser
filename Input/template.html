@@ -153,6 +153,25 @@
         .statistics-bar { display: block; height: 100%; min-width: 3px; border-radius: 3px; animation: barEnter 0.45s ease-out both; transform-origin: left; }
         .statistics-count { color: #ffffff; font-variant-numeric: tabular-nums; text-align: right; }
         .statistics-empty { color: var(--text-muted); padding: 12px 0; }
+        .latest-play-table-wrap { overflow-x: auto; }
+        .latest-play-table { width: 100%; min-width: 900px; border-collapse: collapse; background: var(--bg-card); border: 1px solid #2d314d; }
+        .latest-play-table th { position: sticky; top: 0; background: #24283f; color: #f1f5f9; text-align: left; padding: 10px 12px; font-size: 0.8rem; text-transform: uppercase; }
+        .latest-play-table td { padding: 9px 12px; border-bottom: 1px solid #2d314d; vertical-align: top; }
+        .latest-play-table tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+        .latest-play-date, .latest-play-score, .latest-play-position { white-space: nowrap; font-variant-numeric: tabular-nums; }
+        .latest-play-empty { color: var(--text-muted); text-align: center; }
+        .player-link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.35); text-underline-offset: 3px; cursor: pointer; }
+        .player-link:hover, .player-link:focus-visible { color: #ffd18a; text-decoration-color: currentColor; }
+        .player-profile-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
+        .player-profile-heading h2 { margin: 0; font-size: 1.6rem; color: #ffffff; }
+        .player-profile-heading p { margin: 6px 0 0; color: var(--text-muted); }
+        .player-profile-breakdowns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+        .player-profile-breakdowns section, .player-profile-section { border-top: 1px solid #334155; padding-top: 14px; }
+        .player-profile-breakdowns h3, .player-profile-section h3 { margin: 0 0 12px; color: #ffffff; font-size: 1rem; }
+        .player-profile-counts { width: 100%; border-collapse: collapse; }
+        .player-profile-counts td { padding: 7px 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .player-profile-counts td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+        .player-profile-section { margin-top: 24px; }
         .bar-beginner { background: var(--diff-beginner); }
         .bar-easy { background: var(--diff-easy); }
         .bar-medium { background: var(--diff-medium); }
@@ -164,6 +183,9 @@
         @keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 600px) {
             .statistics-row { grid-template-columns: minmax(72px, 100px) minmax(60px, 1fr) 34px; gap: 8px; font-size: 0.85rem; }
+        }
+        @media (max-width: 700px) {
+            .player-profile-breakdowns { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -177,6 +199,7 @@
         <button id="btn-library" class="tab-btn active" onclick="switchView('library')">Machine Records</button>
         <button id="btn-standings" class="tab-btn" onclick="switchView('standings')">Player Standings</button>
         <button id="btn-statistics" class="tab-btn" onclick="switchView('statistics')">Record Statistics</button>
+        <button id="btn-latest-plays" class="tab-btn" onclick="switchView('latest-plays')">Latest Plays</button>
         <input type="text" id="globalSearch" class="search-bar" placeholder="Search songs or charts..." oninput="handleSearch()">
     </div>
 
@@ -232,7 +255,7 @@
                                             {% for entry in entries %}
                                             <tr>
                                                 <td class="bold text-muted">#{{ loop.index }}</td>
-                                                <td class="bold text-gold">{{ entry.player }}</td>
+                                                <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
                                                 <td class="bold font-mono">{{ entry.percentage }}% <span style="font-size:0.75rem; font-weight:normal;" class="text-muted">({{ entry.grade }})</span></td>
                                                 <td class="text-muted font-mono" style="font-size:0.8rem;">{{ entry.date }}</td>
                                             </tr>
@@ -275,7 +298,7 @@
                         {% else %}#{{ loop.index }}
                         {% endif %}
                     </td>
-                    <td class="bold text-gold">{{ player.player_name }} ({{ player.initials | join(', ') }})</td>
+                    <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[player.player_name] }}">{{ player.player_name }}</button> ({{ player.initials | join(', ') }})</td>
                     <td class="text-center bold font-mono">
                         {{ player.top_scores }}
                     </td>
@@ -312,7 +335,7 @@
                 <div class="statistics-chart" role="list" aria-label="{{ category.label }} top scores by player">
                     {% for leader in category.leaders %}
                     <div class="statistics-row" role="listitem">
-                        <span class="statistics-player">{{ leader.player }}</span>
+                        <span class="statistics-player"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[leader.player] }}">{{ leader.player }}</button></span>
                         <span class="statistics-track" aria-hidden="true"><span class="statistics-bar {% if mode == 'difficulty' %}bar-{{ category.key }}{% else %}bar-mix{% endif %}" style="width: {{ (leader.wins / max_wins * 100) | round | int }}%"></span></span>
                         <span class="statistics-count">{{ leader.wins }}</span>
                     </div>
@@ -326,17 +349,117 @@
         </section>
         {% endfor %}
     </div>
+
+    <div id="latestPlaysView" class="view-panel">
+        <div class="statistics-header">
+            <h2>Latest Plays</h2>
+        </div>
+        <div class="statistics-controls" role="group" aria-label="Latest plays filter">
+            <button type="button" class="active" data-latest-play-mode="all" onclick="showLatestPlays('all')">All</button>
+            <button type="button" data-latest-play-mode="machine-records" onclick="showLatestPlays('machine-records')">Machine Records Only</button>
+        </div>
+        {% for mode, entries in [('all', latest_plays.all), ('machine-records', latest_plays.machine_records)] %}
+        <div id="latest-plays-{{ mode }}" class="latest-play-list" {% if mode != 'all' %}hidden{% endif %}>
+            <div class="latest-play-table-wrap">
+                <table class="latest-play-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Section</th>
+                            <th>Folder</th>
+                            <th>Song</th>
+                            <th>Difficulty</th>
+                            <th>Player</th>
+                            <th>Score</th>
+                            {% if mode == 'all' %}
+                            <th>Position</th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entry in entries %}
+                        <tr>
+                            <td class="latest-play-date">{{ entry.date }}</td>
+                            <td>{{ entry.section }}</td>
+                            <td>{{ entry.folder }}</td>
+                            <td>{{ entry.song }}</td>
+                            <td>{{ entry.difficulty }}</td>
+                            <td><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
+                            <td class="latest-play-score">{{ entry.percentage }}%</td>
+                            {% if mode == 'all' %}
+                            <td class="latest-play-position">#{{ entry.position }}</td>
+                            {% endif %}
+                        </tr>
+                        {% else %}
+                        <tr><td class="latest-play-empty" colspan="{{ 8 if mode == 'all' else 7 }}">No matching plays.</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div id="playerProfileView" class="view-panel">
+        <div class="player-profile-heading">
+            <button type="button" class="tab-btn" onclick="returnFromPlayerProfile()">Back</button>
+            <div>
+                <h2 id="playerProfileName"></h2>
+                <p>Registered initials: <span id="playerProfileInitials"></span></p>
+            </div>
+        </div>
+        <div class="player-profile-breakdowns">
+            <section>
+                <h3>Records by Difficulty</h3>
+                <table class="player-profile-counts"><tbody id="playerDifficultyCounts"></tbody></table>
+            </section>
+            <section>
+                <h3>Records by Mix</h3>
+                <table class="player-profile-counts"><tbody id="playerMixCounts"></tbody></table>
+            </section>
+        </div>
+        <section class="player-profile-section">
+            <h3>Latest Scores</h3>
+            <div class="statistics-controls" role="group" aria-label="Player latest score filter">
+                <button type="button" class="active" data-profile-play-mode="all" onclick="showProfilePlays('all')">All</button>
+                <button type="button" data-profile-play-mode="machine_records" onclick="showProfilePlays('machine_records')">Machine Records Only</button>
+            </div>
+            <div class="latest-play-table-wrap">
+                <table class="latest-play-table">
+                    <thead><tr><th>Date</th><th>Section</th><th>Folder</th><th>Song</th><th>Difficulty</th><th>Score</th><th data-profile-position>Position</th></tr></thead>
+                    <tbody id="playerLatestScores"></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="player-profile-section">
+            <h3>Top Scores by Percentage</h3>
+            <div class="latest-play-table-wrap">
+                <table class="latest-play-table">
+                    <thead><tr><th>Rank</th><th>Score</th><th>Song</th><th>Difficulty</th><th>Folder</th><th>Date</th></tr></thead>
+                    <tbody id="playerTopScores"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
 </div>
 
+<script id="player-profile-data" type="application/json">{{ player_profiles | tojson }}</script>
 <script>
+    const playerProfiles = JSON.parse(document.getElementById('player-profile-data').textContent);
+    let currentView = 'library';
+    let currentPlayerProfile = null;
+
     function switchView(viewName) {
+        if (viewName !== 'player-profile') currentView = viewName;
         const searchInput = document.getElementById('globalSearch');
         document.getElementById('libraryView').classList.toggle('active', viewName === 'library');
         document.getElementById('standingsView').classList.toggle('active', viewName === 'standings');
         document.getElementById('statisticsView').classList.toggle('active', viewName === 'statistics');
+        document.getElementById('latestPlaysView').classList.toggle('active', viewName === 'latest-plays');
+        document.getElementById('playerProfileView').classList.toggle('active', viewName === 'player-profile');
         document.getElementById('btn-library').classList.toggle('active', viewName === 'library');
         document.getElementById('btn-standings').classList.toggle('active', viewName === 'standings');
         document.getElementById('btn-statistics').classList.toggle('active', viewName === 'statistics');
+        document.getElementById('btn-latest-plays').classList.toggle('active', viewName === 'latest-plays');
         if (viewName !== 'library') {
             searchInput.style.visibility = 'hidden';
         } else {
@@ -344,6 +467,74 @@
             handleSearch();
         }
     }
+
+    function openPlayerProfile(playerId) {
+        const profile = playerProfiles[Number(playerId)];
+        if (!profile) return;
+
+        currentPlayerProfile = profile;
+        document.getElementById('playerProfileName').textContent = profile.player_name;
+        document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
+        populatePlayerRows('playerDifficultyCounts', profile.difficulty_counts, row => [row.label, row.count], 2);
+        populatePlayerRows('playerMixCounts', profile.mix_counts, row => [row.label, row.count], 2);
+        showProfilePlays('all');
+        populatePlayerRows('playerTopScores', profile.top_scores, (score, index) => [
+            `#${index + 1}`, `${score.percentage}%`, score.song, score.difficulty,
+            score.folder, score.date,
+        ], 6);
+        switchView('player-profile');
+    }
+
+    function returnFromPlayerProfile() {
+        switchView(currentView);
+    }
+
+    function populatePlayerRows(bodyId, entries, getCells, columnCount) {
+        const body = document.getElementById(bodyId);
+        body.replaceChildren();
+        if (!entries.length) {
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.colSpan = columnCount;
+            cell.className = 'latest-play-empty';
+            cell.textContent = 'No scores';
+            row.appendChild(cell);
+            body.appendChild(row);
+            return;
+        }
+
+        entries.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            getCells(entry, index).forEach(value => {
+                const cell = document.createElement('td');
+                cell.textContent = value ?? '';
+                row.appendChild(cell);
+            });
+            body.appendChild(row);
+        });
+    }
+
+    function showProfilePlays(mode) {
+        if (!currentPlayerProfile) return;
+        document.querySelectorAll('[data-profile-play-mode]').forEach(button => {
+            button.classList.toggle('active', button.dataset.profilePlayMode === mode);
+        });
+        const isAll = mode === 'all';
+        document.querySelectorAll('[data-profile-position]').forEach(cell => {
+            cell.hidden = !isAll;
+        });
+        const entries = currentPlayerProfile[mode];
+        populatePlayerRows('playerLatestScores', entries, score => {
+            const cells = [score.date, score.section, score.folder, score.song, score.difficulty, `${score.percentage}%`];
+            if (isAll) cells.push(`#${score.position}`);
+            return cells;
+        }, isAll ? 7 : 6);
+    }
+
+    document.addEventListener('click', event => {
+        const playerLink = event.target.closest('.player-link');
+        if (playerLink) openPlayerProfile(playerLink.dataset.playerId);
+    });
 
     function showStatisticsMode(mode) {
         document.querySelectorAll('[data-stat-mode-button]').forEach(button => {
@@ -361,6 +552,15 @@
         });
         panel.querySelectorAll('[data-category-panel]').forEach(categoryPanel => {
             categoryPanel.hidden = categoryPanel.dataset.categoryPanel !== category;
+        });
+    }
+
+    function showLatestPlays(mode) {
+        document.querySelectorAll('[data-latest-play-mode]').forEach(button => {
+            button.classList.toggle('active', button.dataset.latestPlayMode === mode);
+        });
+        document.querySelectorAll('.latest-play-list').forEach(list => {
+            list.hidden = list.id !== `latest-plays-${mode}`;
         });
     }
 

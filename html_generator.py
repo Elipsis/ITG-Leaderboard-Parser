@@ -13,6 +13,7 @@ OUTPUT_HTML = SCRIPT_DIR / "Output" / "Leaderboard.html"
 
 DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge")
 DIFFICULTY_RANK = {difficulty: rank for rank, difficulty in enumerate(DIFFICULTY_ORDER)}
+PLAYER_PROFILE_SCORE_LIMIT = 20
 
 def load_yaml_data():
     """Loads compiled databases directly from your output files."""
@@ -112,9 +113,75 @@ def build_record_statistics(players, folder_whitelist):
         "mixes": mix_categories,
     }
 
+def build_latest_plays(players, limit=100):
+    entries = [
+        {**score, "player": player["player_name"]}
+        for player in players
+        for score in player.get("scores", [])
+    ]
+    entries.sort(key=date_sort_key, reverse=True)
+    machine_records = [entry for entry in entries if entry.get("position") == 1]
+    return {
+        "all": entries[:limit],
+        "machine_records": machine_records[:limit],
+    }
+
+def date_sort_key(entry):
+    played = entry.get("date")
+    if not isinstance(played, str) or played == "Unknown Date":
+        return (False, "")
+    return (True, played)
+
+def build_player_profiles(players, folder_whitelist):
+    profiles = []
+    player_profile_ids = {}
+
+    for player_id, player in enumerate(players):
+        player_name = player["player_name"]
+        scores = player.get("scores", [])
+        scores_by_date = sorted(scores, key=date_sort_key, reverse=True)
+        machine_records = [score for score in scores_by_date if score.get("position") == 1]
+        top_scores = sorted(
+            scores,
+            key=lambda score: (
+                float(score.get("percentage") or 0),
+                date_sort_key(score),
+            ),
+            reverse=True,
+        )
+        difficulty_counts = Counter(score.get("difficulty") for score in scores)
+        mix_counts = Counter(score.get("section") for score in scores)
+        ordered_difficulties = [
+            difficulty for difficulty in DIFFICULTY_ORDER if difficulty_counts[difficulty]
+        ]
+        ordered_difficulties.extend(
+            sorted(set(difficulty_counts) - set(DIFFICULTY_ORDER))
+        )
+
+        player_profile_ids[player_name] = player_id
+        profiles.append({
+            "player_name": player_name,
+            "initials": player.get("initials", []),
+            "difficulty_counts": [
+                {"label": difficulty, "count": difficulty_counts[difficulty]}
+                for difficulty in ordered_difficulties
+            ],
+            "mix_counts": [
+                {"label": section, "count": mix_counts[section]}
+                for section in folder_whitelist
+            ],
+            "all": scores_by_date[:PLAYER_PROFILE_SCORE_LIMIT],
+            "machine_records": machine_records[:PLAYER_PROFILE_SCORE_LIMIT],
+            "top_scores": top_scores[:PLAYER_PROFILE_SCORE_LIMIT],
+        })
+
+    return profiles, player_profile_ids
+
 def generate_html_with_jinja():
     catalog, players, folder_whitelist = load_yaml_data()
     record_statistics = build_record_statistics(players, folder_whitelist)
+    latest_plays = build_latest_plays(players)
+    player_profiles, player_profile_ids = build_player_profiles(players, folder_whitelist)
     
     # Configure Jinja environments to read your templates folder
     file_loader = FileSystemLoader(SCRIPT_DIR / "Input")
@@ -128,6 +195,9 @@ def generate_html_with_jinja():
         catalog=catalog,
         players=players,
         record_statistics=record_statistics,
+        latest_plays=latest_plays,
+        player_profiles=player_profiles,
+        player_profile_ids=player_profile_ids,
     )
     
     # Export completed build to disk

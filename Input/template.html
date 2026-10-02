@@ -28,6 +28,7 @@
         h1 {
             margin: 0 0 10px 0; font-size: 2.5rem; letter-spacing: 1px;
             background: linear-gradient(to right, #3b82f6, #86efac);
+            background-clip: text;
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .controls { display: flex; gap: 15px; margin-bottom: 25px; justify-content: center; align-items: center; flex-wrap: wrap; }
@@ -341,7 +342,7 @@
                     {% for leader in category.leaders %}
                     <div class="statistics-row" role="listitem">
                         <span class="statistics-player"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[leader.player] }}">{{ leader.player }}</button></span>
-                        <span class="statistics-track" aria-hidden="true"><span class="statistics-bar {% if mode == 'difficulty' %}bar-{{ category.key }}{% else %}bar-mix{% endif %}" style="width: {{ (leader.wins / max_wins * 100) | round | int }}%"></span></span>
+                        <span class="statistics-track" aria-hidden="true"><span class="statistics-bar {% if mode == 'difficulty' %}bar-{{ category.key }}{% else %}bar-mix{% endif %}" data-bar-width="{{ (leader.wins / max_wins * 100) | round | int }}"></span></span>
                         <span class="statistics-count">{{ leader.wins }}</span>
                     </div>
                     {% endfor %}
@@ -446,15 +447,20 @@
     </div>
 </div>
 
-<script id="player-profile-data" type="application/json">{{ player_profiles | tojson }}</script>
+<script id="player-profile-data" type="application/json">{{ {"profiles": player_profiles, "score_limit": player_profile_score_limit} | tojson }}</script>
 <script>
-    const playerProfiles = JSON.parse(document.getElementById('player-profile-data').textContent);
-    const playerProfileScoreLimit = {{ player_profile_score_limit }};
+    const playerProfileData = JSON.parse(document.getElementById('player-profile-data').textContent);
+    const playerProfiles = playerProfileData.profiles;
+    const playerProfileScoreLimit = playerProfileData.score_limit;
     let currentView = 'library';
     let currentPlayerProfile = null;
     let currentProfileScoreView = 'latest';
     let currentProfileScoreScope = 'all';
     let currentProfileFilters = {difficulty: null, section: null};
+
+    document.querySelectorAll('[data-bar-width]').forEach(bar => {
+        bar.style.width = `${bar.dataset.barWidth}%`;
+    });
 
     function switchView(viewName) {
         if (viewName !== 'player-profile') currentView = viewName;

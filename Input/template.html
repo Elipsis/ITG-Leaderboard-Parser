@@ -137,7 +137,34 @@
         .standings-table { width: 100%; border-collapse: collapse; background-color: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid #2d314d; }
         .standings-table th { background-color: #24283f; color: #f1f5f9; text-align: left; padding: 14px 18px; font-weight: 600; }
         .standings-table td { padding: 14px 18px; border-bottom: 1px solid #2d314d; }
+        .statistics-header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+        .statistics-header h2 { margin: 0; font-size: 1.5rem; color: #ffffff; }
+        .statistics-note { color: var(--text-muted); font-size: 0.9rem; }
+        .statistics-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .statistics-controls button { background: var(--bg-card); border: 1px solid #334155; color: var(--text-main); padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+        .statistics-controls button.active { background: #315c56; border-color: #65b6a2; color: #ffffff; }
+        .statistics-controls button.most-difficult-button { border-color: #e5aa5b; color: #f3c478; font-weight: 700; }
+        .statistics-controls button.most-difficult-button.active { background: #5b4325; border-color: #ffd18a; color: #ffffff; }
+        .statistics-panel[hidden], .statistics-category[hidden] { display: none; }
+        .statistics-chart { max-width: 820px; }
+        .statistics-row { display: grid; grid-template-columns: minmax(90px, 150px) minmax(80px, 1fr) 42px; align-items: center; gap: 12px; margin: 10px 0; }
+        .statistics-player { overflow-wrap: anywhere; color: #f1f5f9; }
+        .statistics-track { height: 16px; overflow: hidden; background: rgba(255, 255, 255, 0.08); border-radius: 3px; }
+        .statistics-bar { display: block; height: 100%; min-width: 3px; border-radius: 3px; animation: barEnter 0.45s ease-out both; transform-origin: left; }
+        .statistics-count { color: #ffffff; font-variant-numeric: tabular-nums; text-align: right; }
+        .statistics-empty { color: var(--text-muted); padding: 12px 0; }
+        .bar-beginner { background: var(--diff-beginner); }
+        .bar-easy { background: var(--diff-easy); }
+        .bar-medium { background: var(--diff-medium); }
+        .bar-hard { background: var(--diff-hard); }
+        .bar-challenge { background: var(--diff-challenge); }
+        .bar-most-difficult { background: #e5aa5b; }
+        .bar-mix { background: #65b6a2; }
+        @keyframes barEnter { from { transform: scaleX(0); } to { transform: scaleX(1); } }
         @keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 600px) {
+            .statistics-row { grid-template-columns: minmax(72px, 100px) minmax(60px, 1fr) 34px; gap: 8px; font-size: 0.85rem; }
+        }
     </style>
 </head>
 <body>
@@ -147,8 +174,9 @@
         <p class="text-muted">High Score Database & Player Profiles</p>
     </header>
     <div class="controls">
-        <button id="btn-library" class="tab-btn active" onclick="switchView('library')">Library Tree</button>
+        <button id="btn-library" class="tab-btn active" onclick="switchView('library')">Machine Records</button>
         <button id="btn-standings" class="tab-btn" onclick="switchView('standings')">Player Standings</button>
+        <button id="btn-statistics" class="tab-btn" onclick="switchView('statistics')">Record Statistics</button>
         <input type="text" id="globalSearch" class="search-bar" placeholder="Search songs or charts..." oninput="handleSearch()">
     </div>
 
@@ -259,6 +287,45 @@
             </tbody>
         </table>
     </div>
+
+    <div id="statisticsView" class="view-panel">
+        <div class="statistics-header">
+            <h2>Record Statistics</h2>
+            <span class="statistics-note">{{ record_statistics.qualified_players }} players with {{ record_statistics.minimum_top_scores }}+ top scores</span>
+        </div>
+        <div class="statistics-controls" role="group" aria-label="Statistics view">
+            <button type="button" class="active" data-stat-mode-button="difficulty" onclick="showStatisticsMode('difficulty')">By Difficulty</button>
+            <button type="button" data-stat-mode-button="mix" onclick="showStatisticsMode('mix')">By Mix</button>
+        </div>
+
+        {% for mode, categories in [('difficulty', record_statistics.difficulties), ('mix', record_statistics.mixes)] %}
+        <section id="statistics-{{ mode }}" class="statistics-panel" {% if mode != 'difficulty' %}hidden{% endif %}>
+            <div class="statistics-controls" role="group" aria-label="Select {{ mode }} category">
+                {% for category in categories %}
+                <button type="button" class="{% if loop.first %}active{% endif %}{% if category.key == 'most-difficult' %} most-difficult-button{% endif %}" data-category-button="{{ category.key }}" onclick="showStatisticsCategory('{{ mode }}', '{{ category.key }}')">{{ category.label }}</button>
+                {% endfor %}
+            </div>
+            {% for category in categories %}
+            <div class="statistics-category" data-category-panel="{{ category.key }}" {% if not loop.first %}hidden{% endif %}>
+                {% if category.leaders %}
+                {% set max_wins = category.leaders[0].wins %}
+                <div class="statistics-chart" role="list" aria-label="{{ category.label }} top scores by player">
+                    {% for leader in category.leaders %}
+                    <div class="statistics-row" role="listitem">
+                        <span class="statistics-player">{{ leader.player }}</span>
+                        <span class="statistics-track" aria-hidden="true"><span class="statistics-bar {% if mode == 'difficulty' %}bar-{{ category.key }}{% else %}bar-mix{% endif %}" style="width: {{ (leader.wins / max_wins * 100) | round | int }}%"></span></span>
+                        <span class="statistics-count">{{ leader.wins }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="statistics-empty">No qualifying top scores in this category.</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
+        {% endfor %}
+    </div>
 </div>
 
 <script>
@@ -266,14 +333,35 @@
         const searchInput = document.getElementById('globalSearch');
         document.getElementById('libraryView').classList.toggle('active', viewName === 'library');
         document.getElementById('standingsView').classList.toggle('active', viewName === 'standings');
+        document.getElementById('statisticsView').classList.toggle('active', viewName === 'statistics');
         document.getElementById('btn-library').classList.toggle('active', viewName === 'library');
         document.getElementById('btn-standings').classList.toggle('active', viewName === 'standings');
-        if (viewName === 'standings') {
+        document.getElementById('btn-statistics').classList.toggle('active', viewName === 'statistics');
+        if (viewName !== 'library') {
             searchInput.style.visibility = 'hidden';
         } else {
             searchInput.style.visibility = 'visible';
             handleSearch();
         }
+    }
+
+    function showStatisticsMode(mode) {
+        document.querySelectorAll('[data-stat-mode-button]').forEach(button => {
+            button.classList.toggle('active', button.dataset.statModeButton === mode);
+        });
+        document.querySelectorAll('.statistics-panel').forEach(panel => {
+            panel.hidden = panel.id !== `statistics-${mode}`;
+        });
+    }
+
+    function showStatisticsCategory(mode, category) {
+        const panel = document.getElementById(`statistics-${mode}`);
+        panel.querySelectorAll('[data-category-button]').forEach(button => {
+            button.classList.toggle('active', button.dataset.categoryButton === category);
+        });
+        panel.querySelectorAll('[data-category-panel]').forEach(categoryPanel => {
+            categoryPanel.hidden = categoryPanel.dataset.categoryPanel !== category;
+        });
     }
 
     function toggleLeaderboard(drawerId, buttonElement) {

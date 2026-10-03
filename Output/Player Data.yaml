@@ -5037,14 +5037,6 @@
     date: '2012-08-25 19:31:33'
     position: 1
   - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 6th Mix
-    song: SOMEWHERE OVER THE RAINBOW
-    difficulty: Hard
-    percentage: '90.00'
-    grade: Tier07
-    date: '2026-02-24 20:42:56'
-    position: 2
-  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
     song: GRADIUSIC CYBER
     difficulty: Hard
@@ -5916,6 +5908,14 @@
     grade: Tier13
     date: '2011-03-26 23:52:21'
     position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 6th Mix
+    song: SOMEWHERE OVER THE RAINBOW
+    difficulty: Easy
+    percentage: '70.73'
+    grade: Tier13
+    date: '2026-02-24 20:42:56'
+    position: 2
   - section: Other
     folder: Unofficial
     song: MaxX Enigma
@@ -14281,7 +14281,7 @@
     percentage: '69.16'
     grade: Tier13
     date: '2012-01-17 18:04:10'
-    position: 3
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: Look To The Sky (True Color Mix)
@@ -29206,8 +29206,8 @@
     difficulty: Easy
     percentage: '70.24'
     grade: Tier13
-    date: '2017-05-03 14:37:54'
-    position: 2
+    date: '2017-05-03 14:37:55'
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: I Like To Move It
@@ -34852,8 +34852,8 @@
     position: 3
 - player_name: Seitoko
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 7
   top_scores: 0
   scores:

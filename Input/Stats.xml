@@ -26,7 +26,7 @@
 <GoalCalories>0</GoalCalories>
 <GoalSeconds>0</GoalSeconds>
 <LastPlayedMachineGuid>02200529</LastPlayedMachineGuid>
-<LastPlayedDate>2026-10-02</LastPlayedDate>
+<LastPlayedDate>2026-10-03</LastPlayedDate>
 <TotalDancePoints>16809500</TotalDancePoints>
 <NumExtraStagesPassed>0</NumExtraStagesPassed>
 <NumExtraStagesFailed>0</NumExtraStagesFailed>
@@ -296339,8 +296339,8 @@
 </LastDays>
 <LastWeeks>
 <ThisWeek>0</ThisWeek>
-<LastWeek>0</LastWeek>
-<Week02Ago>1</Week02Ago>
+<LastWeek>1</LastWeek>
+<Week02Ago>0</Week02Ago>
 <Week03Ago>0</Week03Ago>
 <Week04Ago>0</Week04Ago>
 <Week05Ago>0</Week05Ago>

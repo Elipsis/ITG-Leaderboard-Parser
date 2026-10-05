@@ -513,7 +513,7 @@ def export_sections_to_yaml(section_list, filename=CATALOG):
 def export_players_to_yaml(section_list, filename=PLAYERS):
     with open(filename, "w", encoding="utf-8") as f:
         yaml.safe_dump(section_list, f, default_flow_style=False, sort_keys=False)
-    print(f"Successfully exported player datato {filename}")
+    print(f"Successfully exported player data to {filename}")
 
 
 def main():

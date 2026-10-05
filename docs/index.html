@@ -95263,6 +95263,7 @@
         leaderboardTargets.set(key, drawer.id);
     });
     let currentView = 'library';
+    let profileReturnView = 'library';
     let currentPlayerProfile = null;
     let currentProfileScoreView = 'latest';
     let currentProfileScoreScope = 'all';
@@ -95272,8 +95273,19 @@
         bar.style.width = `${bar.dataset.barWidth}%`;
     });
 
-    function switchView(viewName) {
+    function updateShareableHash(hash, replace = false) {
+        if (window.location.hash === hash) return;
+        const url = hash || `${window.location.pathname}${window.location.search}`;
+        if (replace) {
+            window.history.replaceState(null, '', url);
+        } else {
+            window.history.pushState(null, '', url);
+        }
+    }
+
+    function switchView(viewName, updateUrl = true) {
         if (viewName !== 'player-profile') currentView = viewName;
+        if (updateUrl && viewName !== 'player-profile') updateShareableHash('');
         const searchInput = document.getElementById('globalSearch');
         document.getElementById('libraryView').classList.toggle('active', viewName === 'library');
         document.getElementById('standingsView').classList.toggle('active', viewName === 'standings');
@@ -95305,10 +95317,11 @@
         return link;
     }
 
-    function openPlayerProfile(playerId) {
+    function openPlayerProfile(playerId, updateUrl = true) {
         const profile = playerProfiles[Number(playerId)];
         if (!profile) return;
 
+        if (updateUrl) profileReturnView = currentView;
         currentPlayerProfile = profile;
         document.getElementById('playerProfileName').textContent = profile.player_name;
         document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
@@ -95319,10 +95332,12 @@
         populateProfileFilterRows('playerMixCounts', profile.mix_counts, 'section');
         renderProfileScores();
         switchView('player-profile');
+        if (updateUrl) updateShareableHash(`#player-${Number(playerId)}`);
     }
 
     function returnFromPlayerProfile() {
-        switchView(currentView);
+        switchView(currentView, false);
+        updateShareableHash('', true);
     }
 
     function populatePlayerRows(bodyId, entries, getCells, columnCount) {
@@ -95460,30 +95475,57 @@
         renderProfileScores();
     }
 
+    function openLeaderboard(drawerId, updateUrl = true) {
+        const drawer = document.getElementById(drawerId);
+        const card = drawer?.closest('.song-card');
+        const folder = drawer?.closest('.folder-section');
+        const section = drawer?.closest('.macro-section');
+        if (!drawer || !card || !folder || !section) {
+            console.error('Unable to open the requested leaderboard.');
+            return;
+        }
+
+        document.getElementById('globalSearch').value = '';
+        switchView('library', false);
+        section.open = true;
+        folder.open = true;
+        card.querySelectorAll('.leaderboard-drawer').forEach(item => item.classList.remove('active-drawer'));
+        card.querySelectorAll('.badge-btn').forEach(button => button.classList.remove('active-toggle'));
+        drawer.classList.add('active-drawer');
+        card.querySelector(`[data-leaderboard-target="${drawer.id}"]`)?.classList.add('active-toggle');
+        if (updateUrl) updateShareableHash(`#${drawer.id}`);
+        drawer.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+
+    function restoreLocationFromHash() {
+        const hash = window.location.hash.slice(1);
+        if (hash.startsWith('player-')) {
+            const playerId = hash.slice('player-'.length);
+            if (/^\d+$/.test(playerId)) openPlayerProfile(playerId, false);
+            return;
+        }
+        if (hash.startsWith('drawer-')) openLeaderboard(hash, false);
+        else if (!hash) {
+            const returnView = document.getElementById('playerProfileView').classList.contains('active')
+                ? profileReturnView
+                : currentView;
+            switchView(returnView, false);
+            document.querySelectorAll('.leaderboard-drawer.active-drawer').forEach(drawer => {
+                drawer.classList.remove('active-drawer');
+                drawer.closest('.song-card')?.querySelectorAll('.badge-btn.active-toggle').forEach(button => {
+                    button.classList.remove('active-toggle');
+                });
+            });
+        }
+    }
+
     document.addEventListener('click', event => {
         const playerLink = event.target.closest('.player-link');
         if (playerLink) openPlayerProfile(playerLink.dataset.playerId);
         const leaderboardLink = event.target.closest('.player-score-leaderboard-link');
         if (leaderboardLink) {
-            const drawer = document.getElementById(leaderboardLink.dataset.leaderboardTarget);
-            const card = drawer?.closest('.song-card');
-            const folder = drawer?.closest('.folder-section');
-            const section = drawer?.closest('.macro-section');
-            if (!drawer || !card || !folder || !section) {
-                console.error('Unable to open the leaderboard for this player score.');
-                return;
-            }
-
             event.preventDefault();
-            document.getElementById('globalSearch').value = '';
-            switchView('library');
-            section.open = true;
-            folder.open = true;
-            card.querySelectorAll('.leaderboard-drawer').forEach(item => item.classList.remove('active-drawer'));
-            card.querySelectorAll('.badge-btn').forEach(button => button.classList.remove('active-toggle'));
-            drawer.classList.add('active-drawer');
-            card.querySelector(`[data-leaderboard-target="${drawer.id}"]`)?.classList.add('active-toggle');
-            drawer.scrollIntoView({behavior: 'smooth', block: 'center'});
+            openLeaderboard(leaderboardLink.dataset.leaderboardTarget);
         }
         const filterButton = event.target.closest('.player-profile-filter-button');
         if (filterButton) togglePlayerProfileFilter(filterButton.dataset.profileFilterKind, filterButton.dataset.profileFilterValue);
@@ -95528,6 +95570,9 @@
         if (!wasActive) {
             targetDrawer.classList.add('active-drawer');
             buttonElement.classList.add('active-toggle');
+            updateShareableHash(`#${drawerId}`);
+        } else if (window.location.hash === `#${drawerId}`) {
+            updateShareableHash('');
         }
     }
 
@@ -95576,6 +95621,9 @@
             if (query === '') section.open = false; // Reset Section when field is cleared
         });
     }
+
+    window.addEventListener('hashchange', restoreLocationFromHash);
+    restoreLocationFromHash();
 </script>
 <script>
 document.addEventListener('click', function (e) {

@@ -163,6 +163,8 @@
         .latest-play-empty { color: var(--text-muted); text-align: center; }
         .player-link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.35); text-underline-offset: 3px; cursor: pointer; }
         .player-link:hover, .player-link:focus-visible { color: #ffd18a; text-decoration-color: currentColor; }
+        .player-score-leaderboard-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.35); text-underline-offset: 3px; }
+        .player-score-leaderboard-link:hover, .player-score-leaderboard-link:focus-visible { color: #ffd18a; text-decoration-color: currentColor; }
         .player-profile-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
         .player-profile-heading h2 { margin: 0; font-size: 1.6rem; color: #ffffff; }
         .player-profile-heading p { margin: 6px 0 0; color: var(--text-muted); }
@@ -238,6 +240,7 @@
                                     <div class="song-diffs">
                                         {% for diff in song.difficulties %}
                                         <button class="badge-btn diff-{{ diff.lower() }}" 
+                                                data-leaderboard-target="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}"
                                                 onclick="toggleLeaderboard('drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}', this)">
                                             {{ diff }}
                                         </button>
@@ -246,7 +249,12 @@
                                 </div>
                                 
                                 {% for diff, entries in song.leaderboards.items() %}
-                                <div id="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}" class="leaderboard-drawer title-{{ diff.lower() }}">
+                                <div id="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}"
+                                     class="leaderboard-drawer title-{{ diff.lower() }}"
+                                     data-section="{{ section.section_name }}"
+                                     data-folder="{{ folder.folder_name }}"
+                                     data-song="{{ song.song_title }}"
+                                     data-difficulty="{{ diff }}">
                                     <p class="drawer-title title-{{ diff.lower() }}">🏆 {{ diff }} Leaderboard</p>
                                     <table class="score-table">
                                         <thead>
@@ -452,6 +460,16 @@
     const playerProfileData = JSON.parse(document.getElementById('player-profile-data').textContent);
     const playerProfiles = playerProfileData.profiles;
     const playerProfileScoreLimit = playerProfileData.score_limit;
+    const leaderboardTargets = new Map();
+    document.querySelectorAll('.leaderboard-drawer').forEach(drawer => {
+        const key = JSON.stringify([
+            drawer.dataset.section,
+            drawer.dataset.folder,
+            drawer.dataset.song,
+            drawer.dataset.difficulty
+        ]);
+        leaderboardTargets.set(key, drawer.id);
+    });
     let currentView = 'library';
     let currentPlayerProfile = null;
     let currentProfileScoreView = 'latest';
@@ -480,6 +498,19 @@
             searchInput.style.visibility = 'visible';
             handleSearch();
         }
+    }
+
+    function createProfileLeaderboardLink(score, label) {
+        const key = JSON.stringify([score.section, score.folder, score.song, score.difficulty]);
+        const targetId = leaderboardTargets.get(key);
+        if (!targetId) return label;
+
+        const link = document.createElement('a');
+        link.className = 'player-score-leaderboard-link';
+        link.href = `#${targetId}`;
+        link.dataset.leaderboardTarget = targetId;
+        link.textContent = label ?? '';
+        return link;
     }
 
     function openPlayerProfile(playerId) {
@@ -520,7 +551,11 @@
             const row = document.createElement('tr');
             getCells(entry, index).forEach(value => {
                 const cell = document.createElement('td');
-                cell.textContent = value ?? '';
+                if (value instanceof Node) {
+                    cell.appendChild(value);
+                } else {
+                    cell.textContent = value ?? '';
+                }
                 row.appendChild(cell);
             });
             body.appendChild(row);
@@ -603,8 +638,8 @@
         });
         document.getElementById('playerScoresTitle').textContent = isLatest ? 'Latest Scores' : 'Top Scores by Percentage';
         const getCells = isLatest
-            ? score => [score.date, score.section, score.folder, score.song, score.difficulty, `${score.percentage}%`]
-            : (score, index) => [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, score.song, score.difficulty, score.date];
+            ? score => [score.date, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), `${score.percentage}%`]
+            : (score, index) => [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), score.date];
         populatePlayerRows('playerScores', visibleEntries, (score, index) => {
             const cells = getCells(score, index);
             if (isAll) cells.push(`#${score.position}`);
@@ -636,6 +671,28 @@
     document.addEventListener('click', event => {
         const playerLink = event.target.closest('.player-link');
         if (playerLink) openPlayerProfile(playerLink.dataset.playerId);
+        const leaderboardLink = event.target.closest('.player-score-leaderboard-link');
+        if (leaderboardLink) {
+            const drawer = document.getElementById(leaderboardLink.dataset.leaderboardTarget);
+            const card = drawer?.closest('.song-card');
+            const folder = drawer?.closest('.folder-section');
+            const section = drawer?.closest('.macro-section');
+            if (!drawer || !card || !folder || !section) {
+                console.error('Unable to open the leaderboard for this player score.');
+                return;
+            }
+
+            event.preventDefault();
+            document.getElementById('globalSearch').value = '';
+            switchView('library');
+            section.open = true;
+            folder.open = true;
+            card.querySelectorAll('.leaderboard-drawer').forEach(item => item.classList.remove('active-drawer'));
+            card.querySelectorAll('.badge-btn').forEach(button => button.classList.remove('active-toggle'));
+            drawer.classList.add('active-drawer');
+            card.querySelector(`[data-leaderboard-target="${drawer.id}"]`)?.classList.add('active-toggle');
+            drawer.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
         const filterButton = event.target.closest('.player-profile-filter-button');
         if (filterButton) togglePlayerProfileFilter(filterButton.dataset.profileFilterKind, filterButton.dataset.profileFilterValue);
     });

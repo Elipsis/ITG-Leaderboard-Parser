@@ -1,3 +1,22 @@
+{% set itg_grade_display = {
+    'Tier01': ('★★★★', 'grade-stars'),
+    'Tier02': ('★★★', 'grade-stars'),
+    'Tier03': ('★★', 'grade-stars'),
+    'Tier04': ('★', 'grade-stars'),
+    'Tier05': ('S+', 'grade-s'),
+    'Tier06': ('S', 'grade-s'),
+    'Tier07': ('S-', 'grade-s'),
+    'Tier08': ('A+', 'grade-a'),
+    'Tier09': ('A', 'grade-a'),
+    'Tier10': ('A-', 'grade-a'),
+    'Tier11': ('B+', 'grade-b'),
+    'Tier12': ('B', 'grade-b'),
+    'Tier13': ('B-', 'grade-b'),
+    'Tier14': ('C+', 'grade-c'),
+    'Tier15': ('C', 'grade-c'),
+    'Tier16': ('C-', 'grade-c'),
+    'Tier17': ('D', 'grade-d')
+} %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,6 +157,14 @@
         .award-ffc { color: #7dd3fc; }
         .award-fec { color: #fbbf24; }
         .award-fc { color: #4ade80; }
+        .score-grade { font-size: 0.75rem; font-weight: 700; margin-left: 0.35rem; }
+        .grade-stars { color: #fbbf24; }
+        .grade-s { color: #acaaab; }
+        .grade-a { color: #ff0011; }
+        .grade-b { color: #ffea00; }
+        .grade-c { color: #5fe400; }
+        .grade-d { color: #854200; }
+        .grade-unmapped { color: var(--text-muted); }
         
         .standings-table { width: 100%; border-collapse: collapse; background-color: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid #2d314d; }
         .standings-table th { background-color: #24283f; color: #f1f5f9; text-align: left; padding: 14px 18px; font-weight: 600; }
@@ -274,7 +301,7 @@
                                             <tr>
                                                 <td class="bold text-muted">#{{ loop.index }}</td>
                                                 <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
-                                                <td class="bold font-mono">{{ entry.percentage }}% <span style="font-size:0.75rem; font-weight:normal;" class="text-muted">({{ entry.grade }})</span>{% if entry.award == 'FullComboW1' %} <span class="score-award award-ffc">FFC</span>{% elif entry.award == 'FullComboW2' %} <span class="score-award award-fec">FEC</span>{% elif entry.award == 'FullComboW3' %} <span class="score-award award-fc">FC</span>{% endif %}</td>
+                                                {% set grade_display = itg_grade_display.get(entry.grade) %}<td class="bold font-mono">{{ entry.percentage }}% <span class="score-grade {{ grade_display[1] if grade_display else 'grade-unmapped' }}">{{ grade_display[0] if grade_display else entry.grade }}</span>{% if entry.award == 'FullComboW1' %} <span class="score-award award-ffc">FFC</span>{% elif entry.award == 'FullComboW2' %} <span class="score-award award-fec">FEC</span>{% elif entry.award == 'FullComboW3' %} <span class="score-award award-fc">FC</span>{% endif %}</td>
                                                 <td class="text-muted font-mono" style="font-size:0.8rem;">{{ entry.date }}</td>
                                             </tr>
                                             {% endfor %}

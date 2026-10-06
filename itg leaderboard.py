@@ -22,14 +22,16 @@ ITG2_BLACKLIST = SCRIPT_DIR / "Output" / "ITG2 Purges.txt"
 DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit")
 
 class XML_Record:
-    def __init__(self, inits, folder, song, difficulty, percentage, grade, date):
+    def __init__(self, inits, folder, song, difficulty, percentage, grade, award, date):
         self.inits = inits
         self.folder = folder
         self.song = song
         self.difficulty = difficulty
         self.percentage = percentage
         self.grade = grade
+        self.award = award
         self.date = date
+        
 
     def __str__(self):
         return f"{self.song} - ({self.difficulty}): {self.percentage} by {self.inits}"
@@ -93,7 +95,7 @@ class Leaderboard:
         self.entries = []
 
     def add_entry(self, someRecord):
-        newEntry = Leaderboard_Entry(someRecord.inits, someRecord.percentage, someRecord.grade, someRecord.date)
+        newEntry = Leaderboard_Entry(someRecord.inits, someRecord.percentage, someRecord.grade, someRecord.award, someRecord.date)
         self.entries.append(newEntry)
 
     @property
@@ -104,21 +106,23 @@ class Leaderboard:
         self.entries.sort(key=attrgetter('percentage', 'date'), reverse=True)
 
 class Leaderboard_Entry:
-    def __init__(self, inits, percentage, grade, date):
+    def __init__(self, inits, percentage, grade, award, date):
         self.inits = inits
         self.percentage = percentage
         self.grade = grade
+        self.award = award
         self.date = date
         self.player = find_friendly_name(inits)
 
 class Player_Entry:
-    def __init__(self, section, folder, song, difficulty, percentage, grade, date, position):
+    def __init__(self, section, folder, song, difficulty, percentage, grade, award, date, position):
         self.section = section
         self.folder = folder
         self.song = song
         self.difficulty = difficulty
         self.percentage = percentage
         self.grade = grade
+        self.award = award
         self.date = date
         self.position = position
 
@@ -185,6 +189,7 @@ def leaderboard_entry_representer(dumper, data):
         "player": data.player,
         "percentage": f"{data.percentage:.2f}",
         "grade": data.grade,
+        "award": data.award,
         "date": data.date
     })
 
@@ -196,6 +201,7 @@ def player_entry_representer(dumper, data):
         "difficulty": data.difficulty,
         "percentage": f"{data.percentage:.2f}",
         "grade": data.grade,
+        "award": data.award,
         "date": data.date,
         "position": data.position 
     })
@@ -416,6 +422,7 @@ def populate_player_data(section_list, player_list):
                                 leaderboard.difficulty, 
                                 entry.percentage, 
                                 entry.grade, 
+                                entry.award, 
                                 entry.date,
                                 index
                             ))
@@ -539,9 +546,10 @@ def main():
                 player_name = high_score.find('Name').text if high_score.find('Name') is not None else "Unknown Player"
                 grade = high_score.find('Grade').text if high_score.find('Grade') is not None else "No Grade"
                 date = high_score.find('DateTime').text if high_score.find('DateTime') is not None else "Unknown Date"
+                award = high_score.find('StageAward').text if high_score.find('StageAward') is not None else "No Award"
 
                 if grade != "Failed" and score > 0 and player_name != None:
-                    xml_score_data.append(XML_Record(player_name, song_folder, song_title, difficulty, score, grade, date))
+                    xml_score_data.append(XML_Record(player_name, song_folder, song_title, difficulty, score, grade, award, date))
 
     print("Evaluated " + str(score_counter) + " score entries.")
     print("Successfully discovered " + str(len(xml_score_data)) + " passing scores with names!")

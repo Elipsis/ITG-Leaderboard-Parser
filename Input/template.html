@@ -134,6 +134,10 @@
         .score-table td { padding: 8px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
         .score-table tr:last-child td { border-bottom: none; }
         .score-table tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.01); }
+        .score-award { font-size: 0.75rem; font-weight: 700; margin-left: 0.35rem; }
+        .award-ffc { color: #7dd3fc; }
+        .award-fec { color: #fbbf24; }
+        .award-fc { color: #4ade80; }
         
         .standings-table { width: 100%; border-collapse: collapse; background-color: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid #2d314d; }
         .standings-table th { background-color: #24283f; color: #f1f5f9; text-align: left; padding: 14px 18px; font-weight: 600; }
@@ -270,7 +274,7 @@
                                             <tr>
                                                 <td class="bold text-muted">#{{ loop.index }}</td>
                                                 <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
-                                                <td class="bold font-mono">{{ entry.percentage }}% <span style="font-size:0.75rem; font-weight:normal;" class="text-muted">({{ entry.grade }})</span></td>
+                                                <td class="bold font-mono">{{ entry.percentage }}% <span style="font-size:0.75rem; font-weight:normal;" class="text-muted">({{ entry.grade }})</span>{% if entry.award == 'FullComboW1' %} <span class="score-award award-ffc">FFC</span>{% elif entry.award == 'FullComboW2' %} <span class="score-award award-fec">FEC</span>{% elif entry.award == 'FullComboW3' %} <span class="score-award award-fc">FC</span>{% endif %}</td>
                                                 <td class="text-muted font-mono" style="font-size:0.8rem;">{{ entry.date }}</td>
                                             </tr>
                                             {% endfor %}

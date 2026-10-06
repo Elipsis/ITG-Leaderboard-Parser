@@ -427,8 +427,8 @@
                             <td class="latest-play-date">{{ entry.date }}</td>
                             <td>{{ entry.section }}</td>
                             <td>{{ entry.folder }}</td>
-                            <td>{{ entry.song }}</td>
-                            <td>{{ entry.difficulty }}</td>
+                            <td><span data-latest-play-link data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}">{{ entry.song }}</span></td>
+                            <td><span data-latest-play-link data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}">{{ entry.difficulty }}</span></td>
                             <td><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
                             <td class="latest-play-score">{{ entry.percentage }}%</td>
                             {% if mode == 'all' %}
@@ -555,6 +555,15 @@
         link.textContent = label ?? '';
         return link;
     }
+
+    document.querySelectorAll('[data-latest-play-link]').forEach(element => {
+        const link = createProfileLeaderboardLink(element.dataset, element.textContent);
+        if (link instanceof Node) {
+            element.replaceWith(link);
+        } else {
+            element.replaceWith(document.createTextNode(link));
+        }
+    });
 
     function openPlayerProfile(playerId, updateUrl = true) {
         const profile = playerProfiles[Number(playerId)];

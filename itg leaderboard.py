@@ -103,7 +103,7 @@ class Leaderboard:
         return len(self.entries)
 
     def sort(self):
-        self.entries.sort(key=attrgetter('percentage', 'date'), reverse=True)
+        self.entries.sort(key=lambda x: (-x.percentage, x.date))
 
 class Leaderboard_Entry:
     def __init__(self, inits, percentage, grade, award, date):

@@ -390,16 +390,16 @@
           award: null
           date: Unknown Date
         Hard:
-        - player: MLS
-          percentage: '99.30'
-          grade: Tier02
-          award: FullComboW2
-          date: '2013-11-15 02:03:24'
         - player: Elipsis
           percentage: '99.30'
           grade: Tier02
           award: FullComboW2
           date: '2013-11-05 05:47:46'
+        - player: MLS
+          percentage: '99.30'
+          grade: Tier02
+          award: FullComboW2
+          date: '2013-11-15 02:03:24'
         - player: LONE
           percentage: '87.74'
           grade: Tier08
@@ -1674,16 +1674,16 @@
           award: null
           date: '2011-03-21 20:27:37'
         Challenge:
-        - player: MLS
-          percentage: '97.43'
-          grade: Tier04
-          award: null
-          date: '2013-08-09 15:04:07'
         - player: Elipsis
           percentage: '97.43'
           grade: Tier04
           award: FullComboW3
           date: '2011-01-20 00:02:25'
+        - player: MLS
+          percentage: '97.43'
+          grade: Tier04
+          award: null
+          date: '2013-08-09 15:04:07'
         - player: Ennui
           percentage: '97.30'
           grade: Tier04
@@ -2365,16 +2365,16 @@
           grade: Tier04
           award: FullComboW2
           date: '2011-02-16 19:23:58'
-        - player: LONE
-          percentage: '90.54'
-          grade: Tier07
-          award: null
-          date: '2012-11-07 21:56:16'
         - player: BMM
           percentage: '90.54'
           grade: Tier07
           award: null
           date: '2011-05-20 22:49:10'
+        - player: LONE
+          percentage: '90.54'
+          grade: Tier07
+          award: null
+          date: '2012-11-07 21:56:16'
         - player: JILL
           percentage: '66.44'
           grade: Tier14
@@ -4738,16 +4738,16 @@
           award: null
           date: '2011-05-20 21:30:58'
         Hard:
-        - player: Elipsis
-          percentage: '99.39'
-          grade: Tier02
-          award: FullComboW2
-          date: '2012-01-15 18:27:54'
         - player: BMM
           percentage: '99.39'
           grade: Tier02
           award: FullComboW2
           date: '2011-06-15 20:51:58'
+        - player: Elipsis
+          percentage: '99.39'
+          grade: Tier02
+          award: FullComboW2
+          date: '2012-01-15 18:27:54'
         - player: LONE
           percentage: '93.26'
           grade: Tier06
@@ -5468,16 +5468,16 @@
           grade: Tier03
           award: FullComboW2
           date: '2011-02-17 00:15:32'
-        - player: TLOD
-          percentage: '96.79'
-          grade: Tier04
-          award: FullComboW2
-          date: '2022-03-22 12:21:38'
         - player: MLS
           percentage: '96.79'
           grade: Tier04
           award: FullComboW3
           date: '2011-02-17 00:15:32'
+        - player: TLOD
+          percentage: '96.79'
+          grade: Tier04
+          award: FullComboW2
+          date: '2022-03-22 12:21:38'
         - player: LONE
           percentage: '93.73'
           grade: Tier06
@@ -6096,16 +6096,16 @@
           award: null
           date: '2017-04-12 17:36:49'
         Hard:
-        - player: Elipsis
-          percentage: '97.16'
-          grade: Tier04
-          award: FullComboW3
-          date: '2013-03-19 03:13:52'
         - player: CRIP
           percentage: '97.16'
           grade: Tier04
           award: FullComboW3
           date: '2011-02-21 19:38:52'
+        - player: Elipsis
+          percentage: '97.16'
+          grade: Tier04
+          award: FullComboW3
+          date: '2013-03-19 03:13:52'
         - player: MLS
           percentage: '94.71'
           grade: Tier05
@@ -7452,16 +7452,16 @@
           grade: Tier03
           award: FullComboW3
           date: '2013-04-04 14:07:07'
-        - player: CRIP
-          percentage: '97.88'
-          grade: Tier04
-          award: FullComboW3
-          date: '2011-07-15 22:26:24'
         - player: Ennui
           percentage: '97.88'
           grade: Tier04
           award: FullComboW2
           date: '2011-05-02 19:22:13'
+        - player: CRIP
+          percentage: '97.88'
+          grade: Tier04
+          award: FullComboW3
+          date: '2011-07-15 22:26:24'
         - player: TLOD
           percentage: '97.58'
           grade: Tier04
@@ -7604,16 +7604,16 @@
           grade: Tier02
           award: FullComboW2
           date: '2011-04-27 20:03:30'
-        - player: MLS
-          percentage: '97.79'
-          grade: Tier04
-          award: FullComboW2
-          date: '2013-11-02 21:28:50'
         - player: CRIP
           percentage: '97.79'
           grade: Tier04
           award: FullComboW2
           date: '2011-04-15 19:42:20'
+        - player: MLS
+          percentage: '97.79'
+          grade: Tier04
+          award: FullComboW2
+          date: '2013-11-02 21:28:50'
         - player: LAST
           percentage: '96.56'
           grade: Tier04
@@ -8226,16 +8226,16 @@
           award: null
           date: '2011-01-30 22:43:39'
         Hard:
-        - player: MLS
-          percentage: '99.44'
-          grade: Tier02
-          award: FullComboW2
-          date: '2014-01-10 03:24:09'
         - player: Elipsis
           percentage: '99.44'
           grade: Tier02
           award: FullComboW2
           date: '2013-11-05 04:43:59'
+        - player: MLS
+          percentage: '99.44'
+          grade: Tier02
+          award: FullComboW2
+          date: '2014-01-10 03:24:09'
         - player: BMM
           percentage: '98.95'
           grade: Tier03
@@ -8801,16 +8801,16 @@
           grade: Tier08
           award: FullComboW3
           date: '2012-01-29 20:26:49'
-        - player: ZBRA
-          percentage: '83.33'
-          grade: Tier09
-          award: null
-          date: '2014-01-09 02:02:57'
         - player: JILL
           percentage: '83.33'
           grade: Tier09
           award: null
           date: '2011-11-17 23:08:41'
+        - player: ZBRA
+          percentage: '83.33'
+          grade: Tier09
+          award: null
+          date: '2014-01-09 02:02:57'
     - song_title: Share My Love
       difficulties:
       - Hard
@@ -10114,16 +10114,16 @@
           award: null
           date: '2018-05-12 19:11:03'
         Hard:
-        - player: Elipsis
-          percentage: '99.22'
-          grade: Tier02
-          award: FullComboW2
-          date: '2013-11-05 06:13:02'
         - player: MLS
           percentage: '99.22'
           grade: Tier02
           award: FullComboW3
           date: '2013-08-09 15:00:01'
+        - player: Elipsis
+          percentage: '99.22'
+          grade: Tier02
+          award: FullComboW2
+          date: '2013-11-05 06:13:02'
         - player: BMM
           percentage: '98.64'
           grade: Tier03
@@ -10776,16 +10776,16 @@
           award: null
           date: '2011-02-18 22:49:13'
         Hard:
-        - player: MLS
-          percentage: '99.41'
-          grade: Tier02
-          award: FullComboW2
-          date: '2014-02-20 03:04:10'
         - player: Elipsis
           percentage: '99.41'
           grade: Tier02
           award: FullComboW2
           date: '2013-07-09 15:45:49'
+        - player: MLS
+          percentage: '99.41'
+          grade: Tier02
+          award: FullComboW2
+          date: '2014-02-20 03:04:10'
         - player: BMM
           percentage: '98.69'
           grade: Tier03
@@ -10918,16 +10918,16 @@
           grade: Tier08
           award: null
           date: '2011-03-26 22:14:30'
-        - player: A
-          percentage: '72.10'
-          grade: Tier12
-          award: null
-          date: '2018-05-12 19:14:07'
         - player: LWS
           percentage: '72.10'
           grade: Tier12
           award: null
           date: '2011-12-18 21:12:17'
+        - player: A
+          percentage: '72.10'
+          grade: Tier12
+          award: null
+          date: '2018-05-12 19:14:07'
         Hard:
         - player: Elipsis
           percentage: '98.45'
@@ -11232,16 +11232,16 @@
       - Challenge
       leaderboards:
         Challenge:
-        - player: Elipsis
-          percentage: '98.47'
-          grade: Tier03
-          award: FullComboW2
-          date: '2012-02-12 19:13:55'
         - player: BMM
           percentage: '98.47'
           grade: Tier03
           award: FullComboW2
           date: '2011-06-07 20:16:38'
+        - player: Elipsis
+          percentage: '98.47'
+          grade: Tier03
+          award: FullComboW2
+          date: '2012-02-12 19:13:55'
         - player: LONE
           percentage: '90.36'
           grade: Tier07
@@ -13586,16 +13586,16 @@
           grade: Tier02
           award: FullComboW2
           date: '2011-01-24 23:23:28'
-        - player: MLS
-          percentage: '98.40'
-          grade: Tier03
-          award: FullComboW2
-          date: '2014-02-07 02:34:54'
         - player: Ennui
           percentage: '98.40'
           grade: Tier03
           award: FullComboW2
           date: '2011-02-12 23:48:15'
+        - player: MLS
+          percentage: '98.40'
+          grade: Tier03
+          award: FullComboW2
+          date: '2014-02-07 02:34:54'
         - player: CRIP
           percentage: '98.24'
           grade: Tier03
@@ -17901,16 +17901,16 @@
           grade: Tier03
           award: FullComboW3
           date: '2012-06-20 18:51:24'
-        - player: MXI
-          percentage: '88.71'
-          grade: Tier08
-          award: null
-          date: '2011-09-19 20:17:21'
         - player: LONE
           percentage: '88.71'
           grade: Tier08
           award: null
           date: '2011-05-01 17:16:44'
+        - player: MXI
+          percentage: '88.71'
+          grade: Tier08
+          award: null
+          date: '2011-09-19 20:17:21'
     - song_title: AM-3P(CHAOS Special)
       difficulties:
       - Challenge
@@ -20883,16 +20883,16 @@
           grade: Tier04
           award: FullComboW2
           date: '2011-04-21 23:34:42'
-        - player: CRIP
-          percentage: '97.15'
-          grade: Tier04
-          award: FullComboW3
-          date: '2013-12-29 05:43:54'
         - player: BMM
           percentage: '97.15'
           grade: Tier04
           award: FullComboW2
           date: '2011-05-05 21:20:03'
+        - player: CRIP
+          percentage: '97.15'
+          grade: Tier04
+          award: FullComboW3
+          date: '2013-12-29 05:43:54'
         - player: MLS
           percentage: '96.56'
           grade: Tier04

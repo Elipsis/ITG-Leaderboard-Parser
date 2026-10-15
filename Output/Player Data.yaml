@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 768
-  top_scores: 687
+  total_scores: 769
+  top_scores: 688
   scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -2973,6 +2973,15 @@
     grade: Tier04
     award: FullComboW3
     date: '2013-04-12 17:45:31'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: KEEP ON MOVIN'
+    difficulty: Hard
+    percentage: '97.26'
+    grade: Tier04
+    award: FullComboW2
+    date: '2026-10-15 02:21:04'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -17609,7 +17618,7 @@
   initials:
   - JILL
   total_scores: 794
-  top_scores: 289
+  top_scores: 288
   scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -18492,7 +18501,7 @@
     grade: Tier08
     award: null
     date: Unknown Date
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: SAINT GOES MARCHING (REMIX)

@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 756
-  top_scores: 676
+  total_scores: 759
+  top_scores: 679
   scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -4933,6 +4933,14 @@
     date: '2011-08-23 22:57:42'
     position: 1
   - section: In The Groove
+    folder: In The Groove 3
+    song: Dance All Night
+    difficulty: Challenge
+    percentage: '91.20'
+    grade: Tier07
+    date: '2026-10-14 23:22:07'
+    position: 1
+  - section: In The Groove
     folder: In The Groove
     song: The Beginning
     difficulty: Challenge
@@ -4979,6 +4987,14 @@
     percentage: '90.85'
     grade: Tier07
     date: '2011-02-03 23:04:08'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: LET'S GET DOWN
+    difficulty: Challenge
+    percentage: '90.82'
+    grade: Tier07
+    date: '2026-10-14 23:27:47'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -5028,6 +5044,14 @@
     grade: Tier07
     date: '2011-09-12 17:54:23'
     position: 2
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: HAVE YOU NEVER BEEN MELLOW
+    difficulty: Challenge
+    percentage: '90.08'
+    grade: Tier07
+    date: '2026-10-14 23:25:52'
+    position: 1
   - section: In The Groove
     folder: In The Groove 3
     song: Dawn (Perpetual Mix)
@@ -5036,14 +5060,6 @@
     grade: Tier07
     date: '2012-08-25 19:31:33'
     position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 6th Mix
-    song: SOMEWHERE OVER THE RAINBOW
-    difficulty: Hard
-    percentage: '90.00'
-    grade: Tier07
-    date: '2026-02-24 20:42:56'
-    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
     song: GRADIUSIC CYBER
@@ -5916,6 +5932,14 @@
     grade: Tier13
     date: '2011-03-26 23:52:21'
     position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 6th Mix
+    song: SOMEWHERE OVER THE RAINBOW
+    difficulty: Easy
+    percentage: '70.73'
+    grade: Tier13
+    date: '2026-02-24 20:42:56'
+    position: 2
   - section: Other
     folder: Unofficial
     song: MaxX Enigma
@@ -6056,7 +6080,7 @@
   initials:
   - LONE
   total_scores: 1187
-  top_scores: 513
+  top_scores: 510
   scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -8849,7 +8873,7 @@
     percentage: '88.31'
     grade: Tier08
     date: '2013-02-24 04:52:22'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: MAXIMIZER
@@ -8993,7 +9017,7 @@
     percentage: '87.91'
     grade: Tier08
     date: '2011-12-29 16:56:51'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: TIERRA BUENA
@@ -12305,7 +12329,7 @@
     percentage: '77.59'
     grade: Tier11
     date: '2012-03-20 15:47:43'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: Fly away -mix del matador-
@@ -14281,7 +14305,7 @@
     percentage: '69.16'
     grade: Tier13
     date: '2012-01-17 18:04:10'
-    position: 3
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: Look To The Sky (True Color Mix)
@@ -19559,7 +19583,7 @@
     percentage: '72.61'
     grade: Tier12
     date: '2012-01-22 16:46:22'
-    position: 3
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: music
@@ -25569,7 +25593,7 @@
     percentage: '82.46'
     grade: Tier10
     date: '2012-01-22 16:46:22'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
     song: Queen's Jamaica (astria mix)
@@ -28737,7 +28761,7 @@
     percentage: '58.90'
     grade: Tier16
     date: '2011-08-07 15:30:33'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: CARTOON HEROES (Speedy Mix)
@@ -29206,8 +29230,8 @@
     difficulty: Easy
     percentage: '70.24'
     grade: Tier13
-    date: '2017-05-03 14:37:54'
-    position: 2
+    date: '2017-05-03 14:37:55'
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: I Like To Move It

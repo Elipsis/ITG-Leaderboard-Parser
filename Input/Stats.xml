@@ -18,21 +18,21 @@
 <Song Dir=''/>
 <Course/>
 <CurrentCombo>0</CurrentCombo>
-<TotalSessions>88</TotalSessions>
-<TotalSessionSeconds>2730</TotalSessionSeconds>
-<TotalGameplaySeconds>917654</TotalGameplaySeconds>
-<TotalCaloriesBurned>955584.875000</TotalCaloriesBurned>
+<TotalSessions>89</TotalSessions>
+<TotalSessionSeconds>2874</TotalSessionSeconds>
+<TotalGameplaySeconds>917747</TotalGameplaySeconds>
+<TotalCaloriesBurned>955608.812500</TotalCaloriesBurned>
 <GoalType>0</GoalType>
 <GoalCalories>0</GoalCalories>
 <GoalSeconds>0</GoalSeconds>
 <LastPlayedMachineGuid>02200529</LastPlayedMachineGuid>
 <LastPlayedDate>2026-10-15</LastPlayedDate>
-<TotalDancePoints>16825641</TotalDancePoints>
+<TotalDancePoints>16826856</TotalDancePoints>
 <NumExtraStagesPassed>0</NumExtraStagesPassed>
 <NumExtraStagesFailed>0</NumExtraStagesFailed>
 <NumToasties>941</NumToasties>
-<TotalTapsAndHolds>4141500</TotalTapsAndHolds>
-<TotalJumps>315056</TotalJumps>
+<TotalTapsAndHolds>4141750</TotalTapsAndHolds>
+<TotalJumps>315071</TotalJumps>
 <TotalHolds>214356</TotalHolds>
 <TotalRolls>1960</TotalRolls>
 <TotalMines>57090</TotalMines>
@@ -41,20 +41,20 @@
 <DefaultModifiers/>
 <Unlocks/>
 <NumSongsPlayedByPlayMode>
-<Regular>15196</Regular>
+<Regular>15199</Regular>
 <Nonstop>530</Nonstop>
 <Rave>24</Rave>
 </NumSongsPlayedByPlayMode>
 <NumSongsPlayedByStyle>
 <Style Game='dance' Style='double'>318</Style>
-<Style Game='dance' Style='single'>4292</Style>
+<Style Game='dance' Style='single'>4295</Style>
 <Style Game='dance' Style='versus'>11140</Style>
 </NumSongsPlayedByStyle>
 <NumSongsPlayedByDifficulty>
 <Beginner>358</Beginner>
 <Easy>1437</Easy>
 <Medium>2267</Medium>
-<Hard>9042</Hard>
+<Hard>9045</Hard>
 <Challenge>2582</Challenge>
 <Edit>64</Edit>
 </NumSongsPlayedByDifficulty>
@@ -64,7 +64,7 @@
 <Meter3>591</Meter3>
 <Meter4>879</Meter4>
 <Meter5>934</Meter5>
-<Meter6>1344</Meter6>
+<Meter6>1347</Meter6>
 <Meter7>3847</Meter7>
 <Meter8>3356</Meter8>
 <Meter9>2404</Meter9>
@@ -73,9 +73,9 @@
 <Meter12>381</Meter12>
 <Meter13>135</Meter13>
 </NumSongsPlayedByMeter>
-<NumTotalSongsPlayed>10180</NumTotalSongsPlayed>
+<NumTotalSongsPlayed>10183</NumTotalSongsPlayed>
 <NumStagesPassedByPlayMode>
-<Regular>11454</Regular>
+<Regular>11455</Regular>
 <Nonstop>42</Nonstop>
 <Rave>19</Rave>
 </NumStagesPassedByPlayMode>
@@ -83,7 +83,7 @@
 <Tier01>3</Tier01>
 <Tier02>214</Tier02>
 <Tier03>516</Tier03>
-<Tier04>1068</Tier04>
+<Tier04>1069</Tier04>
 <Tier05>732</Tier05>
 <Tier06>606</Tier06>
 <Tier07>790</Tier07>
@@ -41194,9 +41194,59 @@
 <Song Dir='Songs/Dance Dance Revolution 3rd Mix/IF YOU CAN SAY GOODBYE/'>
 <Steps Difficulty='Hard' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>1</NumTimesPlayed>
-<LastPlayed>2005-06-27</LastPlayed>
-<HighGrade>Tier09</HighGrade>
+<NumTimesPlayed>2</NumTimesPlayed>
+<LastPlayed>2026-10-15</LastPlayed>
+<HighGrade>Tier04</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier04</Grade>
+<Score>36</Score>
+<PercentDP>0.972000</PercentDP>
+<SurviveSeconds>87.008545</SurviveSeconds>
+<MaxCombo>1631</MaxCombo>
+<StageAward>SingleDigitW3</StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m375, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-15 02:04:14</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>0</Miss>
+<W5>0</W5>
+<W4>0</W4>
+<W3>2</W3>
+<W2>29</W2>
+<W1>219</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>0</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.988679</Stream>
+<Voltage>0.994976</Voltage>
+<Air>1.000000</Air>
+<Freeze>0.000000</Freeze>
+<Chaos>0.972000</Chaos>
+<Notes>265.000000</Notes>
+<TapsAndHolds>250</TapsAndHolds>
+<Jumps>15</Jumps>
+<Holds>0</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name>JILL</Name>
 <Grade>Tier09</Grade>
@@ -41762,8 +41812,8 @@
 <Song Dir='Songs/Dance Dance Revolution 3rd Mix/KEEP ON MOVIN&apos;/'>
 <Steps Difficulty='Hard' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>1</NumTimesPlayed>
-<LastPlayed>2005-06-27</LastPlayed>
+<NumTimesPlayed>3</NumTimesPlayed>
+<LastPlayed>2026-10-15</LastPlayed>
 <HighGrade>Tier08</HighGrade>
 <HighScore>
 <Name>JILL</Name>
@@ -296877,7 +296927,7 @@
 <CaloriesBurned Date='2026-09-25'>27.117603</CaloriesBurned>
 <CaloriesBurned Date='2026-10-02'>12.594808</CaloriesBurned>
 <CaloriesBurned Date='2026-10-14'>83.243393</CaloriesBurned>
-<CaloriesBurned Date='2026-10-15'>241.960052</CaloriesBurned>
+<CaloriesBurned Date='2026-10-15'>265.858490</CaloriesBurned>
 </CalorieData>
 <CoinData>
 <LastDays>

@@ -1,3 +1,22 @@
+{% set itg_grade_display = {
+    'Tier01': ('★★★★', 'grade-stars'),
+    'Tier02': ('★★★', 'grade-stars'),
+    'Tier03': ('★★', 'grade-stars'),
+    'Tier04': ('★', 'grade-stars'),
+    'Tier05': ('S+', 'grade-s'),
+    'Tier06': ('S', 'grade-s'),
+    'Tier07': ('S-', 'grade-s'),
+    'Tier08': ('A+', 'grade-a'),
+    'Tier09': ('A', 'grade-a'),
+    'Tier10': ('A-', 'grade-a'),
+    'Tier11': ('B+', 'grade-b'),
+    'Tier12': ('B', 'grade-b'),
+    'Tier13': ('B-', 'grade-b'),
+    'Tier14': ('C+', 'grade-c'),
+    'Tier15': ('C', 'grade-c'),
+    'Tier16': ('C-', 'grade-c'),
+    'Tier17': ('D', 'grade-d')
+} %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +31,11 @@
             --text-muted: #94a3b8;
             --accent-blue: #3b82f6;
             --accent-gold: #f59e0b;
-            --diff-beginner: #38bdf8;
+            --diff-beginner: #c084fc;
             --diff-easy: #4ade80;
             --diff-medium: #facc15;
             --diff-hard: #f87171;
-            --diff-challenge: #c084fc;
+            --diff-challenge: #38bdf8;
             --diff-edit: #a1a1aa;
         }
         body {
@@ -115,7 +134,7 @@
         .diff-easy { background-color: var(--diff-easy); }
         .diff-medium { background-color: var(--diff-medium); }
         .diff-hard { background-color: var(--diff-hard); }
-        .diff-challenge { background-color: var(--diff-challenge); color: #fff; }
+        .diff-challenge { background-color: var(--diff-challenge); }
         .diff-edit { background-color: var(--diff-edit); }
 
         .leaderboard-drawer { display: none; margin-top: 12px; padding: 12px; border-radius: 6px; background-color: rgba(15, 17, 26, 0.6); border-left: 4px solid transparent; }
@@ -134,6 +153,18 @@
         .score-table td { padding: 8px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
         .score-table tr:last-child td { border-bottom: none; }
         .score-table tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.01); }
+        .score-award { font-size: 0.75rem; font-weight: 700; margin-left: 0.35rem; }
+        .award-ffc { color: #7dd3fc; }
+        .award-fec { color: #fbbf24; }
+        .award-fc { color: #4ade80; }
+        .score-grade { font-size: 0.75rem; font-weight: 700; margin-left: 0.35rem; }
+        .grade-stars { color: #fbbf24; }
+        .grade-s { color: #acaaab; }
+        .grade-a { color: #ff0011; }
+        .grade-b { color: #ffea00; }
+        .grade-c { color: #5fe400; }
+        .grade-d { color: #854200; }
+        .grade-unmapped { color: var(--text-muted); }
         
         .standings-table { width: 100%; border-collapse: collapse; background-color: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid #2d314d; }
         .standings-table th { background-color: #24283f; color: #f1f5f9; text-align: left; padding: 14px 18px; font-weight: 600; }
@@ -163,6 +194,8 @@
         .latest-play-empty { color: var(--text-muted); text-align: center; }
         .player-link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.35); text-underline-offset: 3px; cursor: pointer; }
         .player-link:hover, .player-link:focus-visible { color: #ffd18a; text-decoration-color: currentColor; }
+        .player-score-leaderboard-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.35); text-underline-offset: 3px; }
+        .player-score-leaderboard-link:hover, .player-score-leaderboard-link:focus-visible { color: #ffd18a; text-decoration-color: currentColor; }
         .player-profile-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
         .player-profile-heading h2 { margin: 0; font-size: 1.6rem; color: #ffffff; }
         .player-profile-heading p { margin: 6px 0 0; color: var(--text-muted); }
@@ -238,6 +271,7 @@
                                     <div class="song-diffs">
                                         {% for diff in song.difficulties %}
                                         <button class="badge-btn diff-{{ diff.lower() }}" 
+                                                data-leaderboard-target="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}"
                                                 onclick="toggleLeaderboard('drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}', this)">
                                             {{ diff }}
                                         </button>
@@ -246,7 +280,12 @@
                                 </div>
                                 
                                 {% for diff, entries in song.leaderboards.items() %}
-                                <div id="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}" class="leaderboard-drawer title-{{ diff.lower() }}">
+                                <div id="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}"
+                                     class="leaderboard-drawer title-{{ diff.lower() }}"
+                                     data-section="{{ section.section_name }}"
+                                     data-folder="{{ folder.folder_name }}"
+                                     data-song="{{ song.song_title }}"
+                                     data-difficulty="{{ diff }}">
                                     <p class="drawer-title title-{{ diff.lower() }}">🏆 {{ diff }} Leaderboard</p>
                                     <table class="score-table">
                                         <thead>
@@ -262,7 +301,7 @@
                                             <tr>
                                                 <td class="bold text-muted">#{{ loop.index }}</td>
                                                 <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
-                                                <td class="bold font-mono">{{ entry.percentage }}% <span style="font-size:0.75rem; font-weight:normal;" class="text-muted">({{ entry.grade }})</span></td>
+                                                {% set grade_display = itg_grade_display.get(entry.grade) %}<td class="bold font-mono">{{ entry.percentage }}% <span class="score-grade {{ grade_display[1] if grade_display else 'grade-unmapped' }}">{{ grade_display[0] if grade_display else entry.grade }}</span>{% if entry.award == 'FullComboW1' %} <span class="score-award award-ffc">FFC</span>{% elif entry.award == 'FullComboW2' %} <span class="score-award award-fec">FEC</span>{% elif entry.award == 'FullComboW3' %} <span class="score-award award-fc">FC</span>{% endif %}</td>
                                                 <td class="text-muted font-mono" style="font-size:0.8rem;">{{ entry.date }}</td>
                                             </tr>
                                             {% endfor %}
@@ -388,8 +427,8 @@
                             <td class="latest-play-date">{{ entry.date }}</td>
                             <td>{{ entry.section }}</td>
                             <td>{{ entry.folder }}</td>
-                            <td>{{ entry.song }}</td>
-                            <td>{{ entry.difficulty }}</td>
+                            <td><span data-latest-play-link data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}">{{ entry.song }}</span></td>
+                            <td><span data-latest-play-link data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}">{{ entry.difficulty }}</span></td>
                             <td><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
                             <td class="latest-play-score">{{ entry.percentage }}%</td>
                             {% if mode == 'all' %}
@@ -452,7 +491,18 @@
     const playerProfileData = JSON.parse(document.getElementById('player-profile-data').textContent);
     const playerProfiles = playerProfileData.profiles;
     const playerProfileScoreLimit = playerProfileData.score_limit;
+    const leaderboardTargets = new Map();
+    document.querySelectorAll('.leaderboard-drawer').forEach(drawer => {
+        const key = JSON.stringify([
+            drawer.dataset.section,
+            drawer.dataset.folder,
+            drawer.dataset.song,
+            drawer.dataset.difficulty
+        ]);
+        leaderboardTargets.set(key, drawer.id);
+    });
     let currentView = 'library';
+    let profileReturnView = 'library';
     let currentPlayerProfile = null;
     let currentProfileScoreView = 'latest';
     let currentProfileScoreScope = 'all';
@@ -462,8 +512,19 @@
         bar.style.width = `${bar.dataset.barWidth}%`;
     });
 
-    function switchView(viewName) {
+    function updateShareableHash(hash, replace = false) {
+        if (window.location.hash === hash) return;
+        const url = hash || `${window.location.pathname}${window.location.search}`;
+        if (replace) {
+            window.history.replaceState(null, '', url);
+        } else {
+            window.history.pushState(null, '', url);
+        }
+    }
+
+    function switchView(viewName, updateUrl = true) {
         if (viewName !== 'player-profile') currentView = viewName;
+        if (updateUrl && viewName !== 'player-profile') updateShareableHash('');
         const searchInput = document.getElementById('globalSearch');
         document.getElementById('libraryView').classList.toggle('active', viewName === 'library');
         document.getElementById('standingsView').classList.toggle('active', viewName === 'standings');
@@ -482,10 +543,33 @@
         }
     }
 
-    function openPlayerProfile(playerId) {
+    function createProfileLeaderboardLink(score, label) {
+        const key = JSON.stringify([score.section, score.folder, score.song, score.difficulty]);
+        const targetId = leaderboardTargets.get(key);
+        if (!targetId) return label;
+
+        const link = document.createElement('a');
+        link.className = 'player-score-leaderboard-link';
+        link.href = `#${targetId}`;
+        link.dataset.leaderboardTarget = targetId;
+        link.textContent = label ?? '';
+        return link;
+    }
+
+    document.querySelectorAll('[data-latest-play-link]').forEach(element => {
+        const link = createProfileLeaderboardLink(element.dataset, element.textContent);
+        if (link instanceof Node) {
+            element.replaceWith(link);
+        } else {
+            element.replaceWith(document.createTextNode(link));
+        }
+    });
+
+    function openPlayerProfile(playerId, updateUrl = true) {
         const profile = playerProfiles[Number(playerId)];
         if (!profile) return;
 
+        if (updateUrl) profileReturnView = currentView;
         currentPlayerProfile = profile;
         document.getElementById('playerProfileName').textContent = profile.player_name;
         document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
@@ -496,10 +580,12 @@
         populateProfileFilterRows('playerMixCounts', profile.mix_counts, 'section');
         renderProfileScores();
         switchView('player-profile');
+        if (updateUrl) updateShareableHash(`#player-${Number(playerId)}`);
     }
 
     function returnFromPlayerProfile() {
-        switchView(currentView);
+        switchView(currentView, false);
+        updateShareableHash('', true);
     }
 
     function populatePlayerRows(bodyId, entries, getCells, columnCount) {
@@ -520,7 +606,11 @@
             const row = document.createElement('tr');
             getCells(entry, index).forEach(value => {
                 const cell = document.createElement('td');
-                cell.textContent = value ?? '';
+                if (value instanceof Node) {
+                    cell.appendChild(value);
+                } else {
+                    cell.textContent = value ?? '';
+                }
                 row.appendChild(cell);
             });
             body.appendChild(row);
@@ -603,8 +693,8 @@
         });
         document.getElementById('playerScoresTitle').textContent = isLatest ? 'Latest Scores' : 'Top Scores by Percentage';
         const getCells = isLatest
-            ? score => [score.date, score.section, score.folder, score.song, score.difficulty, `${score.percentage}%`]
-            : (score, index) => [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, score.song, score.difficulty, score.date];
+            ? score => [score.date, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), `${score.percentage}%`]
+            : (score, index) => [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), score.date];
         populatePlayerRows('playerScores', visibleEntries, (score, index) => {
             const cells = getCells(score, index);
             if (isAll) cells.push(`#${score.position}`);
@@ -633,9 +723,58 @@
         renderProfileScores();
     }
 
+    function openLeaderboard(drawerId, updateUrl = true) {
+        const drawer = document.getElementById(drawerId);
+        const card = drawer?.closest('.song-card');
+        const folder = drawer?.closest('.folder-section');
+        const section = drawer?.closest('.macro-section');
+        if (!drawer || !card || !folder || !section) {
+            console.error('Unable to open the requested leaderboard.');
+            return;
+        }
+
+        document.getElementById('globalSearch').value = '';
+        switchView('library', false);
+        section.open = true;
+        folder.open = true;
+        card.querySelectorAll('.leaderboard-drawer').forEach(item => item.classList.remove('active-drawer'));
+        card.querySelectorAll('.badge-btn').forEach(button => button.classList.remove('active-toggle'));
+        drawer.classList.add('active-drawer');
+        card.querySelector(`[data-leaderboard-target="${drawer.id}"]`)?.classList.add('active-toggle');
+        if (updateUrl) updateShareableHash(`#${drawer.id}`);
+        drawer.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+
+    function restoreLocationFromHash() {
+        const hash = window.location.hash.slice(1);
+        if (hash.startsWith('player-')) {
+            const playerId = hash.slice('player-'.length);
+            if (/^\d+$/.test(playerId)) openPlayerProfile(playerId, false);
+            return;
+        }
+        if (hash.startsWith('drawer-')) openLeaderboard(hash, false);
+        else if (!hash) {
+            const returnView = document.getElementById('playerProfileView').classList.contains('active')
+                ? profileReturnView
+                : currentView;
+            switchView(returnView, false);
+            document.querySelectorAll('.leaderboard-drawer.active-drawer').forEach(drawer => {
+                drawer.classList.remove('active-drawer');
+                drawer.closest('.song-card')?.querySelectorAll('.badge-btn.active-toggle').forEach(button => {
+                    button.classList.remove('active-toggle');
+                });
+            });
+        }
+    }
+
     document.addEventListener('click', event => {
         const playerLink = event.target.closest('.player-link');
         if (playerLink) openPlayerProfile(playerLink.dataset.playerId);
+        const leaderboardLink = event.target.closest('.player-score-leaderboard-link');
+        if (leaderboardLink) {
+            event.preventDefault();
+            openLeaderboard(leaderboardLink.dataset.leaderboardTarget);
+        }
         const filterButton = event.target.closest('.player-profile-filter-button');
         if (filterButton) togglePlayerProfileFilter(filterButton.dataset.profileFilterKind, filterButton.dataset.profileFilterValue);
     });
@@ -679,6 +818,9 @@
         if (!wasActive) {
             targetDrawer.classList.add('active-drawer');
             buttonElement.classList.add('active-toggle');
+            updateShareableHash(`#${drawerId}`);
+        } else if (window.location.hash === `#${drawerId}`) {
+            updateShareableHash('');
         }
     }
 
@@ -727,6 +869,9 @@
             if (query === '') section.open = false; // Reset Section when field is cleared
         });
     }
+
+    window.addEventListener('hashchange', restoreLocationFromHash);
+    restoreLocationFromHash();
 </script>
 <script>
 document.addEventListener('click', function (e) {

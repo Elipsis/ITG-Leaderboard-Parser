@@ -100,6 +100,10 @@
       - Challenge
       leaderboards:
         Challenge:
+        - player: Elipsis
+          percentage: '90.08'
+          grade: Tier07
+          date: '2026-10-14 23:25:52'
         - player: LONE
           percentage: '88.31'
           grade: Tier08
@@ -152,6 +156,10 @@
       - Challenge
       leaderboards:
         Challenge:
+        - player: Elipsis
+          percentage: '90.82'
+          grade: Tier07
+          date: '2026-10-14 23:27:47'
         - player: LONE
           percentage: '87.91'
           grade: Tier08
@@ -586,6 +594,10 @@
       - Challenge
       leaderboards:
         Challenge:
+        - player: Elipsis
+          percentage: '95.45'
+          grade: Tier05
+          date: '2026-10-15 00:31:40'
         - player: LONE
           percentage: '83.86'
           grade: Tier09
@@ -958,6 +970,10 @@
       - Hard
       leaderboards:
         Hard:
+        - player: Elipsis
+          percentage: '96.22'
+          grade: Tier04
+          date: '2026-10-15 00:33:53'
         - player: LONE
           percentage: '86.11'
           grade: Tier08
@@ -996,6 +1012,10 @@
       - Hard
       leaderboards:
         Hard:
+        - player: Elipsis
+          percentage: '97.41'
+          grade: Tier04
+          date: '2026-10-15 00:35:46'
         - player: MXI
           percentage: '86.35'
           grade: Tier08
@@ -7356,19 +7376,19 @@
           percentage: '71.06'
           grade: Tier13
           date: '2011-01-07 23:20:21'
+        - player: Elipsis
+          percentage: '70.73'
+          grade: Tier13
+          date: '2026-02-24 20:42:56'
         - player: MMM
           percentage: '70.24'
           grade: Tier13
-          date: '2017-05-03 14:37:54'
+          date: '2017-05-03 14:37:55'
         Hard:
         - player: Elipsis
           percentage: '96.55'
           grade: Tier04
           date: '2017-05-03 14:37:55'
-        - player: Elipsis
-          percentage: '90.00'
-          grade: Tier07
-          date: '2026-02-24 20:42:56'
         - player: LONE
           percentage: '69.16'
           grade: Tier13
@@ -21667,6 +21687,10 @@
           grade: Tier07
           date: '2011-10-29 14:44:17'
         Challenge:
+        - player: Elipsis
+          percentage: '91.20'
+          grade: Tier07
+          date: '2026-10-14 23:22:07'
         - player: LONE
           percentage: '77.59'
           grade: Tier11
@@ -22015,6 +22039,10 @@
           grade: Tier11
           date: '2013-09-20 10:41:52'
         Challenge:
+        - player: Elipsis
+          percentage: '86.11'
+          grade: Tier08
+          date: '2026-10-15 01:02:26'
         - player: LONE
           percentage: '81.45'
           grade: Tier10
@@ -22214,6 +22242,10 @@
           grade: Tier11
           date: '2013-09-20 10:44:45'
         Challenge:
+        - player: Elipsis
+          percentage: '90.04'
+          grade: Tier07
+          date: '2026-10-15 01:05:46'
         - player: LONE
           percentage: '78.40'
           grade: Tier11

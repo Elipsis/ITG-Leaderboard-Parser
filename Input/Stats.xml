@@ -18,21 +18,21 @@
 <Song Dir=''/>
 <Course/>
 <CurrentCombo>0</CurrentCombo>
-<TotalSessions>85</TotalSessions>
-<TotalSessionSeconds>1472</TotalSessionSeconds>
-<TotalGameplaySeconds>916849</TotalGameplaySeconds>
-<TotalCaloriesBurned>955342.937500</TotalCaloriesBurned>
+<TotalSessions>86</TotalSessions>
+<TotalSessionSeconds>1844</TotalSessionSeconds>
+<TotalGameplaySeconds>917072</TotalGameplaySeconds>
+<TotalCaloriesBurned>955398.625000</TotalCaloriesBurned>
 <GoalType>0</GoalType>
 <GoalCalories>0</GoalCalories>
 <GoalSeconds>0</GoalSeconds>
 <LastPlayedMachineGuid>02200529</LastPlayedMachineGuid>
-<LastPlayedDate>2026-10-14</LastPlayedDate>
-<TotalDancePoints>16813709</TotalDancePoints>
+<LastPlayedDate>2026-10-15</LastPlayedDate>
+<TotalDancePoints>16816663</TotalDancePoints>
 <NumExtraStagesPassed>0</NumExtraStagesPassed>
 <NumExtraStagesFailed>0</NumExtraStagesFailed>
 <NumToasties>940</NumToasties>
-<TotalTapsAndHolds>4138897</TotalTapsAndHolds>
-<TotalJumps>314835</TotalJumps>
+<TotalTapsAndHolds>4139511</TotalTapsAndHolds>
+<TotalJumps>314933</TotalJumps>
 <TotalHolds>214325</TotalHolds>
 <TotalRolls>1960</TotalRolls>
 <TotalMines>57072</TotalMines>
@@ -41,21 +41,21 @@
 <DefaultModifiers/>
 <Unlocks/>
 <NumSongsPlayedByPlayMode>
-<Regular>15187</Regular>
+<Regular>15190</Regular>
 <Nonstop>530</Nonstop>
 <Rave>24</Rave>
 </NumSongsPlayedByPlayMode>
 <NumSongsPlayedByStyle>
 <Style Game='dance' Style='double'>318</Style>
-<Style Game='dance' Style='single'>4283</Style>
+<Style Game='dance' Style='single'>4286</Style>
 <Style Game='dance' Style='versus'>11140</Style>
 </NumSongsPlayedByStyle>
 <NumSongsPlayedByDifficulty>
 <Beginner>358</Beginner>
 <Easy>1437</Easy>
 <Medium>2267</Medium>
-<Hard>9037</Hard>
-<Challenge>2578</Challenge>
+<Hard>9039</Hard>
+<Challenge>2579</Challenge>
 <Edit>64</Edit>
 </NumSongsPlayedByDifficulty>
 <NumSongsPlayedByMeter>
@@ -63,19 +63,19 @@
 <Meter2>148</Meter2>
 <Meter3>591</Meter3>
 <Meter4>879</Meter4>
-<Meter5>933</Meter5>
+<Meter5>934</Meter5>
 <Meter6>1343</Meter6>
-<Meter7>3844</Meter7>
-<Meter8>3355</Meter8>
+<Meter7>3845</Meter7>
+<Meter8>3356</Meter8>
 <Meter9>2401</Meter9>
 <Meter10>1017</Meter10>
 <Meter11>329</Meter11>
 <Meter12>381</Meter12>
 <Meter13>135</Meter13>
 </NumSongsPlayedByMeter>
-<NumTotalSongsPlayed>10171</NumTotalSongsPlayed>
+<NumTotalSongsPlayed>10174</NumTotalSongsPlayed>
 <NumStagesPassedByPlayMode>
-<Regular>11446</Regular>
+<Regular>11449</Regular>
 <Nonstop>42</Nonstop>
 <Rave>19</Rave>
 </NumStagesPassedByPlayMode>
@@ -83,8 +83,8 @@
 <Tier01>3</Tier01>
 <Tier02>213</Tier02>
 <Tier03>516</Tier03>
-<Tier04>1065</Tier04>
-<Tier05>730</Tier05>
+<Tier04>1067</Tier04>
+<Tier05>731</Tier05>
 <Tier06>606</Tier06>
 <Tier07>789</Tier07>
 <Tier08>844</Tier08>
@@ -19385,9 +19385,59 @@
 <Song Dir='Songs/Dance Dance Revolution 2nd Mix/BRILLIANT 2U/'>
 <Steps Difficulty='Challenge' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>1</NumTimesPlayed>
-<LastPlayed>2011-05-22</LastPlayed>
-<HighGrade>Tier09</HighGrade>
+<NumTimesPlayed>2</NumTimesPlayed>
+<LastPlayed>2026-10-15</LastPlayed>
+<HighGrade>Tier05</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier05</Grade>
+<Score>45</Score>
+<PercentDP>0.954500</PercentDP>
+<SurviveSeconds>83.130043</SurviveSeconds>
+<MaxCombo>544</MaxCombo>
+<StageAward>SingleDigitW3</StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m375, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-15 00:31:40</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>0</Miss>
+<W5>0</W5>
+<W4>0</W4>
+<W3>2</W3>
+<W2>54</W2>
+<W1>208</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>0</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.993243</Stream>
+<Voltage>1.000000</Voltage>
+<Air>1.000000</Air>
+<Freeze>0.000000</Freeze>
+<Chaos>0.954545</Chaos>
+<Notes>296.000000</Notes>
+<TapsAndHolds>264</TapsAndHolds>
+<Jumps>32</Jumps>
+<Holds>0</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name>LONE</Name>
 <Grade>Tier09</Grade>
@@ -23118,9 +23168,59 @@
 <Song Dir='Songs/Dance Dance Revolution 2nd Mix/Jam Jam Reggae/'>
 <Steps Difficulty='Hard' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>1</NumTimesPlayed>
-<LastPlayed>2011-08-13</LastPlayed>
-<HighGrade>Tier08</HighGrade>
+<NumTimesPlayed>2</NumTimesPlayed>
+<LastPlayed>2026-10-15</LastPlayed>
+<HighGrade>Tier04</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier04</Grade>
+<Score>33</Score>
+<PercentDP>0.962200</PercentDP>
+<SurviveSeconds>72.282341</SurviveSeconds>
+<MaxCombo>760</MaxCombo>
+<StageAward>SingleDigitW3</StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m375, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-15 00:33:53</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>0</Miss>
+<W5>0</W5>
+<W4>0</W4>
+<W3>3</W3>
+<W2>25</W2>
+<W1>152</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>0</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.986111</Stream>
+<Voltage>1.000000</Voltage>
+<Air>1.000000</Air>
+<Freeze>0.000000</Freeze>
+<Chaos>0.962222</Chaos>
+<Notes>216.000000</Notes>
+<TapsAndHolds>180</TapsAndHolds>
+<Jumps>36</Jumps>
+<Holds>0</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name>LONE</Name>
 <Grade>Tier08</Grade>
@@ -23450,9 +23550,59 @@
 <Song Dir='Songs/Dance Dance Revolution 2nd Mix/Keep On Movin&apos;/'>
 <Steps Difficulty='Hard' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>4</NumTimesPlayed>
-<LastPlayed>2025-12-21</LastPlayed>
-<HighGrade>Tier08</HighGrade>
+<NumTimesPlayed>5</NumTimesPlayed>
+<LastPlayed>2026-10-15</LastPlayed>
+<HighGrade>Tier04</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier04</Grade>
+<Score>19</Score>
+<PercentDP>0.974100</PercentDP>
+<SurviveSeconds>68.327934</SurviveSeconds>
+<MaxCombo>960</MaxCombo>
+<StageAward>SingleDigitW3</StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m375, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-15 00:35:46</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>0</Miss>
+<W5>0</W5>
+<W4>0</W4>
+<W3>2</W3>
+<W2>16</W2>
+<W1>152</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>0</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.990000</Stream>
+<Voltage>1.000000</Voltage>
+<Air>1.000000</Air>
+<Freeze>0.000000</Freeze>
+<Chaos>0.974118</Chaos>
+<Notes>200.000000</Notes>
+<TapsAndHolds>170</TapsAndHolds>
+<Jumps>30</Jumps>
+<Holds>0</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name></Name>
 <Grade>Tier08</Grade>
@@ -296477,6 +296627,7 @@
 <CaloriesBurned Date='2026-09-25'>27.117603</CaloriesBurned>
 <CaloriesBurned Date='2026-10-02'>12.594808</CaloriesBurned>
 <CaloriesBurned Date='2026-10-14'>83.243393</CaloriesBurned>
+<CaloriesBurned Date='2026-10-15'>55.676414</CaloriesBurned>
 </CalorieData>
 <CoinData>
 <LastDays>
@@ -296492,8 +296643,8 @@
 <ThisWeek>0</ThisWeek>
 <LastWeek>0</LastWeek>
 <Week02Ago>0</Week02Ago>
-<Week03Ago>0</Week03Ago>
-<Week04Ago>1</Week04Ago>
+<Week03Ago>1</Week03Ago>
+<Week04Ago>0</Week04Ago>
 <Week05Ago>0</Week05Ago>
 <Week06Ago>0</Week06Ago>
 <Week07Ago>0</Week07Ago>

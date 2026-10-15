@@ -274,7 +274,9 @@
                                     <span class="song-title">{{ song.song_title }}</span>
                                 </div>
                                 <div class="song-difficulty-rows">
+                                    {% set doubles_with_scores = song.leaderboards.values() | selectattr("type", "equalto", "double") | selectattr("entries") | list %}
                                     {% for chart_type, type_label, difficulties in [("single", "Singles", song.difficulties_single), ("double", "Doubles", song.difficulties_double)] %}
+                                    {% if chart_type == "single" or doubles_with_scores %}
                                     <div class="difficulty-row">
                                         <span class="difficulty-row-label">{{ type_label }}</span>
                                         <div class="song-diffs">
@@ -288,6 +290,7 @@
                                             {% endfor %}
                                         </div>
                                     </div>
+                                    {% endif %}
                                     {% endfor %}
                                 </div>
 

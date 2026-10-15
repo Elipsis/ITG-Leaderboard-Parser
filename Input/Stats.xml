@@ -18,22 +18,22 @@
 <Song Dir=''/>
 <Course/>
 <CurrentCombo>0</CurrentCombo>
-<TotalSessions>84</TotalSessions>
-<TotalSessionSeconds>893</TotalSessionSeconds>
-<TotalGameplaySeconds>916556</TotalGameplaySeconds>
-<TotalCaloriesBurned>955259.687500</TotalCaloriesBurned>
+<TotalSessions>85</TotalSessions>
+<TotalSessionSeconds>1472</TotalSessionSeconds>
+<TotalGameplaySeconds>916849</TotalGameplaySeconds>
+<TotalCaloriesBurned>955342.937500</TotalCaloriesBurned>
 <GoalType>0</GoalType>
 <GoalCalories>0</GoalCalories>
 <GoalSeconds>0</GoalSeconds>
 <LastPlayedMachineGuid>02200529</LastPlayedMachineGuid>
 <LastPlayedDate>2026-10-14</LastPlayedDate>
-<TotalDancePoints>16809500</TotalDancePoints>
+<TotalDancePoints>16813709</TotalDancePoints>
 <NumExtraStagesPassed>0</NumExtraStagesPassed>
 <NumExtraStagesFailed>0</NumExtraStagesFailed>
 <NumToasties>940</NumToasties>
-<TotalTapsAndHolds>4137985</TotalTapsAndHolds>
-<TotalJumps>314770</TotalJumps>
-<TotalHolds>214312</TotalHolds>
+<TotalTapsAndHolds>4138897</TotalTapsAndHolds>
+<TotalJumps>314835</TotalJumps>
+<TotalHolds>214325</TotalHolds>
 <TotalRolls>1960</TotalRolls>
 <TotalMines>57072</TotalMines>
 <TotalHands>3199</TotalHands>
@@ -41,13 +41,13 @@
 <DefaultModifiers/>
 <Unlocks/>
 <NumSongsPlayedByPlayMode>
-<Regular>15184</Regular>
+<Regular>15187</Regular>
 <Nonstop>530</Nonstop>
 <Rave>24</Rave>
 </NumSongsPlayedByPlayMode>
 <NumSongsPlayedByStyle>
 <Style Game='dance' Style='double'>318</Style>
-<Style Game='dance' Style='single'>4280</Style>
+<Style Game='dance' Style='single'>4283</Style>
 <Style Game='dance' Style='versus'>11140</Style>
 </NumSongsPlayedByStyle>
 <NumSongsPlayedByDifficulty>
@@ -55,7 +55,7 @@
 <Easy>1437</Easy>
 <Medium>2267</Medium>
 <Hard>9037</Hard>
-<Challenge>2575</Challenge>
+<Challenge>2578</Challenge>
 <Edit>64</Edit>
 </NumSongsPlayedByDifficulty>
 <NumSongsPlayedByMeter>
@@ -66,16 +66,16 @@
 <Meter5>933</Meter5>
 <Meter6>1343</Meter6>
 <Meter7>3844</Meter7>
-<Meter8>3353</Meter8>
-<Meter9>2400</Meter9>
+<Meter8>3355</Meter8>
+<Meter9>2401</Meter9>
 <Meter10>1017</Meter10>
 <Meter11>329</Meter11>
 <Meter12>381</Meter12>
 <Meter13>135</Meter13>
 </NumSongsPlayedByMeter>
-<NumTotalSongsPlayed>10168</NumTotalSongsPlayed>
+<NumTotalSongsPlayed>10171</NumTotalSongsPlayed>
 <NumStagesPassedByPlayMode>
-<Regular>11443</Regular>
+<Regular>11446</Regular>
 <Nonstop>42</Nonstop>
 <Rave>19</Rave>
 </NumStagesPassedByPlayMode>
@@ -86,7 +86,7 @@
 <Tier04>1065</Tier04>
 <Tier05>730</Tier05>
 <Tier06>606</Tier06>
-<Tier07>786</Tier07>
+<Tier07>789</Tier07>
 <Tier08>844</Tier08>
 <Tier09>791</Tier09>
 <Tier10>814</Tier10>
@@ -14115,9 +14115,59 @@
 <Song Dir='Songs/Dance Dance Revolution 1st Mix/HAVE YOU NEVER BEEN MELLOW/'>
 <Steps Difficulty='Challenge' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>28</NumTimesPlayed>
-<LastPlayed>2003-12-31</LastPlayed>
-<HighGrade>Tier08</HighGrade>
+<NumTimesPlayed>29</NumTimesPlayed>
+<LastPlayed>2026-10-14</LastPlayed>
+<HighGrade>Tier07</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier07</Grade>
+<Score>57</Score>
+<PercentDP>0.900800</PercentDP>
+<SurviveSeconds>86.244514</SurviveSeconds>
+<MaxCombo>609</MaxCombo>
+<StageAward></StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m375, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-14 23:25:52</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>1</Miss>
+<W5>0</W5>
+<W4>3</W4>
+<W3>12</W3>
+<W2>49</W2>
+<W1>171</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>0</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.930328</Stream>
+<Voltage>0.120571</Voltage>
+<Air>0.875000</Air>
+<Freeze>0.000000</Freeze>
+<Chaos>0.900847</Chaos>
+<Notes>243.000000</Notes>
+<TapsAndHolds>235</TapsAndHolds>
+<Jumps>8</Jumps>
+<Holds>0</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name>LONE</Name>
 <Grade>Tier08</Grade>
@@ -14746,9 +14796,59 @@
 <Song Dir='Songs/Dance Dance Revolution 1st Mix/LET&apos;S GET DOWN/'>
 <Steps Difficulty='Challenge' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>27</NumTimesPlayed>
-<LastPlayed>2026-10-02</LastPlayed>
-<HighGrade>Tier08</HighGrade>
+<NumTimesPlayed>28</NumTimesPlayed>
+<LastPlayed>2026-10-14</LastPlayed>
+<HighGrade>Tier07</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier07</Grade>
+<Score>65</Score>
+<PercentDP>0.908200</PercentDP>
+<SurviveSeconds>91.283142</SurviveSeconds>
+<MaxCombo>248</MaxCombo>
+<StageAward></StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m375, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-14 23:27:47</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>1</Miss>
+<W5>0</W5>
+<W4>0</W4>
+<W3>16</W3>
+<W2>58</W2>
+<W1>193</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>0</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.933099</Stream>
+<Voltage>0.862871</Voltage>
+<Air>1.000000</Air>
+<Freeze>0.000000</Freeze>
+<Chaos>0.908209</Chaos>
+<Notes>283.000000</Notes>
+<TapsAndHolds>267</TapsAndHolds>
+<Jumps>16</Jumps>
+<Holds>0</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name>LONE</Name>
 <Grade>Tier08</Grade>
@@ -248590,9 +248690,59 @@
 </Steps>
 <Steps Difficulty='Challenge' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>1</NumTimesPlayed>
-<LastPlayed>2012-03-20</LastPlayed>
-<HighGrade>Tier11</HighGrade>
+<NumTimesPlayed>2</NumTimesPlayed>
+<LastPlayed>2026-10-14</LastPlayed>
+<HighGrade>Tier07</HighGrade>
+<HighScore>
+<Name>...</Name>
+<Grade>Tier07</Grade>
+<Score>77</Score>
+<PercentDP>0.912000</PercentDP>
+<SurviveSeconds>116.014351</SurviveSeconds>
+<MaxCombo>586</MaxCombo>
+<StageAward>FullComboW3</StageAward>
+<PeakComboAward></PeakComboAward>
+<Modifiers>NoHideLights, m400, FailImmediateContinue, Overhead</Modifiers>
+<DateTime>2026-10-14 23:22:07</DateTime>
+<PlayerGuid>1ca745bb10cd5365</PlayerGuid>
+<MachineGuid>02200529</MachineGuid>
+<ProductID>1</ProductID>
+<TapNoteScores>
+<HitMine>0</HitMine>
+<AvoidMine>0</AvoidMine>
+<CheckpointMiss>0</CheckpointMiss>
+<Miss>0</Miss>
+<W5>0</W5>
+<W4>0</W4>
+<W3>22</W3>
+<W2>120</W2>
+<W1>268</W1>
+<CheckpointHit>0</CheckpointHit>
+</TapNoteScores>
+<HoldNoteScores>
+<LetGo>0</LetGo>
+<Held>13</Held>
+<MissedHold>0</MissedHold>
+</HoldNoteScores>
+<RadarValues>
+<Stream>0.949002</Stream>
+<Voltage>1.000000</Voltage>
+<Air>0.975610</Air>
+<Freeze>1.000000</Freeze>
+<Chaos>0.912057</Chaos>
+<Notes>451.000000</Notes>
+<TapsAndHolds>410</TapsAndHolds>
+<Jumps>41</Jumps>
+<Holds>13</Holds>
+<Mines>0</Mines>
+<Hands>0</Hands>
+<Rolls>0</Rolls>
+<Lifts>0</Lifts>
+<Fakes>0</Fakes>
+</RadarValues>
+<LifeRemainingSeconds>0.000000</LifeRemainingSeconds>
+<Disqualified>0</Disqualified>
+</HighScore>
 <HighScore>
 <Name>LONE</Name>
 <Grade>Tier11</Grade>
@@ -296326,6 +296476,7 @@
 <CaloriesBurned Date='2026-05-09'>358.806122</CaloriesBurned>
 <CaloriesBurned Date='2026-09-25'>27.117603</CaloriesBurned>
 <CaloriesBurned Date='2026-10-02'>12.594808</CaloriesBurned>
+<CaloriesBurned Date='2026-10-14'>83.243393</CaloriesBurned>
 </CalorieData>
 <CoinData>
 <LastDays>

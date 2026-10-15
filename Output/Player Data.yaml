@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 764
-  top_scores: 684
+  total_scores: 767
+  top_scores: 686
   scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -339,6 +339,14 @@
     percentage: '99.14'
     grade: Tier02
     date: '2011-06-08 21:21:06'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: BA KKWO
+    difficulty: Hard
+    percentage: '99.13'
+    grade: Tier02
+    date: '2026-10-15 01:25:58'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
@@ -3373,6 +3381,14 @@
     date: '2011-06-04 18:34:04'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: holiday
+    difficulty: Hard
+    percentage: '96.34'
+    grade: Tier04
+    date: '2026-10-15 01:30:04'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: GIVE ME UP
     difficulty: Hard
@@ -3596,6 +3612,14 @@
     grade: Tier05
     date: '2012-11-13 19:30:04'
     position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: CUTIE CHASER
+    difficulty: Hard
+    percentage: '95.92'
+    grade: Tier05
+    date: '2026-10-15 01:27:58'
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 1st Mix
     song: MY FIRE
@@ -6120,7 +6144,7 @@
   initials:
   - LONE
   total_scores: 1187
-  top_scores: 506
+  top_scores: 505
   scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -6737,7 +6761,7 @@
     percentage: '94.26'
     grade: Tier05
     date: '2012-09-12 19:37:40'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: Spacy Crazy Girl
@@ -8193,7 +8217,7 @@
     percentage: '90.12'
     grade: Tier07
     date: '2011-11-17 23:01:06'
-    position: 2
+    position: 3
   - section: In The Groove
     folder: In The Groove 3
     song: Blow my Mind
@@ -9425,7 +9449,7 @@
     percentage: '86.98'
     grade: Tier08
     date: '2013-10-22 21:59:00'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: Beautiful Life
@@ -17615,7 +17639,7 @@
     percentage: '80.08'
     grade: Tier10
     date: '2011-11-17 23:01:06'
-    position: 3
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: BURNIN' THE FLOOR (MOMO MIX)
@@ -17791,7 +17815,7 @@
     percentage: '79.48'
     grade: Tier11
     date: '2012-09-12 19:37:40'
-    position: 2
+    position: 3
   - section: In The Groove
     folder: In The Groove
     song: Driving Force Classical
@@ -18487,7 +18511,7 @@
     percentage: '76.78'
     grade: Tier11
     date: '2013-10-22 21:59:00'
-    position: 3
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: SHAKE YOUR BOOTY
@@ -28505,7 +28529,7 @@
     percentage: '62.43'
     grade: Tier15
     date: '2011-02-09 19:50:54'
-    position: 3
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: cachaca
@@ -30602,7 +30626,7 @@
   initials:
   - ENUI
   total_scores: 153
-  top_scores: 15
+  top_scores: 14
   scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -30771,7 +30795,7 @@
     percentage: '96.86'
     grade: Tier04
     date: '2011-02-12 23:45:52'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
     song: Venus
@@ -31739,7 +31763,7 @@
     percentage: '70.83'
     grade: Tier13
     date: Unknown Date
-    position: 4
+    position: 5
   - section: In The Groove
     folder: In The Groove 2
     song: Go 60 Go

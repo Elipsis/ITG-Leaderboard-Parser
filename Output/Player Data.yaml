@@ -31938,7 +31938,7 @@
     grade: Tier14
     award: null
     date: '2011-10-04 23:37:27'
-    position: 2
+    position: 3
   - section: In The Groove
     folder: In The Groove 3
     song: Into my Dream
@@ -39279,8 +39279,8 @@
     position: 3
 - player_name: Seitoko
   initials:
-  - SNOW
   - RAIN
+  - SNOW
   total_scores: 7
   top_scores: 0
   scores:
@@ -40334,9 +40334,18 @@
 - player_name: ?!
   initials:
   - ?!
-  total_scores: 3
+  total_scores: 4
   top_scores: 0
   scores:
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: LITTLE BITCH
+    difficulty: Hard
+    percentage: '77.96'
+    grade: Tier11
+    award: null
+    date: '2026-10-22 00:36:46'
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 1st Mix
     song: TRIP MACHINE

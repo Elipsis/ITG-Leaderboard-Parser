@@ -22,11 +22,12 @@ ITG2_BLACKLIST = SCRIPT_DIR / "Output" / "ITG2 Purges.txt"
 DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit")
 
 class XML_Record:
-    def __init__(self, inits, folder, song, difficulty, percentage, grade, award, date):
+    def __init__(self, inits, folder, song, difficulty, type, percentage, grade, award, date):
         self.inits = inits
         self.folder = folder
         self.song = song
         self.difficulty = difficulty
+        self.type = type
         self.percentage = percentage
         self.grade = grade
         self.award = award
@@ -39,25 +40,37 @@ class XML_Record:
 class Song:
     def __init__(self, name):
         self.name = name
-        self.difficulties = []
+        self.difficulties_single = []
+        self.difficulties_double = []
         self.leaderboards = {}
 
-    def add_difficulty(self, difficulty):
-        self.difficulties.append(difficulty)
+    def add_difficulty(self, difficulty, type):
+        match type:
+            case "single":
+                if difficulty not in self.difficulties_single:
+                    self.difficulties_single.append(difficulty)
+            case "double":
+                if difficulty not in self.difficulties_double:
+                    self.difficulties_double.append(difficulty)
+            case _:
+                print(f"Unknown type '{type}' for song '{self.name}' and difficulty '{difficulty}'")
 
     @property
     def num_difficulties(self):
-        return len(self.difficulties)
+        return len(self.difficulties_single) + len(self.diffculties_double)
 
     def generate_leaderboards(self):
         count = 0
-        for difficulty in self.difficulties:
-            self.leaderboards[difficulty] = Leaderboard(difficulty)
+        for difficulty in self.difficulties_single:
+            self.leaderboards[difficulty + " (Single)"] = Leaderboard(difficulty, "single")
+            count = count + 1
+        for difficulty in self.difficulties_double:
+            self.leaderboards[difficulty + " (Double)"] = Leaderboard(difficulty, "double")
             count = count + 1
         return count
 
     def __str__(self):
-        return f"{self.name} with difficulties {self.difficulties}"
+        return f"{self.name} with difficulties {self.difficulties_single}"
 
 class Folder:
     def __init__(self, name):
@@ -90,8 +103,9 @@ class Section:
         return f"{self.name} containing {self.num_folders} folders"
     
 class Leaderboard:
-    def __init__(self, difficulty):
+    def __init__(self, difficulty, type):
         self.difficulty = difficulty
+        self.type = type
         self.entries = []
 
     def add_entry(self, someRecord):
@@ -115,11 +129,12 @@ class Leaderboard_Entry:
         self.player = find_friendly_name(inits)
 
 class Player_Entry:
-    def __init__(self, section, folder, song, difficulty, percentage, grade, award, date, position):
+    def __init__(self, section, folder, song, difficulty, type, percentage, grade, award, date, position):
         self.section = section
         self.folder = folder
         self.song = song
         self.difficulty = difficulty
+        self.type = type
         self.percentage = percentage
         self.grade = grade
         self.award = award
@@ -168,7 +183,8 @@ def folder_representer(dumper, data):
 def song_representer(dumper, data):
     return dumper.represent_dict ({
         "song_title": data.name,
-        "difficulties": data.difficulties,
+        "difficulties_single": data.difficulties_single,
+        "difficulties_double": data.difficulties_double,
         "leaderboards": data.leaderboards
     })
 
@@ -182,7 +198,10 @@ def player_representer(dumper, data):
     })
 
 def leaderboard_representer(dumper, data):
-    return dumper.represent_list(data.entries)
+    return dumper.represent_dict({
+        "type": data.type,
+        "entries": data.entries
+    })
 
 def leaderboard_entry_representer(dumper, data):
     return dumper.represent_dict({
@@ -199,6 +218,7 @@ def player_entry_representer(dumper, data):
         "folder": data.folder,
         "song": data.song,
         "difficulty": data.difficulty,
+        "type": data.type,
         "percentage": f"{data.percentage:.2f}",
         "grade": data.grade,
         "award": data.award,
@@ -352,20 +372,32 @@ def associate_difficulties_to_songs(score_list, folder_list):
         if not matching_song:
             continue
 
-        if score.difficulty not in matching_song.difficulties:
-            matching_song.add_difficulty(score.difficulty)
-            associations = associations + 1
+        if score.type == "single":
+            if score.difficulty not in matching_song.difficulties_single:
+                matching_song.add_difficulty(score.difficulty, "single")
+                associations = associations + 1
+
+        if score.type == "double":
+            if score.difficulty not in matching_song.difficulties_double:
+                matching_song.add_difficulty(score.difficulty, "double")
+                associations = associations + 1
 
     for folder in folder_list:
         for song in folder.songs:
-            song.difficulties.sort(
+            song.difficulties_single.sort(
                 key=lambda difficulty: (
                     DIFFICULTY_ORDER.index(difficulty)
                     if difficulty in DIFFICULTY_ORDER
                     else len(DIFFICULTY_ORDER)
                 )
             )
-
+            song.difficulties_double.sort(
+                key=lambda difficulty: (
+                    DIFFICULTY_ORDER.index(difficulty)
+                    if difficulty in DIFFICULTY_ORDER
+                    else len(DIFFICULTY_ORDER)
+                )
+            )
     return associations
 
 def generate_leaderboards(folder_list):
@@ -387,6 +419,14 @@ def populate_leaderboards(score_data, folder_list):
         matching_song = next((s for s in matching_folder.songs if s.name == score.song), None)
         if not matching_song:
             continue
+
+        match score.type:
+            case "single":
+                score.difficulty = score.difficulty + " (Single)"
+            case "double":
+                score.difficulty = score.difficulty + " (Double)"
+            case  _:
+                print(f"Unknown type '{score.type}' for score '{score}'")
 
         leaderboard = matching_song.leaderboards.get(score.difficulty)
         
@@ -420,6 +460,7 @@ def populate_player_data(section_list, player_list):
                                 folder.name, 
                                 song.name, 
                                 leaderboard.difficulty, 
+                                leaderboard.type,
                                 entry.percentage, 
                                 entry.grade, 
                                 entry.award, 
@@ -431,7 +472,6 @@ def populate_player_data(section_list, player_list):
     for player in player_list:
         player.scores.sort(key=attrgetter("percentage", "song"), reverse=True)
     return count
-
 
 #Shitty google method.  I just want 10th mix in the right place.
 def sort_folders_by_mix(folder):
@@ -459,10 +499,7 @@ def datefix(scores):
     for theScore in scores:
         dt = datetime.strptime(theScore.date, date_format)
     
-        # 2. Check if the year is older than 2011
         if dt.year < 2011:
-            # Keep the same month and day, but force 2011 and midnight
-            # dt = dt.replace(year=2011, hour=0, minute=0, second=0)
             theScore.date = "Unknown Date"
 
             invalid = invalid + 1
@@ -538,6 +575,7 @@ def main():
         
         for steps in song.findall('.//Steps'):
             difficulty = steps.get('Difficulty')
+            type = steps.get('StepsType').split("-")[1]
             
             for high_score in steps.findall('.//HighScoreList/HighScore'):
                 score_counter = score_counter + 1
@@ -549,7 +587,7 @@ def main():
                 award = high_score.find('StageAward').text if high_score.find('StageAward') is not None else "No Award"
 
                 if grade != "Failed" and score > 0 and player_name != None:
-                    xml_score_data.append(XML_Record(player_name, song_folder, song_title, difficulty, score, grade, award, date))
+                    xml_score_data.append(XML_Record(player_name, song_folder, song_title, difficulty, type, score, grade, award, date))
 
     print("Evaluated " + str(score_counter) + " score entries.")
     print("Successfully discovered " + str(len(xml_score_data)) + " passing scores with names!")

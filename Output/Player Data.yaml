@@ -39591,8 +39591,8 @@
     position: 3
 - player_name: Seitoko
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 7
   top_scores: 0
   scores:

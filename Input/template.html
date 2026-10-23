@@ -121,10 +121,14 @@
         }
         .song-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         .song-title { font-weight: 600; font-size: 1.1rem; line-height: 1.3; color: #ffffff; }
+        .song-difficulty-rows { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+        .difficulty-row { display: flex; align-items: center; gap: 10px; min-height: 28px; }
+        .difficulty-row-label { flex: 0 0 68px; color: var(--text-muted); font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+        .song-diffs { display: flex; flex-wrap: wrap; gap: 5px; }
         
         .badge-btn {
             display: inline-block; font-size: 0.75rem; font-weight: bold; padding: 5px 10px; border-radius: 6px;
-            color: #000; margin-left: 5px; text-transform: uppercase; border: 2px solid transparent; cursor: pointer;
+            color: #000; text-transform: uppercase; border: 2px solid transparent; cursor: pointer;
             transition: all 0.15s ease;
         }
         .badge-btn:hover { filter: brightness(1.2); transform: translateY(-1px); }
@@ -268,25 +272,41 @@
                             <div class="song-card" data-search-target="{{ song.song_title.lower() }}">
                                 <div class="song-header">
                                     <span class="song-title">{{ song.song_title }}</span>
-                                    <div class="song-diffs">
-                                        {% for diff in song.difficulties %}
-                                        <button class="badge-btn diff-{{ diff.lower() }}" 
-                                                data-leaderboard-target="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}"
-                                                onclick="toggleLeaderboard('drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}', this)">
-                                            {{ diff }}
-                                        </button>
-                                        {% endfor %}
-                                    </div>
                                 </div>
-                                
-                                {% for diff, entries in song.leaderboards.items() %}
-                                <div id="drawer-{{ section_index }}-{{ folder_index }}-{{ song_index }}-{{ diff.lower() }}"
-                                     class="leaderboard-drawer title-{{ diff.lower() }}"
+                                <div class="song-difficulty-rows">
+                                    {% set doubles_with_scores = song.leaderboards.values() | selectattr("type", "equalto", "double") | selectattr("entries") | list %}
+                                    {% for chart_type, type_label, difficulties in [("single", "Singles", song.difficulties_single), ("double", "Doubles", song.difficulties_double)] %}
+                                    {% if chart_type == "single" or doubles_with_scores %}
+                                    <div class="difficulty-row">
+                                        <span class="difficulty-row-label">{{ type_label }}</span>
+                                        <div class="song-diffs">
+                                            {% for diff in difficulties %}
+                                            {% set drawer_id = "drawer-" ~ section_index ~ "-" ~ folder_index ~ "-" ~ song_index ~ "-" ~ chart_type ~ "-" ~ diff.lower() %}
+                                            <button class="badge-btn diff-{{ diff.lower() }}"
+                                                    data-leaderboard-target="{{ drawer_id }}"
+                                                    onclick="toggleLeaderboard('{{ drawer_id }}', this)">
+                                                {{ diff }}
+                                            </button>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+
+                                {% for leaderboard_name, leaderboard in song.leaderboards.items() %}
+                                {% set difficulty = leaderboard_name.rsplit(" (", 1)[0] %}
+                                {% set chart_type = leaderboard.type %}
+                                {% set type_label = "Singles" if chart_type == "single" else "Doubles" %}
+                                {% set drawer_id = "drawer-" ~ section_index ~ "-" ~ folder_index ~ "-" ~ song_index ~ "-" ~ chart_type ~ "-" ~ difficulty.lower() %}
+                                <div id="{{ drawer_id }}"
+                                     class="leaderboard-drawer title-{{ difficulty.lower() }}"
                                      data-section="{{ section.section_name }}"
                                      data-folder="{{ folder.folder_name }}"
                                      data-song="{{ song.song_title }}"
-                                     data-difficulty="{{ diff }}">
-                                    <p class="drawer-title title-{{ diff.lower() }}">🏆 {{ diff }} Leaderboard</p>
+                                     data-difficulty="{{ difficulty }}"
+                                     data-type="{{ chart_type }}">
+                                    <p class="drawer-title title-{{ difficulty.lower() }}">🏆 {{ difficulty }} {{ type_label }} Leaderboard</p>
                                     <table class="score-table">
                                         <thead>
                                             <tr>
@@ -297,7 +317,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {% for entry in entries %}
+                                            {% for entry in leaderboard.entries %}
                                             <tr>
                                                 <td class="bold text-muted">#{{ loop.index }}</td>
                                                 <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
@@ -499,7 +519,9 @@
             drawer.dataset.song,
             drawer.dataset.difficulty
         ]);
-        leaderboardTargets.set(key, drawer.id);
+        const targets = leaderboardTargets.get(key) ?? [];
+        targets.push({id: drawer.id, type: drawer.dataset.type});
+        leaderboardTargets.set(key, targets);
     });
     let currentView = 'library';
     let profileReturnView = 'library';
@@ -545,7 +567,10 @@
 
     function createProfileLeaderboardLink(score, label) {
         const key = JSON.stringify([score.section, score.folder, score.song, score.difficulty]);
-        const targetId = leaderboardTargets.get(key);
+        const targets = leaderboardTargets.get(key) ?? [];
+        const targetId = score.type
+            ? targets.find(target => target.type === score.type)?.id
+            : targets.length === 1 ? targets[0].id : null;
         if (!targetId) return label;
 
         const link = document.createElement('a');

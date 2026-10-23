@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'Input/Stats.xml'
+  workflow_dispatch:
 
 permissions:
   contents: write

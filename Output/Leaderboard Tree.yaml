@@ -629,6 +629,11 @@
           grade: Tier04
           award: FullComboW2
           date: '2011-02-16 19:20:08'
+        - player: Ennui
+          percentage: '69.66'
+          grade: Tier13
+          award: null
+          date: '2026-10-22 18:08:16'
     - song_title: BRILLIANT 2U (CLUB VER.)
       difficulties:
       - Easy
@@ -2017,6 +2022,11 @@
           award: null
           date: '2011-02-23 19:29:03'
         Hard:
+        - player: Elipsis
+          percentage: '98.79'
+          grade: Tier03
+          award: SingleDigitW2
+          date: '2026-10-22 18:32:10'
         - player: LONE
           percentage: '94.29'
           grade: Tier05
@@ -2027,6 +2037,11 @@
           grade: Tier08
           award: FullComboW3
           date: '2011-10-14 23:51:41'
+        - player: Ennui
+          percentage: '86.16'
+          grade: Tier08
+          award: null
+          date: '2026-10-22 18:32:10'
     - song_title: g.m.d
       difficulties:
       - Hard
@@ -2459,6 +2474,16 @@
           grade: Tier11
           award: null
           date: '2017-04-22 07:13:27'
+        - player: BDDD
+          percentage: '67.97'
+          grade: Tier14
+          award: null
+          date: '2026-10-22 19:12:37'
+        - player: KEY
+          percentage: '65.71'
+          grade: Tier14
+          award: null
+          date: '2026-10-22 22:06:29'
         - player: BETH
           percentage: '52.63'
           grade: Tier17
@@ -2600,11 +2625,21 @@
           grade: Tier05
           award: null
           date: '2013-04-07 18:44:32'
+        - player: Elipsis
+          percentage: '91.63'
+          grade: Tier07
+          award: FullComboW3
+          date: '2026-10-22 18:27:45'
         - player: LONE
           percentage: '83.55'
           grade: Tier09
           award: null
           date: '2013-01-02 11:45:41'
+        - player: Ennui
+          percentage: '69.56'
+          grade: Tier13
+          award: null
+          date: '2026-10-22 18:27:45'
         - player: MXI
           percentage: '61.54'
           grade: Tier15
@@ -2850,6 +2885,11 @@
           grade: Tier11
           award: null
           date: '2017-05-06 10:10:23'
+        - player: BDDD
+          percentage: '65.75'
+          grade: Tier14
+          award: null
+          date: '2026-10-22 19:14:54'
         - player: M
           percentage: '64.55'
           grade: Tier14
@@ -2902,6 +2942,11 @@
           grade: Tier13
           award: null
           date: '2013-04-14 17:52:53'
+        - player: Ennui
+          percentage: '67.82'
+          grade: Tier14
+          award: null
+          date: '2026-10-22 18:21:27'
         - player: MXI
           percentage: '62.57'
           grade: Tier15
@@ -3144,8 +3189,15 @@
           date: Unknown Date
     - song_title: IN THE NAVY '99 (XXL Disaster Remix)
       difficulties:
+      - Easy
       - Hard
       leaderboards:
+        Easy:
+        - player: BDDD
+          percentage: '59.09'
+          grade: Tier16
+          award: null
+          date: '2026-10-22 19:17:15'
         Hard:
         - player: Elipsis
           percentage: '97.72'
@@ -3438,6 +3490,11 @@
           grade: Tier03
           award: FullComboW2
           date: '2012-01-29 21:38:35'
+        - player: Ennui
+          percentage: '68.26'
+          grade: Tier13
+          award: null
+          date: '2026-10-22 22:32:30'
     - song_title: ROCK BEAT
       difficulties:
       - Hard
@@ -3599,8 +3656,15 @@
           date: '2012-01-22 18:22:23'
     - song_title: THE RACE
       difficulties:
+      - Easy
       - Hard
       leaderboards:
+        Easy:
+        - player: BDDD
+          percentage: '80.13'
+          grade: Tier10
+          award: null
+          date: '2026-10-22 19:57:42'
         Hard:
         - player: Elipsis
           percentage: '97.28'
@@ -3639,8 +3703,15 @@
           date: '2013-01-19 07:43:27'
     - song_title: TURN ME ON (HEAVENLY MIX)
       difficulties:
+      - Easy
       - Hard
       leaderboards:
+        Easy:
+        - player: BDDD
+          percentage: '79.15'
+          grade: Tier11
+          award: null
+          date: '2026-10-22 20:01:53'
         Hard:
         - player: Elipsis
           percentage: '96.72'
@@ -3869,8 +3940,15 @@
           date: '2011-02-09 19:50:54'
     - song_title: think ya better D
       difficulties:
+      - Medium
       - Hard
       leaderboards:
+        Medium:
+        - player: BDDD
+          percentage: '61.46'
+          grade: Tier15
+          award: null
+          date: '2026-10-22 19:59:46'
         Hard:
         - player: Elipsis
           percentage: '98.23'
@@ -4552,8 +4630,15 @@
           date: '2011-08-26 21:33:45'
     - song_title: GOTCHA (The Theme from STARSKY & HUTCH)
       difficulties:
+      - Medium
       - Hard
       leaderboards:
+        Medium:
+        - player: BDDD
+          percentage: '65.69'
+          grade: Tier14
+          award: null
+          date: '2026-10-22 21:01:03'
         Hard:
         - player: Elipsis
           percentage: '98.03'
@@ -4948,8 +5033,15 @@
           date: '2013-11-05 06:02:16'
     - song_title: Let's talk it over
       difficulties:
+      - Medium
       - Hard
       leaderboards:
+        Medium:
+        - player: BDDD
+          percentage: '78.06'
+          grade: Tier11
+          award: null
+          date: '2026-10-22 21:03:08'
         Hard:
         - player: Elipsis
           percentage: '99.17'
@@ -6194,10 +6286,10 @@
           date: '2011-01-21 22:11:38'
         Hard:
         - player: Elipsis
-          percentage: '97.28'
-          grade: Tier04
-          award: FullComboW2
-          date: '2011-01-07 00:00:30'
+          percentage: '98.25'
+          grade: Tier03
+          award: OneW3
+          date: '2026-10-22 21:11:30'
         - player: Ennui
           percentage: '95.28'
           grade: Tier05
@@ -9466,6 +9558,11 @@
           award: null
           date: '2011-10-02 19:31:47'
         - player: Ennui
+          percentage: '77.17'
+          grade: Tier11
+          award: null
+          date: '2026-10-22 19:32:02'
+        - player: Ennui
           percentage: '76.04'
           grade: Tier11
           award: null
@@ -9589,6 +9686,16 @@
       - Challenge
       leaderboards:
         Challenge:
+        - player: Elipsis
+          percentage: '94.82'
+          grade: Tier05
+          award: null
+          date: '2026-10-22 22:36:05'
+        - player: Ennui
+          percentage: '85.65'
+          grade: Tier09
+          award: null
+          date: '2026-10-22 22:36:05'
         - player: LONE
           percentage: '66.69'
           grade: Tier14
@@ -12897,6 +13004,11 @@
           grade: Tier08
           award: null
           date: Unknown Date
+        - player: Ennui
+          percentage: '86.93'
+          grade: Tier08
+          award: null
+          date: '2026-10-22 21:50:31'
     - song_title: Heaven is a '57 metallic gray (gimmix)
       difficulties:
       - Medium
@@ -20828,11 +20940,21 @@
       - Hard
       leaderboards:
         Hard:
+        - player: Elipsis
+          percentage: '98.50'
+          grade: Tier03
+          award: FullComboW2
+          date: '2026-10-22 20:42:15'
         - player: LONE
           percentage: '90.72'
           grade: Tier07
           award: null
           date: '2011-07-04 15:38:07'
+        - player: Ennui
+          percentage: '90.59'
+          grade: Tier07
+          award: null
+          date: '2026-10-22 20:42:15'
     - song_title: Let My Love Go Blind
       difficulties:
       - Medium
@@ -22568,6 +22690,11 @@
           grade: Tier14
           award: null
           date: '2025-09-16 15:19:34'
+        - player: KEY
+          percentage: '55.84'
+          grade: Tier16
+          award: null
+          date: '2026-10-22 21:39:59'
         Medium:
         - player: LONE
           percentage: '97.65'
@@ -23262,6 +23389,11 @@
           grade: Tier08
           award: FullComboW3
           date: '2011-09-05 21:47:17'
+        - player: Ennui
+          percentage: '84.46'
+          grade: Tier09
+          award: null
+          date: '2026-10-22 20:38:47'
         - player: MXI
           percentage: '83.15'
           grade: Tier09
@@ -23888,6 +24020,11 @@
       - Challenge
       leaderboards:
         Beginner:
+        - player: KEY
+          percentage: '80.59'
+          grade: Tier10
+          award: null
+          date: '2026-10-22 22:09:37'
         - player: ALIY
           percentage: '65.97'
           grade: Tier14
@@ -23946,11 +24083,21 @@
           award: null
           date: '2018-07-21 14:52:16'
         Hard:
+        - player: Elipsis
+          percentage: '95.73'
+          grade: Tier05
+          award: SingleDigitW3
+          date: '2026-10-22 21:56:24'
         - player: LONE
           percentage: '88.53'
           grade: Tier08
           award: null
           date: Unknown Date
+        - player: Ennui
+          percentage: '81.18'
+          grade: Tier10
+          award: null
+          date: '2026-10-22 21:56:24'
         - player: MXI
           percentage: '73.36'
           grade: Tier12
@@ -24630,6 +24777,11 @@
       - Challenge
       leaderboards:
         Easy:
+        - player: KEY
+          percentage: '82.11'
+          grade: Tier10
+          award: null
+          date: '2026-10-22 22:13:14'
         - player: JILL
           percentage: '63.44'
           grade: Tier15
@@ -25346,6 +25498,11 @@
       - Challenge
       leaderboards:
         Easy:
+        - player: KEY
+          percentage: '86.09'
+          grade: Tier08
+          award: null
+          date: '2026-10-22 22:16:03'
         - player: JILL
           percentage: '85.37'
           grade: Tier09
@@ -25584,10 +25741,17 @@
           date: '2013-04-22 18:07:59'
     - song_title: Be my Friend
       difficulties:
+      - Easy
       - Medium
       - Hard
       - Challenge
       leaderboards:
+        Easy:
+        - player: KEY
+          percentage: '77.00'
+          grade: Tier11
+          award: null
+          date: '2026-10-22 22:18:46'
         Medium:
         - player: LONE
           percentage: '81.29'
@@ -25776,6 +25940,11 @@
           grade: Tier11
           award: null
           date: '2012-05-17 19:32:14'
+        - player: Ennui
+          percentage: '76.00'
+          grade: Tier11
+          award: null
+          date: '2026-10-22 19:38:42'
         Edit:
         - player: Elipsis
           percentage: '93.63'
@@ -25958,6 +26127,11 @@
           grade: Tier14
           award: null
           date: '2011-02-06 01:56:35'
+        - player: KEY
+          percentage: '27.36'
+          grade: Tier17
+          award: null
+          date: '2026-10-22 22:43:57'
         Medium:
         - player: LONE
           percentage: '76.05'
@@ -26115,9 +26289,16 @@
           date: '2011-11-21 20:57:38'
     - song_title: Frozen Fire
       difficulties:
+      - Easy
       - Hard
       - Challenge
       leaderboards:
+        Easy:
+        - player: KEY
+          percentage: '68.84'
+          grade: Tier13
+          award: null
+          date: '2026-10-22 22:46:16'
         Hard:
         - player: LONE
           percentage: '66.36'
@@ -26522,6 +26703,16 @@
       - Challenge
       leaderboards:
         Hard:
+        - player: Elipsis
+          percentage: '92.80'
+          grade: Tier06
+          award: null
+          date: '2026-10-22 19:35:38'
+        - player: Ennui
+          percentage: '72.46'
+          grade: Tier12
+          award: null
+          date: '2026-10-22 19:35:38'
         - player: JILL
           percentage: '68.84'
           grade: Tier13
@@ -26618,10 +26809,17 @@
           date: '2013-05-05 19:13:23'
     - song_title: Less Than Three
       difficulties:
+      - Easy
       - Medium
       - Hard
       - Challenge
       leaderboards:
+        Easy:
+        - player: KEY
+          percentage: '74.30'
+          grade: Tier12
+          award: null
+          date: '2026-10-22 22:48:46'
         Medium:
         - player: LONE
           percentage: '64.57'

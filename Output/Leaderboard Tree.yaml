@@ -23698,12 +23698,26 @@
             date: '2012-05-31 15:11:42'
     - song_title: Hardcore of the North
       difficulties_single:
+      - Beginner
       - Easy
       - Medium
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '100.00'
+            grade: Tier01
+            award: FullComboW1
+            date: '2026-10-25 18:05:13'
+          - player: Elipsis
+            percentage: '99.72'
+            grade: Tier02
+            award: OneW2
+            date: '2026-10-25 17:57:52'
         Easy (Single):
           type: single
           entries:

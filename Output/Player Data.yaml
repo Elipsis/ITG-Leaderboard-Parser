@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 777
-  top_scores: 706
+  total_scores: 779
+  top_scores: 707
   scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -24,6 +24,16 @@
     award: FullComboW1
     date: '2011-05-18 23:44:30'
     position: 1
+  - section: In The Groove
+    folder: In The Groove
+    song: Hardcore of the North
+    difficulty: Beginner
+    type: single
+    percentage: '100.00'
+    grade: Tier01
+    award: FullComboW1
+    date: '2026-10-25 18:05:13'
+    position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: A Stupid Barber
@@ -44,6 +54,16 @@
     award: FullComboW2
     date: '2012-02-06 20:42:51'
     position: 1
+  - section: In The Groove
+    folder: In The Groove
+    song: Hardcore of the North
+    difficulty: Beginner
+    type: single
+    percentage: '99.72'
+    grade: Tier02
+    award: OneW2
+    date: '2026-10-25 17:57:52'
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: Your Rain(RAGE MIX)
@@ -44145,8 +44165,8 @@
     position: 2
 - player_name: Seitoko
   initials:
-  - SNOW
   - RAIN
+  - SNOW
   total_scores: 7
   top_scores: 0
   scores:

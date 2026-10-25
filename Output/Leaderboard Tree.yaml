@@ -2910,6 +2910,11 @@
             grade: Tier14
             award: null
             date: '2026-10-22 22:06:29'
+          - player: DLAU
+            percentage: '59.69'
+            grade: Tier16
+            award: null
+            date: '2026-10-25 13:15:02'
           - player: BETH
             percentage: '52.63'
             grade: Tier17
@@ -4226,6 +4231,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.94'
+            grade: Tier03
+            award: OneW3
+            date: '2026-10-25 13:36:30'
           - player: LONE
             percentage: '74.72'
             grade: Tier12
@@ -6872,16 +6882,16 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.07'
+            grade: Tier02
+            award: OneW3
+            date: '2026-10-25 13:48:43'
           - player: BMM
             percentage: '98.83'
             grade: Tier03
             award: FullComboW3
             date: '2011-06-15 20:49:02'
-          - player: Elipsis
-            percentage: '98.52'
-            grade: Tier03
-            award: FullComboW2
-            date: '2011-02-26 19:48:21'
           - player: Ennui
             percentage: '96.98'
             grade: Tier04
@@ -8251,7 +8261,8 @@
     - song_title: STILL IN MY HEART
       difficulties_single:
       - Hard
-      difficulties_double: []
+      difficulties_double:
+      - Hard
       leaderboards:
         Hard (Single):
           type: single
@@ -8281,6 +8292,14 @@
             grade: Tier13
             award: null
             date: '2013-10-11 21:41:19'
+        Hard (Double):
+          type: double
+          entries:
+          - player: Ennui
+            percentage: '63.40'
+            grade: Tier15
+            award: null
+            date: '2026-10-25 13:25:59'
     - song_title: SWING IT
       difficulties_single:
       - Easy
@@ -10362,16 +10381,21 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.59'
+            grade: Tier03
+            award: SingleDigitW3
+            date: '2026-10-25 13:51:59'
           - player: MLS
             percentage: '97.98'
             grade: Tier04
             award: FullComboW3
             date: '2013-11-03 18:41:49'
-          - player: Elipsis
-            percentage: '97.63'
-            grade: Tier04
-            award: FullComboW3
-            date: '2013-11-05 04:46:16'
+          - player: Ennui
+            percentage: '84.29'
+            grade: Tier09
+            award: null
+            date: '2026-10-25 13:51:59'
           - player: JILL
             percentage: '79.82'
             grade: Tier11
@@ -11239,6 +11263,11 @@
             grade: Tier07
             award: null
             date: '2011-04-15 19:59:22'
+          - player: Elipsis
+            percentage: '89.33'
+            grade: Tier07
+            award: null
+            date: '2026-10-25 15:29:15'
           - player: MLS
             percentage: '85.44'
             grade: Tier09
@@ -11259,6 +11288,11 @@
         Easy (Single):
           type: single
           entries:
+          - player: DLAU
+            percentage: '78.94'
+            grade: Tier11
+            award: null
+            date: '2026-10-25 13:40:00'
           - player: MMM
             percentage: '73.51'
             grade: Tier12
@@ -11989,6 +12023,11 @@
             grade: Tier13
             award: null
             date: '2011-02-12 22:21:39'
+          - player: DLAU
+            percentage: '47.38'
+            grade: Tier17
+            award: null
+            date: '2026-10-25 13:57:12'
         Hard (Single):
           type: single
           entries:
@@ -13186,16 +13225,16 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.22'
+            grade: Tier02
+            award: OneW3
+            date: '2026-10-25 14:05:20'
           - player: BMM
             percentage: '99.09'
             grade: Tier02
             award: FullComboW2
             date: '2013-05-21 18:59:57'
-          - player: Elipsis
-            percentage: '98.51'
-            grade: Tier03
-            award: FullComboW2
-            date: '2013-03-19 02:58:45'
           - player: CRIP
             percentage: '97.92'
             grade: Tier04
@@ -13252,16 +13291,16 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.02'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-10-25 13:31:03'
           - player: MLS
             percentage: '97.38'
             grade: Tier04
             award: FullComboW3
             date: '2014-09-07 03:53:42'
-          - player: Elipsis
-            percentage: '97.33'
-            grade: Tier04
-            award: FullComboW3
-            date: '2012-01-18 20:38:38'
           - player: BMM
             percentage: '95.70'
             grade: Tier05
@@ -13371,11 +13410,20 @@
             date: '2011-10-14 21:32:40'
     - song_title: kakumei
       difficulties_single:
+      - Easy
       - Medium
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '76.17'
+            grade: Tier11
+            award: null
+            date: '2026-10-25 13:44:45'
         Medium (Single):
           type: single
           entries:
@@ -13587,6 +13635,11 @@
             grade: Tier04
             award: FullComboW3
             date: '2011-06-08 20:53:24'
+          - player: Ennui
+            percentage: '82.91'
+            grade: Tier10
+            award: null
+            date: '2026-10-25 13:54:37'
           - player: LONE
             percentage: '81.96'
             grade: Tier10
@@ -15316,12 +15369,21 @@
             date: '2011-06-15 18:32:29'
     - song_title: Kind Lady
       difficulties_single:
+      - Beginner
       - Easy
       - Medium
       - Hard
       difficulties_double:
       - Easy
       leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '51.64'
+            grade: Tier17
+            award: null
+            date: '2026-10-25 13:12:17'
         Easy (Single):
           type: single
           entries:
@@ -17538,6 +17600,11 @@
             grade: Tier09
             award: null
             date: '2011-01-09 00:16:59'
+          - player: Ennui
+            percentage: '72.93'
+            grade: Tier12
+            award: null
+            date: '2026-10-25 14:36:35'
           - player: LONE
             percentage: '57.09'
             grade: Tier16
@@ -18005,6 +18072,11 @@
             grade: Tier02
             award: FullComboW2
             date: '2020-04-26 16:23:27'
+          - player: Ennui
+            percentage: '90.62'
+            grade: Tier07
+            award: null
+            date: '2026-10-25 14:14:00'
           - player: LONE
             percentage: '85.35'
             grade: Tier09
@@ -18685,6 +18757,11 @@
             grade: Tier03
             award: FullComboW2
             date: '2011-02-03 18:45:43'
+          - player: Ennui
+            percentage: '88.84'
+            grade: Tier08
+            award: null
+            date: '2026-10-25 14:16:58'
           - player: LONE
             percentage: '88.76'
             grade: Tier08
@@ -22761,6 +22838,11 @@
             grade: Tier11
             award: null
             date: '2011-03-06 15:40:56'
+          - player: DLAU
+            percentage: '69.45'
+            grade: Tier13
+            award: null
+            date: '2026-10-25 14:20:50'
         Hard (Single):
           type: single
           entries:
@@ -23589,7 +23671,7 @@
             grade: Tier04
             award: FullComboW3
             date: '2011-08-17 18:52:38'
-          - player: MONT
+          - player: MLS
             percentage: '97.37'
             grade: Tier04
             award: null
@@ -23635,6 +23717,11 @@
             grade: Tier12
             award: null
             date: '2011-01-25 22:58:43'
+          - player: DLAU
+            percentage: '66.10'
+            grade: Tier14
+            award: null
+            date: '2026-10-25 15:17:45'
         Medium (Single):
           type: single
           entries:
@@ -23666,10 +23753,19 @@
             date: '2011-01-30 22:30:07'
     - song_title: Hip Hop Jam
       difficulties_single:
+      - Medium
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '78.12'
+            grade: Tier11
+            award: null
+            date: '2026-10-25 14:40:13'
         Hard (Single):
           type: single
           entries:
@@ -24190,11 +24286,20 @@
             date: '2026-10-22 20:42:15'
     - song_title: Let My Love Go Blind
       difficulties_single:
+      - Easy
       - Medium
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '74.53'
+            grade: Tier12
+            award: null
+            date: '2026-10-25 14:42:56'
         Medium (Single):
           type: single
           entries:
@@ -24354,7 +24459,7 @@
         Challenge (Single):
           type: single
           entries:
-          - player: MONT
+          - player: MLS
             percentage: '95.85'
             grade: Tier05
             award: null
@@ -25110,6 +25215,11 @@
             grade: Tier08
             award: null
             date: '2011-02-16 20:16:27'
+          - player: DLAU
+            percentage: '67.13'
+            grade: Tier14
+            award: null
+            date: '2026-10-25 14:46:06'
         Hard (Single):
           type: single
           entries:
@@ -27981,7 +28091,7 @@
             grade: Tier04
             award: null
             date: '2014-01-31 01:38:43'
-          - player: MONT
+          - player: MLS
             percentage: '96.71'
             grade: Tier04
             award: FullComboW3
@@ -28768,7 +28878,7 @@
             grade: Tier05
             award: null
             date: '2011-10-19 18:20:49'
-          - player: MONT
+          - player: MLS
             percentage: '95.76'
             grade: Tier05
             award: null
@@ -30961,10 +31071,10 @@
             award: null
             date: '2026-10-22 19:35:38'
           - player: Ennui
-            percentage: '72.46'
-            grade: Tier12
+            percentage: '89.40'
+            grade: Tier07
             award: null
-            date: '2026-10-22 19:35:38'
+            date: '2026-10-25 15:08:18'
           - player: JILL
             percentage: '68.84'
             grade: Tier13
@@ -32427,7 +32537,7 @@
             grade: Tier10
             award: null
             date: '2012-01-23 22:02:57'
-          - player: MONT
+          - player: MLS
             percentage: '80.50'
             grade: Tier10
             award: null

@@ -1,0 +1,230 @@
+- classification_name: ITG
+  packs:
+  - pack_name: Marathon
+    courses:
+    - course_name: Get Groov'n
+      difficulties_single:
+      - Medium
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '78.53'
+            grade: Tier11
+            award: null
+            date: '2026-02-26 18:30:05'
+          - player: MXI
+            percentage: '73.89'
+            grade: Tier12
+            award: null
+            date: '2011-01-17 22:53:11'
+    - course_name: Hardcore Galore
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '85.27'
+            grade: Tier09
+            award: null
+            date: '2011-09-07 20:03:03'
+  - pack_name: Marathon2
+    courses:
+    - course_name: Driven
+      difficulties_single:
+      - Medium
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '79.35'
+            grade: Tier11
+            award: null
+            date: '2011-05-11 21:07:45'
+    - course_name: Getting Started
+      difficulties_single:
+      - Easy
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.72'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-09-25 20:56:19'
+- classification_name: Unofficial
+  packs:
+  - pack_name: Unofficial
+    courses:
+    - course_name: Afronova Roots
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.74'
+            grade: Tier04
+            award: null
+            date: '2011-02-13 00:31:01'
+          - player: Ennui
+            percentage: '94.53'
+            grade: Tier05
+            award: null
+            date: '2011-02-13 00:31:01'
+          - player: JAG
+            percentage: '77.74'
+            grade: Tier11
+            award: null
+            date: '2011-09-28 20:42:14'
+          - player: LONE
+            percentage: '73.70'
+            grade: Tier12
+            award: null
+            date: '2012-01-29 20:56:09'
+          - player: MXI
+            percentage: '64.84'
+            grade: Tier14
+            award: null
+            date: '2012-01-29 20:56:09'
+    - course_name: DDR 1st Mix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.19'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-02-04 23:45:30'
+          - player: Ennui
+            percentage: '95.26'
+            grade: Tier05
+            award: null
+            date: '2011-02-13 00:51:15'
+          - player: CRIP
+            percentage: '94.00'
+            grade: Tier05
+            award: null
+            date: '2011-02-04 23:45:30'
+          - player: LONE
+            percentage: '86.78'
+            grade: Tier08
+            award: null
+            date: '2013-08-16 14:38:58'
+          - player: BMM
+            percentage: '86.16'
+            grade: Tier08
+            award: null
+            date: '2011-05-20 22:09:32'
+          - player: MXI
+            percentage: '73.42'
+            grade: Tier12
+            award: null
+            date: '2012-01-23 21:47:03'
+    - course_name: Hardcore Set
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '66.82'
+            grade: Tier14
+            award: null
+            date: '2011-02-21 21:30:47'
+    - course_name: Maxed Out
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: CRIP
+            percentage: '83.39'
+            grade: Tier09
+            award: null
+            date: '2013-04-04 15:25:38'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '79.12'
+            grade: Tier11
+            award: null
+            date: '2011-05-02 23:20:06'
+    - course_name: Power Nines 1
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.51'
+            grade: Tier05
+            award: null
+            date: '2011-08-07 16:31:03'
+    - course_name: Power Nines 2
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.31'
+            grade: Tier05
+            award: null
+            date: '2011-08-07 15:15:14'
+    - course_name: The Max 3300
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '62.12'
+            grade: Tier15
+            award: null
+            date: '2011-03-06 21:35:25'
+    - course_name: Trip Machine Everybody
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.89'
+            grade: Tier06
+            award: null
+            date: '2011-02-16 19:01:04'
+          - player: Ennui
+            percentage: '80.85'
+            grade: Tier10
+            award: null
+            date: '2011-02-13 02:32:39'

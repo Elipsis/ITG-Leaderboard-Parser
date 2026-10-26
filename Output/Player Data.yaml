@@ -1,7 +1,7 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 779
+  total_scores: 776
   top_scores: 707
   song_scores:
   - section: Dance Dance Revolution
@@ -54,16 +54,6 @@
     award: FullComboW2
     date: '2012-02-06 20:42:51'
     position: 1
-  - section: In The Groove
-    folder: In The Groove
-    song: Hardcore of the North
-    difficulty: Beginner
-    type: single
-    percentage: '99.72'
-    grade: Tier02
-    award: OneW2
-    date: '2026-10-25 17:57:52'
-    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: Your Rain(RAGE MIX)
@@ -4495,16 +4485,6 @@
     date: '2013-04-12 17:37:26'
     position: 1
   - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 6th Mix
-    song: Sandstorm
-    difficulty: Hard
-    type: single
-    percentage: '96.03'
-    grade: Tier04
-    award: FullComboW3
-    date: '2026-02-24 20:40:41'
-    position: 5
-  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: MY SUMMER LOVE (TOMMY'S SMILE MIX)
     difficulty: Challenge
@@ -4713,7 +4693,7 @@
     grade: Tier05
     award: null
     date: '2012-09-11 17:39:20'
-    position: 4
+    position: 3
   - section: In The Groove
     folder: In The Groove
     song: The Game
@@ -7116,16 +7096,6 @@
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
-    song: Y.M.C.A
-    difficulty: Hard
-    type: single
-    percentage: '84.25'
-    grade: Tier09
-    award: null
-    date: '2026-02-24 20:45:36'
-    position: 3
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 8th Mix
     song: DROP THE BOMB (System S.F. Mix)
     difficulty: Hard
     type: double
@@ -8520,7 +8490,7 @@
     grade: Tier05
     award: FullComboW3
     date: Unknown Date
-    position: 6
+    position: 5
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: Firefly
@@ -12860,7 +12830,7 @@
     grade: Tier09
     award: null
     date: '2013-04-05 16:41:59'
-    position: 5
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: bag
@@ -16830,7 +16800,7 @@
     grade: Tier12
     award: null
     date: '2012-12-09 01:05:17'
-    position: 5
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: Groove
@@ -17240,7 +17210,7 @@
     grade: Tier12
     award: null
     date: '2012-05-31 15:11:42'
-    position: 6
+    position: 5
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: THE 7 JUMP
@@ -18690,7 +18660,7 @@
     grade: Tier14
     award: null
     date: '2011-09-28 19:51:38'
-    position: 5
+    position: 4
   - section: In The Groove
     folder: In The Groove 2
     song: No Princess
@@ -21277,7 +21247,7 @@
     grade: Tier09
     award: null
     date: '2011-11-17 23:08:41'
-    position: 8
+    position: 7
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: LA COPA DE LA VIDA
@@ -28114,7 +28084,7 @@
     grade: Tier08
     award: FullComboW3
     date: '2012-01-29 20:26:49'
-    position: 7
+    position: 6
   - section: In The Groove
     folder: In The Groove 2
     song: Bumble Bee
@@ -33190,7 +33160,7 @@
   initials:
   - MLS
   - MONT
-  total_scores: 159
+  total_scores: 154
   top_scores: 44
   song_scores:
   - section: Dance Dance Revolution
@@ -33713,16 +33683,6 @@
     award: FullComboW3
     date: '2014-09-07 03:53:42'
     position: 2
-  - section: In The Groove
-    folder: In The Groove
-    song: Happiness Comes
-    difficulty: Hard
-    type: single
-    percentage: '97.37'
-    grade: Tier04
-    award: null
-    date: '2012-09-26 19:05:47'
-    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 5th Mix
     song: MATSURI JAPAN
@@ -33863,16 +33823,6 @@
     award: null
     date: '2013-11-29 03:24:38'
     position: 2
-  - section: In The Groove
-    folder: In The Groove 2
-    song: Music Pleeze
-    difficulty: Challenge
-    type: single
-    percentage: '96.71'
-    grade: Tier04
-    award: FullComboW3
-    date: '2012-09-26 19:21:33'
-    position: 3
   - section: In The Groove
     folder: In The Groove
     song: Which MC Was That
@@ -34063,16 +34013,6 @@
     award: FullComboW3
     date: '2011-02-28 20:01:07'
     position: 2
-  - section: In The Groove
-    folder: In The Groove 2
-    song: Spacy Crazy Girl
-    difficulty: Challenge
-    type: single
-    percentage: '95.76'
-    grade: Tier05
-    award: null
-    date: '2012-09-26 19:11:38'
-    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: Star Gate Heaven (FUTURE LOVE Mix)
@@ -34403,16 +34343,6 @@
     award: null
     date: '2013-12-22 08:29:12'
     position: 2
-  - section: In The Groove
-    folder: In The Groove
-    song: My Favourite Game
-    difficulty: Challenge
-    type: single
-    percentage: '92.61'
-    grade: Tier06
-    award: null
-    date: '2013-11-02 21:13:22'
-    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: L'amour et la liberte (DDR ver.)
@@ -34713,16 +34643,6 @@
     award: null
     date: '2013-12-20 02:32:11'
     position: 4
-  - section: Other
-    folder: Unofficial
-    song: Jig
-    difficulty: Challenge
-    type: single
-    percentage: '80.50'
-    grade: Tier10
-    award: null
-    date: '2012-09-26 19:18:16'
-    position: 3
   - section: In The Groove
     folder: In The Groove 2
     song: Sunshine
@@ -35279,7 +35199,7 @@
     grade: Tier04
     award: FullComboW3
     date: '2011-02-21 19:36:20'
-    position: 3
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: '.59'
@@ -37886,7 +37806,7 @@
     grade: Tier07
     award: null
     date: '2011-04-09 22:36:38'
-    position: 5
+    position: 4
   - section: In The Groove
     folder: In The Groove 3
     song: Sun Son Sunday (Orange Mix)
@@ -39320,7 +39240,7 @@
     grade: Tier06
     award: null
     date: '2011-01-08 23:21:49'
-    position: 4
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: Destiny Lovers
@@ -40000,7 +39920,7 @@
     grade: Tier10
     award: null
     date: '2011-01-08 20:21:01'
-    position: 4
+    position: 3
   - section: In The Groove
     folder: In The Groove 2
     song: Little Kitty Mine
@@ -41893,7 +41813,7 @@
     grade: Tier10
     award: null
     date: '2019-01-20 16:19:12'
-    position: 6
+    position: 5
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: GHOSTS (VINCENT DE MOOR REMIX)
@@ -43984,7 +43904,7 @@
     grade: Tier09
     award: null
     date: '2014-01-09 02:02:57'
-    position: 9
+    position: 8
   - section: In The Groove
     folder: In The Groove 2
     song: Life of a Butterfly
@@ -44511,7 +44431,7 @@
   initials:
   - SNOW
   - RAIN
-  total_scores: 7
+  total_scores: 6
   top_scores: 0
   song_scores:
   - section: Dance Dance Revolution
@@ -44554,16 +44474,6 @@
     award: null
     date: '2011-06-27 22:59:46'
     position: 3
-  - section: Other
-    folder: Unofficial
-    song: FF7 Boss Battle
-    difficulty: Hard
-    type: single
-    percentage: '73.02'
-    grade: Tier12
-    award: null
-    date: '2013-01-28 12:02:08'
-    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: ORDINARY WORLD

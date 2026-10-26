@@ -33188,8 +33188,8 @@
     position: 5
 - player_name: MLS
   initials:
-  - MONT
   - MLS
+  - MONT
   total_scores: 159
   top_scores: 44
   song_scores:
@@ -44509,8 +44509,8 @@
   course_scores: []
 - player_name: Seitoko
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 7
   top_scores: 0
   song_scores:

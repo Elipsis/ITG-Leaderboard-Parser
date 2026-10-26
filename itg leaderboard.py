@@ -884,6 +884,38 @@ def export_players_to_yaml(section_list, filename=PLAYERS):
         yaml.safe_dump(section_list, f, default_flow_style=False, sort_keys=False)
     print(f"Successfully exported player data to {filename}")
 
+def deduplicate_leaderboard_entries(section_list, classification_list):
+    removed_count = 0
+
+    def deduplicate(leaderboard):
+        nonlocal removed_count
+        seen_players = set()
+        unique_entries = []
+
+        for entry in leaderboard.entries:
+            if entry.player in seen_players:
+                removed_count += 1
+                continue
+
+            seen_players.add(entry.player)
+            unique_entries.append(entry)
+
+        leaderboard.entries = unique_entries
+
+    for section in section_list:
+        for folder in section.folders:
+            for song in folder.songs:
+                for leaderboard in song.leaderboards.values():
+                    deduplicate(leaderboard)
+
+    for classification in classification_list:
+        for pack in classification.packs:
+            for course in pack.courses:
+                for leaderboard in course.leaderboards.values():
+                    deduplicate(leaderboard)
+
+    return removed_count
+
 def main():
     # Parse the stats.xml data
     tree = ET.parse(SCRIPT_DIR / "Input" / "Stats.xml")
@@ -989,6 +1021,9 @@ def main():
 
     count_course_populations = populate_course_leaderboards(xml_course_score_data, pack_list)
     print("Added " + str(count_course_populations) + " XML scores to " + str(count_course_leaderboards_generated) + " course leaderboards.")
+
+    duplicate_entries_removed = deduplicate_leaderboard_entries(section_list, classification_list)
+    print("Removed " + str(duplicate_entries_removed) + " duplicate player entries from leaderboards.")
 
     count_player_scores_associated = populate_player_data(section_list, classification_list, player_list)
     print("Associated " + str(count_player_scores_associated) + " scores to player profiles.")

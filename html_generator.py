@@ -16,6 +16,8 @@ COURSE_PACK_WHITELIST_PATH = SCRIPT_DIR / "Input" / "Course Pack Whitelist.yaml"
 
 #HTML
 OUTPUT_HTML = SCRIPT_DIR / "docs" / "index.html"
+SOURCE_CSS = SCRIPT_DIR / "Input" / "leaderboard.css"
+OUTPUT_CSS = OUTPUT_HTML.parent / "leaderboard.css"
 
 DIFFICULTY_ORDER = ("Beginner", "Easy", "Medium", "Hard", "Challenge")
 DIFFICULTY_RANK = {difficulty: rank for rank, difficulty in enumerate(DIFFICULTY_ORDER)}
@@ -263,6 +265,7 @@ def generate_html_with_jinja():
     
     # Export completed build to disk
     OUTPUT_HTML.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_CSS.write_text(SOURCE_CSS.read_text(encoding="utf-8"), encoding="utf-8")
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
         f.write(rendered_output)
         

@@ -239,18 +239,19 @@
         <p class="text-muted">High Score Database & Player Profiles</p>
     </header>
     <div class="controls">
-        <button id="btn-library" class="tab-btn active" onclick="switchView('library')">Machine Records</button>
+        <button id="btn-songs" class="tab-btn active" onclick="switchView('songs')">Song Leaderboards</button>
+        <button id="btn-courses" class="tab-btn" onclick="switchView('courses')">Course Leaderboards</button>
         <button id="btn-standings" class="tab-btn" onclick="switchView('standings')">Player Standings</button>
         <button id="btn-statistics" class="tab-btn" onclick="switchView('statistics')">Record Statistics</button>
-        <button id="btn-latest-plays" class="tab-btn" onclick="switchView('latest-plays')">Latest Plays</button>
-        <input type="text" id="globalSearch" class="search-bar" placeholder="Search songs or charts..." oninput="handleSearch()">
+        <button id="btn-latest-pbs" class="tab-btn" onclick="switchView('latest-pbs')">Latest PBs</button>
+        <input type="text" id="globalSearch" class="search-bar" placeholder="Search songs or courses..." oninput="handleSearch()">
     </div>
 
         <!-- Panel A: Library View with Double Expandable Framework -->
-    <div id="libraryView" class="view-panel active">
-        {% for section in catalog %}  <!-- ◄--- MAKE SURE THIS LINE IS PASTED HERE! -->
+    <div id="songLeaderboardsView" class="view-panel catalog-view active" data-catalog-view="songs">
+        {% for section in song_catalog %}
         {% set section_index = loop.index0 %}
-        <details class="macro-section">
+        <details class="macro-section" data-catalog-section>
             <summary class="macro-title section-{{ section.section_name | lower }}">
                 📂 {{ section.section_name }} <span class="text-muted" style="font-size:0.9rem; font-weight:normal; margin-left: auto; margin-right: 15px;">({{ section.folders | length }} Packs)</span>
             </summary>
@@ -258,7 +259,7 @@
                 
                 {% for folder in section.folders %}
                 {% set folder_index = loop.index0 %}
-                <details class="folder-section" data-folder-target="{{ folder.folder_name.lower() }}">
+                <details class="folder-section" data-catalog-group data-folder-target="{{ folder.folder_name.lower() }}">
                     <summary class="folder-title">
                         📁 {{ folder.folder_name }} 
                         <span class="text-muted" style="font-size:0.9rem; font-weight:normal; margin-left: auto; margin-right: 15px;">
@@ -269,7 +270,7 @@
                         <div class="song-grid">
                             {% for song in folder.songs %}
                             {% set song_index = loop.index0 %}
-                            <div class="song-card" data-search-target="{{ song.song_title.lower() }}">
+                            <div class="song-card" data-record-card data-search-target="{{ song.song_title.lower() }}">
                                 <div class="song-header">
                                     <span class="song-title">{{ song.song_title }}</span>
                                 </div>
@@ -301,6 +302,8 @@
                                 {% set drawer_id = "drawer-" ~ section_index ~ "-" ~ folder_index ~ "-" ~ song_index ~ "-" ~ chart_type ~ "-" ~ difficulty.lower() %}
                                 <div id="{{ drawer_id }}"
                                      class="leaderboard-drawer title-{{ difficulty.lower() }}"
+                                     data-record-type="song"
+                                     data-catalog-view="songs"
                                      data-section="{{ section.section_name }}"
                                      data-folder="{{ folder.folder_name }}"
                                      data-song="{{ song.song_title }}"
@@ -342,6 +345,99 @@
         {% endfor %}
     </div>
 
+    <div id="courseLeaderboardsView" class="view-panel catalog-view" data-catalog-view="courses">
+        {% for classification in course_catalog %}
+        {% set classification_index = loop.index0 %}
+        <details class="macro-section" data-catalog-section>
+            <summary class="macro-title">
+                📂 {{ classification.classification_name }}
+                <span class="text-muted" style="font-size:0.9rem; font-weight:normal; margin-left: auto; margin-right: 15px;">({{ classification.packs | length }} Packs)</span>
+            </summary>
+            <div class="macro-content">
+                {% for pack in classification.packs %}
+                {% set pack_index = loop.index0 %}
+                <details class="folder-section" data-catalog-group>
+                    <summary class="folder-title">
+                        📁 {{ pack.pack_name }}
+                        <span class="text-muted" style="font-size:0.9rem; font-weight:normal; margin-left: auto; margin-right: 15px;">({{ pack.courses | length }} courses)</span>
+                    </summary>
+                    <div class="folder-content">
+                        <div class="song-grid">
+                            {% for course in pack.courses %}
+                            {% set course_index = loop.index0 %}
+                            <div class="song-card" data-record-card data-search-target="{{ course.course_name.lower() }}">
+                                <div class="song-header">
+                                    <span class="song-title">{{ course.course_name }}</span>
+                                </div>
+                                <div class="song-difficulty-rows">
+                                    {% set doubles_with_scores = course.leaderboards.values() | selectattr("type", "equalto", "double") | selectattr("entries") | list %}
+                                    {% for chart_type, type_label, difficulties in [("single", "Singles", course.difficulties_single), ("double", "Doubles", course.difficulties_double)] %}
+                                    {% if chart_type == "single" or doubles_with_scores %}
+                                    <div class="difficulty-row">
+                                        <span class="difficulty-row-label">{{ type_label }}</span>
+                                        <div class="song-diffs">
+                                            {% for diff in difficulties %}
+                                            {% set drawer_id = "drawer-course-" ~ classification_index ~ "-" ~ pack_index ~ "-" ~ course_index ~ "-" ~ chart_type ~ "-" ~ diff.lower() %}
+                                            <button class="badge-btn diff-{{ diff.lower() }}"
+                                                    data-leaderboard-target="{{ drawer_id }}"
+                                                    onclick="toggleLeaderboard('{{ drawer_id }}', this)">
+                                                {{ diff }}
+                                            </button>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+
+                                {% for leaderboard_name, leaderboard in course.leaderboards.items() %}
+                                {% set difficulty = leaderboard_name.rsplit(" (", 1)[0] %}
+                                {% set chart_type = leaderboard.type %}
+                                {% set type_label = "Singles" if chart_type == "single" else "Doubles" %}
+                                {% set drawer_id = "drawer-course-" ~ classification_index ~ "-" ~ pack_index ~ "-" ~ course_index ~ "-" ~ chart_type ~ "-" ~ difficulty.lower() %}
+                                <div id="{{ drawer_id }}"
+                                     class="leaderboard-drawer title-{{ difficulty.lower() }}"
+                                     data-record-type="course"
+                                     data-catalog-view="courses"
+                                     data-classification="{{ classification.classification_name }}"
+                                     data-pack="{{ pack.pack_name }}"
+                                     data-course="{{ course.course_name }}"
+                                     data-difficulty="{{ difficulty }}"
+                                     data-type="{{ chart_type }}">
+                                    <p class="drawer-title title-{{ difficulty.lower() }}">🏆 {{ difficulty }} {{ type_label }} Leaderboard</p>
+                                    <table class="score-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10%">Rank</th>
+                                                <th style="width: 40%">Player</th>
+                                                <th style="width: 25%">Score</th>
+                                                <th style="width: 25%">Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for entry in leaderboard.entries %}
+                                            <tr>
+                                                <td class="bold text-muted">#{{ loop.index }}</td>
+                                                <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
+                                                {% set grade_display = itg_grade_display.get(entry.grade) %}<td class="bold font-mono">{{ entry.percentage }}% <span class="score-grade {{ grade_display[1] if grade_display else 'grade-unmapped' }}">{{ grade_display[0] if grade_display else entry.grade }}</span>{% if entry.award == 'FullComboW1' %} <span class="score-award award-ffc">FFC</span>{% elif entry.award == 'FullComboW2' %} <span class="score-award award-fec">FEC</span>{% elif entry.award == 'FullComboW3' %} <span class="score-award award-fc">FC</span>{% endif %}</td>
+                                                <td class="text-muted font-mono" style="font-size:0.8rem;">{{ entry.date }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+        </details>
+        {% endfor %}
+    </div>
+
     <!-- Panel B: Standings View -->
     <div id="standingsView" class="view-panel">
         <table class="standings-table">
@@ -349,7 +445,8 @@
                 <tr>
                     <th class="sortable-b" style="cursor: pointer;">Rank</th>
                     <th class="sortable-b" style="cursor: pointer;">Profile (Initials)</th>
-                    <th class="sortable-b" style="cursor: pointer;">Top Scores</th>
+                    <th class="sortable-b" style="cursor: pointer;">Song Top Records</th>
+                    <th class="sortable-b" style="cursor: pointer;">Course Top Records</th>
                     <th class="sortable-b" style="cursor: pointer;">Total Scores</th>
                 </tr>
             </thead>
@@ -365,10 +462,13 @@
                     </td>
                     <td class="bold text-gold"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[player.player_name] }}">{{ player.player_name }}</button> ({{ player.initials | join(', ') }})</td>
                     <td class="text-center bold font-mono">
-                        {{ player.top_scores }}
+                        {{ player.song_top_records }}
                     </td>
                     <td class="text-center bold font-mono">
-                        {% if player.scores is defined %}{{ player.scores | length }}{% else %}0{% endif %}
+                        {{ player.course_top_records }}
+                    </td>
+                    <td class="text-center bold font-mono">
+                        {{ player.total_scores }}
                     </td>
                 </tr>
                 {% endfor %}
@@ -379,60 +479,69 @@
     <div id="statisticsView" class="view-panel">
         <div class="statistics-header">
             <h2>Record Statistics</h2>
-            <span class="statistics-note">{{ record_statistics.qualified_players }} players with {{ record_statistics.minimum_top_scores }}+ top scores</span>
         </div>
-        <div class="statistics-controls" role="group" aria-label="Statistics view">
-            <button type="button" class="active" data-stat-mode-button="difficulty" onclick="showStatisticsMode('difficulty')">By Difficulty</button>
-            <button type="button" data-stat-mode-button="mix" onclick="showStatisticsMode('mix')">By Mix</button>
+        <div class="statistics-controls" role="group" aria-label="Record type">
+            <button type="button" class="active" data-stat-entity-button="songs" onclick="showStatisticsEntity('songs')">Songs</button>
+            <button type="button" data-stat-entity-button="courses" onclick="showStatisticsEntity('courses')">Courses</button>
         </div>
 
-        {% for mode, categories in [('difficulty', record_statistics.difficulties), ('mix', record_statistics.mixes)] %}
-        <section id="statistics-{{ mode }}" class="statistics-panel" {% if mode != 'difficulty' %}hidden{% endif %}>
-            <div class="statistics-controls" role="group" aria-label="Select {{ mode }} category">
-                {% for category in categories %}
-                <button type="button" class="{% if loop.first %}active{% endif %}{% if category.key == 'most-difficult' %} most-difficult-button{% endif %}" data-category-button="{{ category.key }}" onclick="showStatisticsCategory('{{ mode }}', '{{ category.key }}')">{{ category.label }}</button>
-                {% endfor %}
-            </div>
-            {% for category in categories %}
-            <div class="statistics-category" data-category-panel="{{ category.key }}" {% if not loop.first %}hidden{% endif %}>
-                {% if category.leaders %}
-                {% set max_wins = category.leaders[0].wins %}
-                <div class="statistics-chart" role="list" aria-label="{{ category.label }} top scores by player">
-                    {% for leader in category.leaders %}
-                    <div class="statistics-row" role="listitem">
-                        <span class="statistics-player"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[leader.player] }}">{{ leader.player }}</button></span>
-                        <span class="statistics-track" aria-hidden="true"><span class="statistics-bar {% if mode == 'difficulty' %}bar-{{ category.key }}{% else %}bar-mix{% endif %}" data-bar-width="{{ (leader.wins / max_wins * 100) | round | int }}"></span></span>
-                        <span class="statistics-count">{{ leader.wins }}</span>
-                    </div>
+        {% for entity, stats, entity_label, grouping_label in [('songs', record_statistics.songs, 'song', 'By Mix'), ('courses', record_statistics.courses, 'course', 'By Classification')] %}
+        <div id="statistics-entity-{{ entity }}" class="statistics-entity-panel" {% if entity != 'songs' %}hidden{% endif %}>
+            <span class="statistics-note">{{ stats.qualified_players }} players with {{ stats.minimum_top_scores }}+ {{ entity_label }} top records</span>
+            {% for mode, categories in [('difficulty', stats.difficulties), ('grouping', stats.groupings)] %}
+            <section id="statistics-{{ entity }}-{{ mode }}" class="statistics-panel" {% if mode != 'difficulty' %}hidden{% endif %}>
+                <div class="statistics-controls" role="group" aria-label="{{ entity }} statistics view">
+                    <button type="button" class="{% if mode == 'difficulty' %}active{% endif %}" data-stat-mode-button="difficulty" onclick="showStatisticsMode('difficulty')">By Difficulty</button>
+                    <button type="button" class="{% if mode == 'grouping' %}active{% endif %}" data-stat-mode-button="grouping" onclick="showStatisticsMode('grouping')">{{ grouping_label }}</button>
+                </div>
+                <div class="statistics-controls" role="group" aria-label="Select {{ mode }} category">
+                    {% for category in categories %}
+                    <button type="button" class="{% if loop.first %}active{% endif %}{% if category.key == 'most-difficult' %} most-difficult-button{% endif %}" data-category-button="{{ category.key }}" onclick="showStatisticsCategory('{{ category.key }}')">{{ category.label }}</button>
                     {% endfor %}
                 </div>
-                {% else %}
-                <p class="statistics-empty">No qualifying top scores in this category.</p>
-                {% endif %}
-            </div>
+                {% for category in categories %}
+                <div class="statistics-category" data-category-panel="{{ category.key }}" {% if not loop.first %}hidden{% endif %}>
+                    {% if category.leaders %}
+                    {% set max_wins = category.leaders[0].wins %}
+                    <div class="statistics-chart" role="list" aria-label="{{ category.label }} top records by player">
+                        {% for leader in category.leaders %}
+                        <div class="statistics-row" role="listitem">
+                            <span class="statistics-player"><button type="button" class="player-link" data-player-id="{{ player_profile_ids[leader.player] }}">{{ leader.player }}</button></span>
+                            <span class="statistics-track" aria-hidden="true"><span class="statistics-bar {% if mode == 'difficulty' %}bar-{{ category.key }}{% else %}bar-mix{% endif %}" data-bar-width="{{ (leader.wins / max_wins * 100) | round | int }}"></span></span>
+                            <span class="statistics-count">{{ leader.wins }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <p class="statistics-empty">No qualifying top records in this category.</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
             {% endfor %}
-        </section>
+        </div>
         {% endfor %}
     </div>
 
-    <div id="latestPlaysView" class="view-panel">
+    <div id="latestPBsView" class="view-panel">
         <div class="statistics-header">
-            <h2>Latest Plays</h2>
+            <h2>Latest PBs</h2>
         </div>
-        <div class="statistics-controls" role="group" aria-label="Latest plays filter">
-            <button type="button" class="active" data-latest-play-mode="all" onclick="showLatestPlays('all')">All</button>
-            <button type="button" data-latest-play-mode="machine-records" onclick="showLatestPlays('machine-records')">Machine Records Only</button>
+        <div class="statistics-controls" role="group" aria-label="Latest PBs filter">
+            <button type="button" class="active" data-latest-pb-mode="all" onclick="showLatestPBs('all')">All</button>
+            <button type="button" data-latest-pb-mode="machine-records" onclick="showLatestPBs('machine-records')">Machine Records Only</button>
         </div>
-        {% for mode, entries in [('all', latest_plays.all), ('machine-records', latest_plays.machine_records)] %}
-        <div id="latest-plays-{{ mode }}" class="latest-play-list" {% if mode != 'all' %}hidden{% endif %}>
+        {% for mode, entries in [('all', latest_pbs.all), ('machine-records', latest_pbs.machine_records)] %}
+        <div id="latest-pbs-{{ mode }}" class="latest-play-list" {% if mode != 'all' %}hidden{% endif %}>
             <div class="latest-play-table-wrap">
                 <table class="latest-play-table">
                     <thead>
                         <tr>
                             <th>Date</th>
-                            <th>Section</th>
-                            <th>Folder</th>
-                            <th>Song</th>
+                            <th>Record Type</th>
+                            <th>Classification / Section</th>
+                            <th>Pack / Folder</th>
+                            <th>Course / Song</th>
                             <th>Difficulty</th>
                             <th>Player</th>
                             <th>Score</th>
@@ -445,10 +554,18 @@
                         {% for entry in entries %}
                         <tr>
                             <td class="latest-play-date">{{ entry.date }}</td>
+                            <td>{{ entry.record_type }}</td>
+                            {% if entry.record_type == 'Song' %}
                             <td>{{ entry.section }}</td>
                             <td>{{ entry.folder }}</td>
-                            <td><span data-latest-play-link data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}">{{ entry.song }}</span></td>
-                            <td><span data-latest-play-link data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}">{{ entry.difficulty }}</span></td>
+                            <td><span data-latest-play-link data-record-type="song" data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}" data-type="{{ entry.type }}">{{ entry.song }}</span></td>
+                            <td><span data-latest-play-link data-record-type="song" data-section="{{ entry.section }}" data-folder="{{ entry.folder }}" data-song="{{ entry.song }}" data-difficulty="{{ entry.difficulty }}" data-type="{{ entry.type }}">{{ entry.difficulty }}</span></td>
+                            {% else %}
+                            <td>{{ entry.classification }}</td>
+                            <td>{{ entry.pack }}</td>
+                            <td><span data-latest-play-link data-record-type="course" data-classification="{{ entry.classification }}" data-pack="{{ entry.pack }}" data-course="{{ entry.course }}" data-difficulty="{{ entry.difficulty }}" data-type="{{ entry.type }}">{{ entry.course }}</span></td>
+                            <td><span data-latest-play-link data-record-type="course" data-classification="{{ entry.classification }}" data-pack="{{ entry.pack }}" data-course="{{ entry.course }}" data-difficulty="{{ entry.difficulty }}" data-type="{{ entry.type }}">{{ entry.difficulty }}</span></td>
+                            {% endif %}
                             <td><button type="button" class="player-link" data-player-id="{{ player_profile_ids[entry.player] }}">{{ entry.player }}</button></td>
                             <td class="latest-play-score">{{ entry.percentage }}%</td>
                             {% if mode == 'all' %}
@@ -456,7 +573,7 @@
                             {% endif %}
                         </tr>
                         {% else %}
-                        <tr><td class="latest-play-empty" colspan="{{ 8 if mode == 'all' else 7 }}">No matching plays.</td></tr>
+                        <tr><td class="latest-play-empty" colspan="{{ 9 if mode == 'all' else 8 }}">No matching plays.</td></tr>
                         {% endfor %}
                     </tbody>
                 </table>
@@ -472,14 +589,18 @@
                 <p>Registered initials: <span id="playerProfileInitials"></span></p>
             </div>
         </div>
+        <div class="statistics-controls" role="group" aria-label="Player record type">
+            <button type="button" class="active" data-profile-entity="songs" onclick="showProfileEntity('songs')">Song Scores</button>
+            <button type="button" data-profile-entity="courses" onclick="showProfileEntity('courses')">Course Scores</button>
+        </div>
         <div class="player-profile-breakdowns">
             <section>
                 <h3>Records by Difficulty</h3>
                 <table class="player-profile-counts"><tbody id="playerDifficultyCounts"></tbody></table>
             </section>
             <section>
-                <h3>Records by Mix</h3>
-                <table class="player-profile-counts"><tbody id="playerMixCounts"></tbody></table>
+                <h3 id="playerGroupCountsTitle">Records by Mix</h3>
+                <table class="player-profile-counts"><tbody id="playerGroupCounts"></tbody></table>
             </section>
         </div>
         <section class="player-profile-section">
@@ -513,22 +634,16 @@
     const playerProfileScoreLimit = playerProfileData.score_limit;
     const leaderboardTargets = new Map();
     document.querySelectorAll('.leaderboard-drawer').forEach(drawer => {
-        const key = JSON.stringify([
-            drawer.dataset.section,
-            drawer.dataset.folder,
-            drawer.dataset.song,
-            drawer.dataset.difficulty
-        ]);
-        const targets = leaderboardTargets.get(key) ?? [];
-        targets.push({id: drawer.id, type: drawer.dataset.type});
-        leaderboardTargets.set(key, targets);
+        const key = leaderboardKey(drawer.dataset.recordType, drawer.dataset);
+        leaderboardTargets.set(key, drawer.id);
     });
-    let currentView = 'library';
-    let profileReturnView = 'library';
+    let currentView = 'songs';
+    let profileReturnView = 'songs';
     let currentPlayerProfile = null;
+    let currentProfileEntity = 'songs';
     let currentProfileScoreView = 'latest';
     let currentProfileScoreScope = 'all';
-    let currentProfileFilters = {difficulty: null, section: null};
+    let currentProfileFilters = {difficulty: null, group: null};
 
     document.querySelectorAll('[data-bar-width]').forEach(bar => {
         bar.style.width = `${bar.dataset.barWidth}%`;
@@ -548,16 +663,18 @@
         if (viewName !== 'player-profile') currentView = viewName;
         if (updateUrl && viewName !== 'player-profile') updateShareableHash('');
         const searchInput = document.getElementById('globalSearch');
-        document.getElementById('libraryView').classList.toggle('active', viewName === 'library');
+        document.getElementById('songLeaderboardsView').classList.toggle('active', viewName === 'songs');
+        document.getElementById('courseLeaderboardsView').classList.toggle('active', viewName === 'courses');
         document.getElementById('standingsView').classList.toggle('active', viewName === 'standings');
         document.getElementById('statisticsView').classList.toggle('active', viewName === 'statistics');
-        document.getElementById('latestPlaysView').classList.toggle('active', viewName === 'latest-plays');
+        document.getElementById('latestPBsView').classList.toggle('active', viewName === 'latest-pbs');
         document.getElementById('playerProfileView').classList.toggle('active', viewName === 'player-profile');
-        document.getElementById('btn-library').classList.toggle('active', viewName === 'library');
+        document.getElementById('btn-songs').classList.toggle('active', viewName === 'songs');
+        document.getElementById('btn-courses').classList.toggle('active', viewName === 'courses');
         document.getElementById('btn-standings').classList.toggle('active', viewName === 'standings');
         document.getElementById('btn-statistics').classList.toggle('active', viewName === 'statistics');
-        document.getElementById('btn-latest-plays').classList.toggle('active', viewName === 'latest-plays');
-        if (viewName !== 'library') {
+        document.getElementById('btn-latest-pbs').classList.toggle('active', viewName === 'latest-pbs');
+        if (viewName !== 'songs' && viewName !== 'courses') {
             searchInput.style.visibility = 'hidden';
         } else {
             searchInput.style.visibility = 'visible';
@@ -565,12 +682,16 @@
         }
     }
 
+    function leaderboardKey(recordType, data) {
+        if (recordType === 'course') {
+            return JSON.stringify(['course', data.classification, data.pack, data.course, data.difficulty, data.type]);
+        }
+        return JSON.stringify(['song', data.section, data.folder, data.song, data.difficulty, data.type]);
+    }
+
     function createProfileLeaderboardLink(score, label) {
-        const key = JSON.stringify([score.section, score.folder, score.song, score.difficulty]);
-        const targets = leaderboardTargets.get(key) ?? [];
-        const targetId = score.type
-            ? targets.find(target => target.type === score.type)?.id
-            : targets.length === 1 ? targets[0].id : null;
+        const key = leaderboardKey(score.record_type ?? score.recordType, score);
+        const targetId = leaderboardTargets.get(key);
         if (!targetId) return label;
 
         const link = document.createElement('a');
@@ -598,14 +719,19 @@
         currentPlayerProfile = profile;
         document.getElementById('playerProfileName').textContent = profile.player_name;
         document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
+        currentProfileEntity = 'songs';
         currentProfileScoreView = 'latest';
         currentProfileScoreScope = 'all';
-        currentProfileFilters = {difficulty: null, section: null};
-        populateProfileFilterRows('playerDifficultyCounts', profile.difficulty_counts, 'difficulty');
-        populateProfileFilterRows('playerMixCounts', profile.mix_counts, 'section');
+        currentProfileFilters = {difficulty: null, group: null};
         renderProfileScores();
         switchView('player-profile');
         if (updateUrl) updateShareableHash(`#player-${Number(playerId)}`);
+    }
+
+    function showProfileEntity(entity) {
+        currentProfileEntity = entity;
+        currentProfileFilters = {difficulty: null, group: null};
+        renderProfileScores();
     }
 
     function returnFromPlayerProfile() {
@@ -673,6 +799,9 @@
     }
 
     function updateProfileScoreControls() {
+        document.querySelectorAll('[data-profile-entity]').forEach(button => {
+            button.classList.toggle('active', button.dataset.profileEntity === currentProfileEntity);
+        });
         document.querySelectorAll('[data-profile-score-view]').forEach(button => {
             button.classList.toggle('active', button.dataset.profileScoreView === currentProfileScoreView);
         });
@@ -684,9 +813,9 @@
             button.classList.toggle('active', isActive);
             button.setAttribute('aria-pressed', String(isActive));
         });
-        const hasFilters = Boolean(currentProfileFilters.difficulty || currentProfileFilters.section);
+        const hasFilters = Boolean(currentProfileFilters.difficulty || currentProfileFilters.group);
         document.getElementById('clearPlayerScoreFilters').disabled = !hasFilters;
-        const activeFilters = [currentProfileFilters.difficulty, currentProfileFilters.section].filter(Boolean);
+        const activeFilters = [currentProfileFilters.difficulty, currentProfileFilters.group].filter(Boolean);
         document.getElementById('playerProfileFilterStatus').textContent = activeFilters.length
             ? `Filters: ${activeFilters.join(' + ')}`
             : 'No score filters';
@@ -696,18 +825,33 @@
         if (!currentPlayerProfile) return;
         const isLatest = currentProfileScoreView === 'latest';
         const isAll = currentProfileScoreScope === 'all';
-        const entries = currentPlayerProfile.scores.filter(score =>
+        const isCourse = currentProfileEntity === 'courses';
+        const scores = isCourse ? currentPlayerProfile.course_scores : currentPlayerProfile.song_scores;
+        const groupCounts = isCourse
+            ? currentPlayerProfile.course_group_counts
+            : currentPlayerProfile.song_group_counts;
+        const groupKey = isCourse ? 'classification' : 'section';
+        const groupLabel = isCourse ? 'Records by Classification' : 'Records by Mix';
+        document.getElementById('playerGroupCountsTitle').textContent = groupLabel;
+        populateProfileFilterRows('playerDifficultyCounts', isCourse
+            ? currentPlayerProfile.course_difficulty_counts
+            : currentPlayerProfile.song_difficulty_counts, 'difficulty');
+        populateProfileFilterRows('playerGroupCounts', groupCounts, 'group');
+        const entries = scores.filter(score =>
             (!currentProfileFilters.difficulty || score.difficulty === currentProfileFilters.difficulty)
-            && (!currentProfileFilters.section || score.section === currentProfileFilters.section)
+            && (!currentProfileFilters.group || score[groupKey] === currentProfileFilters.group)
             && (isAll || score.position === 1)
         );
         entries.sort(isLatest
             ? compareProfileDates
             : (first, second) => Number(second.percentage) - Number(first.percentage) || compareProfileDates(first, second));
         const visibleEntries = entries.slice(0, playerProfileScoreLimit);
+        const entityHeaders = isCourse
+            ? ['Classification', 'Pack', 'Course']
+            : ['Section', 'Folder', 'Song'];
         const headers = isLatest
-            ? ['Date', 'Section', 'Folder', 'Song', 'Difficulty', 'Score']
-            : ['Rank', 'Score', 'Section', 'Folder', 'Song', 'Difficulty', 'Date'];
+            ? ['Date', ...entityHeaders, 'Difficulty', 'Score']
+            : ['Rank', 'Score', ...entityHeaders, 'Difficulty', 'Date'];
         if (isAll) headers.push('Position');
         const headerRow = document.getElementById('playerScoreHeaders');
         headerRow.replaceChildren();
@@ -716,10 +860,15 @@
             header.textContent = label;
             headerRow.appendChild(header);
         });
-        document.getElementById('playerScoresTitle').textContent = isLatest ? 'Latest Scores' : 'Top Scores by Percentage';
+        const entityLabel = isCourse ? 'Course' : 'Song';
+        document.getElementById('playerScoresTitle').textContent = `${isLatest ? 'Latest' : 'Top'} ${entityLabel} Scores`;
         const getCells = isLatest
-            ? score => [score.date, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), `${score.percentage}%`]
-            : (score, index) => [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), score.date];
+            ? score => isCourse
+                ? [score.date, score.classification, score.pack, createProfileLeaderboardLink(score, score.course), createProfileLeaderboardLink(score, score.difficulty), `${score.percentage}%`]
+                : [score.date, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), `${score.percentage}%`]
+            : (score, index) => isCourse
+                ? [`#${index + 1}`, `${score.percentage}%`, score.classification, score.pack, createProfileLeaderboardLink(score, score.course), createProfileLeaderboardLink(score, score.difficulty), score.date]
+                : [`#${index + 1}`, `${score.percentage}%`, score.section, score.folder, createProfileLeaderboardLink(score, score.song), createProfileLeaderboardLink(score, score.difficulty), score.date];
         populatePlayerRows('playerScores', visibleEntries, (score, index) => {
             const cells = getCells(score, index);
             if (isAll) cells.push(`#${score.position}`);
@@ -744,24 +893,24 @@
     }
 
     function clearPlayerScoreFilters() {
-        currentProfileFilters = {difficulty: null, section: null};
+        currentProfileFilters = {difficulty: null, group: null};
         renderProfileScores();
     }
 
     function openLeaderboard(drawerId, updateUrl = true) {
         const drawer = document.getElementById(drawerId);
-        const card = drawer?.closest('.song-card');
-        const folder = drawer?.closest('.folder-section');
-        const section = drawer?.closest('.macro-section');
-        if (!drawer || !card || !folder || !section) {
+        const card = drawer?.closest('[data-record-card]');
+        const group = drawer?.closest('[data-catalog-group]');
+        const section = drawer?.closest('[data-catalog-section]');
+        if (!drawer || !card || !group || !section) {
             console.error('Unable to open the requested leaderboard.');
             return;
         }
 
         document.getElementById('globalSearch').value = '';
-        switchView('library', false);
+        switchView(drawer.dataset.catalogView, false);
         section.open = true;
-        folder.open = true;
+        group.open = true;
         card.querySelectorAll('.leaderboard-drawer').forEach(item => item.classList.remove('active-drawer'));
         card.querySelectorAll('.badge-btn').forEach(button => button.classList.remove('active-toggle'));
         drawer.classList.add('active-drawer');
@@ -804,17 +953,27 @@
         if (filterButton) togglePlayerProfileFilter(filterButton.dataset.profileFilterKind, filterButton.dataset.profileFilterValue);
     });
 
-    function showStatisticsMode(mode) {
-        document.querySelectorAll('[data-stat-mode-button]').forEach(button => {
-            button.classList.toggle('active', button.dataset.statModeButton === mode);
+    function showStatisticsEntity(entity) {
+        document.querySelectorAll('[data-stat-entity-button]').forEach(button => {
+            button.classList.toggle('active', button.dataset.statEntityButton === entity);
         });
-        document.querySelectorAll('.statistics-panel').forEach(panel => {
-            panel.hidden = panel.id !== `statistics-${mode}`;
+        document.querySelectorAll('.statistics-entity-panel').forEach(panel => {
+            panel.hidden = panel.id !== `statistics-entity-${entity}`;
         });
     }
 
-    function showStatisticsCategory(mode, category) {
-        const panel = document.getElementById(`statistics-${mode}`);
+    function showStatisticsMode(mode) {
+        const entityPanel = document.querySelector('.statistics-entity-panel:not([hidden])');
+        entityPanel.querySelectorAll('[data-stat-mode-button]').forEach(button => {
+            button.classList.toggle('active', button.dataset.statModeButton === mode);
+        });
+        entityPanel.querySelectorAll('.statistics-panel').forEach(panel => {
+            panel.hidden = !panel.id.endsWith(`-${mode}`);
+        });
+    }
+
+    function showStatisticsCategory(category) {
+        const panel = document.querySelector('.statistics-entity-panel:not([hidden]) .statistics-panel:not([hidden])');
         panel.querySelectorAll('[data-category-button]').forEach(button => {
             button.classList.toggle('active', button.dataset.categoryButton === category);
         });
@@ -823,12 +982,12 @@
         });
     }
 
-    function showLatestPlays(mode) {
-        document.querySelectorAll('[data-latest-play-mode]').forEach(button => {
-            button.classList.toggle('active', button.dataset.latestPlayMode === mode);
+    function showLatestPBs(mode) {
+        document.querySelectorAll('[data-latest-pb-mode]').forEach(button => {
+            button.classList.toggle('active', button.dataset.latestPbMode === mode);
         });
         document.querySelectorAll('.latest-play-list').forEach(list => {
-            list.hidden = list.id !== `latest-plays-${mode}`;
+            list.hidden = list.id !== `latest-pbs-${mode}`;
         });
     }
 
@@ -852,14 +1011,15 @@
     // Enhanced Search Engine: Cascades down 2 levels of nested details layers
     function handleSearch() {
         const query = document.getElementById('globalSearch').value.toLowerCase().trim();
-        const macroSections = document.querySelectorAll('.macro-section');
+        const catalogView = document.querySelector('.catalog-view.active');
+        const macroSections = catalogView.querySelectorAll('[data-catalog-section]');
 
         macroSections.forEach(section => {
-            const folders = section.querySelectorAll('.folder-section');
+            const folders = section.querySelectorAll('[data-catalog-group]');
             let activeFoldersInSection = 0;
 
             folders.forEach(folder => {
-                const cards = folder.querySelectorAll('.song-card');
+                const cards = folder.querySelectorAll('[data-record-card]');
                 let visibleSongsInFolder = 0;
 
                 cards.forEach(card => {

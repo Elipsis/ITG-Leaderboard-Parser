@@ -15692,6 +15692,11 @@
             grade: Tier06
             award: null
             date: '2011-01-09 00:26:08'
+          - player: Ennui
+            percentage: '85.19'
+            grade: Tier09
+            award: null
+            date: '2026-10-29 20:35:31'
           - player: ASH
             percentage: '80.53'
             grade: Tier10
@@ -23381,6 +23386,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.51'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-10-29 20:41:50'
           - player: LONE
             percentage: '90.69'
             grade: Tier07
@@ -23779,6 +23789,16 @@
         Easy (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.55'
+            grade: Tier03
+            award: null
+            date: '2026-10-29 20:14:13'
+          - player: Ennui
+            percentage: '96.54'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-10-29 20:14:13'
           - player: LONE
             percentage: '87.15'
             grade: Tier08

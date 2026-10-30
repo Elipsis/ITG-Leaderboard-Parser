@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 782
-  top_scores: 713
+  total_scores: 784
+  top_scores: 715
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -153,6 +153,16 @@
     grade: Tier02
     award: FullComboW2
     date: '2011-01-24 23:23:28'
+    position: 1
+  - section: In The Groove
+    folder: In The Groove
+    song: Dreams of Passion
+    difficulty: Hard
+    type: single
+    percentage: '99.51'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-10-29 20:41:50'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
@@ -1323,6 +1333,16 @@
     grade: Tier03
     award: FullComboW2
     date: '2012-01-18 20:49:23'
+    position: 1
+  - section: In The Groove
+    folder: In The Groove
+    song: Hardcore of the North
+    difficulty: Easy
+    type: single
+    percentage: '98.55'
+    grade: Tier03
+    award: null
+    date: '2026-10-29 20:14:13'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 3rd Mix
@@ -7949,7 +7969,7 @@
   initials:
   - LONE
   total_scores: 1187
-  top_scores: 498
+  top_scores: 496
   song_scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -10170,7 +10190,7 @@
     grade: Tier07
     award: null
     date: '2011-05-07 22:34:12'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: SYNCHRONIZED LOVE (Red Monster Hyper Mix)
@@ -12040,7 +12060,7 @@
     grade: Tier08
     award: null
     date: '2013-03-27 10:12:18'
-    position: 1
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: Star Gate Heaven
@@ -15570,7 +15590,7 @@
     grade: Tier11
     award: null
     date: '2011-05-18 19:18:52'
-    position: 3
+    position: 4
   - section: In The Groove
     folder: In The Groove
     song: Pandemonium
@@ -30674,7 +30694,7 @@
     grade: Tier12
     award: null
     date: '2011-01-25 22:58:43'
-    position: 2
+    position: 4
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
     song: boys
@@ -38171,7 +38191,7 @@
 - player_name: Ennui
   initials:
   - ENUI
-  total_scores: 178
+  total_scores: 180
   top_scores: 27
   song_scores:
   - section: Dance Dance Revolution
@@ -38423,6 +38443,16 @@
     grade: Tier04
     award: FullComboW3
     date: '2011-01-22 23:55:27'
+    position: 2
+  - section: In The Groove
+    folder: In The Groove
+    song: Hardcore of the North
+    difficulty: Easy
+    type: single
+    percentage: '96.54'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-10-29 20:14:13'
     position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -39294,6 +39324,16 @@
     award: null
     date: '2011-05-16 21:36:28'
     position: 3
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 8th Mix
+    song: LOVE LOVE SHINE
+    difficulty: Hard
+    type: single
+    percentage: '85.19'
+    grade: Tier09
+    award: null
+    date: '2026-10-29 20:35:31'
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: '!'
@@ -41154,7 +41194,7 @@
     grade: Tier14
     award: null
     date: '2026-10-25 15:17:45'
-    position: 3
+    position: 5
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 3rd Mix
     song: BUMBLE BEE
@@ -45653,7 +45693,7 @@
     grade: Tier10
     award: null
     date: '2011-01-09 00:26:08'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: A Stupid Barber

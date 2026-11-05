@@ -1309,7 +1309,7 @@
             grade: Tier08
             award: null
             date: '2011-09-05 21:10:11'
-          - player: GARY
+          - player: GMcGregz
             percentage: '82.95'
             grade: Tier10
             award: null
@@ -1873,7 +1873,7 @@
             grade: Tier06
             award: null
             date: '2013-04-07 18:47:45'
-          - player: GARY
+          - player: GMcGregz
             percentage: '75.69'
             grade: Tier12
             award: null
@@ -3086,7 +3086,7 @@
             grade: Tier14
             award: null
             date: '2026-02-24 19:52:32'
-          - player: ROFR
+          - player: rofer
             percentage: '60.36'
             grade: Tier15
             award: null
@@ -3287,7 +3287,7 @@
             grade: Tier03
             award: FullComboW3
             date: '2011-02-18 21:35:30'
-          - player: GARY
+          - player: GMcGregz
             percentage: '84.44'
             grade: Tier09
             award: null
@@ -3757,7 +3757,7 @@
             grade: Tier16
             award: null
             date: '2026-10-22 19:17:15'
-          - player: ROFR
+          - player: rofer
             percentage: '48.94'
             grade: Tier17
             award: null
@@ -4806,7 +4806,7 @@
         Medium (Single):
           type: single
           entries:
-          - player: GARY
+          - player: GMcGregz
             percentage: '80.59'
             grade: Tier10
             award: null
@@ -5308,7 +5308,7 @@
             grade: Tier08
             award: null
             date: '2013-05-20 16:11:04'
-          - player: GARY
+          - player: GMcGregz
             percentage: '87.41'
             grade: Tier08
             award: null
@@ -6091,7 +6091,7 @@
             grade: Tier05
             award: FullComboW3
             date: '2011-01-08 21:11:23'
-          - player: GARY
+          - player: GMcGregz
             percentage: '90.15'
             grade: Tier07
             award: null
@@ -6155,7 +6155,7 @@
             grade: Tier07
             award: FullComboW3
             date: '2013-02-01 08:57:30'
-          - player: GARY
+          - player: GMcGregz
             percentage: '90.57'
             grade: Tier07
             award: FullComboW3
@@ -7070,7 +7070,7 @@
             grade: Tier04
             award: FullComboW3
             date: '2011-02-26 19:50:56'
-          - player: GARY
+          - player: GMcGregz
             percentage: '81.74'
             grade: Tier10
             award: null
@@ -7449,7 +7449,7 @@
             grade: Tier07
             award: null
             date: '2011-09-05 21:18:41'
-          - player: GARY
+          - player: GMcGregz
             percentage: '83.43'
             grade: Tier09
             award: null
@@ -7758,7 +7758,7 @@
         Medium (Single):
           type: single
           entries:
-          - player: GARY
+          - player: GMcGregz
             percentage: '80.00'
             grade: Tier10
             award: null
@@ -7857,7 +7857,7 @@
             grade: Tier08
             award: null
             date: '2026-11-04 19:54:40'
-          - player: GARY
+          - player: GMcGregz
             percentage: '81.52'
             grade: Tier10
             award: null
@@ -8653,7 +8653,7 @@
             grade: Tier07
             award: FullComboW3
             date: '2013-01-14 10:15:10'
-          - player: GARY
+          - player: GMcGregz
             percentage: '86.37'
             grade: Tier08
             award: null
@@ -11025,7 +11025,7 @@
             grade: Tier07
             award: null
             date: '2026-11-04 21:33:49'
-          - player: GARY
+          - player: GMcGregz
             percentage: '80.13'
             grade: Tier10
             award: null
@@ -12760,7 +12760,7 @@
             grade: Tier10
             award: null
             date: '2011-12-29 16:46:42'
-          - player: GARY
+          - player: GMcGregz
             percentage: '70.47'
             grade: Tier13
             award: null
@@ -12876,7 +12876,7 @@
             grade: Tier06
             award: FullComboW3
             date: '2014-01-16 02:23:50'
-          - player: GARY
+          - player: GMcGregz
             percentage: '92.07'
             grade: Tier06
             award: FullComboW3
@@ -14020,7 +14020,7 @@
             grade: Tier06
             award: null
             date: '2019-03-10 06:56:32'
-          - player: GARY
+          - player: GMcGregz
             percentage: '86.95'
             grade: Tier08
             award: null
@@ -14470,7 +14470,7 @@
             grade: Tier11
             award: null
             date: '2011-02-03 20:08:00'
-          - player: GARY
+          - player: GMcGregz
             percentage: '73.54'
             grade: Tier12
             award: null
@@ -14620,7 +14620,7 @@
             grade: Tier07
             award: null
             date: '2011-10-25 17:40:10'
-          - player: GARY
+          - player: GMcGregz
             percentage: '78.26'
             grade: Tier11
             award: null
@@ -15635,7 +15635,7 @@
             grade: Tier13
             award: null
             date: '2011-02-08 19:55:44'
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '68.91'
             grade: Tier13
             award: null
@@ -15868,7 +15868,7 @@
             grade: Tier08
             award: null
             date: '2011-04-06 21:41:39'
-          - player: GARY
+          - player: GMcGregz
             percentage: '74.93'
             grade: Tier12
             award: null
@@ -16042,7 +16042,7 @@
             grade: Tier07
             award: null
             date: '2011-07-15 22:19:47'
-          - player: GARY
+          - player: GMcGregz
             percentage: '87.89'
             grade: Tier08
             award: null
@@ -16225,7 +16225,7 @@
             grade: Tier10
             award: null
             date: '2019-03-10 07:02:24'
-          - player: GARY
+          - player: GMcGregz
             percentage: '80.27'
             grade: Tier10
             award: null
@@ -16410,7 +16410,7 @@
             grade: Tier06
             award: FullComboW3
             date: '2012-04-25 17:58:31'
-          - player: GARY
+          - player: GMcGregz
             percentage: '85.51'
             grade: Tier09
             award: null
@@ -17520,7 +17520,7 @@
         Medium (Single):
           type: single
           entries:
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '53.42'
             grade: Tier17
             award: null
@@ -17762,7 +17762,7 @@
             grade: Tier06
             award: null
             date: '2013-03-03 04:24:33'
-          - player: GARY
+          - player: GMcGregz
             percentage: '86.53'
             grade: Tier08
             award: null
@@ -18464,12 +18464,12 @@
         Easy (Single):
           type: single
           entries:
-          - player: TAI
+          - player: TaiFighter
             percentage: '37.61'
             grade: Tier17
             award: null
             date: '2026-11-04 21:51:02'
-          - player: JENY
+          - player: Nynaeve
             percentage: '34.32'
             grade: Tier17
             award: null
@@ -18611,7 +18611,7 @@
         Medium (Single):
           type: single
           entries:
-          - player: GARY
+          - player: GMcGregz
             percentage: '76.71'
             grade: Tier11
             award: null
@@ -18981,7 +18981,7 @@
         Easy (Single):
           type: single
           entries:
-          - player: TAI
+          - player: TaiFighter
             percentage: '75.91'
             grade: Tier12
             award: null
@@ -19145,7 +19145,7 @@
             grade: Tier11
             award: null
             date: Unknown Date
-          - player: GARY
+          - player: GMcGregz
             percentage: '64.70'
             grade: Tier14
             award: null
@@ -19672,7 +19672,7 @@
             grade: Tier11
             award: null
             date: '2012-11-20 18:17:42'
-          - player: GARY
+          - player: GMcGregz
             percentage: '63.73'
             grade: Tier15
             award: null
@@ -19688,7 +19688,7 @@
         Easy (Single):
           type: single
           entries:
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '85.48'
             grade: Tier09
             award: null
@@ -19696,7 +19696,7 @@
         Medium (Single):
           type: single
           entries:
-          - player: GARY
+          - player: GMcGregz
             percentage: '82.84'
             grade: Tier10
             award: null
@@ -21150,7 +21150,7 @@
             grade: Tier05
             award: FullComboW3
             date: '2011-09-18 22:23:07'
-          - player: GARY
+          - player: GMcGregz
             percentage: '88.71'
             grade: Tier08
             award: null
@@ -21291,7 +21291,7 @@
             grade: Tier11
             award: null
             date: '2026-11-04 18:48:18'
-          - player: ROFR
+          - player: rofer
             percentage: '53.60'
             grade: Tier17
             award: null
@@ -21583,7 +21583,7 @@
             grade: Tier11
             award: null
             date: '2011-02-23 17:37:23'
-          - player: GARY
+          - player: GMcGregz
             percentage: '70.80'
             grade: Tier13
             award: null
@@ -21601,7 +21601,7 @@
             grade: Tier05
             award: FullComboW3
             date: '2011-07-01 17:16:42'
-          - player: GARY
+          - player: GMcGregz
             percentage: '85.77'
             grade: Tier09
             award: null
@@ -23395,7 +23395,7 @@
             grade: Tier09
             award: null
             date: '2013-09-23 18:30:16'
-          - player: GARY
+          - player: GMcGregz
             percentage: '80.25'
             grade: Tier10
             award: null
@@ -23471,7 +23471,7 @@
             grade: Tier12
             award: null
             date: '2011-09-16 10:20:58'
-          - player: GARY
+          - player: GMcGregz
             percentage: '69.85'
             grade: Tier13
             award: null
@@ -23639,12 +23639,12 @@
         Beginner (Single):
           type: single
           entries:
-          - player: TAI
+          - player: TaiFighter
             percentage: '44.61'
             grade: Tier17
             award: null
             date: '2026-11-04 21:09:29'
-          - player: JENY
+          - player: Nynaeve
             percentage: '21.53'
             grade: Tier17
             award: null
@@ -23841,12 +23841,12 @@
             grade: Tier10
             award: null
             date: '2011-02-09 20:49:37'
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '76.35'
             grade: Tier11
             award: null
             date: '2026-11-04 19:19:53'
-          - player: GARY
+          - player: GMcGregz
             percentage: '70.29'
             grade: Tier13
             award: null
@@ -26390,7 +26390,7 @@
             grade: Tier15
             award: null
             date: '2013-10-22 22:18:03'
-          - player: GARY
+          - player: GMcGregz
             percentage: '63.05'
             grade: Tier15
             award: null
@@ -29397,7 +29397,7 @@
         Easy (Single):
           type: single
           entries:
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '85.16'
             grade: Tier09
             award: null
@@ -29767,7 +29767,7 @@
         Medium (Single):
           type: single
           entries:
-          - player: GARY
+          - player: GMcGregz
             percentage: '70.29'
             grade: Tier13
             award: null
@@ -29899,7 +29899,7 @@
         Easy (Single):
           type: single
           entries:
-          - player: GARY
+          - player: GMcGregz
             percentage: '85.60'
             grade: Tier09
             award: null
@@ -30298,7 +30298,7 @@
             grade: Tier09
             award: null
             date: '2013-10-22 22:35:10'
-          - player: GARY
+          - player: GMcGregz
             percentage: '72.85'
             grade: Tier12
             award: null
@@ -33011,7 +33011,7 @@
         Challenge (Single):
           type: single
           entries:
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '85.70'
             grade: Tier09
             award: null
@@ -33126,7 +33126,7 @@
             grade: Tier10
             award: null
             date: '2026-11-04 20:58:21'
-          - player: QLCJ
+          - player: QuillCollective
             percentage: '76.74'
             grade: Tier11
             award: null
@@ -33594,7 +33594,7 @@
             grade: Tier09
             award: null
             date: '2017-06-26 20:16:52'
-          - player: GARY
+          - player: GMcGregz
             percentage: '82.80'
             grade: Tier10
             award: null

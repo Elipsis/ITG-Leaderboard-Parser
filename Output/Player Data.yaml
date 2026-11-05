@@ -41967,7 +41967,7 @@
     date: '2026-10-22 22:43:57'
     position: 2
   course_scores: []
-- player_name: GARY
+- player_name: GMcGregz
   initials:
   - GARY
   total_scores: 38
@@ -43042,7 +43042,7 @@
     date: '2020-04-11 09:40:51'
     position: 2
   course_scores: []
-- player_name: QLCJ
+- player_name: QuillCollective
   initials:
   - QLCJ
   total_scores: 7
@@ -43119,7 +43119,7 @@
     date: '2026-11-04 22:07:20'
     position: 1
   course_scores: []
-- player_name: TAI
+- player_name: TaiFighter
   initials:
   - TAI
   total_scores: 3
@@ -45080,6 +45080,43 @@
     date: '2025-12-16 15:30:08'
     position: 1
   course_scores: []
+- player_name: rofer
+  initials:
+  - ROFR
+  total_scores: 3
+  top_scores: 0
+  song_scores:
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: CAPTAIN JACK (GRANDALE REMIX)
+    difficulty: Easy
+    type: single
+    percentage: '60.36'
+    grade: Tier15
+    award: null
+    date: '2026-11-04 20:31:17'
+    position: 7
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 10th Mix
+    song: Blind Justice ~Torn souls Hurt Faiths~
+    difficulty: Beginner
+    type: single
+    percentage: '53.60'
+    grade: Tier17
+    award: null
+    date: '2026-11-04 18:48:18'
+    position: 2
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: IN THE NAVY '99 (XXL Disaster Remix)
+    difficulty: Easy
+    type: single
+    percentage: '48.94'
+    grade: Tier17
+    award: null
+    date: '2026-11-04 20:33:28'
+    position: 3
+  course_scores: []
 - player_name: ZOD
   initials:
   - ZOD
@@ -45770,43 +45807,6 @@
     date: '2018-07-21 14:57:55'
     position: 3
   course_scores: []
-- player_name: ROFR
-  initials:
-  - ROFR
-  total_scores: 3
-  top_scores: 0
-  song_scores:
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 3rd Mix
-    song: CAPTAIN JACK (GRANDALE REMIX)
-    difficulty: Easy
-    type: single
-    percentage: '60.36'
-    grade: Tier15
-    award: null
-    date: '2026-11-04 20:31:17'
-    position: 7
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 10th Mix
-    song: Blind Justice ~Torn souls Hurt Faiths~
-    difficulty: Beginner
-    type: single
-    percentage: '53.60'
-    grade: Tier17
-    award: null
-    date: '2026-11-04 18:48:18'
-    position: 2
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 3rd Mix
-    song: IN THE NAVY '99 (XXL Disaster Remix)
-    difficulty: Easy
-    type: single
-    percentage: '48.94'
-    grade: Tier17
-    award: null
-    date: '2026-11-04 20:33:28'
-    position: 3
-  course_scores: []
 - player_name: OLD
   initials:
   - OLD
@@ -45823,6 +45823,33 @@
     award: null
     date: '2025-11-26 13:49:13'
     position: 3
+  course_scores: []
+- player_name: Nynaeve
+  initials:
+  - JENY
+  total_scores: 2
+  top_scores: 0
+  song_scores:
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: DOESN'T REALLY MATTER
+    difficulty: Easy
+    type: single
+    percentage: '34.32'
+    grade: Tier17
+    award: null
+    date: '2026-11-04 21:51:02'
+    position: 2
+  - section: In The Groove
+    folder: In The Groove
+    song: Don't Promise Me
+    difficulty: Beginner
+    type: single
+    percentage: '21.53'
+    grade: Tier17
+    award: null
+    date: '2026-11-04 21:09:29'
+    position: 2
   course_scores: []
 - player_name: NATE
   initials:
@@ -46194,33 +46221,6 @@
     award: null
     date: '2025-03-08 17:42:16'
     position: 5
-  course_scores: []
-- player_name: JENY
-  initials:
-  - JENY
-  total_scores: 2
-  top_scores: 0
-  song_scores:
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 9th Mix
-    song: DOESN'T REALLY MATTER
-    difficulty: Easy
-    type: single
-    percentage: '34.32'
-    grade: Tier17
-    award: null
-    date: '2026-11-04 21:51:02'
-    position: 2
-  - section: In The Groove
-    folder: In The Groove
-    song: Don't Promise Me
-    difficulty: Beginner
-    type: single
-    percentage: '21.53'
-    grade: Tier17
-    award: null
-    date: '2026-11-04 21:09:29'
-    position: 2
   course_scores: []
 - player_name: JBH
   initials:

@@ -32805,6 +32805,187 @@
             grade: Tier13
             award: null
             date: '2012-09-11 18:05:40'
+  - folder_name: In The Groove Rebirth
+    songs:
+    - song_title: Dr. Doolittle
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Ennui
+            percentage: '94.12'
+            grade: Tier05
+            award: SingleDigitW3
+            date: '2026-10-29 19:39:41'
+    - song_title: Gargoyle (Original Mix)
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Ennui
+            percentage: '76.51'
+            grade: Tier11
+            award: null
+            date: '2026-10-29 19:42:09'
+    - song_title: Indulgence
+      difficulties_single:
+      - Medium
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: Ennui
+            percentage: '88.03'
+            grade: Tier08
+            award: null
+            date: '2026-10-29 20:32:59'
+    - song_title: Lady Bug
+      difficulties_single:
+      - Easy
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '84.42'
+            grade: Tier09
+            award: FullComboW3
+            date: '2026-10-29 20:01:02'
+        Challenge (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '87.30'
+            grade: Tier08
+            award: null
+            date: '2026-10-29 19:52:33'
+    - song_title: Necropolis
+      difficulties_single:
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Challenge (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '89.27'
+            grade: Tier07
+            award: null
+            date: '2026-10-29 19:54:37'
+    - song_title: Nights In Heaven - Days In Hell
+      difficulties_single:
+      - Easy
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '90.65'
+            grade: Tier07
+            award: null
+            date: '2026-10-29 20:03:50'
+    - song_title: Overdrive
+      difficulties_single:
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Challenge (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '79.84'
+            grade: Tier11
+            award: null
+            date: '2026-10-29 19:57:29'
+    - song_title: Popcorn
+      difficulties_single:
+      - Medium
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '66.21'
+            grade: Tier14
+            award: null
+            date: '2026-10-29 20:06:19'
+    - song_title: Remember December
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Ennui
+            percentage: '89.85'
+            grade: Tier07
+            award: null
+            date: '2026-10-29 19:45:12'
+    - song_title: Safety Net
+      difficulties_single:
+      - Easy
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '54.92'
+            grade: Tier17
+            award: null
+            date: '2026-10-29 20:21:15'
+    - song_title: Sail AwaY
+      difficulties_single:
+      - Easy
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '72.00'
+            grade: Tier12
+            award: null
+            date: '2026-10-29 20:23:49'
+    - song_title: Vi Sitter I Ventrilo Och Spelar DotA
+      difficulties_single:
+      - Medium
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '82.66'
+            grade: Tier10
+            award: null
+            date: '2026-10-29 20:26:39'
+        Challenge (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '86.36'
+            grade: Tier08
+            award: null
+            date: '2026-11-04 21:31:02'
+          - player: Ennui
+            percentage: '75.63'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 21:31:02'
 - section_name: Other
   folders:
   - folder_name: Maurice

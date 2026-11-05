@@ -1309,6 +1309,11 @@
             grade: Tier08
             award: null
             date: '2011-09-05 21:10:11'
+          - player: GARY
+            percentage: '82.95'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 18:23:54'
           - player: JILL
             percentage: '78.00'
             grade: Tier11
@@ -2843,6 +2848,11 @@
             grade: Tier07
             award: null
             date: '2012-11-07 21:56:16'
+          - player: Ennui
+            percentage: '82.88'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 18:10:38'
           - player: JILL
             percentage: '66.44'
             grade: Tier14
@@ -2933,6 +2943,11 @@
             grade: Tier11
             award: null
             date: '2011-01-27 23:49:04'
+          - player: PRI
+            percentage: '69.15'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 20:29:23'
           - player: M
             percentage: '60.63'
             grade: Tier15
@@ -3056,6 +3071,11 @@
             grade: Tier10
             award: null
             date: '2025-12-16 15:43:59'
+          - player: PRI
+            percentage: '77.51'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 20:31:17'
           - player: IIII
             percentage: '75.58'
             grade: Tier12
@@ -3066,6 +3086,11 @@
             grade: Tier14
             award: null
             date: '2026-02-24 19:52:32'
+          - player: ROFR
+            percentage: '60.36'
+            grade: Tier15
+            award: null
+            date: '2026-11-04 20:31:17'
         Medium (Single):
           type: single
           entries:
@@ -3722,11 +3747,21 @@
         Easy (Single):
           type: single
           entries:
+          - player: PRI
+            percentage: '70.15'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 20:33:28'
           - player: BDDD
             percentage: '59.09'
             grade: Tier16
             award: null
             date: '2026-10-22 19:17:15'
+          - player: ROFR
+            percentage: '48.94'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 20:33:28'
         Hard (Single):
           type: single
           entries:
@@ -4771,6 +4806,11 @@
         Medium (Single):
           type: single
           entries:
+          - player: GARY
+            percentage: '80.59'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 21:43:37'
           - player: LONE
             percentage: '71.54'
             grade: Tier13
@@ -4881,6 +4921,16 @@
             grade: Tier09
             award: null
             date: '2011-02-08 21:53:50'
+          - player: DLAU
+            percentage: '81.61'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 19:10:14'
+          - player: BDDD
+            percentage: '72.25'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 19:10:14'
           - player: VVVV
             percentage: '71.61'
             grade: Tier13
@@ -5109,9 +5159,23 @@
             date: '2012-01-11 21:02:34'
     - song_title: DAM DARIRAM (KCP MIX)
       difficulties_single:
+      - Easy
       - Hard
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '84.11'
+            grade: Tier09
+            award: null
+            date: '2026-11-04 19:12:13'
+          - player: BDDD
+            percentage: '77.05'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 19:12:13'
         Hard (Single):
           type: single
           entries:
@@ -5188,11 +5252,21 @@
         Easy (Single):
           type: single
           entries:
+          - player: BDDD
+            percentage: '77.71'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 18:30:49'
           - player: JILL
             percentage: '74.86'
             grade: Tier12
             award: null
             date: '2011-02-08 19:53:22'
+          - player: DLAU
+            percentage: '70.14'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 18:30:49'
         Medium (Single):
           type: single
           entries:
@@ -5615,10 +5689,24 @@
             date: '2014-01-09 02:11:26'
     - song_title: IF YOU WERE HERE (B4 ZA BEAT MIX)
       difficulties_single:
+      - Easy
       - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: BDDD
+            percentage: '72.41'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 18:28:34'
+          - player: DLAU
+            percentage: '65.71'
+            grade: Tier14
+            award: null
+            date: '2026-11-04 18:28:34'
         Medium (Single):
           type: single
           entries:
@@ -6067,6 +6155,11 @@
             grade: Tier07
             award: FullComboW3
             date: '2013-02-01 08:57:30'
+          - player: GARY
+            percentage: '90.57'
+            grade: Tier07
+            award: FullComboW3
+            date: '2026-11-04 21:45:54'
           - player: MXI
             percentage: '88.93'
             grade: Tier08
@@ -7312,6 +7405,7 @@
     - song_title: Abyss
       difficulties_single:
       - Easy
+      - Medium
       - Hard
       difficulties_double:
       - Hard
@@ -7324,6 +7418,14 @@
             grade: Tier11
             award: null
             date: '2011-01-21 22:11:38'
+        Medium (Single):
+          type: single
+          entries:
+          - player: BDDD
+            percentage: '59.82'
+            grade: Tier16
+            award: null
+            date: '2026-11-04 20:52:08'
         Hard (Single):
           type: single
           entries:
@@ -7347,6 +7449,11 @@
             grade: Tier07
             award: null
             date: '2011-09-05 21:18:41'
+          - player: GARY
+            percentage: '83.43'
+            grade: Tier09
+            award: null
+            date: '2026-11-04 20:52:08'
           - player: MXI
             percentage: '81.29'
             grade: Tier10
@@ -7644,9 +7751,18 @@
             date: '2011-08-13 15:59:48'
     - song_title: Healing Vision
       difficulties_single:
+      - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: GARY
+            percentage: '80.00'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 18:21:40'
         Hard (Single):
           type: single
           entries:
@@ -7721,6 +7837,7 @@
     - song_title: INSERTiON
       difficulties_single:
       - Easy
+      - Medium
       - Hard
       difficulties_double: []
       leaderboards:
@@ -7732,6 +7849,19 @@
             grade: Tier14
             award: null
             date: '2011-01-10 22:27:46'
+        Medium (Single):
+          type: single
+          entries:
+          - player: Ennui
+            percentage: '88.28'
+            grade: Tier08
+            award: null
+            date: '2026-11-04 19:54:40'
+          - player: GARY
+            percentage: '81.52'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 19:54:40'
         Hard (Single):
           type: single
           entries:
@@ -7884,6 +8014,16 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '95.74'
+            grade: Tier05
+            award: SingleDigitW3
+            date: '2026-11-04 19:01:43'
+          - player: Ennui
+            percentage: '87.80'
+            grade: Tier08
+            award: null
+            date: '2026-11-04 19:01:43'
           - player: LONE
             percentage: '85.10'
             grade: Tier09
@@ -8842,10 +8982,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '98.71'
-            grade: Tier03
+            percentage: '99.24'
+            grade: Tier02
             award: FullComboW2
-            date: '2011-07-15 22:26:24'
+            date: '2026-11-04 22:23:45'
           - player: BMM
             percentage: '98.64'
             grade: Tier03
@@ -10880,6 +11020,11 @@
             grade: Tier06
             award: FullComboW3
             date: '2014-02-13 03:37:03'
+          - player: Ennui
+            percentage: '91.43'
+            grade: Tier07
+            award: null
+            date: '2026-11-04 21:33:49'
           - player: GARY
             percentage: '80.13'
             grade: Tier10
@@ -12605,11 +12750,21 @@
             grade: Tier04
             award: FullComboW3
             date: '2011-06-27 22:42:45'
+          - player: MLS
+            percentage: '90.64'
+            grade: Tier07
+            award: null
+            date: '2026-11-04 22:14:25'
           - player: LONE
             percentage: '81.28'
             grade: Tier10
             award: null
             date: '2011-12-29 16:46:42'
+          - player: GARY
+            percentage: '70.47'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 22:14:25'
           - player: ZBRA
             percentage: '66.24'
             grade: Tier14
@@ -13865,16 +14020,16 @@
             grade: Tier06
             award: null
             date: '2019-03-10 06:56:32'
+          - player: GARY
+            percentage: '86.95'
+            grade: Tier08
+            award: null
+            date: '2026-11-04 19:23:02'
           - player: JILL
             percentage: '84.12'
             grade: Tier09
             award: null
             date: '2013-08-09 13:48:51'
-          - player: GARY
-            percentage: '84.05'
-            grade: Tier09
-            award: null
-            date: '2011-07-15 21:53:45'
           - player: ASH
             percentage: '75.88'
             grade: Tier12
@@ -14315,6 +14470,11 @@
             grade: Tier11
             award: null
             date: '2011-02-03 20:08:00'
+          - player: GARY
+            percentage: '73.54'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 22:45:13'
           - player: MXI
             percentage: '66.74'
             grade: Tier14
@@ -14494,16 +14654,16 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.21'
+            grade: Tier02
+            award: FullComboW2
+            date: '2026-11-04 18:58:35'
           - player: MLS
             percentage: '98.56'
             grade: Tier03
             award: FullComboW3
             date: '2013-07-12 12:03:44'
-          - player: Elipsis
-            percentage: '98.30'
-            grade: Tier03
-            award: FullComboW3
-            date: '2017-05-03 14:20:42'
           - player: Ennui
             percentage: '96.98'
             grade: Tier04
@@ -14887,6 +15047,16 @@
             grade: Tier09
             award: null
             date: '2011-02-03 20:10:21'
+          - player: BDDD
+            percentage: '76.57'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 20:01:09'
+          - player: DLAU
+            percentage: '70.28'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 20:01:09'
           - player: MXI
             percentage: '66.17'
             grade: Tier14
@@ -14927,9 +15097,18 @@
             date: '2011-08-05 22:33:11'
     - song_title: Go West
       difficulties_single:
+      - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: DLAU
+            percentage: '59.78'
+            grade: Tier16
+            award: null
+            date: '2026-11-04 20:02:52'
         Hard (Single):
           type: single
           entries:
@@ -15446,11 +15625,21 @@
             grade: Tier09
             award: null
             date: '2011-01-10 22:45:24'
+          - player: PRI
+            percentage: '74.17'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 21:01:15'
           - player: JILL
             percentage: '70.17'
             grade: Tier13
             award: null
             date: '2011-02-08 19:55:44'
+          - player: QLCJ
+            percentage: '68.91'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 21:01:15'
         Medium (Single):
           type: single
           entries:
@@ -15679,6 +15868,11 @@
             grade: Tier08
             award: null
             date: '2011-04-06 21:41:39'
+          - player: GARY
+            percentage: '74.93'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 22:47:19'
           - player: LONE
             percentage: '66.79'
             grade: Tier14
@@ -16988,6 +17182,11 @@
             grade: Tier12
             award: null
             date: '2013-10-02 18:14:31'
+          - player: BDDD
+            percentage: '69.18'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 18:40:34'
         Hard (Double):
           type: double
           entries:
@@ -17314,9 +17513,18 @@
             date: '2011-05-11 20:44:01'
     - song_title: Your Rain(RAGE MIX)
       difficulties_single:
+      - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: QLCJ
+            percentage: '53.42'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 22:07:20'
         Hard (Single):
           type: single
           entries:
@@ -18248,10 +18456,24 @@
             date: '2013-04-12 17:35:07'
     - song_title: DOESN'T REALLY MATTER
       difficulties_single:
+      - Easy
       - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: TAI
+            percentage: '37.61'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 21:51:02'
+          - player: JENY
+            percentage: '34.32'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 21:51:02'
         Medium (Single):
           type: single
           entries:
@@ -18382,9 +18604,18 @@
             date: '2012-03-17 15:51:47'
     - song_title: Dance, Dance
       difficulties_single:
+      - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: GARY
+            percentage: '76.71'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 21:41:21'
         Hard (Single):
           type: single
           entries:
@@ -18742,10 +18973,19 @@
             date: '2011-07-23 16:23:41'
     - song_title: GIRL IN A DAYDREAM
       difficulties_single:
+      - Easy
       - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: TAI
+            percentage: '75.91'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 21:53:18'
         Medium (Single):
           type: single
           entries:
@@ -19439,14 +19679,28 @@
             date: Unknown Date
     - song_title: Mugen
       difficulties_single:
+      - Easy
       - Medium
       - Hard
       difficulties_double:
       - Hard
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: QLCJ
+            percentage: '85.48'
+            grade: Tier09
+            award: null
+            date: '2026-11-04 20:10:18'
         Medium (Single):
           type: single
           entries:
+          - player: GARY
+            percentage: '82.84'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 20:10:18'
           - player: JILL
             percentage: '73.81'
             grade: Tier12
@@ -21024,10 +21278,24 @@
             date: '2012-01-17 18:26:06'
     - song_title: Blind Justice ~Torn souls Hurt Faiths~
       difficulties_single:
+      - Beginner
       - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: PRI
+            percentage: '78.20'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 18:48:18'
+          - player: ROFR
+            percentage: '53.60'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 18:48:18'
         Medium (Single):
           type: single
           entries:
@@ -21315,6 +21583,11 @@
             grade: Tier11
             award: null
             date: '2011-02-23 17:37:23'
+          - player: GARY
+            percentage: '70.80'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 18:17:52'
         Hard (Single):
           type: single
           entries:
@@ -23045,10 +23318,19 @@
             date: '2013-03-27 12:25:05'
     - song_title: Da Roots
       difficulties_single:
+      - Medium
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: BDDD
+            percentage: '53.41'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 19:14:58'
         Hard (Single):
           type: single
           entries:
@@ -23113,6 +23395,11 @@
             grade: Tier09
             award: null
             date: '2013-09-23 18:30:16'
+          - player: GARY
+            percentage: '80.25'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 20:15:50'
           - player: Ennui
             percentage: '78.52'
             grade: Tier11
@@ -23149,6 +23436,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.96'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-04 18:13:55'
           - player: CRIP
             percentage: '95.49'
             grade: Tier05
@@ -23164,6 +23456,11 @@
             grade: Tier07
             award: null
             date: '2014-02-15 02:31:14'
+          - player: Ennui
+            percentage: '86.63'
+            grade: Tier08
+            award: null
+            date: '2026-11-04 18:13:55'
           - player: MDK
             percentage: '73.71'
             grade: Tier12
@@ -23334,10 +23631,24 @@
             date: '2012-04-12 23:12:25'
     - song_title: Don't Promise Me
       difficulties_single:
+      - Beginner
       - Easy
       - Hard
       difficulties_double: []
       leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: TAI
+            percentage: '44.61'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 21:09:29'
+          - player: JENY
+            percentage: '21.53'
+            grade: Tier17
+            award: null
+            date: '2026-11-04 21:09:29'
         Easy (Single):
           type: single
           entries:
@@ -23530,6 +23841,16 @@
             grade: Tier10
             award: null
             date: '2011-02-09 20:49:37'
+          - player: QLCJ
+            percentage: '76.35'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 19:19:53'
+          - player: GARY
+            percentage: '70.29'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 19:19:53'
         Hard (Single):
           type: single
           entries:
@@ -26942,11 +27263,20 @@
             date: '2011-07-28 00:50:08'
     - song_title: Fleadh Uncut
       difficulties_single:
+      - Beginner
       - Medium
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.90'
+            grade: Tier03
+            award: SingleDigitW2
+            date: '2026-11-04 22:20:55'
         Medium (Single):
           type: single
           entries:
@@ -26986,6 +27316,11 @@
             grade: Tier04
             award: FullComboW3
             date: '2011-02-16 22:39:54'
+          - player: Ennui
+            percentage: '62.52'
+            grade: Tier15
+            award: null
+            date: '2026-11-04 22:20:55'
     - song_title: Funk Factory
       difficulties_single:
       - Beginner
@@ -29054,10 +29389,19 @@
             date: '2011-02-18 22:23:29'
     - song_title: Summer in Belize
       difficulties_single:
+      - Easy
       - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: QLCJ
+            percentage: '85.16'
+            grade: Tier09
+            award: null
+            date: '2026-11-04 22:01:01'
         Hard (Single):
           type: single
           entries:
@@ -29071,6 +29415,11 @@
             grade: Tier10
             award: null
             date: '2013-03-19 02:41:02'
+          - player: MLS
+            percentage: '73.58'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 22:01:01'
           - player: JILL
             percentage: '68.24'
             grade: Tier13
@@ -29278,6 +29627,16 @@
             grade: Tier13
             award: null
             date: '2011-07-04 16:21:47'
+          - player: DLAU
+            percentage: '63.33'
+            grade: Tier15
+            award: null
+            date: '2026-11-04 20:05:54'
+          - player: BDDD
+            percentage: '58.66'
+            grade: Tier16
+            award: null
+            date: '2026-11-04 20:05:54'
         Hard (Single):
           type: single
           entries:
@@ -29400,9 +29759,27 @@
             date: '2013-05-20 16:48:41'
     - song_title: Tribal Style
       difficulties_single:
+      - Medium
+      - Hard
       - Challenge
       difficulties_double: []
       leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: GARY
+            percentage: '70.29'
+            grade: Tier13
+            award: null
+            date: '2026-11-04 19:51:38'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Ennui
+            percentage: '73.92'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 19:51:38'
         Challenge (Single):
           type: single
           entries:
@@ -29515,9 +29892,18 @@
             date: '2011-01-23 02:10:47'
     - song_title: Visible Noise
       difficulties_single:
+      - Easy
       - Hard
       difficulties_double: []
       leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: GARY
+            percentage: '85.60'
+            grade: Tier09
+            award: null
+            date: '2026-11-04 20:49:11'
         Hard (Single):
           type: single
           entries:
@@ -29912,6 +30298,11 @@
             grade: Tier09
             award: null
             date: '2013-10-22 22:35:10'
+          - player: GARY
+            percentage: '72.85'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 19:25:55'
           - player: JILL
             percentage: '72.44'
             grade: Tier12
@@ -31153,10 +31544,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '92.80'
-            grade: Tier06
+            percentage: '97.96'
+            grade: Tier04
             award: null
-            date: '2026-10-22 19:35:38'
+            date: '2026-11-04 18:08:17'
           - player: Ennui
             percentage: '89.40'
             grade: Tier07
@@ -32269,11 +32660,16 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.80'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-04 22:18:12'
           - player: Ennui
-            percentage: '91.53'
-            grade: Tier07
+            percentage: '92.43'
+            grade: Tier06
             award: null
-            date: '2026-10-29 18:34:58'
+            date: '2026-11-04 22:18:12'
           - player: LONE
             percentage: '90.64'
             grade: Tier07
@@ -32422,10 +32818,28 @@
           type: single
           entries:
           - player: MLS
-            percentage: '81.52'
+            percentage: '88.80'
+            grade: Tier08
+            award: null
+            date: '2026-11-04 20:19:34'
+    - song_title: I Am The Best
+      difficulties_single:
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Challenge (Single):
+          type: single
+          entries:
+          - player: QLCJ
+            percentage: '85.70'
+            grade: Tier09
+            award: null
+            date: '2026-11-04 19:29:49'
+          - player: MLS
+            percentage: '82.53'
             grade: Tier10
             award: null
-            date: '2026-10-22 19:52:41'
+            date: '2026-11-04 19:29:49'
     - song_title: Mr. Simple
       difficulties_single:
       - Challenge
@@ -32461,10 +32875,10 @@
           type: single
           entries:
           - player: MLS
-            percentage: '81.37'
-            grade: Tier10
+            percentage: '85.41'
+            grade: Tier09
             award: null
-            date: '2026-10-22 20:58:08'
+            date: '2026-11-04 19:33:05'
   - folder_name: Unofficial
     songs:
     - song_title: Determinator70
@@ -32526,6 +32940,16 @@
             grade: Tier09
             award: null
             date: '2011-01-19 20:03:15'
+          - player: PRI
+            percentage: '80.65'
+            grade: Tier10
+            award: null
+            date: '2026-11-04 20:58:21'
+          - player: QLCJ
+            percentage: '76.74'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 20:58:21'
         Medium (Single):
           type: single
           entries:
@@ -32933,6 +33357,11 @@
             grade: Tier13
             award: null
             date: '2011-04-20 17:47:43'
+          - player: BDDD
+            percentage: '63.63'
+            grade: Tier15
+            award: null
+            date: '2026-11-04 20:55:14'
           - player: MXI
             percentage: '59.14'
             grade: Tier16

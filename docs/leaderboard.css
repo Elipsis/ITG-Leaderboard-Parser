@@ -208,6 +208,8 @@ h1 {
 .completion-song-name a { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 3px; }
 .completion-song-name a:hover, .completion-song-name a:focus-visible { color: #ffd18a; }
 .completion-score-box { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 26px; box-sizing: border-box; border-radius: 4px; color: #08111f; font-size: 0.72rem; font-weight: 800; border: 1px solid rgba(255,255,255,0.08); white-space: nowrap; }
+.completion-score-with-rank { display: inline-grid; grid-template-columns: 48px 20px; align-items: center; width: 68px; transform: translateX(10px); }
+.completion-score-rank { display: inline-flex; align-items: center; justify-content: center; width: 20px; font-size: 0.85rem; line-height: 1; }
 .completion-none { background: rgba(148,163,184,0.28); color: var(--text-main); }
 .completion-fc { background: #4ade80; }
 .completion-fec { background: #fbbf24; }

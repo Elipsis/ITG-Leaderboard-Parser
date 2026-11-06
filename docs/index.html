@@ -127141,7 +127141,7 @@
             </div>
             <div class="completion-legend" aria-label="Combo award legend">
                 <span><span class="completion-swatch completion-ffc"></span> Full Fantastic Combo</span>
-                <span><span class="completion-swatch completion-fec"></span> Full Extra Combo</span>
+                <span><span class="completion-swatch completion-fec"></span> Full Excellent Combo</span>
                 <span><span class="completion-swatch completion-fc"></span> Full Combo</span>
                 <span><span class="completion-swatch completion-none"></span> No combo</span>
             </div>
@@ -127164,6 +127164,7 @@
     let currentView = 'songs';
     let profileReturnView = 'songs';
     let currentPlayerProfile = null;
+    let currentPlayerProfileId = null;
     let currentProfileEntity = 'songs';
     let currentProfileScoreView = 'latest';
     let currentProfileScoreScope = 'all';
@@ -127236,30 +127237,36 @@
         }
     });
 
-    function openPlayerProfile(playerId, updateUrl = true) {
+    function openPlayerProfile(playerId, updateUrl = true, entity = 'songs') {
         const profile = playerProfiles[Number(playerId)];
         if (!profile) return;
 
         if (updateUrl) profileReturnView = currentView;
         currentPlayerProfile = profile;
+        currentPlayerProfileId = Number(playerId);
         document.getElementById('playerProfileName').textContent = profile.player_name;
         document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
         document.getElementById('completionSearch').value = '';
-        currentProfileEntity = 'songs';
+        currentProfileEntity = ['songs', 'courses', 'completion'].includes(entity) ? entity : 'songs';
         currentProfileScoreView = 'latest';
         currentProfileScoreScope = 'all';
         currentCompletionStyle = 'single';
         currentProfileFilters = {difficulty: null, group: null};
-        renderProfileScores();
         switchView('player-profile');
-        if (updateUrl) updateShareableHash(`#player-${Number(playerId)}`);
+        if (currentProfileEntity === 'completion') renderProfileCompletion();
+        else renderProfileScores();
+        if (updateUrl) updateShareableHash(`#player-${Number(playerId)}-${currentProfileEntity}`);
     }
 
     function showProfileEntity(entity) {
+        if (!['songs', 'courses', 'completion'].includes(entity)) return;
         currentProfileEntity = entity;
         currentProfileFilters = {difficulty: null, group: null};
         if (entity === 'completion') renderProfileCompletion();
         else renderProfileScores();
+        if (currentPlayerProfileId !== null) {
+            updateShareableHash(`#player-${currentPlayerProfileId}-${entity}`);
+        }
     }
 
     function showProfileCompletionStyle(style) {
@@ -127466,6 +127473,22 @@
         return 'completion-none';
     }
 
+    function wrapCompletionRank(box, position) {
+        const rank = Number(position);
+        const wrapper = document.createElement('span');
+        wrapper.className = 'completion-score-with-rank';
+        wrapper.appendChild(box);
+
+        const rankMark = document.createElement('span');
+        rankMark.className = 'completion-score-rank';
+        if (rank === 1 || rank === 2 || rank === 3) {
+            rankMark.textContent = rank === 1 ? '🏆' : rank === 2 ? '🥈' : '🥉';
+            rankMark.setAttribute('aria-label', `${rank}${rank === 1 ? 'st' : rank === 2 ? 'nd' : 'rd'} place`);
+        }
+        wrapper.appendChild(rankMark);
+        return wrapper;
+    }
+
     function completionChartExists(song, difficulty, chartType) {
         if (!(song.difficulties_single ?? []).some(value => completionKey(value) === completionKey(difficulty))
             && !(song.difficulties_double ?? []).some(value => completionKey(value) === completionKey(difficulty))) {
@@ -127505,7 +127528,7 @@
             box.classList.add('completion-unplayed');
             box.textContent = '—';
             box.title = `Not played: ${difficulty} ${chartType === 'single' ? 'Singles' : 'Doubles'}`;
-            return box;
+            return wrapCompletionRank(box, null);
         }
 
         box.textContent = completionGradeNames[score.grade] ?? score.grade ?? '—';
@@ -127516,8 +127539,10 @@
         if (leaderboardLink instanceof HTMLAnchorElement) {
             leaderboardLink.className = 'completion-score-link';
             leaderboardLink.replaceChildren(box.cloneNode(true));
-            return leaderboardLink;
+            return wrapCompletionRank(leaderboardLink, score.position);
         }
+        const rankWrapped = wrapCompletionRank(box, score.position);
+        if (rankWrapped !== box) return rankWrapped;
         return box;
     }
 
@@ -127674,8 +127699,8 @@
     function restoreLocationFromHash() {
         const hash = window.location.hash.slice(1);
         if (hash.startsWith('player-')) {
-            const playerId = hash.slice('player-'.length);
-            if (/^\d+$/.test(playerId)) openPlayerProfile(playerId, false);
+            const playerMatch = /^player-(\d+)(?:-(songs|courses|completion))?$/.exec(hash);
+            if (playerMatch) openPlayerProfile(playerMatch[1], false, playerMatch[2] ?? 'songs');
             return;
         }
         if (hash.startsWith('drawer-')) openLeaderboard(hash, false);

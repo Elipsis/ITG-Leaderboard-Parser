@@ -33318,8 +33318,8 @@
     position: 5
 - player_name: MLS
   initials:
-  - MLS
   - MONT
+  - MLS
   total_scores: 157
   top_scores: 43
   song_scores:
@@ -38301,8 +38301,8 @@
 - player_name: Ennui
   initials:
   - ENUI
-  total_scores: 192
-  top_scores: 32
+  total_scores: 193
+  top_scores: 33
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -39473,6 +39473,16 @@
     grade: Tier09
     award: null
     date: '2011-05-16 21:05:55'
+    position: 1
+  - section: Other
+    folder: Maurice
+    song: I Am The Best
+    difficulty: Challenge
+    type: single
+    percentage: '85.70'
+    grade: Tier09
+    award: null
+    date: '2026-11-04 19:29:49'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
@@ -43042,22 +43052,49 @@
     date: '2020-04-11 09:40:51'
     position: 2
   course_scores: []
+- player_name: TaiFighter
+  initials:
+  - TAI
+  total_scores: 3
+  top_scores: 3
+  song_scores:
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: GIRL IN A DAYDREAM
+    difficulty: Easy
+    type: single
+    percentage: '75.91'
+    grade: Tier12
+    award: null
+    date: '2026-11-04 21:53:18'
+    position: 1
+  - section: In The Groove
+    folder: In The Groove
+    song: Don't Promise Me
+    difficulty: Beginner
+    type: single
+    percentage: '44.61'
+    grade: Tier17
+    award: null
+    date: '2026-11-04 21:09:29'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: DOESN'T REALLY MATTER
+    difficulty: Easy
+    type: single
+    percentage: '37.61'
+    grade: Tier17
+    award: null
+    date: '2026-11-04 21:51:02'
+    position: 1
+  course_scores: []
 - player_name: QuillCollective
   initials:
   - QLCJ
-  total_scores: 7
-  top_scores: 4
+  total_scores: 6
+  top_scores: 3
   song_scores:
-  - section: Other
-    folder: Maurice
-    song: I Am The Best
-    difficulty: Challenge
-    type: single
-    percentage: '85.70'
-    grade: Tier09
-    award: null
-    date: '2026-11-04 19:29:49'
-    position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: Mugen
@@ -43117,43 +43154,6 @@
     grade: Tier17
     award: null
     date: '2026-11-04 22:07:20'
-    position: 1
-  course_scores: []
-- player_name: TaiFighter
-  initials:
-  - TAI
-  total_scores: 3
-  top_scores: 3
-  song_scores:
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 9th Mix
-    song: GIRL IN A DAYDREAM
-    difficulty: Easy
-    type: single
-    percentage: '75.91'
-    grade: Tier12
-    award: null
-    date: '2026-11-04 21:53:18'
-    position: 1
-  - section: In The Groove
-    folder: In The Groove
-    song: Don't Promise Me
-    difficulty: Beginner
-    type: single
-    percentage: '44.61'
-    grade: Tier17
-    award: null
-    date: '2026-11-04 21:09:29'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 9th Mix
-    song: DOESN'T REALLY MATTER
-    difficulty: Easy
-    type: single
-    percentage: '37.61'
-    grade: Tier17
-    award: null
-    date: '2026-11-04 21:51:02'
     position: 1
   course_scores: []
 - player_name: NMC

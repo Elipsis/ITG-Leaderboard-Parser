@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 792
-  top_scores: 724
+  total_scores: 799
+  top_scores: 731
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -84,6 +84,16 @@
     award: FullComboW2
     date: '2013-04-22 18:00:36'
     position: 2
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 7th Mix
+    song: Will I
+    difficulty: Hard
+    type: single
+    percentage: '99.67'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-06 16:44:44'
+    position: 1
   - section: In The Groove
     folder: In The Groove
     song: PA Theme
@@ -123,6 +133,26 @@
     grade: Tier02
     award: FullComboW2
     date: '2011-10-31 15:42:10'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: Hunting for you
+    difficulty: Hard
+    type: single
+    percentage: '99.58'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-06 16:47:33'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: 20,November (CLUB 2P VER.)
+    difficulty: Hard
+    type: single
+    percentage: '99.58'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-06 16:38:10'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -365,16 +395,6 @@
     date: '2013-11-05 06:13:02'
     position: 2
   - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 7th Mix
-    song: Will I
-    difficulty: Hard
-    type: single
-    percentage: '99.22'
-    grade: Tier02
-    award: OneW3
-    date: '2026-10-25 14:05:20'
-    position: 1
-  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: DYNAMITE RAVE (Down Bird SOTA Mix)
     difficulty: Hard
@@ -423,6 +443,16 @@
     grade: Tier02
     award: FullComboW2
     date: '2013-04-05 13:41:53'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: 20,November
+    difficulty: Hard
+    type: single
+    percentage: '99.17'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-06 16:36:29'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -1033,6 +1063,16 @@
     grade: Tier03
     award: FullComboW2
     date: '2012-01-23 21:11:25'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: GIRL IN A DAYDREAM
+    difficulty: Hard
+    type: single
+    percentage: '98.70'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-06 16:56:10'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -3365,6 +3405,16 @@
     date: '2012-01-11 20:50:32'
     position: 2
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: Baby's Tears
+    difficulty: Hard
+    type: single
+    percentage: '97.30'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-11-06 16:51:59'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: Take It To The Morning Light (Extended Vocal)
     difficulty: Hard
@@ -3703,6 +3753,16 @@
     grade: Tier04
     award: FullComboW3
     date: '2013-07-09 15:42:19'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 9th Mix
+    song: Fly away
+    difficulty: Hard
+    type: single
+    percentage: '97.06'
+    grade: Tier04
+    award: OneW3
+    date: '2026-11-06 16:54:13'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
@@ -4215,6 +4275,16 @@
     date: '2017-05-03 14:37:55'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: HAVE YOU NEVER BEEN MELLOW
+    difficulty: Challenge
+    type: single
+    percentage: '96.52'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-11-06 16:33:33'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: SEDUCTION(Vocal Remix)
     difficulty: Hard
@@ -4473,6 +4543,16 @@
     grade: Tier04
     award: FullComboW3
     date: '2011-02-16 18:47:59'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: LET'S GET DOWN
+    difficulty: Challenge
+    type: single
+    percentage: '96.19'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-11-06 16:31:17'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -5033,6 +5113,16 @@
     grade: Tier05
     award: FullComboW3
     date: '2012-02-15 22:09:09'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: 22DUNK (CLUB ANOTHER VER.)
+    difficulty: Hard
+    type: single
+    percentage: '95.42'
+    grade: Tier05
+    award: SingleDigitW3
+    date: '2026-11-06 16:39:57'
     position: 1
   - section: In The Groove
     folder: In The Groove 3
@@ -6515,16 +6605,6 @@
     date: '2011-02-03 23:04:08'
     position: 1
   - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 1st Mix
-    song: LET'S GET DOWN
-    difficulty: Challenge
-    type: single
-    percentage: '90.82'
-    grade: Tier07
-    award: null
-    date: '2026-10-14 23:27:47'
-    position: 1
-  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
     song: GIRIGILI Burning 24H!
     difficulty: Hard
@@ -6584,16 +6664,6 @@
     award: null
     date: '2011-09-12 17:54:23'
     position: 2
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 1st Mix
-    song: HAVE YOU NEVER BEEN MELLOW
-    difficulty: Challenge
-    type: single
-    percentage: '90.08'
-    grade: Tier07
-    award: null
-    date: '2026-10-14 23:25:52'
-    position: 1
   - section: In The Groove
     folder: In The Groove 3
     song: Into my Dream
@@ -8049,7 +8119,7 @@
   initials:
   - LONE
   total_scores: 1187
-  top_scores: 494
+  top_scores: 487
   song_scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -8940,7 +9010,7 @@
     grade: Tier06
     award: FullComboW3
     date: '2011-08-31 18:56:32'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: MORE THAN I NEEDED TO KNOW
@@ -9850,7 +9920,7 @@
     grade: Tier07
     award: FullComboW3
     date: '2013-01-14 10:34:48'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: nijiiro
@@ -10000,7 +10070,7 @@
     grade: Tier07
     award: FullComboW3
     date: '2011-09-20 17:18:26'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: AM-3P (303 BASSMIX)
@@ -11900,7 +11970,7 @@
     grade: Tier08
     award: FullComboW3
     date: '2014-01-23 01:57:54'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove
     song: Drifting Away
@@ -12120,7 +12190,7 @@
     grade: Tier08
     award: null
     date: '2013-03-27 12:16:47'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: Bloodrush
@@ -15430,7 +15500,7 @@
     grade: Tier11
     award: null
     date: Unknown Date
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: Little Kitty Mine
@@ -16790,7 +16860,7 @@
     grade: Tier12
     award: null
     date: '2011-05-24 16:34:03'
-    position: 1
+    position: 2
   - section: Other
     folder: Unofficial
     song: Scars of Time
@@ -21607,7 +21677,7 @@
     grade: Tier10
     award: null
     date: '2013-01-14 10:34:48'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: Destiny Lovers
@@ -22277,7 +22347,7 @@
     grade: Tier10
     award: null
     date: Unknown Date
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: nijiiro
@@ -25537,7 +25607,7 @@
     grade: Tier13
     award: null
     date: '2013-01-14 10:31:34'
-    position: 4
+    position: 5
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 3rd Mix
     song: DROP THE BOMB
@@ -25687,7 +25757,7 @@
     grade: Tier13
     award: null
     date: Unknown Date
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: memories
@@ -29584,7 +29654,7 @@
     grade: Tier11
     award: null
     date: '2011-09-29 23:38:14'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: fantasy
@@ -33318,8 +33388,8 @@
     position: 5
 - player_name: MLS
   initials:
-  - MONT
   - MLS
+  - MONT
   total_scores: 157
   top_scores: 43
   song_scores:
@@ -34712,7 +34782,7 @@
     grade: Tier08
     award: null
     date: Unknown Date
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: BREAK DOWN!
@@ -45569,7 +45639,7 @@
     grade: Tier17
     award: null
     date: '2013-12-19 02:34:37'
-    position: 5
+    position: 6
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: janejana
@@ -45704,8 +45774,8 @@
   course_scores: []
 - player_name: Seitoko
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 6
   top_scores: 0
   song_scores:
@@ -46692,7 +46762,7 @@
     grade: Tier12
     award: null
     date: Unknown Date
-    position: 3
+    position: 4
   course_scores: []
 - player_name: ?!
   initials:

@@ -135,10 +135,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '90.08'
-            grade: Tier07
-            award: null
-            date: '2026-10-14 23:25:52'
+            percentage: '96.52'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-11-06 16:33:33'
           - player: LONE
             percentage: '88.31'
             grade: Tier08
@@ -210,10 +210,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '90.82'
-            grade: Tier07
-            award: null
-            date: '2026-10-14 23:27:47'
+            percentage: '96.19'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-11-06 16:31:17'
           - player: LONE
             percentage: '87.91'
             grade: Tier08
@@ -533,6 +533,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.58'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-06 16:38:10'
           - player: LONE
             percentage: '79.08'
             grade: Tier11
@@ -551,6 +556,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.17'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-06 16:36:29'
           - player: LONE
             percentage: '87.28'
             grade: Tier08
@@ -582,6 +592,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '95.42'
+            grade: Tier05
+            award: SingleDigitW3
+            date: '2026-11-06 16:39:57'
           - player: LONE
             percentage: '75.14'
             grade: Tier12
@@ -13415,10 +13430,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '99.22'
+            percentage: '99.67'
             grade: Tier02
-            award: OneW3
-            date: '2026-10-25 14:05:20'
+            award: SingleDigitW2
+            date: '2026-11-06 16:44:44'
           - player: BMM
             percentage: '99.09'
             grade: Tier02
@@ -18212,6 +18227,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.30'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-11-06 16:51:59'
           - player: LONE
             percentage: '91.28'
             grade: Tier07
@@ -18914,6 +18934,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.06'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-06 16:54:13'
           - player: LONE
             percentage: '87.60'
             grade: Tier08
@@ -18997,6 +19022,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.70'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-06 16:56:10'
           - player: LONE
             percentage: '93.71'
             grade: Tier06
@@ -19254,6 +19284,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.58'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-06 16:47:33'
           - player: LONE
             percentage: '91.60'
             grade: Tier07

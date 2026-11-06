@@ -44,6 +44,7 @@ h1 {
 .search-bar:focus { outline: none; border-color: var(--accent-blue); }
 .view-panel { display: none; }
 .view-panel.active { display: block; }
+[hidden] { display: none !important; }
 
 .macro-section {
     margin-bottom: 20px; background-color: rgba(26, 29, 46, 0.2);
@@ -180,6 +181,40 @@ h1 {
 .player-profile-score-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .player-profile-filter-status { color: var(--text-muted); font-size: 0.9rem; }
 .player-profile-section { margin-top: 24px; }
+.completion-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+.completion-heading h3 { margin-bottom: 4px; }
+.completion-note { margin: 0; color: var(--text-muted); font-size: 0.8rem; }
+.completion-search { width: min(260px, 100%); box-sizing: border-box; }
+.completion-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; color: var(--text-muted); font-size: 0.78rem; }
+.completion-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+.completion-swatch { width: 12px; height: 12px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.12); }
+.completion-grid { display: flex; flex-direction: column; gap: 12px; }
+.completion-section, .completion-folder { border: 1px solid #2d314d; border-radius: 8px; overflow: hidden; background: var(--bg-card); }
+.completion-section-title, .completion-folder-title { cursor: pointer; list-style: none; user-select: none; }
+.completion-section-title::-webkit-details-marker, .completion-folder-title::-webkit-details-marker { display: none; }
+.completion-section-title::before, .completion-folder-title::before { content: '▶'; display: inline-block; margin-right: 8px; font-size: 0.7rem; color: var(--text-muted); }
+.completion-section[open] > .completion-section-title::before, .completion-folder[open] > .completion-folder-title::before { transform: rotate(90deg); }
+.completion-section-title { padding: 12px 14px; font-weight: 700; background: rgba(255,255,255,0.025); }
+.completion-folder { margin: 10px; }
+.completion-folder-title { padding: 9px 12px; font-size: 0.9rem; font-weight: 700; border-bottom: 1px solid transparent; }
+.completion-folder[open] > .completion-folder-title { border-bottom-color: #2d314d; }
+.completion-table-wrap { overflow-x: auto; }
+.completion-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 620px; table-layout: fixed; }
+.completion-table th { position: sticky; top: 0; padding: 6px 4px; color: var(--text-muted); font-size: 0.68rem; text-transform: uppercase; background: #202438; border-bottom: 1px solid #343a57; text-align: center; }
+.completion-header-difficulty { line-height: 1.15; font-size: 0.68rem; white-space: nowrap; }
+.completion-table th.completion-song-header { width: 220px; text-align: left; left: 0; z-index: 2; }
+.completion-table td { height: 34px; padding: 4px 2px; border-bottom: 1px solid rgba(255,255,255,0.045); text-align: center; vertical-align: middle; }
+.completion-table td.completion-song-name { position: sticky; left: 0; z-index: 1; text-align: left; background: var(--bg-card); font-size: 0.82rem; font-weight: 600; padding-left: 10px; width: 220px; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.completion-song-name a { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 3px; }
+.completion-song-name a:hover, .completion-song-name a:focus-visible { color: #ffd18a; }
+.completion-score-box { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 26px; box-sizing: border-box; border-radius: 4px; color: #08111f; font-size: 0.72rem; font-weight: 800; border: 1px solid rgba(255,255,255,0.08); white-space: nowrap; }
+.completion-none { background: rgba(148,163,184,0.28); color: var(--text-main); }
+.completion-fc { background: #4ade80; }
+.completion-fec { background: #fbbf24; }
+.completion-ffc { background: #7dd3fc; }
+.completion-unplayed { background: rgba(148,163,184,0.12); color: #64748b; border-style: dashed; }
+.completion-score-link { display: inline-flex; line-height: 0; text-decoration: none; }
+.completion-empty { color: var(--text-muted); text-align: center; padding: 20px; }
 .bar-beginner { background: var(--diff-beginner); }
 .bar-easy { background: var(--diff-easy); }
 .bar-medium { background: var(--diff-medium); }

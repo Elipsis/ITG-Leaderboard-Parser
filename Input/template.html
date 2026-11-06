@@ -385,8 +385,9 @@
         <div class="statistics-controls" role="group" aria-label="Player record type">
             <button type="button" class="active" data-profile-entity="songs" onclick="showProfileEntity('songs')">Song Scores</button>
             <button type="button" data-profile-entity="courses" onclick="showProfileEntity('courses')">Course Scores</button>
+            <button type="button" data-profile-entity="completion" onclick="showProfileEntity('completion')">Song Completion</button>
         </div>
-        <div class="player-profile-breakdowns">
+        <div class="player-profile-breakdowns" id="playerProfileBreakdowns">
             <section>
                 <h3>Records by Difficulty</h3>
                 <table class="player-profile-counts"><tbody id="playerDifficultyCounts"></tbody></table>
@@ -396,7 +397,7 @@
                 <table class="player-profile-counts"><tbody id="playerGroupCounts"></tbody></table>
             </section>
         </div>
-        <section class="player-profile-section">
+        <section class="player-profile-section" id="playerScoreSection">
             <div class="player-profile-score-heading">
                 <h3 id="playerScoresTitle">Latest Scores</h3>
                 <div class="statistics-controls" role="group" aria-label="Player score view">
@@ -417,14 +418,35 @@
                 </table>
             </div>
         </section>
+        <section class="player-profile-section" id="playerCompletionSection" hidden>
+            <div class="completion-heading">
+                <div>
+                    <h3>Song Completion</h3>
+                </div>
+                <input type="search" id="completionSearch" class="search-bar completion-search"
+                       placeholder="Search songs..." oninput="renderProfileCompletion()">
+            </div>
+            <div class="statistics-controls" role="group" aria-label="Song completion style">
+                <button type="button" class="active" data-completion-style="single" onclick="showProfileCompletionStyle('single')">Singles</button>
+                <button type="button" data-completion-style="double" onclick="showProfileCompletionStyle('double')">Doubles</button>
+            </div>
+            <div class="completion-legend" aria-label="Combo award legend">
+                <span><span class="completion-swatch completion-ffc"></span> Full Fantastic Combo</span>
+                <span><span class="completion-swatch completion-fec"></span> Full Excellent Combo</span>
+                <span><span class="completion-swatch completion-fc"></span> Full Combo</span>
+                <span><span class="completion-swatch completion-none"></span> No combo</span>
+            </div>
+            <div id="playerCompletionGrid" class="completion-grid"></div>
+        </section>
     </div>
 </div>
 
-<script id="player-profile-data" type="application/json">{{ {"profiles": player_profiles, "score_limit": player_profile_score_limit} | tojson }}</script>
+<script id="player-profile-data" type="application/json">{{ {"profiles": player_profiles, "score_limit": player_profile_score_limit, "song_catalog": song_catalog} | tojson }}</script>
 <script>
     const playerProfileData = JSON.parse(document.getElementById('player-profile-data').textContent);
     const playerProfiles = playerProfileData.profiles;
     const playerProfileScoreLimit = playerProfileData.score_limit;
+    const playerSongCatalog = playerProfileData.song_catalog;
     const leaderboardTargets = new Map();
     document.querySelectorAll('.leaderboard-drawer').forEach(drawer => {
         const key = leaderboardKey(drawer.dataset.recordType, drawer.dataset);
@@ -433,10 +455,12 @@
     let currentView = 'songs';
     let profileReturnView = 'songs';
     let currentPlayerProfile = null;
+    let currentPlayerProfileId = null;
     let currentProfileEntity = 'songs';
     let currentProfileScoreView = 'latest';
     let currentProfileScoreScope = 'all';
     let currentProfileFilters = {difficulty: null, group: null};
+    let currentCompletionStyle = 'single';
 
     document.querySelectorAll('[data-bar-width]').forEach(bar => {
         bar.style.width = `${bar.dataset.barWidth}%`;
@@ -504,27 +528,42 @@
         }
     });
 
-    function openPlayerProfile(playerId, updateUrl = true) {
+    function openPlayerProfile(playerId, updateUrl = true, entity = 'songs') {
         const profile = playerProfiles[Number(playerId)];
         if (!profile) return;
 
         if (updateUrl) profileReturnView = currentView;
         currentPlayerProfile = profile;
+        currentPlayerProfileId = Number(playerId);
         document.getElementById('playerProfileName').textContent = profile.player_name;
         document.getElementById('playerProfileInitials').textContent = profile.initials.join(', ');
-        currentProfileEntity = 'songs';
+        document.getElementById('completionSearch').value = '';
+        currentProfileEntity = ['songs', 'courses', 'completion'].includes(entity) ? entity : 'songs';
         currentProfileScoreView = 'latest';
         currentProfileScoreScope = 'all';
+        currentCompletionStyle = 'single';
         currentProfileFilters = {difficulty: null, group: null};
-        renderProfileScores();
         switchView('player-profile');
-        if (updateUrl) updateShareableHash(`#player-${Number(playerId)}`);
+        if (currentProfileEntity === 'completion') renderProfileCompletion();
+        else renderProfileScores();
+        if (updateUrl) updateShareableHash(`#player-${Number(playerId)}-${currentProfileEntity}`);
     }
 
     function showProfileEntity(entity) {
+        if (!['songs', 'courses', 'completion'].includes(entity)) return;
         currentProfileEntity = entity;
         currentProfileFilters = {difficulty: null, group: null};
-        renderProfileScores();
+        if (entity === 'completion') renderProfileCompletion();
+        else renderProfileScores();
+        if (currentPlayerProfileId !== null) {
+            updateShareableHash(`#player-${currentPlayerProfileId}-${entity}`);
+        }
+    }
+
+    function showProfileCompletionStyle(style) {
+        if (style !== 'single' && style !== 'double') return;
+        currentCompletionStyle = style;
+        renderProfileCompletion();
     }
 
     function returnFromPlayerProfile() {
@@ -595,6 +634,9 @@
         document.querySelectorAll('[data-profile-entity]').forEach(button => {
             button.classList.toggle('active', button.dataset.profileEntity === currentProfileEntity);
         });
+        document.querySelectorAll('[data-completion-style]').forEach(button => {
+            button.classList.toggle('active', button.dataset.completionStyle === currentCompletionStyle);
+        });
         document.querySelectorAll('[data-profile-score-view]').forEach(button => {
             button.classList.toggle('active', button.dataset.profileScoreView === currentProfileScoreView);
         });
@@ -616,6 +658,9 @@
 
     function renderProfileScores() {
         if (!currentPlayerProfile) return;
+        document.getElementById('playerProfileBreakdowns').hidden = false;
+        document.getElementById('playerScoreSection').hidden = false;
+        document.getElementById('playerCompletionSection').hidden = true;
         const isLatest = currentProfileScoreView === 'latest';
         const isAll = currentProfileScoreScope === 'all';
         const isCourse = currentProfileEntity === 'courses';
@@ -670,6 +715,236 @@
         updateProfileScoreControls();
     }
 
+    const completionDifficultyNames = ['Beginner', 'Easy', 'Medium', 'Hard', 'Challenge', 'Edit'];
+    const completionGradeNames = {
+        Tier01: '★★★★',
+        Tier02: '★★★',
+        Tier03: '★★',
+        Tier04: '★',
+        Tier05: 'S+',
+        Tier06: 'S',
+        Tier07: 'S-',
+        Tier08: 'A+',
+        Tier09: 'A',
+        Tier10: 'A-',
+        Tier11: 'B+',
+        Tier12: 'B',
+        Tier13: 'B-',
+        Tier14: 'C+',
+        Tier15: 'C',
+        Tier16: 'C-',
+        Tier17: 'D'
+    };
+
+    function completionText(value) {
+        return String(value ?? '').trim();
+    }
+
+    function completionKey(value) {
+        return completionText(value).toLowerCase();
+    }
+
+    function findCompletionScore(profile, sectionName, folderName, songName, difficulty, chartType) {
+        const matches = profile.song_scores.filter(score =>
+            completionKey(score.section) === completionKey(sectionName)
+            && completionKey(score.folder) === completionKey(folderName)
+            && completionKey(score.song) === completionKey(songName)
+            && completionKey(score.difficulty) === completionKey(difficulty)
+            && completionKey(score.type) === completionKey(chartType)
+        );
+        return matches.sort((first, second) =>
+            Number(second.percentage || 0) - Number(first.percentage || 0)
+        )[0] ?? null;
+    }
+
+    function completionAwardClass(award) {
+        if (award === 'FullComboW1') return 'completion-ffc';
+        if (award === 'FullComboW2') return 'completion-fec';
+        if (award === 'FullComboW3') return 'completion-fc';
+        return 'completion-none';
+    }
+
+    function wrapCompletionRank(box, position) {
+        const rank = Number(position);
+        const wrapper = document.createElement('span');
+        wrapper.className = 'completion-score-with-rank';
+        wrapper.appendChild(box);
+
+        const rankMark = document.createElement('span');
+        rankMark.className = 'completion-score-rank';
+        if (rank === 1 || rank === 2 || rank === 3) {
+            rankMark.textContent = rank === 1 ? '🏆' : rank === 2 ? '🥈' : '🥉';
+            rankMark.setAttribute('aria-label', `${rank}${rank === 1 ? 'st' : rank === 2 ? 'nd' : 'rd'} place`);
+        }
+        wrapper.appendChild(rankMark);
+        return wrapper;
+    }
+
+    function completionChartExists(song, difficulty, chartType) {
+        if (!(song.difficulties_single ?? []).some(value => completionKey(value) === completionKey(difficulty))
+            && !(song.difficulties_double ?? []).some(value => completionKey(value) === completionKey(difficulty))) {
+            return false;
+        }
+        return Object.entries(song.leaderboards ?? {}).some(([name, leaderboard]) =>
+            completionKey(name.split(' (')[0]) === completionKey(difficulty)
+            && completionKey(leaderboard.type) === completionKey(chartType)
+            && (leaderboard.entries ?? []).length > 0
+        );
+    }
+
+    function createCompletionSongLink(sectionName, folderName, song) {
+        const label = song.song_title;
+        const chart = completionDifficultyNames.find(difficulty =>
+            completionChartExists(song, difficulty, currentCompletionStyle)
+        );
+        if (!chart) {
+            return document.createTextNode(label);
+        }
+        return createProfileLeaderboardLink({
+            record_type: 'song',
+            section: sectionName,
+            folder: folderName,
+            song: song.song_title,
+            difficulty: chart,
+            type: currentCompletionStyle
+        }, label);
+    }
+
+    function renderCompletionBox(profile, sectionName, folderName, song, difficulty, chartType) {
+        const score = findCompletionScore(profile, sectionName, folderName, song.song_title, difficulty, chartType);
+        const box = document.createElement('span');
+        box.className = `completion-score-box ${completionAwardClass(score?.award)}`;
+
+        if (!score) {
+            box.classList.add('completion-unplayed');
+            box.textContent = '—';
+            box.title = `Not played: ${difficulty} ${chartType === 'single' ? 'Singles' : 'Doubles'}`;
+            return wrapCompletionRank(box, null);
+        }
+
+        box.textContent = completionGradeNames[score.grade] ?? score.grade ?? '—';
+        const chartLabel = chartType === 'single' ? 'Singles' : 'Doubles';
+        box.title = `${score.percentage}% ${difficulty} ${chartLabel}${score.award ? ' - ' + score.award : ''}`;
+
+        const leaderboardLink = createProfileLeaderboardLink(score, '');
+        if (leaderboardLink instanceof HTMLAnchorElement) {
+            leaderboardLink.className = 'completion-score-link';
+            leaderboardLink.replaceChildren(box.cloneNode(true));
+            return wrapCompletionRank(leaderboardLink, score.position);
+        }
+        const rankWrapped = wrapCompletionRank(box, score.position);
+        if (rankWrapped !== box) return rankWrapped;
+        return box;
+    }
+
+    function renderProfileCompletion() {
+        if (!currentPlayerProfile) return;
+        document.getElementById('playerProfileBreakdowns').hidden = true;
+        document.getElementById('playerScoreSection').hidden = true;
+        document.getElementById('playerCompletionSection').hidden = false;
+        updateProfileScoreControls();
+
+        const query = completionKey(document.getElementById('completionSearch').value);
+        const grid = document.getElementById('playerCompletionGrid');
+        grid.replaceChildren();
+
+        playerSongCatalog.forEach(section => {
+            const sectionFolders = section.folders.map(folder => {
+                const songs = folder.songs.filter(song =>
+                    (!query || completionKey(song.song_title).includes(query))
+                    && (completionChartExists(song, 'Beginner', currentCompletionStyle)
+                    || completionChartExists(song, 'Easy', currentCompletionStyle)
+                    || completionChartExists(song, 'Medium', currentCompletionStyle)
+                    || completionChartExists(song, 'Hard', currentCompletionStyle)
+                    || completionChartExists(song, 'Challenge', currentCompletionStyle))
+                );
+                return {folder, songs};
+            }).filter(item => item.songs.length);
+            if (!sectionFolders.length) return;
+
+            const sectionBlock = document.createElement('details');
+            sectionBlock.className = 'completion-section';
+            sectionBlock.open = true;
+            const summary = document.createElement('summary');
+            summary.className = 'completion-section-title';
+            summary.textContent = section.section_name;
+            sectionBlock.appendChild(summary);
+
+            sectionFolders.forEach(({folder, songs}) => {
+                const folderBlock = document.createElement('details');
+                folderBlock.className = 'completion-folder';
+                folderBlock.open = true;
+                const folderSummary = document.createElement('summary');
+                folderSummary.className = 'completion-folder-title';
+                folderSummary.textContent = folder.folder_name;
+                folderBlock.appendChild(folderSummary);
+
+                const columns = completionDifficultyNames.filter(difficulty =>
+                    songs.some(song => completionChartExists(song, difficulty, currentCompletionStyle))
+                );
+
+                const wrap = document.createElement('div');
+                wrap.className = 'completion-table-wrap';
+                const table = document.createElement('table');
+                table.className = 'completion-table';
+                const thead = document.createElement('thead');
+                const headerRow = document.createElement('tr');
+                const songHeader = document.createElement('th');
+                songHeader.textContent = 'Song';
+                songHeader.className = 'completion-song-header';
+                headerRow.appendChild(songHeader);
+                columns.forEach(difficulty => {
+                    const header = document.createElement('th');
+                    header.className = 'completion-header-difficulty';
+                    header.textContent = difficulty;
+                    headerRow.appendChild(header);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                const tbody = document.createElement('tbody');
+                songs.forEach(song => {
+                    const row = document.createElement('tr');
+                    const songCell = document.createElement('td');
+                    songCell.className = 'completion-song-name';
+                    const songLink = createCompletionSongLink(section.section_name, folder.folder_name, song);
+                    if (songLink instanceof Node) songCell.appendChild(songLink);
+                    else songCell.textContent = song.song_title;
+                    row.appendChild(songCell);
+
+                    columns.forEach(difficulty => {
+                        const cell = document.createElement('td');
+                        if (completionChartExists(song, difficulty, currentCompletionStyle)) {
+                            cell.appendChild(renderCompletionBox(
+                                currentPlayerProfile,
+                                section.section_name,
+                                folder.folder_name,
+                                song,
+                                difficulty,
+                                currentCompletionStyle
+                            ));
+                        }
+                        row.appendChild(cell);
+                    });
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+                wrap.appendChild(table);
+                folderBlock.appendChild(wrap);
+                sectionBlock.appendChild(folderBlock);
+            });
+
+            grid.appendChild(sectionBlock);
+        });
+
+        if (!grid.children.length) {
+            const empty = document.createElement('p');
+            empty.className = 'completion-empty';
+            empty.textContent = 'No songs match the search.';
+            grid.appendChild(empty);
+        }
+    }
+
     function showProfileScoreView(view) {
         currentProfileScoreView = view;
         renderProfileScores();
@@ -715,8 +990,8 @@
     function restoreLocationFromHash() {
         const hash = window.location.hash.slice(1);
         if (hash.startsWith('player-')) {
-            const playerId = hash.slice('player-'.length);
-            if (/^\d+$/.test(playerId)) openPlayerProfile(playerId, false);
+            const playerMatch = /^player-(\d+)(?:-(songs|courses|completion))?$/.exec(hash);
+            if (playerMatch) openPlayerProfile(playerMatch[1], false, playerMatch[2] ?? 'songs');
             return;
         }
         if (hash.startsWith('drawer-')) openLeaderboard(hash, false);

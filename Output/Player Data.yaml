@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 804
-  top_scores: 736
+  total_scores: 815
+  top_scores: 747
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -215,6 +215,16 @@
     date: '2013-07-09 15:13:18'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: The Theme from Flo-jack
+    difficulty: Hard
+    type: single
+    percentage: '99.46'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-09 18:16:34'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: LOOK TO THE SKY
     difficulty: Hard
@@ -343,6 +353,26 @@
     grade: Tier02
     award: FullComboW2
     date: '2011-01-20 20:14:31'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: THE EARTH LIGHT
+    difficulty: Hard
+    type: single
+    percentage: '99.29'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-09 18:14:15'
+    position: 1
+  - section: In The Groove
+    folder: In The Groove
+    song: Hardcore of the North
+    difficulty: Easy
+    type: single
+    percentage: '99.27'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-09 18:02:10'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -1345,6 +1375,26 @@
     date: '2011-01-24 21:45:49'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: Prince on a star
+    difficulty: Hard
+    type: single
+    percentage: '98.57'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-09 18:04:28'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: Dr.LOVE
+    difficulty: Hard
+    type: single
+    percentage: '98.57'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-09 18:31:49'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: HAVE YOU NEVER BEEN MELLOW (MM GROOVIN MIX)
     difficulty: Hard
@@ -1413,16 +1463,6 @@
     grade: Tier03
     award: FullComboW2
     date: '2012-01-18 20:49:23'
-    position: 1
-  - section: In The Groove
-    folder: In The Groove
-    song: Hardcore of the North
-    difficulty: Easy
-    type: single
-    percentage: '98.55'
-    grade: Tier03
-    award: null
-    date: '2026-10-29 20:14:13'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 3rd Mix
@@ -1805,6 +1845,16 @@
     date: '2012-02-06 21:38:22'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: OVERDOSER (CLUB 2P VER.)
+    difficulty: Hard
+    type: single
+    percentage: '98.36'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-09 18:22:04'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
     song: Every Day, Every Night(NM Style)
     difficulty: Hard
@@ -2133,6 +2183,16 @@
     grade: Tier03
     award: FullComboW2
     date: '2011-08-22 20:11:33'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: Stomp to my beat
+    difficulty: Challenge
+    type: single
+    percentage: '98.17'
+    grade: Tier03
+    award: OneW3
+    date: '2026-11-09 18:20:15'
     position: 1
   - section: In The Groove
     folder: In The Groove 2
@@ -2944,6 +3004,16 @@
     award: FullComboW2
     date: '2011-10-09 23:15:14'
     position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: special energy
+    difficulty: Hard
+    type: single
+    percentage: '97.65'
+    grade: Tier04
+    award: FullComboW2
+    date: '2026-11-09 18:12:10'
+    position: 1
   - section: Other
     folder: Unofficial
     song: OA
@@ -3255,6 +3325,16 @@
     date: '2011-03-21 20:37:02'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: GAMBOL
+    difficulty: Hard
+    type: single
+    percentage: '97.46'
+    grade: Tier04
+    award: OneW3
+    date: '2026-11-09 18:36:04'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 1st Mix
     song: KUNG FU FIGHTING
     difficulty: Medium
@@ -3283,16 +3363,6 @@
     grade: Tier04
     award: FullComboW2
     date: '2020-03-28 10:45:44'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 2nd Mix
-    song: Stomp to my beat
-    difficulty: Challenge
-    type: single
-    percentage: '97.43'
-    grade: Tier04
-    award: FullComboW3
-    date: '2011-01-20 00:02:25'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
@@ -3543,6 +3613,16 @@
     grade: Tier04
     award: FullComboW2
     date: '2026-10-15 02:21:04'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: EL RITMO TROPICAL
+    difficulty: Hard
+    type: single
+    percentage: '97.24'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-11-09 18:34:23'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -4405,6 +4485,16 @@
     date: '2011-11-16 18:21:43'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: PARANOiA MAX (DIRTY MIX)
+    difficulty: Hard
+    type: single
+    percentage: '96.41'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-11-09 18:24:01'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: MY SWEET DARLIN'
     difficulty: Hard
@@ -4543,6 +4633,16 @@
     grade: Tier04
     award: FullComboW3
     date: '2011-10-06 19:19:24'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: PARANOIA MAX (CLUB VER.)
+    difficulty: Hard
+    type: single
+    percentage: '96.25'
+    grade: Tier04
+    award: SingleDigitW3
+    date: '2026-11-09 18:38:15'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
@@ -4803,6 +4903,16 @@
     grade: Tier05
     award: FullComboW3
     date: '2012-01-23 20:47:23'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: Deep clear eyes (CLUB ANOTHER VER.)
+    difficulty: Hard
+    type: single
+    percentage: '95.86'
+    grade: Tier05
+    award: SingleDigitW3
+    date: '2026-11-09 18:28:54'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -6704,6 +6814,16 @@
     award: null
     date: '2011-09-12 17:54:23'
     position: 2
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: RUGGED ASH
+    difficulty: Hard
+    type: single
+    percentage: '90.10'
+    grade: Tier07
+    award: null
+    date: '2026-11-09 18:06:07'
+    position: 1
   - section: In The Groove
     folder: In The Groove 3
     song: Into my Dream
@@ -6803,16 +6923,6 @@
     grade: Tier07
     award: null
     date: '2013-03-19 03:16:23'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 2nd Mix
-    song: PARANOIA MAX (CLUB VER.)
-    difficulty: Hard
-    type: single
-    percentage: '89.44'
-    grade: Tier07
-    award: null
-    date: '2017-09-06 15:50:35'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -8169,7 +8279,7 @@
   initials:
   - LONE
   total_scores: 1187
-  top_scores: 485
+  top_scores: 478
   song_scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -8540,7 +8650,7 @@
     grade: Tier05
     award: FullComboW3
     date: Unknown Date
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
     song: switch
@@ -9260,7 +9370,7 @@
     grade: Tier06
     award: FullComboW3
     date: '2013-11-29 02:42:56'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: Let the beat hit em!
@@ -10060,7 +10170,7 @@
     grade: Tier07
     award: FullComboW3
     date: '2012-03-02 19:12:39'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: Do It Right (80's Electro Mix)
@@ -12810,7 +12920,7 @@
     grade: Tier09
     award: null
     date: '2011-09-13 18:24:01'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: DAIKENKAI
@@ -16180,7 +16290,7 @@
     grade: Tier11
     award: null
     date: Unknown Date
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: ECSTASY (midnight blue mix)
@@ -17190,7 +17300,7 @@
     grade: Tier12
     award: null
     date: '2013-03-27 12:20:51'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: Cryosleep
@@ -19520,7 +19630,7 @@
     grade: Tier15
     award: null
     date: '2011-03-07 16:59:24'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove
     song: Hardcore of the North
@@ -19880,7 +19990,7 @@
     grade: Tier16
     award: null
     date: '2011-08-11 18:57:33'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: DROP OUT
@@ -20066,7 +20176,7 @@
   initials:
   - JILL
   total_scores: 794
-  top_scores: 282
+  top_scores: 280
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -20947,7 +21057,7 @@
     grade: Tier08
     award: null
     date: Unknown Date
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: Beautiful Life
@@ -21427,7 +21537,7 @@
     grade: Tier09
     award: null
     date: '2014-05-28 04:56:03'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: Take Me Away (into the night)(radio vocal)
@@ -22827,7 +22937,7 @@
     grade: Tier11
     award: null
     date: '2012-03-02 19:12:39'
-    position: 2
+    position: 3
   - section: In The Groove
     folder: In The Groove 3
     song: Heel and Toe
@@ -24157,7 +24267,7 @@
     grade: Tier12
     award: null
     date: '2011-09-13 18:24:01'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: WAITING FOR TONIGHT
@@ -24527,7 +24637,7 @@
     grade: Tier12
     award: null
     date: '2013-01-13 06:06:32'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: JUSTIFY MY LOVE
@@ -32864,7 +32974,7 @@
     grade: Tier15
     award: null
     date: '2011-09-19 20:21:58'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 3rd Mix
     song: CAPTAIN JACK (GRANDALE REMIX)
@@ -33441,7 +33551,7 @@
   - MLS
   - MONT
   total_scores: 157
-  top_scores: 43
+  top_scores: 42
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -34402,7 +34512,7 @@
     grade: Tier05
     award: null
     date: '2013-11-29 02:42:56'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: Life of a Butterfly
@@ -45824,8 +45934,8 @@
   course_scores: []
 - player_name: Seitoko
   initials:
-  - SNOW
   - RAIN
+  - SNOW
   total_scores: 6
   top_scores: 0
   song_scores:

@@ -126,7 +126,9 @@ h1 {
 .score-award { font-size: 0.75rem; font-weight: 700; margin-left: 0.35rem; }
 .award-ffc { color: #7dd3fc; }
 .award-fec { color: #fbbf24; }
+.award-sde { color: #fbbf24; }
 .award-fc { color: #4ade80; }
+.award-sdg { color: #4ade80; }
 .score-grade { font-size: 0.75rem; font-weight: 700; margin-left: 0.35rem; }
 .grade-stars { color: #fbbf24; }
 .grade-s { color: #acaaab; }
@@ -213,6 +215,7 @@ h1 {
 .completion-none { background: rgba(148,163,184,0.28); color: var(--text-main); }
 .completion-fc { background: #4ade80; }
 .completion-fec { background: #fbbf24; }
+.completion-single-digit { background-image: repeating-linear-gradient(135deg, transparent 0 4px, rgba(8,17,31,0.2) 4px 6px); }
 .completion-ffc { background: #7dd3fc; }
 .completion-unplayed { background: rgba(148,163,184,0.12); color: #64748b; border-style: dashed; }
 .completion-score-link { display: inline-flex; line-height: 0; text-decoration: none; }

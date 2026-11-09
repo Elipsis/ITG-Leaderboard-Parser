@@ -998,6 +998,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '95.86'
+            grade: Tier05
+            award: SingleDigitW3
+            date: '2026-11-09 18:28:54'
           - player: LONE
             percentage: '74.31'
             grade: Tier12
@@ -1067,6 +1072,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.57'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-09 18:31:49'
           - player: JILL
             percentage: '74.12'
             grade: Tier12
@@ -1098,6 +1108,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.24'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-11-09 18:34:23'
           - player: LONE
             percentage: '85.91'
             grade: Tier09
@@ -1125,6 +1140,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.46'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-09 18:36:04'
           - player: LONE
             percentage: '91.47'
             grade: Tier07
@@ -1194,6 +1214,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.50'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-09 17:53:50'
           - player: LONE
             percentage: '77.97'
             grade: Tier11
@@ -1202,6 +1227,7 @@
     - song_title: GRADIUSIC CYBER (CLUB ANOTHER VER.)
       difficulties_single:
       - Medium
+      - Hard
       difficulties_double: []
       leaderboards:
         Medium (Single):
@@ -1217,6 +1243,14 @@
             grade: Tier16
             award: null
             date: '2011-06-16 18:27:17'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '82.08'
+            grade: Tier10
+            award: null
+            date: '2026-11-09 17:55:57'
     - song_title: GRADIUSIC CYBER
       difficulties_single:
       - Hard
@@ -1438,10 +1472,23 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '92.92'
-            grade: Tier06
-            award: null
-            date: '2017-04-22 11:24:18'
+            percentage: '98.75'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-09 17:46:58'
+    - song_title: LOVE SO GROOVY (CLUB 2P VER.)
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.96'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-09 17:48:55'
     - song_title: LOVE SO GROOVY
       difficulties_single:
       - Hard
@@ -1487,11 +1534,29 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '95.36'
+            grade: Tier05
+            award: SingleDigitW3
+            date: '2026-11-09 17:50:55'
           - player: LONE
             percentage: '74.58'
             grade: Tier12
             award: null
             date: '2011-05-24 18:00:33'
+    - song_title: MAKE A JAM!
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.75'
+            grade: Tier04
+            award: FullComboW2
+            date: '2026-11-09 17:58:09'
     - song_title: MAKE IT BETTER (So-REAL Mix)
       difficulties_single:
       - Medium
@@ -1587,6 +1652,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.36'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-09 18:22:04'
           - player: LONE
             percentage: '77.28'
             grade: Tier11
@@ -1633,10 +1703,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '89.44'
-            grade: Tier07
-            award: null
-            date: '2017-09-06 15:50:35'
+            percentage: '96.25'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-11-09 18:38:15'
           - player: LONE
             percentage: '80.12'
             grade: Tier10
@@ -1665,6 +1735,19 @@
             grade: Tier05
             award: null
             date: '2013-11-03 18:33:55'
+    - song_title: PARANOiA MAX (DIRTY MIX)
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.41'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-11-09 18:24:01'
     - song_title: PERFECT FREE
       difficulties_single:
       - Medium
@@ -1764,6 +1847,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.57'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-09 18:04:28'
           - player: MLS
             percentage: '95.18'
             grade: Tier05
@@ -1915,6 +2003,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '90.10'
+            grade: Tier07
+            award: null
+            date: '2026-11-09 18:06:07'
           - player: LONE
             percentage: '58.24'
             grade: Tier16
@@ -2022,10 +2115,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '97.43'
-            grade: Tier04
-            award: FullComboW3
-            date: '2011-01-20 00:02:25'
+            percentage: '98.17'
+            grade: Tier03
+            award: OneW3
+            date: '2026-11-09 18:20:15'
           - player: MLS
             percentage: '97.43'
             grade: Tier04
@@ -2068,6 +2161,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.29'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-09 18:14:15'
           - player: JILL
             percentage: '83.59'
             grade: Tier09
@@ -2127,6 +2225,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.46'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-09 18:16:34'
           - player: LONE
             percentage: '95.83'
             grade: Tier05
@@ -2713,6 +2816,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.65'
+            grade: Tier04
+            award: FullComboW2
+            date: '2026-11-09 18:12:10'
           - player: LONE
             percentage: '62.34'
             grade: Tier15
@@ -24146,10 +24254,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '98.55'
-            grade: Tier03
-            award: null
-            date: '2026-10-29 20:14:13'
+            percentage: '99.27'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-09 18:02:10'
           - player: Ennui
             percentage: '96.54'
             grade: Tier04

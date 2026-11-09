@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 799
-  top_scores: 731
+  total_scores: 804
+  top_scores: 736
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -1023,6 +1023,16 @@
     grade: Tier03
     award: FullComboW2
     date: '2011-12-12 21:27:11'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: LET THEM MOVE
+    difficulty: Hard
+    type: single
+    percentage: '98.75'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-09 17:46:58'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
@@ -2454,6 +2464,16 @@
     award: FullComboW3
     date: '2012-02-06 21:35:58'
     position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: LOVE SO GROOVY (CLUB 2P VER.)
+    difficulty: Hard
+    type: single
+    percentage: '97.96'
+    grade: Tier04
+    award: OneW3
+    date: '2026-11-09 17:48:55'
+    position: 1
   - section: In The Groove
     folder: In The Groove 3
     song: Kiss Me
@@ -2815,6 +2835,16 @@
     date: '2017-05-03 14:31:09'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: MAKE A JAM!
+    difficulty: Hard
+    type: single
+    percentage: '97.75'
+    grade: Tier04
+    award: FullComboW2
+    date: '2026-11-09 17:58:09'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: PEACE-OUT
     difficulty: Hard
@@ -3133,6 +3163,16 @@
     grade: Tier04
     award: FullComboW3
     date: '2011-05-16 21:36:28'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: GET UP'N MOVE
+    difficulty: Hard
+    type: single
+    percentage: '97.50'
+    grade: Tier04
+    award: OneW3
+    date: '2026-11-09 17:53:50'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 3rd Mix
@@ -5135,6 +5175,16 @@
     date: '2012-12-08 23:30:08'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: LUV TO ME (disco mix)
+    difficulty: Hard
+    type: single
+    percentage: '95.36'
+    grade: Tier05
+    award: SingleDigitW3
+    date: '2026-11-09 17:50:55'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: HYPNOTIC CRISIS
     difficulty: Hard
@@ -6173,16 +6223,6 @@
     grade: Tier06
     award: null
     date: '2012-01-18 21:44:09'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 2nd Mix
-    song: LET THEM MOVE
-    difficulty: Hard
-    type: single
-    percentage: '92.92'
-    grade: Tier06
-    award: null
-    date: '2017-04-22 11:24:18'
     position: 1
   - section: In The Groove
     folder: In The Groove 2
@@ -7404,6 +7444,16 @@
     award: null
     date: '2011-08-11 18:30:16'
     position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: GRADIUSIC CYBER (CLUB ANOTHER VER.)
+    difficulty: Hard
+    type: single
+    percentage: '82.08'
+    grade: Tier10
+    award: null
+    date: '2026-11-09 17:55:57'
+    position: 1
   - section: Other
     folder: Unofficial
     song: neoMAX (full version)
@@ -8119,7 +8169,7 @@
   initials:
   - LONE
   total_scores: 1187
-  top_scores: 487
+  top_scores: 485
   song_scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -15850,7 +15900,7 @@
     grade: Tier11
     award: null
     date: '2012-11-23 21:09:21'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: WITCH DOCTOR (GIANTS TOONS VERSION)
@@ -17060,7 +17110,7 @@
     grade: Tier12
     award: null
     date: '2011-05-24 18:00:33'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: THEME FROM ENTER THE DRAGON (Revival 2001 MIX)
@@ -45774,8 +45824,8 @@
   course_scores: []
 - player_name: Seitoko
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 6
   top_scores: 0
   song_scores:

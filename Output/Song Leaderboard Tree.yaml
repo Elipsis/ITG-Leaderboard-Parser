@@ -1194,6 +1194,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '97.50'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-09 17:53:50'
           - player: LONE
             percentage: '77.97'
             grade: Tier11
@@ -1202,6 +1207,7 @@
     - song_title: GRADIUSIC CYBER (CLUB ANOTHER VER.)
       difficulties_single:
       - Medium
+      - Hard
       difficulties_double: []
       leaderboards:
         Medium (Single):
@@ -1217,6 +1223,14 @@
             grade: Tier16
             award: null
             date: '2011-06-16 18:27:17'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '82.08'
+            grade: Tier10
+            award: null
+            date: '2026-11-09 17:55:57'
     - song_title: GRADIUSIC CYBER
       difficulties_single:
       - Hard
@@ -1438,10 +1452,23 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '92.92'
-            grade: Tier06
-            award: null
-            date: '2017-04-22 11:24:18'
+            percentage: '98.75'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-09 17:46:58'
+    - song_title: LOVE SO GROOVY (CLUB 2P VER.)
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.96'
+            grade: Tier04
+            award: OneW3
+            date: '2026-11-09 17:48:55'
     - song_title: LOVE SO GROOVY
       difficulties_single:
       - Hard
@@ -1487,11 +1514,29 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '95.36'
+            grade: Tier05
+            award: SingleDigitW3
+            date: '2026-11-09 17:50:55'
           - player: LONE
             percentage: '74.58'
             grade: Tier12
             award: null
             date: '2011-05-24 18:00:33'
+    - song_title: MAKE A JAM!
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.75'
+            grade: Tier04
+            award: FullComboW2
+            date: '2026-11-09 17:58:09'
     - song_title: MAKE IT BETTER (So-REAL Mix)
       difficulties_single:
       - Medium

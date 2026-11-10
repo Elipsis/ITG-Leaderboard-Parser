@@ -23013,6 +23013,3494 @@
             grade: Tier15
             award: null
             date: '2011-09-20 22:16:54'
+  - folder_name: Dance Dance Revolution Ultramixes
+    songs:
+    - song_title: (dot)59 - remix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '77.73'
+            grade: Tier11
+            award: null
+            date: '2011-10-29 14:55:36'
+    - song_title: 19, November
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '86.28'
+            grade: Tier08
+            award: null
+            date: '2011-10-29 14:53:28'
+          - player: JILL
+            percentage: '78.28'
+            grade: Tier11
+            award: null
+            date: '2012-12-23 02:48:15'
+    - song_title: ABSOLUTE Cuff -N- Stuff it Mix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.11'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-02-02 01:37:57'
+          - player: LONE
+            percentage: '92.98'
+            grade: Tier06
+            award: null
+            date: '2011-07-22 17:24:39'
+    - song_title: AKUMAJO DRACULA MEDLEY
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '86.62'
+            grade: Tier08
+            award: FullComboW3
+            date: '2011-02-08 20:44:29'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '65.18'
+            grade: Tier14
+            award: null
+            date: '2011-02-08 20:42:41'
+          - player: JILL
+            percentage: '59.47'
+            grade: Tier16
+            award: null
+            date: '2011-12-18 21:43:16'
+        Hard (Single):
+          type: single
+          entries:
+          - player: MLS
+            percentage: '88.18'
+            grade: Tier08
+            award: null
+            date: '2013-12-22 08:00:34'
+          - player: CRIP
+            percentage: '86.73'
+            grade: Tier08
+            award: null
+            date: '2011-09-18 22:33:23'
+          - player: Elipsis
+            percentage: '86.73'
+            grade: Tier08
+            award: null
+            date: '2012-11-12 22:22:13'
+          - player: BMM
+            percentage: '86.48'
+            grade: Tier08
+            award: null
+            date: '2013-05-05 19:03:33'
+          - player: LONE
+            percentage: '82.01'
+            grade: Tier10
+            award: null
+            date: '2013-12-22 08:00:34'
+    - song_title: After all Svenson & Gielen Remix Edit
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '70.82'
+            grade: Tier13
+            award: null
+            date: '2011-08-31 20:07:46'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.20'
+            grade: Tier05
+            award: null
+            date: '2011-06-04 19:23:33'
+          - player: LONE
+            percentage: '81.13'
+            grade: Tier10
+            award: null
+            date: '2012-12-23 01:36:31'
+          - player: JILL
+            percentage: '65.99'
+            grade: Tier14
+            award: null
+            date: '2012-12-23 01:36:31'
+    - song_title: Alphabet Aerobics
+      difficulties_single:
+      - Beginner
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: BABB
+            percentage: '74.06'
+            grade: Tier12
+            award: null
+            date: '2025-09-16 16:05:02'
+        Easy (Single):
+          type: single
+          entries:
+          - player: B
+            percentage: '84.59'
+            grade: Tier09
+            award: null
+            date: '2025-12-16 16:46:29'
+          - player: PRI
+            percentage: '79.41'
+            grade: Tier11
+            award: null
+            date: '2026-11-04 18:51:19'
+          - player: MMM
+            percentage: '76.94'
+            grade: Tier11
+            award: null
+            date: '2017-04-22 08:05:30'
+          - player: rofer
+            percentage: '75.64'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 18:51:19'
+          - player: A
+            percentage: '73.18'
+            grade: Tier12
+            award: null
+            date: '2025-12-16 16:46:29'
+          - player: MJ
+            percentage: '72.24'
+            grade: Tier12
+            award: null
+            date: '2025-09-16 16:05:02'
+        Medium (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.16'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-02-24 20:14:25'
+          - player: JILL
+            percentage: '80.81'
+            grade: Tier10
+            award: null
+            date: '2011-05-20 23:06:46'
+          - player: PRI
+            percentage: '74.61'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 18:53:52'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.78'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-03-20 17:25:38'
+          - player: MLS
+            percentage: '91.69'
+            grade: Tier07
+            award: null
+            date: '2013-12-22 07:43:03'
+          - player: ZEL
+            percentage: '90.39'
+            grade: Tier07
+            award: FullComboW3
+            date: '2020-01-02 14:51:59'
+          - player: LONE
+            percentage: '83.74'
+            grade: Tier09
+            award: null
+            date: '2013-12-22 07:43:03'
+          - player: RVRS
+            percentage: '74.69'
+            grade: Tier12
+            award: null
+            date: '2011-03-26 14:33:35'
+    - song_title: Altitude
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '90.40'
+            grade: Tier07
+            award: FullComboW3
+            date: '2011-12-27 22:06:07'
+          - player: JILL
+            percentage: '66.10'
+            grade: Tier14
+            award: null
+            date: '2011-12-27 22:06:07'
+        Hard (Single):
+          type: single
+          entries:
+          - player: CRIP
+            percentage: '85.88'
+            grade: Tier09
+            award: null
+            date: '2014-02-15 02:42:42'
+          - player: LONE
+            percentage: '61.36'
+            grade: Tier15
+            award: null
+            date: '2011-09-24 19:39:28'
+    - song_title: BABY BABY GIMME YOUR LOVE 2002
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '99.12'
+            grade: Tier02
+            award: FullComboW3
+            date: '2020-04-26 16:41:26'
+          - player: LONE
+            percentage: '96.09'
+            grade: Tier04
+            award: null
+            date: '2011-07-16 15:09:25'
+    - song_title: BAILA! BAILA!
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.02'
+            grade: Tier05
+            award: null
+            date: '2012-06-20 18:29:17'
+          - player: LONE
+            percentage: '84.98'
+            grade: Tier09
+            award: null
+            date: '2011-07-16 15:12:50'
+          - player: JILL
+            percentage: '72.86'
+            grade: Tier12
+            award: null
+            date: '2012-12-23 02:50:36'
+    - song_title: BALLAD FOR YOU
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.55'
+            grade: Tier04
+            award: FullComboW2
+            date: '2026-10-22 18:41:12'
+          - player: LONE
+            percentage: '86.48'
+            grade: Tier08
+            award: null
+            date: '2011-07-26 17:10:48'
+          - player: JILL
+            percentage: '74.93'
+            grade: Tier12
+            award: null
+            date: Unknown Date
+    - song_title: BATTLE BREAKS
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.85'
+            grade: Tier03
+            award: null
+            date: '2011-12-21 19:40:21'
+          - player: LONE
+            percentage: '93.63'
+            grade: Tier06
+            award: null
+            date: '2011-07-16 15:15:26'
+          - player: JILL
+            percentage: '83.50'
+            grade: Tier09
+            award: null
+            date: '2011-09-28 20:22:47'
+    - song_title: Baile Le Samba
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '75.25'
+            grade: Tier12
+            award: null
+            date: '2011-02-06 02:43:32'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.79'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-09-20 22:05:44'
+          - player: MXI
+            percentage: '80.08'
+            grade: Tier10
+            award: null
+            date: '2011-09-20 22:05:44'
+          - player: JILL
+            percentage: '74.76'
+            grade: Tier12
+            award: null
+            date: '2012-01-22 17:03:56'
+          - player: LONE
+            percentage: '72.66'
+            grade: Tier12
+            award: null
+            date: '2011-03-13 15:20:54'
+    - song_title: Balalaika, Carried With the Wind Jondi&Spesh mix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '69.96'
+            grade: Tier13
+            award: null
+            date: '2011-01-31 00:47:32'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.16'
+            grade: Tier04
+            award: SingleDigitW3
+            date: '2026-10-22 18:38:34'
+          - player: LONE
+            percentage: '84.84'
+            grade: Tier09
+            award: null
+            date: '2011-07-26 17:08:38'
+    - song_title: Brick House
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '69.67'
+            grade: Tier13
+            award: null
+            date: '2011-01-16 01:32:59'
+          - player: MXI
+            percentage: '61.21'
+            grade: Tier15
+            award: null
+            date: '2011-01-26 00:30:56'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.92'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-01-26 00:30:56'
+          - player: LONE
+            percentage: '87.92'
+            grade: Tier08
+            award: null
+            date: '2012-01-14 17:14:22'
+    - song_title: Brilliant R-E-D
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '58.13'
+            grade: Tier16
+            award: null
+            date: '2011-01-07 22:48:13'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LWS
+            percentage: '78.65'
+            grade: Tier11
+            award: null
+            date: '2011-12-18 21:29:54'
+          - player: JILL
+            percentage: '76.59'
+            grade: Tier11
+            award: null
+            date: '2011-08-21 23:01:23'
+          - player: LONE
+            percentage: '71.67'
+            grade: Tier13
+            award: null
+            date: '2011-02-05 15:51:23'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.95'
+            grade: Tier04
+            award: FullComboW2
+            date: '2011-05-16 21:51:21'
+          - player: LONE
+            percentage: '87.32'
+            grade: Tier08
+            award: null
+            date: '2012-11-12 21:38:54'
+          - player: JILL
+            percentage: '69.68'
+            grade: Tier13
+            award: null
+            date: '2013-03-27 14:10:16'
+    - song_title: Burn For You
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.33'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-02-03 19:03:10'
+          - player: LONE
+            percentage: '90.03'
+            grade: Tier07
+            award: null
+            date: '2011-07-20 18:01:13'
+    - song_title: C Squared
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '70.00'
+            grade: Tier13
+            award: null
+            date: '2011-01-24 19:47:31'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.08'
+            grade: Tier06
+            award: null
+            date: '2011-04-06 17:46:12'
+          - player: LONE
+            percentage: '82.40'
+            grade: Tier10
+            award: null
+            date: '2012-04-18 20:04:05'
+    - song_title: CANDY (VOCAL)
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.87'
+            grade: Tier06
+            award: FullComboW3
+            date: '2026-10-22 18:43:10'
+          - player: LONE
+            percentage: '78.26'
+            grade: Tier11
+            award: null
+            date: '2011-12-27 22:11:20'
+    - song_title: Castles In The Sky
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '84.64'
+            grade: Tier09
+            award: null
+            date: '2011-02-23 18:38:46'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.40'
+            grade: Tier03
+            award: FullComboW2
+            date: '2012-08-15 18:40:54'
+          - player: Ennui
+            percentage: '95.07'
+            grade: Tier05
+            award: null
+            date: '2011-05-16 22:04:43'
+          - player: LONE
+            percentage: '95.07'
+            grade: Tier05
+            award: FullComboW3
+            date: '2013-10-11 21:08:42'
+          - player: ZOD
+            percentage: '93.12'
+            grade: Tier06
+            award: null
+            date: '2012-11-12 20:55:50'
+          - player: MXI
+            percentage: '87.95'
+            grade: Tier08
+            award: null
+            date: '2012-08-15 18:40:54'
+          - player: JILL
+            percentage: '87.18'
+            grade: Tier08
+            award: null
+            date: '2013-10-11 21:08:42'
+    - song_title: Catch it!
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LWS
+            percentage: '76.12'
+            grade: Tier11
+            award: null
+            date: '2011-12-18 21:32:07'
+          - player: LONE
+            percentage: '74.91'
+            grade: Tier12
+            award: null
+            date: '2011-02-08 20:06:01'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.27'
+            grade: Tier04
+            award: null
+            date: '2011-12-18 21:32:07'
+          - player: LONE
+            percentage: '67.58'
+            grade: Tier14
+            award: null
+            date: '2011-07-20 18:07:59'
+    - song_title: Close Your Eyes
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.76'
+            grade: Tier04
+            award: FullComboW2
+            date: '2011-01-26 01:03:53'
+          - player: JILL
+            percentage: '86.79'
+            grade: Tier08
+            award: null
+            date: '2013-01-05 22:52:25'
+          - player: LONE
+            percentage: '84.85'
+            grade: Tier09
+            award: null
+            date: '2013-01-05 22:52:25'
+    - song_title: Colors Midihead's Sapphire Mix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '68.66'
+            grade: Tier13
+            award: null
+            date: '2011-02-02 01:55:00'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.73'
+            grade: Tier04
+            award: null
+            date: '2011-02-02 01:55:00'
+          - player: CRIP
+            percentage: '95.50'
+            grade: Tier05
+            award: null
+            date: '2011-04-15 19:45:32'
+          - player: BMM
+            percentage: '94.03'
+            grade: Tier05
+            award: null
+            date: '2013-05-18 20:18:52'
+          - player: LONE
+            percentage: '79.57'
+            grade: Tier11
+            award: null
+            date: '2011-07-20 18:10:33'
+          - player: MXI
+            percentage: '78.01'
+            grade: Tier11
+            award: null
+            date: '2011-11-19 13:32:32'
+          - player: MARY
+            percentage: '76.45'
+            grade: Tier11
+            award: null
+            date: '2011-04-15 19:45:32'
+          - player: JILL
+            percentage: '75.88'
+            grade: Tier12
+            award: null
+            date: '2013-05-18 20:18:52'
+    - song_title: Conflict Turmoil Mix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.24'
+            grade: Tier03
+            award: FullComboW3
+            date: '2011-11-16 18:58:56'
+          - player: LONE
+            percentage: '94.12'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-08-13 17:30:37'
+    - song_title: Delta 32 UFO! Remix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.13'
+            grade: Tier04
+            award: null
+            date: '2011-11-19 13:42:21'
+          - player: LONE
+            percentage: '75.74'
+            grade: Tier12
+            award: null
+            date: '2013-01-14 10:23:38'
+          - player: MXI
+            percentage: '68.72'
+            grade: Tier13
+            award: null
+            date: '2011-11-19 13:42:21'
+    - song_title: Disco Break
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '72.90'
+            grade: Tier12
+            award: null
+            date: '2011-02-03 18:59:49'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.55'
+            grade: Tier04
+            award: null
+            date: '2011-02-03 18:59:49'
+          - player: LONE
+            percentage: '89.76'
+            grade: Tier07
+            award: null
+            date: '2014-02-13 04:02:31'
+          - player: JILL
+            percentage: '77.09'
+            grade: Tier11
+            award: null
+            date: '2014-02-13 04:02:31'
+    - song_title: Do That Thang MASH Radio Edit
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.50'
+            grade: Tier04
+            award: null
+            date: '2026-11-04 20:37:23'
+          - player: Ennui
+            percentage: '93.00'
+            grade: Tier06
+            award: null
+            date: '2026-11-04 20:37:23'
+          - player: LONE
+            percentage: '89.22'
+            grade: Tier07
+            award: null
+            date: '2011-08-21 21:59:43'
+          - player: JILL
+            percentage: '75.17'
+            grade: Tier12
+            award: null
+            date: '2014-05-28 05:19:23'
+    - song_title: Don't Stop
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.47'
+            grade: Tier04
+            award: FullComboW2
+            date: '2013-04-03 14:13:06'
+          - player: LONE
+            percentage: '88.26'
+            grade: Tier08
+            award: null
+            date: '2013-04-03 14:13:06'
+    - song_title: EyeSpy
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.83'
+            grade: Tier03
+            award: FullComboW2
+            date: '2012-01-22 17:06:25'
+          - player: LONE
+            percentage: '87.56'
+            grade: Tier08
+            award: null
+            date: '2011-08-13 17:33:44'
+          - player: JILL
+            percentage: '71.41'
+            grade: Tier13
+            award: null
+            date: '2012-01-22 17:06:25'
+    - song_title: FIRE DUB
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: rofer
+            percentage: '63.21'
+            grade: Tier15
+            award: null
+            date: '2026-11-04 19:45:39'
+          - player: PRI
+            percentage: '61.66'
+            grade: Tier15
+            award: null
+            date: '2026-11-04 19:45:39'
+          - player: JILL
+            percentage: '56.43'
+            grade: Tier16
+            award: null
+            date: '2011-02-12 22:27:35'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.98'
+            grade: Tier04
+            award: FullComboW2
+            date: '2011-02-03 19:05:05'
+          - player: LONE
+            percentage: '97.23'
+            grade: Tier04
+            award: FullComboW3
+            date: '2013-01-05 22:58:18'
+          - player: JILL
+            percentage: '86.37'
+            grade: Tier08
+            award: null
+            date: '2013-01-05 22:58:18'
+    - song_title: GET IT ALL
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.08'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-11-19 13:44:28'
+          - player: LONE
+            percentage: '69.54'
+            grade: Tier13
+            award: null
+            date: '2011-07-26 17:18:46'
+          - player: MXI
+            percentage: '62.58'
+            grade: Tier15
+            award: null
+            date: '2011-11-19 13:44:28'
+    - song_title: GORGEOUS 2012
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.52'
+            grade: Tier06
+            award: null
+            date: '2011-04-06 17:51:01'
+          - player: LONE
+            percentage: '65.97'
+            grade: Tier14
+            award: null
+            date: '2011-04-06 17:51:01'
+    - song_title: GRADIUSIC CYBER
+      difficulties_single:
+      - Easy
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '70.13'
+            grade: Tier13
+            award: null
+            date: '2011-04-06 18:03:41'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.19'
+            grade: Tier05
+            award: null
+            date: '2011-09-14 22:47:21'
+          - player: LONE
+            percentage: '70.66'
+            grade: Tier13
+            award: null
+            date: '2011-09-14 22:47:21'
+    - song_title: GYRUSS FULL TILT
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '83.85'
+            grade: Tier09
+            award: null
+            date: '2011-02-08 20:34:08'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '88.23'
+            grade: Tier08
+            award: null
+            date: '2011-04-06 18:09:56'
+          - player: JILL
+            percentage: '69.12'
+            grade: Tier13
+            award: null
+            date: '2011-05-07 23:35:46'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.39'
+            grade: Tier04
+            award: FullComboW3
+            date: '2013-04-03 14:15:30'
+          - player: BMM
+            percentage: '92.51'
+            grade: Tier06
+            award: null
+            date: '2013-07-04 17:55:00'
+          - player: LONE
+            percentage: '90.74'
+            grade: Tier07
+            award: null
+            date: '2013-04-03 14:15:30'
+          - player: MXI
+            percentage: '75.27'
+            grade: Tier12
+            award: null
+            date: '2012-06-20 18:37:40'
+          - player: JILL
+            percentage: '69.96'
+            grade: Tier13
+            award: null
+            date: '2012-11-23 21:11:48'
+    - song_title: Giudecca
+      difficulties_single:
+      - Medium
+      - Hard
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '76.47'
+            grade: Tier11
+            award: null
+            date: '2012-08-11 20:30:57'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.37'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-12-21 19:33:22'
+          - player: WYDE
+            percentage: '92.87'
+            grade: Tier06
+            award: null
+            date: '2013-07-14 10:41:01'
+          - player: LONE
+            percentage: '91.99'
+            grade: Tier07
+            award: null
+            date: '2013-05-05 19:34:11'
+          - player: Ennui
+            percentage: '91.51'
+            grade: Tier07
+            award: FullComboW3
+            date: '2013-05-05 19:34:11'
+          - player: JILL
+            percentage: '73.79'
+            grade: Tier12
+            award: null
+            date: '2013-03-27 14:13:00'
+        Challenge (Single):
+          type: single
+          entries:
+          - player: ZLTH
+            percentage: '85.23'
+            grade: Tier09
+            award: null
+            date: Unknown Date
+          - player: Elipsis
+            percentage: '82.75'
+            grade: Tier10
+            award: null
+            date: '2011-08-23 23:16:47'
+    - song_title: Himawari
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '81.96'
+            grade: Tier10
+            award: null
+            date: '2011-09-28 20:47:42'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.87'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-05-08 19:53:13'
+          - player: LONE
+            percentage: '89.57'
+            grade: Tier07
+            award: null
+            date: '2013-08-04 11:30:42'
+          - player: JILL
+            percentage: '81.29'
+            grade: Tier10
+            award: null
+            date: '2014-10-01 05:53:36'
+    - song_title: Hit 'n' Slap
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '65.42'
+            grade: Tier14
+            award: null
+            date: '2011-01-16 01:53:26'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.33'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-01-16 01:53:26'
+    - song_title: I Am Gothic 2003 remix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '99.27'
+            grade: Tier02
+            award: FullComboW2
+            date: '2012-01-22 16:50:40'
+          - player: CRIP
+            percentage: '96.77'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-04-15 19:48:18'
+          - player: LONE
+            percentage: '92.41'
+            grade: Tier06
+            award: FullComboW3
+            date: '2013-01-05 23:00:46'
+          - player: JILL
+            percentage: '80.92'
+            grade: Tier10
+            award: null
+            date: '2013-01-05 23:00:46'
+          - player: MXI
+            percentage: '80.33'
+            grade: Tier10
+            award: null
+            date: '2012-01-22 16:50:40'
+          - player: MARY
+            percentage: '79.54'
+            grade: Tier11
+            award: null
+            date: '2011-04-15 19:48:18'
+    - song_title: I'm In Heaven Radio Version
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.37'
+            grade: Tier03
+            award: FullComboW3
+            date: '2011-11-21 22:37:47'
+    - song_title: INFINITE PRAYER floating flock style
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.58'
+            grade: Tier05
+            award: null
+            date: '2011-11-02 21:36:00'
+          - player: LONE
+            percentage: '75.99'
+            grade: Tier12
+            award: null
+            date: '2013-09-17 17:36:28'
+          - player: MXI
+            percentage: '67.63'
+            grade: Tier14
+            award: null
+            date: '2011-11-02 21:36:00'
+    - song_title: INFINITE PRAYER
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '85.15'
+            grade: Tier09
+            award: null
+            date: '2011-02-08 21:14:39'
+          - player: JILL
+            percentage: '80.34'
+            grade: Tier10
+            award: null
+            date: '2011-05-20 22:40:01'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.05'
+            grade: Tier03
+            award: FullComboW3
+            date: '2011-09-20 21:59:41'
+          - player: DERP
+            percentage: '96.17'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-08-26 22:11:45'
+          - player: MXI
+            percentage: '80.67'
+            grade: Tier10
+            award: null
+            date: '2011-09-20 21:59:41'
+          - player: LONE
+            percentage: '79.70'
+            grade: Tier11
+            award: null
+            date: '2011-05-20 22:40:01'
+    - song_title: INSERTiON Machine Gun Kelly Mix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.48'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-05-17 19:49:34'
+          - player: LONE
+            percentage: '92.88'
+            grade: Tier06
+            award: null
+            date: '2012-05-17 19:49:34'
+    - song_title: In My Eyes Midihead Remix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '79.30'
+            grade: Tier11
+            award: null
+            date: '2011-02-25 18:14:28'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.51'
+            grade: Tier05
+            award: null
+            date: '2011-01-22 23:29:27'
+          - player: Ennui
+            percentage: '87.51'
+            grade: Tier08
+            award: null
+            date: '2011-01-22 23:29:27'
+          - player: ZLTH
+            percentage: '86.88'
+            grade: Tier08
+            award: null
+            date: '2017-06-26 20:26:27'
+          - player: LONE
+            percentage: '65.57'
+            grade: Tier14
+            award: null
+            date: '2011-07-26 17:21:40'
+    - song_title: In My Eyes
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '99.27'
+            grade: Tier02
+            award: FullComboW3
+            date: '2012-01-22 17:10:18'
+          - player: LONE
+            percentage: '94.72'
+            grade: Tier05
+            award: null
+            date: '2014-06-23 04:25:05'
+          - player: JILL
+            percentage: '92.36'
+            grade: Tier06
+            award: null
+            date: '2014-06-23 04:25:05'
+    - song_title: Insaner
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.09'
+            grade: Tier04
+            award: FullComboW2
+            date: '2012-11-20 18:25:30'
+          - player: LONE
+            percentage: '86.44'
+            grade: Tier08
+            award: null
+            date: '2011-10-29 15:10:40'
+          - player: MXI
+            percentage: '71.33'
+            grade: Tier13
+            award: null
+            date: '2012-11-20 18:25:30'
+    - song_title: Istanbul Cafe
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.69'
+            grade: Tier03
+            award: FullComboW3
+            date: '2011-02-13 00:52:50'
+          - player: Ennui
+            percentage: '97.25'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-02-13 00:52:50'
+          - player: LONE
+            percentage: '85.43'
+            grade: Tier09
+            award: null
+            date: '2011-08-21 22:14:05'
+    - song_title: Jam On It
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.88'
+            grade: Tier06
+            award: null
+            date: '2011-09-22 23:20:18'
+          - player: LONE
+            percentage: '83.57'
+            grade: Tier09
+            award: null
+            date: '2012-06-07 18:50:55'
+          - player: MXI
+            percentage: '71.40'
+            grade: Tier13
+            award: null
+            date: '2011-09-22 23:20:18'
+    - song_title: Jelly Kiss Midihead's SMAK mix
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '85.15'
+            grade: Tier09
+            award: null
+            date: '2011-02-03 19:27:58'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '84.18'
+            grade: Tier09
+            award: null
+            date: '2011-02-03 19:27:58'
+          - player: MXI
+            percentage: '79.50'
+            grade: Tier11
+            award: null
+            date: '2011-01-26 00:46:01'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.60'
+            grade: Tier03
+            award: FullComboW2
+            date: '2020-04-26 16:44:19'
+          - player: LONE
+            percentage: '93.87'
+            grade: Tier06
+            award: FullComboW3
+            date: '2012-01-14 17:18:52'
+    - song_title: KEEP ON MOVIN' DMX Mix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '56.52'
+            grade: Tier16
+            award: null
+            date: '2011-03-19 18:35:11'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.12'
+            grade: Tier04
+            award: FullComboW3
+            date: '2013-05-20 15:54:05'
+          - player: LONE
+            percentage: '85.68'
+            grade: Tier09
+            award: null
+            date: '2014-03-18 02:05:33'
+          - player: JILL
+            percentage: '81.40'
+            grade: Tier10
+            award: null
+            date: '2014-06-23 04:27:17'
+    - song_title: Keep Ya Body Movin'
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: BABB
+            percentage: '41.62'
+            grade: Tier17
+            award: null
+            date: '2025-09-16 16:07:48'
+        Medium (Single):
+          type: single
+          entries:
+          - player: MJ
+            percentage: '57.45'
+            grade: Tier16
+            award: null
+            date: '2025-09-16 16:07:48'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.31'
+            grade: Tier04
+            award: null
+            date: '2012-07-24 13:58:12'
+          - player: JILL
+            percentage: '85.95'
+            grade: Tier09
+            award: null
+            date: '2012-07-24 13:58:12'
+    - song_title: LIGHT MOTION
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.55'
+            grade: Tier06
+            award: null
+            date: '2011-08-22 19:48:03'
+          - player: LONE
+            percentage: '66.62'
+            grade: Tier14
+            award: null
+            date: '2011-08-22 19:48:03'
+    - song_title: LUV TO ME UCCHIE'S EDITION
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '64.03'
+            grade: Tier14
+            award: null
+            date: '2011-08-21 22:37:01'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.97'
+            grade: Tier04
+            award: FullComboW2
+            date: '2026-10-25 14:31:35'
+          - player: Ennui
+            percentage: '87.85'
+            grade: Tier08
+            award: null
+            date: '2026-10-25 14:31:35'
+          - player: LONE
+            percentage: '85.34'
+            grade: Tier09
+            award: null
+            date: '2011-08-21 22:37:01'
+          - player: JILL
+            percentage: '75.03'
+            grade: Tier12
+            award: null
+            date: '2012-12-23 01:51:49'
+    - song_title: La Cucaracha
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.98'
+            grade: Tier06
+            award: null
+            date: '2011-11-03 21:46:34'
+          - player: LONE
+            percentage: '65.50'
+            grade: Tier14
+            award: null
+            date: '2011-07-22 17:39:31'
+          - player: MXI
+            percentage: '62.32'
+            grade: Tier15
+            award: null
+            date: '2011-11-03 21:46:34'
+    - song_title: Life Is A Game
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.31'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-06-27 00:24:13'
+          - player: LONE
+            percentage: '87.92'
+            grade: Tier08
+            award: null
+            date: '2014-08-10 03:35:49'
+          - player: JILL
+            percentage: '70.91'
+            grade: Tier13
+            award: null
+            date: '2013-11-29 02:30:17'
+    - song_title: Look To The Sky (True Color Mix)
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '84.79'
+            grade: Tier09
+            award: null
+            date: '2011-01-26 00:48:15'
+          - player: JILL
+            percentage: '78.78'
+            grade: Tier11
+            award: null
+            date: '2011-03-19 17:58:23'
+          - player: MXI
+            percentage: '69.77'
+            grade: Tier13
+            award: null
+            date: '2011-01-26 00:48:15'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.53'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-01-19 19:43:43'
+          - player: LONE
+            percentage: '95.50'
+            grade: Tier05
+            award: FullComboW3
+            date: '2012-01-14 17:31:06'
+          - player: Ennui
+            percentage: '91.83'
+            grade: Tier07
+            award: FullComboW3
+            date: Unknown Date
+          - player: GMcGregz
+            percentage: '87.25'
+            grade: Tier08
+            award: null
+            date: Unknown Date
+          - player: ZBRA
+            percentage: '86.97'
+            grade: Tier08
+            award: null
+            date: '2013-12-19 02:00:59'
+          - player: JILL
+            percentage: '86.24'
+            grade: Tier08
+            award: null
+            date: '2012-01-14 17:31:06'
+    - song_title: Looking For You
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '77.46'
+            grade: Tier11
+            award: null
+            date: '2011-08-21 22:34:18'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.31'
+            grade: Tier05
+            award: null
+            date: '2011-01-16 01:41:30'
+          - player: LONE
+            percentage: '91.52'
+            grade: Tier07
+            award: FullComboW3
+            date: '2011-08-21 22:16:20'
+    - song_title: Love Is Dreaminess
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '72.32'
+            grade: Tier12
+            award: null
+            date: '2011-02-17 18:20:44'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '73.28'
+            grade: Tier12
+            award: null
+            date: '2011-02-23 19:01:32'
+          - player: MXI
+            percentage: '67.94'
+            grade: Tier14
+            award: null
+            date: '2011-02-21 19:54:49'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.87'
+            grade: Tier05
+            award: FullComboW3
+            date: '2012-02-20 21:12:32'
+          - player: LONE
+            percentage: '68.51'
+            grade: Tier13
+            award: null
+            date: '2011-10-29 15:16:19'
+          - player: MXI
+            percentage: '58.27'
+            grade: Tier16
+            award: null
+            date: '2012-02-20 21:12:32'
+    - song_title: Love Me Do The Acolyte's remix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.37'
+            grade: Tier06
+            award: null
+            date: '2011-09-26 21:05:05'
+          - player: ZLTH
+            percentage: '78.85'
+            grade: Tier11
+            award: null
+            date: '2017-06-26 20:29:36'
+    - song_title: MAD BLAST
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.12'
+            grade: Tier06
+            award: null
+            date: '2012-02-06 21:16:38'
+          - player: LONE
+            percentage: '65.96'
+            grade: Tier14
+            award: null
+            date: '2011-08-21 22:39:17'
+          - player: MXI
+            percentage: '62.76'
+            grade: Tier15
+            award: null
+            date: '2012-02-06 21:16:38'
+    - song_title: MAKE A JAM! DubHouse
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.75'
+            grade: Tier06
+            award: null
+            date: '2011-10-06 19:25:32'
+    - song_title: MATSURI JAPAN J-SUMMER MIX
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.06'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-05-08 19:43:48'
+          - player: LONE
+            percentage: '70.26'
+            grade: Tier13
+            award: null
+            date: '2014-09-21 04:11:01'
+    - song_title: MAX 300 Super-Max-Me Mix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '85.53'
+            grade: Tier09
+            award: null
+            date: '2011-01-09 00:35:47'
+          - player: ZLTH
+            percentage: '83.65'
+            grade: Tier09
+            award: null
+            date: '2017-06-26 20:32:11'
+          - player: Ennui
+            percentage: '77.77'
+            grade: Tier11
+            award: null
+            date: '2011-03-06 22:56:37'
+    - song_title: MEANING OF LIFE
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.33'
+            grade: Tier03
+            award: OneW3
+            date: '2026-10-25 14:33:58'
+          - player: LONE
+            percentage: '88.37'
+            grade: Tier08
+            award: null
+            date: '2012-01-14 17:22:23'
+          - player: Ennui
+            percentage: '83.92'
+            grade: Tier09
+            award: null
+            date: '2026-10-25 14:33:58'
+    - song_title: MGS2 mission R
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '69.83'
+            grade: Tier13
+            award: null
+            date: '2011-07-22 17:48:12'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.23'
+            grade: Tier05
+            award: null
+            date: '2011-02-21 20:09:30'
+          - player: LONE
+            percentage: '85.96'
+            grade: Tier09
+            award: null
+            date: '2011-07-22 17:48:12'
+    - song_title: Mello
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '75.79'
+            grade: Tier12
+            award: null
+            date: '2011-05-11 22:29:46'
+          - player: LONE
+            percentage: '63.77'
+            grade: Tier15
+            award: null
+            date: '2012-04-10 17:42:29'
+    - song_title: Midnight Special
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.81'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-02-02 23:18:57'
+          - player: LONE
+            percentage: '84.10'
+            grade: Tier09
+            award: null
+            date: '2013-03-19 02:49:27'
+          - player: MXI
+            percentage: '72.93'
+            grade: Tier12
+            award: null
+            date: '2012-02-02 23:18:57'
+    - song_title: Mind Parasite
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '92.14'
+            grade: Tier06
+            award: null
+            date: '2013-03-27 09:08:24'
+          - player: MXI
+            percentage: '87.00'
+            grade: Tier08
+            award: FullComboW3
+            date: '2011-01-21 22:33:49'
+          - player: JILL
+            percentage: '74.29'
+            grade: Tier12
+            award: null
+            date: '2011-02-06 03:15:11'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '77.60'
+            grade: Tier11
+            award: null
+            date: '2011-02-06 03:15:11'
+          - player: JILL
+            percentage: '69.52'
+            grade: Tier13
+            award: null
+            date: '2011-05-07 23:01:16'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.34'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-01-21 22:33:49'
+          - player: LONE
+            percentage: '92.45'
+            grade: Tier06
+            award: FullComboW3
+            date: '2012-04-12 21:27:35'
+          - player: MXI
+            percentage: '88.01'
+            grade: Tier08
+            award: null
+            date: '2012-04-12 21:27:35'
+    - song_title: Moment 40
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: QuillCollective
+            percentage: '73.44'
+            grade: Tier12
+            award: null
+            date: '2026-11-04 20:12:50'
+        Medium (Single):
+          type: single
+          entries:
+          - player: GMcGregz
+            percentage: '91.23'
+            grade: Tier07
+            award: FullComboW3
+            date: '2026-11-04 20:12:50'
+          - player: JILL
+            percentage: '73.98'
+            grade: Tier12
+            award: null
+            date: '2011-05-08 20:19:20'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.23'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-05-08 20:19:20'
+          - player: LONE
+            percentage: '88.09'
+            grade: Tier08
+            award: null
+            date: '2011-09-28 21:14:45'
+          - player: GMcGregz
+            percentage: '74.26'
+            grade: Tier12
+            award: null
+            date: '2011-02-18 20:42:19'
+    - song_title: Monkey Punk
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.12'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-09-14 22:50:36'
+          - player: BMM
+            percentage: '95.71'
+            grade: Tier05
+            award: FullComboW3
+            date: '2013-07-04 17:57:44'
+          - player: LONE
+            percentage: '77.88'
+            grade: Tier11
+            award: null
+            date: '2011-09-28 21:12:25'
+          - player: MXI
+            percentage: '69.12'
+            grade: Tier13
+            award: null
+            date: '2011-09-28 22:51:43'
+          - player: JILL
+            percentage: '58.41'
+            grade: Tier16
+            award: null
+            date: '2011-09-28 21:12:25'
+    - song_title: Music To Your Head
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.95'
+            grade: Tier04
+            award: null
+            date: '2011-07-03 22:01:05'
+          - player: LONE
+            percentage: '87.18'
+            grade: Tier08
+            award: null
+            date: '2013-08-04 11:34:28'
+          - player: JILL
+            percentage: '64.69'
+            grade: Tier14
+            award: null
+            date: '2013-08-04 11:34:28'
+    - song_title: Nari Narien Jay Dabhi remix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '74.16'
+            grade: Tier12
+            award: null
+            date: '2011-05-11 19:12:09'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.30'
+            grade: Tier05
+            award: null
+            date: '2011-02-21 20:11:53'
+          - player: LONE
+            percentage: '88.54'
+            grade: Tier08
+            award: FullComboW3
+            date: '2012-03-02 19:01:25'
+          - player: MXI
+            percentage: '83.44'
+            grade: Tier09
+            award: null
+            date: '2012-01-17 18:39:08'
+          - player: JILL
+            percentage: '77.28'
+            grade: Tier11
+            award: null
+            date: '2012-03-02 19:01:25'
+    - song_title: OUTER LIMITS
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '88.40'
+            grade: Tier08
+            award: null
+            date: '2011-08-22 19:50:48'
+          - player: LONE
+            percentage: '65.12'
+            grade: Tier14
+            award: null
+            date: '2011-08-22 19:50:48'
+    - song_title: PARADE OF THE WOODEN SOLDIERS
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double:
+      - Easy
+      - Hard
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: MXI
+            percentage: '88.31'
+            grade: Tier08
+            award: null
+            date: '2011-01-19 19:28:22'
+          - player: JILL
+            percentage: '87.11'
+            grade: Tier08
+            award: null
+            date: '2011-05-20 23:09:19'
+          - player: LONE
+            percentage: '69.28'
+            grade: Tier13
+            award: null
+            date: '2011-01-16 01:29:32'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.09'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-12-21 19:37:58'
+          - player: LONE
+            percentage: '90.21'
+            grade: Tier07
+            award: FullComboW3
+            date: '2012-12-23 02:01:37'
+          - player: Ennui
+            percentage: '88.88'
+            grade: Tier08
+            award: null
+            date: '2011-01-16 20:53:40'
+          - player: JILL
+            percentage: '62.61'
+            grade: Tier15
+            award: null
+            date: '2013-11-08 03:17:52'
+        Easy (Double):
+          type: double
+          entries:
+          - player: MXI
+            percentage: '76.28'
+            grade: Tier11
+            award: null
+            date: '2011-01-31 01:15:37'
+        Hard (Double):
+          type: double
+          entries:
+          - player: Ennui
+            percentage: '83.12'
+            grade: Tier09
+            award: null
+            date: '2011-11-21 21:01:37'
+    - song_title: PUT YOUR FAITH IN ME SATURDAY NIGHT MIX
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '66.58'
+            grade: Tier14
+            award: null
+            date: '2011-03-13 14:39:52'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '99.09'
+            grade: Tier02
+            award: FullComboW2
+            date: '2011-06-04 18:28:27'
+          - player: BMM
+            percentage: '99.00'
+            grade: Tier02
+            award: FullComboW2
+            date: '2011-06-04 18:28:27'
+          - player: MXI
+            percentage: '89.68'
+            grade: Tier07
+            award: null
+            date: '2012-08-09 18:35:39'
+    - song_title: Play My Game
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '71.87'
+            grade: Tier13
+            award: null
+            date: '2011-07-22 17:50:47'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.96'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-12-18 21:03:38'
+          - player: Ennui
+            percentage: '94.93'
+            grade: Tier05
+            award: null
+            date: '2011-12-18 21:03:38'
+          - player: LONE
+            percentage: '85.73'
+            grade: Tier09
+            award: null
+            date: '2013-08-04 11:37:14'
+          - player: JILL
+            percentage: '63.10'
+            grade: Tier15
+            award: null
+            date: '2013-08-04 11:37:14'
+    - song_title: Quickening
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '99.60'
+            grade: Tier02
+            award: FullComboW2
+            date: '2011-09-22 23:41:15'
+          - player: BMM
+            percentage: '98.19'
+            grade: Tier03
+            award: FullComboW3
+            date: '2011-10-15 00:07:41'
+          - player: MXI
+            percentage: '91.28'
+            grade: Tier07
+            award: null
+            date: '2011-10-15 00:07:41'
+    - song_title: RIDE ON THE LIGHT HI GREAT MIX
+      difficulties_single:
+      - Easy
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: MXI
+            percentage: '65.39'
+            grade: Tier14
+            award: null
+            date: '2011-01-10 21:24:45'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.99'
+            grade: Tier04
+            award: FullComboW3
+            date: '2013-02-24 05:33:50'
+          - player: LONE
+            percentage: '79.37'
+            grade: Tier11
+            award: null
+            date: '2013-03-16 04:44:38'
+          - player: GMcGregz
+            percentage: '70.95'
+            grade: Tier13
+            award: null
+            date: '2011-02-18 20:44:35'
+    - song_title: Rainbow Flyer
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.99'
+            grade: Tier06
+            award: null
+            date: '2012-08-09 18:39:02'
+          - player: MXI
+            percentage: '86.67'
+            grade: Tier08
+            award: null
+            date: '2012-08-09 18:39:02'
+          - player: LONE
+            percentage: '82.42'
+            grade: Tier10
+            award: null
+            date: '2011-08-22 19:55:14'
+    - song_title: Raise Your Hands
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '99.26'
+            grade: Tier02
+            award: FullComboW2
+            date: '2012-02-06 20:52:48'
+          - player: LONE
+            percentage: '82.23'
+            grade: Tier10
+            award: null
+            date: '2012-02-06 20:52:48'
+    - song_title: Ready Steady Go
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '90.68'
+            grade: Tier07
+            award: FullComboW3
+            date: '2013-04-03 13:53:47'
+          - player: Ennui
+            percentage: '75.10'
+            grade: Tier12
+            award: null
+            date: '2011-01-22 23:32:04'
+          - player: LONE
+            percentage: '65.49'
+            grade: Tier14
+            award: null
+            date: '2013-04-03 13:53:47'
+    - song_title: Red Room
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.57'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-04-15 20:25:17'
+          - player: Ennui
+            percentage: '95.94'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-04-15 20:25:17'
+          - player: MLS
+            percentage: '92.52'
+            grade: Tier06
+            award: null
+            date: '2013-05-21 19:32:03'
+          - player: MXI
+            percentage: '72.35'
+            grade: Tier12
+            award: null
+            date: '2012-02-02 23:23:01'
+          - player: LONE
+            percentage: '70.61'
+            grade: Tier13
+            award: null
+            date: '2013-05-21 19:32:03'
+    - song_title: Rubberneckin' Paul Oakenfold Remix Radio Edit
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '59.41'
+            grade: Tier16
+            award: null
+            date: '2011-01-25 22:21:47'
+        Hard (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '86.80'
+            grade: Tier08
+            award: null
+            date: '2011-09-28 21:17:26'
+          - player: JILL
+            percentage: '71.67'
+            grade: Tier13
+            award: null
+            date: '2011-09-28 21:20:30'
+    - song_title: SOMETHING WONDERFUL
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.36'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-08-15 18:47:44'
+          - player: BMM
+            percentage: '95.66'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-01-23 00:02:20'
+          - player: CRIP
+            percentage: '82.76'
+            grade: Tier10
+            award: null
+            date: '2011-01-23 00:02:20'
+          - player: LONE
+            percentage: '82.11'
+            grade: Tier10
+            award: null
+            date: '2014-09-21 04:30:26'
+          - player: MXI
+            percentage: '72.90'
+            grade: Tier12
+            award: null
+            date: '2012-08-15 18:47:44'
+          - player: JILL
+            percentage: '66.82'
+            grade: Tier14
+            award: null
+            date: '2014-09-21 04:30:26'
+    - song_title: Sana Mollete Ne Ente BLT STYLE
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '74.39'
+            grade: Tier12
+            award: null
+            date: '2011-03-27 20:00:15'
+        Hard (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '86.04'
+            grade: Tier08
+            award: null
+            date: '2012-12-28 20:49:51'
+          - player: MXI
+            percentage: '74.56'
+            grade: Tier12
+            award: null
+            date: '2011-10-02 19:34:48'
+          - player: JILL
+            percentage: '58.79'
+            grade: Tier16
+            award: null
+            date: '2011-10-02 19:34:48'
+    - song_title: Shiny Disco Balls
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.19'
+            grade: Tier04
+            award: null
+            date: '2012-05-17 19:29:13'
+          - player: CRIP
+            percentage: '96.63'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-03-23 23:48:20'
+          - player: MXI
+            percentage: '87.72'
+            grade: Tier08
+            award: null
+            date: '2012-05-17 19:29:13'
+          - player: LONE
+            percentage: '86.32'
+            grade: Tier08
+            award: null
+            date: '2011-03-10 17:42:14'
+          - player: JILL
+            percentage: '78.18'
+            grade: Tier11
+            award: null
+            date: '2011-09-28 21:22:41'
+    - song_title: Skulk
+      difficulties_single:
+      - Medium
+      - Hard
+      - Challenge
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '80.51'
+            grade: Tier10
+            award: null
+            date: '2011-07-22 17:53:35'
+        Hard (Single):
+          type: single
+          entries:
+          - player: MLS
+            percentage: '97.13'
+            grade: Tier04
+            award: FullComboW3
+            date: Unknown Date
+          - player: LONE
+            percentage: '89.48'
+            grade: Tier07
+            award: null
+            date: Unknown Date
+          - player: JILL
+            percentage: '84.71'
+            grade: Tier09
+            award: null
+            date: '2014-02-13 04:00:03'
+          - player: MXI
+            percentage: '82.75'
+            grade: Tier10
+            award: null
+            date: '2012-11-20 18:29:25'
+        Challenge (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '91.79'
+            grade: Tier07
+            award: null
+            date: '2012-02-02 23:25:51'
+          - player: Ennui
+            percentage: '85.30'
+            grade: Tier09
+            award: null
+            date: '2011-04-15 20:27:58'
+          - player: LONE
+            percentage: '74.25'
+            grade: Tier12
+            award: null
+            date: '2012-01-18 21:32:08'
+          - player: MXI
+            percentage: '64.90'
+            grade: Tier14
+            award: null
+            date: '2012-02-02 23:25:51'
+    - song_title: Sleepwalker
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '65.90'
+            grade: Tier14
+            award: null
+            date: '2012-12-28 20:55:20'
+          - player: MXI
+            percentage: '58.92'
+            grade: Tier16
+            award: null
+            date: '2011-11-03 21:44:02'
+    - song_title: Standing Still In Time
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '94.79'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-01-16 01:51:10'
+          - player: LONE
+            percentage: '84.62'
+            grade: Tier09
+            award: null
+            date: '2011-07-22 17:56:43'
+          - player: JILL
+            percentage: '63.95'
+            grade: Tier15
+            award: null
+            date: '2011-07-22 17:56:43'
+    - song_title: Superstar Nevarakka Mix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '82.77'
+            grade: Tier10
+            award: null
+            date: '2011-07-22 17:59:52'
+          - player: LONE
+            percentage: '80.24'
+            grade: Tier10
+            award: null
+            date: '2011-01-30 22:59:41'
+        Hard (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '93.96'
+            grade: Tier06
+            award: FullComboW3
+            date: '2012-01-29 20:24:13'
+          - player: MXI
+            percentage: '86.92'
+            grade: Tier08
+            award: null
+            date: '2012-01-29 20:24:13'
+    - song_title: THE BIG VOYAGER INFINITE PRAYER REINTERPRETATION
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.67'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-11-20 18:32:23'
+          - player: LONE
+            percentage: '67.69'
+            grade: Tier14
+            award: null
+            date: '2012-01-18 21:34:48'
+          - player: MXI
+            percentage: '59.28'
+            grade: Tier16
+            award: null
+            date: '2012-11-20 18:32:23'
+    - song_title: THE EARTH LIGHT
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '81.85'
+            grade: Tier10
+            award: null
+            date: '2011-02-08 21:35:57'
+          - player: JILL
+            percentage: '72.68'
+            grade: Tier12
+            award: null
+            date: '2011-05-08 20:31:59'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.73'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-11-03 21:39:16'
+          - player: LONE
+            percentage: '82.19'
+            grade: Tier10
+            award: null
+            date: '2011-05-08 20:31:59'
+          - player: MXI
+            percentage: '75.16'
+            grade: Tier12
+            award: null
+            date: '2011-11-03 21:39:16'
+    - song_title: THE STRONG JAEGER UFO! Remix
+      difficulties_single:
+      - Beginner
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: MLS
+            percentage: '33.14'
+            grade: Tier17
+            award: null
+            date: '2026-10-22 18:48:32'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '75.64'
+            grade: Tier12
+            award: null
+            date: '2011-01-25 23:05:18'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.94'
+            grade: Tier04
+            award: null
+            date: '2011-01-25 23:05:18'
+          - player: LONE
+            percentage: '84.26'
+            grade: Tier09
+            award: null
+            date: '2012-02-20 21:25:23'
+          - player: JILL
+            percentage: '68.26'
+            grade: Tier13
+            award: null
+            date: '2014-01-27 03:16:20'
+    - song_title: TOE JAM
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.57'
+            grade: Tier06
+            award: FullComboW3
+            date: '2011-01-25 23:08:05'
+          - player: LONE
+            percentage: '62.49'
+            grade: Tier15
+            award: null
+            date: '2011-07-22 18:02:49'
+          - player: MXI
+            percentage: '59.77'
+            grade: Tier16
+            award: null
+            date: '2012-06-20 18:41:46'
+    - song_title: There 4 You
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '90.62'
+            grade: Tier07
+            award: null
+            date: '2017-04-01 07:37:18'
+    - song_title: Tittle Tattle
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '78.34'
+            grade: Tier11
+            award: null
+            date: '2011-01-24 20:13:20'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '67.90'
+            grade: Tier14
+            award: null
+            date: '2011-01-24 20:13:20'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.85'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-05-02 19:50:06'
+          - player: LONE
+            percentage: '77.70'
+            grade: Tier11
+            award: null
+            date: '2013-01-05 23:04:25'
+          - player: JILL
+            percentage: '67.60'
+            grade: Tier14
+            award: null
+            date: '2013-01-05 23:04:25'
+          - player: MXI
+            percentage: '61.41'
+            grade: Tier15
+            award: null
+            date: '2011-09-15 23:12:32'
+    - song_title: Tough Enough
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '70.92'
+            grade: Tier13
+            award: null
+            date: '2011-01-16 01:44:43'
+          - player: JILL
+            percentage: '69.69'
+            grade: Tier13
+            award: null
+            date: '2011-03-01 18:05:39'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.26'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-01-16 01:44:43'
+          - player: LONE
+            percentage: '71.05'
+            grade: Tier13
+            award: null
+            date: '2011-03-01 18:05:39'
+    - song_title: VJ Army
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '74.44'
+            grade: Tier12
+            award: null
+            date: '2011-03-10 17:56:25'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.52'
+            grade: Tier05
+            award: null
+            date: '2011-05-02 21:28:55'
+          - player: LONE
+            percentage: '80.99'
+            grade: Tier10
+            award: null
+            date: '2012-08-25 19:26:46'
+    - song_title: Virtual Insanity
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.52'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-12-15 00:16:25'
+          - player: LONE
+            percentage: '85.14'
+            grade: Tier09
+            award: null
+            date: '2011-12-15 00:16:25'
+    - song_title: Walk This Way
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '68.12'
+            grade: Tier13
+            award: null
+            date: '2011-02-08 21:12:05'
+        Medium (Single):
+          type: single
+          entries:
+          - player: MXI
+            percentage: '85.21'
+            grade: Tier09
+            award: null
+            date: '2011-02-21 20:15:09'
+          - player: LONE
+            percentage: '84.27'
+            grade: Tier09
+            award: FullComboW3
+            date: '2011-02-23 17:14:31'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.91'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-02-21 20:15:09'
+    - song_title: What I'd Say
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.83'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-12-15 00:21:03'
+          - player: LONE
+            percentage: '68.52'
+            grade: Tier13
+            award: null
+            date: '2011-12-15 00:21:03'
+    - song_title: What is Love
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.72'
+            grade: Tier04
+            award: FullComboW3
+            date: '2017-04-01 07:39:11'
+    - song_title: Wherever You Are
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '95.71'
+            grade: Tier05
+            award: null
+            date: '2012-11-12 22:19:00'
+          - player: LONE
+            percentage: '90.98'
+            grade: Tier07
+            award: null
+            date: '2011-10-01 15:27:10'
+          - player: JILL
+            percentage: '86.02'
+            grade: Tier08
+            award: null
+            date: '2011-10-01 15:27:10'
+    - song_title: Whip It
+      difficulties_single:
+      - Easy
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: EAMO
+            percentage: '73.63'
+            grade: Tier12
+            award: null
+            date: '2012-04-07 21:24:50'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.01'
+            grade: Tier03
+            award: FullComboW2
+            date: '2011-01-16 02:02:04'
+          - player: MXI
+            percentage: '69.50'
+            grade: Tier13
+            award: null
+            date: '2012-04-07 21:24:50'
+    - song_title: Why Club Mix
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '63.55'
+            grade: Tier15
+            award: null
+            date: '2011-05-17 17:29:37'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.77'
+            grade: Tier03
+            award: FullComboW2
+            date: '2013-02-24 05:38:54'
+          - player: LONE
+            percentage: '91.88'
+            grade: Tier07
+            award: null
+            date: '2013-02-24 05:38:54'
+          - player: JILL
+            percentage: '89.03'
+            grade: Tier07
+            award: null
+            date: Unknown Date
+    - song_title: analyze
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.45'
+            grade: Tier03
+            award: FullComboW3
+            date: '2020-04-26 16:39:20'
+          - player: LONE
+            percentage: '93.27'
+            grade: Tier06
+            award: null
+            date: '2013-10-11 21:06:07'
+          - player: JILL
+            percentage: '90.09'
+            grade: Tier07
+            award: null
+            date: '2013-10-11 21:06:07'
+          - player: MXI
+            percentage: '85.91'
+            grade: Tier09
+            award: null
+            date: '2012-02-06 20:29:45'
+    - song_title: candy
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: VVV
+            percentage: '63.10'
+            grade: Tier15
+            award: null
+            date: Unknown Date
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '96.40'
+            grade: Tier04
+            award: FullComboW3
+            date: Unknown Date
+          - player: LONE
+            percentage: '87.81'
+            grade: Tier08
+            award: null
+            date: '2013-08-04 11:27:42'
+          - player: JILL
+            percentage: '77.81'
+            grade: Tier11
+            award: null
+            date: '2014-05-28 04:58:35'
+    - song_title: e-motion ROMANTIC STYLE
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '71.96'
+            grade: Tier13
+            award: FullComboW3
+            date: '2011-02-06 02:50:24'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '62.92'
+            grade: Tier15
+            award: null
+            date: '2011-02-06 02:50:24'
+          - player: LWS
+            percentage: '60.86'
+            grade: Tier15
+            award: null
+            date: '2011-12-12 21:31:55'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '93.75'
+            grade: Tier06
+            award: null
+            date: '2011-02-02 01:57:19'
+          - player: LONE
+            percentage: '61.34'
+            grade: Tier15
+            award: null
+            date: '2012-12-08 23:43:09'
+          - player: MXI
+            percentage: '58.51'
+            grade: Tier16
+            award: null
+            date: '2012-12-08 23:43:09'
+    - song_title: fly through the night
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: JILL
+            percentage: '71.28'
+            grade: Tier13
+            award: null
+            date: '2011-10-12 19:32:12'
+          - player: LONE
+            percentage: '66.69'
+            grade: Tier14
+            award: null
+            date: '2011-03-10 17:29:46'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.56'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-02-21 19:51:53'
+          - player: LONE
+            percentage: '85.33'
+            grade: Tier09
+            award: null
+            date: '2012-08-11 20:27:28'
+          - player: MXI
+            percentage: '77.11'
+            grade: Tier11
+            award: null
+            date: '2012-08-15 18:43:40'
+          - player: JILL
+            percentage: '72.61'
+            grade: Tier12
+            award: null
+            date: '2013-05-20 15:51:39'
+    - song_title: g2
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '77.39'
+            grade: Tier11
+            award: null
+            date: '2011-08-13 17:36:13'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.21'
+            grade: Tier06
+            award: null
+            date: '2012-02-02 23:49:34'
+          - player: ZLTH
+            percentage: '78.29'
+            grade: Tier11
+            award: null
+            date: '2017-06-26 20:22:55'
+          - player: LONE
+            percentage: '69.03'
+            grade: Tier13
+            award: null
+            date: '2012-02-02 23:49:34'
+    - song_title: i feel... T.O.Y. Remix
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.64'
+            grade: Tier04
+            award: FullComboW2
+            date: '2012-11-12 22:26:52'
+          - player: LONE
+            percentage: '79.78'
+            grade: Tier11
+            award: null
+            date: '2014-09-21 03:57:05'
+          - player: JILL
+            percentage: '68.65'
+            grade: Tier13
+            award: null
+            date: '2014-09-21 03:57:05'
+    - song_title: nemesis
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '87.17'
+            grade: Tier08
+            award: null
+            date: '2011-03-15 20:30:43'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.71'
+            grade: Tier04
+            award: FullComboW3
+            date: '2011-05-08 19:49:03'
+          - player: LONE
+            percentage: '88.73'
+            grade: Tier08
+            award: null
+            date: '2012-01-14 17:27:46'
+    - song_title: pot-pourri d'orange
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.05'
+            grade: Tier03
+            award: FullComboW2
+            date: '2012-01-22 17:27:28'
+          - player: JILL
+            percentage: '71.70'
+            grade: Tier13
+            award: null
+            date: '2012-01-22 17:27:28'
+    - song_title: r10k
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '85.86'
+            grade: Tier09
+            award: null
+            date: '2011-07-03 22:03:25'
+          - player: LONE
+            percentage: '56.64'
+            grade: Tier16
+            award: null
+            date: '2011-07-03 22:03:25'
+    - song_title: route 80s
+      difficulties_single:
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '92.52'
+            grade: Tier06
+            award: null
+            date: '2012-04-12 21:38:50'
+    - song_title: starmine
+      difficulties_single:
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Medium (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '81.99'
+            grade: Tier10
+            award: null
+            date: '2011-04-06 17:02:48'
+          - player: MXI
+            percentage: '63.68'
+            grade: Tier15
+            award: null
+            date: '2011-02-18 22:51:53'
+        Hard (Single):
+          type: single
+          entries:
+          - player: CLC
+            percentage: '98.57'
+            grade: Tier03
+            award: FullComboW3
+            date: '2011-01-08 22:02:19'
+          - player: Elipsis
+            percentage: '96.61'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-02-20 21:54:25'
+          - player: Ennui
+            percentage: '95.50'
+            grade: Tier05
+            award: FullComboW3
+            date: '2011-03-06 23:00:36'
+          - player: MLS
+            percentage: '95.40'
+            grade: Tier05
+            award: null
+            date: '2014-08-08 03:23:37'
+          - player: LONE
+            percentage: '80.37'
+            grade: Tier10
+            award: null
+            date: '2012-06-07 18:54:38'
+          - player: GMcGregz
+            percentage: '77.35'
+            grade: Tier11
+            award: null
+            date: '2011-02-18 22:51:53'
+          - player: MXI
+            percentage: '73.70'
+            grade: Tier12
+            award: null
+            date: '2012-02-20 21:54:25'
+          - player: JILL
+            percentage: '61.59'
+            grade: Tier15
+            award: null
+            date: '2014-08-01 05:10:51'
+    - song_title: zero-one
+      difficulties_single:
+      - Easy
+      - Medium
+      - Hard
+      difficulties_double: []
+      leaderboards:
+        Easy (Single):
+          type: single
+          entries:
+          - player: LONE
+            percentage: '98.03'
+            grade: Tier03
+            award: FullComboW3
+            date: '2013-03-27 10:44:20'
+          - player: MXI
+            percentage: '83.94'
+            grade: Tier09
+            award: null
+            date: '2011-01-21 22:36:23'
+        Medium (Single):
+          type: single
+          entries:
+          - player: LWS
+            percentage: '58.77'
+            grade: Tier16
+            award: null
+            date: '2011-12-18 21:27:20'
+        Hard (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '97.77'
+            grade: Tier04
+            award: FullComboW3
+            date: '2012-01-18 21:38:46'
+          - player: CRIP
+            percentage: '92.20'
+            grade: Tier06
+            award: null
+            date: '2013-04-05 15:36:15'
+          - player: LONE
+            percentage: '79.72'
+            grade: Tier11
+            award: null
+            date: '2013-10-22 21:40:44'
+          - player: JILL
+            percentage: '58.11'
+            grade: Tier16
+            award: null
+            date: '2014-03-18 02:08:53'
 - section_name: In The Groove
   folders:
   - folder_name: In The Groove

@@ -215,6 +215,8 @@ h1 {
 .completion-none { background: rgba(148,163,184,0.28); color: var(--text-main); }
 .completion-fc { background: #4ade80; }
 .completion-fec { background: #fbbf24; }
+.completion-one-excellent { background-image: repeating-linear-gradient(135deg, transparent 0 4px, #7dd3fc 4px 6px); }
+.completion-one-great { background-image: repeating-linear-gradient(135deg, transparent 0 4px, #fbbf24 4px 6px); }
 .completion-single-digit { background-image: repeating-linear-gradient(135deg, transparent 0 4px, rgba(8,17,31,0.2) 4px 6px); }
 .completion-ffc { background: #7dd3fc; }
 .completion-unplayed { background: rgba(148,163,184,0.12); color: #64748b; border-style: dashed; }

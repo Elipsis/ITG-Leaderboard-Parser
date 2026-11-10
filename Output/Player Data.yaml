@@ -45934,8 +45934,8 @@
   course_scores: []
 - player_name: Seitoko
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 6
   top_scores: 0
   song_scores:

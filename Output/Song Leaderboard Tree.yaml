@@ -773,6 +773,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.80'
+            grade: Tier03
+            award: FullComboW2
+            date: '2026-11-12 20:11:24'
           - player: LONE
             percentage: '93.21'
             grade: Tier06
@@ -2115,10 +2120,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '98.17'
+            percentage: '98.78'
             grade: Tier03
-            award: OneW3
-            date: '2026-11-09 18:20:15'
+            award: FullComboW2
+            date: '2026-11-12 20:19:30'
           - player: MLS
             percentage: '97.43'
             grade: Tier04
@@ -2998,15 +3003,15 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '99.20'
+            grade: Tier02
+            award: FullComboW2
+            date: '2026-11-12 20:22:19'
           - player: Ennui
             percentage: '97.09'
             grade: Tier04
             award: FullComboW3
-            date: '2011-03-06 21:02:27'
-          - player: Elipsis
-            percentage: '95.20'
-            grade: Tier05
-            award: null
             date: '2011-03-06 21:02:27'
           - player: LONE
             percentage: '87.42'
@@ -3686,6 +3691,11 @@
         Challenge (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '94.40'
+            grade: Tier05
+            award: FullComboW3
+            date: '2026-11-12 20:26:26'
           - player: LONE
             percentage: '62.07'
             grade: Tier15
@@ -4701,6 +4711,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '92.96'
+            grade: Tier06
+            award: null
+            date: '2026-11-12 20:28:52'
           - player: LONE
             percentage: '74.61'
             grade: Tier12

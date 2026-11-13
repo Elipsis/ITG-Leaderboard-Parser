@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 925
-  top_scores: 854
+  total_scores: 928
+  top_scores: 858
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -473,6 +473,16 @@
     grade: Tier02
     award: FullComboW2
     date: '2026-11-04 18:58:35'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: BU DAM
+    difficulty: Hard
+    type: single
+    percentage: '99.20'
+    grade: Tier02
+    award: FullComboW2
+    date: '2026-11-12 20:22:19'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -1085,6 +1095,16 @@
     date: '2026-11-04 22:18:12'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: BRILLIANT 2U (CLUB VER.)
+    difficulty: Hard
+    type: single
+    percentage: '98.80'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-12 20:11:24'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 7th Mix
     song: Get Down Tonight
     difficulty: Hard
@@ -1123,6 +1143,16 @@
     grade: Tier03
     award: FullComboW2
     date: '2011-01-28 00:18:14'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 2nd Mix
+    song: Stomp to my beat
+    difficulty: Challenge
+    type: single
+    percentage: '98.78'
+    grade: Tier03
+    award: FullComboW2
+    date: '2026-11-12 20:19:30'
     position: 1
   - section: In The Groove
     folder: In The Groove 2
@@ -2423,16 +2453,6 @@
     grade: Tier03
     award: FullComboW2
     date: '2011-08-22 20:11:33'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 2nd Mix
-    song: Stomp to my beat
-    difficulty: Challenge
-    type: single
-    percentage: '98.17'
-    grade: Tier03
-    award: OneW3
-    date: '2026-11-09 18:20:15'
     position: 1
   - section: In The Groove
     folder: In The Groove 2
@@ -6165,16 +6185,6 @@
     date: '2012-01-11 20:29:04'
     position: 1
   - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 3rd Mix
-    song: BU DAM
-    difficulty: Hard
-    type: single
-    percentage: '95.20'
-    grade: Tier05
-    award: null
-    date: '2011-03-06 21:02:27'
-    position: 2
-  - section: Dance Dance Revolution
     folder: Dance Dance Revolution Ultramixes
     song: After all Svenson & Gielen Remix Edit
     difficulty: Hard
@@ -6673,6 +6683,16 @@
     grade: Tier05
     award: null
     date: '2011-08-23 22:15:57'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: FOLLOW THE SUN (90' IN THE SHADE MIX)
+    difficulty: Challenge
+    type: single
+    percentage: '94.40'
+    grade: Tier05
+    award: FullComboW3
+    date: '2026-11-12 20:26:26'
     position: 1
   - section: In The Groove
     folder: In The Groove
@@ -7273,6 +7293,16 @@
     grade: Tier06
     award: null
     date: '2011-11-03 21:46:34'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 3rd Mix
+    song: gentle stress (AMD SEXUAL MIX)
+    difficulty: Hard
+    type: single
+    percentage: '92.96'
+    grade: Tier06
+    award: null
+    date: '2026-11-12 20:28:52'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
@@ -9379,7 +9409,7 @@
   initials:
   - LONE
   total_scores: 1325
-  top_scores: 514
+  top_scores: 511
   song_scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -10630,7 +10660,7 @@
     grade: Tier06
     award: FullComboW3
     date: '2012-03-02 19:18:17'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
     song: Into the world
@@ -19270,7 +19300,7 @@
     grade: Tier12
     award: null
     date: '2011-09-24 20:09:41'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 2nd Mix
     song: LUV TO ME (disco mix)
@@ -22100,7 +22130,7 @@
     grade: Tier15
     award: null
     date: '2011-08-13 15:38:03'
-    position: 1
+    position: 2
   - section: In The Groove
     folder: In The Groove 2
     song: Lipstick Kiss
@@ -28467,7 +28497,7 @@
     grade: Tier13
     award: null
     date: '2012-03-02 19:18:17'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution Ultramixes
     song: fly through the night
@@ -30777,7 +30807,7 @@
     grade: Tier15
     award: null
     date: '2013-08-07 15:35:15'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 9th Mix
     song: WHAT A WONDERFUL WORLD
@@ -42532,7 +42562,7 @@
   initials:
   - ENUI
   total_scores: 209
-  top_scores: 34
+  top_scores: 33
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -42713,7 +42743,7 @@
     grade: Tier04
     award: FullComboW3
     date: '2011-03-06 21:02:27'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 4th Mix
     song: b4u

@@ -18,21 +18,21 @@
 <Song Dir=''/>
 <Course/>
 <CurrentCombo>0</CurrentCombo>
-<TotalSessions>524</TotalSessions>
-<TotalSessionSeconds>57571</TotalSessionSeconds>
-<TotalGameplaySeconds>949936</TotalGameplaySeconds>
-<TotalCaloriesBurned>963573.812500</TotalCaloriesBurned>
+<TotalSessions>525</TotalSessions>
+<TotalSessionSeconds>57923</TotalSessionSeconds>
+<TotalGameplaySeconds>950218</TotalGameplaySeconds>
+<TotalCaloriesBurned>963597.500000</TotalCaloriesBurned>
 <GoalType>0</GoalType>
 <GoalCalories>0</GoalCalories>
 <GoalSeconds>0</GoalSeconds>
 <LastPlayedMachineGuid>02200529</LastPlayedMachineGuid>
 <LastPlayedDate>2026-11-18</LastPlayedDate>
-<TotalDancePoints>17234677</TotalDancePoints>
+<TotalDancePoints>17236436</TotalDancePoints>
 <NumExtraStagesPassed>0</NumExtraStagesPassed>
 <NumExtraStagesFailed>0</NumExtraStagesFailed>
 <NumToasties>965</NumToasties>
-<TotalTapsAndHolds>4248054</TotalTapsAndHolds>
-<TotalJumps>322728</TotalJumps>
+<TotalTapsAndHolds>4248408</TotalTapsAndHolds>
+<TotalJumps>322779</TotalJumps>
 <TotalHolds>218725</TotalHolds>
 <TotalRolls>2002</TotalRolls>
 <TotalMines>58898</TotalMines>
@@ -41,19 +41,19 @@
 <DefaultModifiers/>
 <Unlocks/>
 <NumSongsPlayedByPlayMode>
-<Regular>15638</Regular>
+<Regular>15641</Regular>
 <Nonstop>536</Nonstop>
 <Rave>24</Rave>
 </NumSongsPlayedByPlayMode>
 <NumSongsPlayedByStyle>
 <Style Game='dance' Style='double'>332</Style>
-<Style Game='dance' Style='single'>4508</Style>
+<Style Game='dance' Style='single'>4511</Style>
 <Style Game='dance' Style='versus'>11358</Style>
 </NumSongsPlayedByStyle>
 <NumSongsPlayedByDifficulty>
 <Beginner>379</Beginner>
 <Easy>1522</Easy>
-<Medium>2335</Medium>
+<Medium>2338</Medium>
 <Hard>9239</Hard>
 <Challenge>2659</Challenge>
 <Edit>64</Edit>
@@ -61,7 +61,7 @@
 <NumSongsPlayedByMeter>
 <Meter1>406</Meter1>
 <Meter2>157</Meter2>
-<Meter3>622</Meter3>
+<Meter3>625</Meter3>
 <Meter4>940</Meter4>
 <Meter5>967</Meter5>
 <Meter6>1387</Meter6>
@@ -73,15 +73,15 @@
 <Meter12>389</Meter12>
 <Meter13>135</Meter13>
 </NumSongsPlayedByMeter>
-<NumTotalSongsPlayed>10519</NumTotalSongsPlayed>
+<NumTotalSongsPlayed>10522</NumTotalSongsPlayed>
 <NumStagesPassedByPlayMode>
-<Regular>11756</Regular>
+<Regular>11759</Regular>
 <Nonstop>43</Nonstop>
 <Rave>19</Rave>
 </NumStagesPassedByPlayMode>
 <NumStagesPassedByGrade>
 <Tier01>4</Tier01>
-<Tier02>231</Tier02>
+<Tier02>234</Tier02>
 <Tier03>538</Tier03>
 <Tier04>1094</Tier04>
 <Tier05>746</Tier05>
@@ -14437,20 +14437,20 @@
 </Steps>
 <Steps Difficulty='Medium' StepsType='dance-single'>
 <HighScoreList>
-<NumTimesPlayed>11</NumTimesPlayed>
+<NumTimesPlayed>14</NumTimesPlayed>
 <LastPlayed>2026-11-18</LastPlayed>
-<HighGrade>Tier04</HighGrade>
+<HighGrade>Tier02</HighGrade>
 <HighScore>
 <Name>...</Name>
-<Grade>Tier04</Grade>
-<Score>20</Score>
-<PercentDP>0.974500</PercentDP>
-<SurviveSeconds>94.818367</SurviveSeconds>
-<MaxCombo>135</MaxCombo>
-<StageAward>OneW3</StageAward>
+<Grade>Tier02</Grade>
+<Score>18</Score>
+<PercentDP>0.994900</PercentDP>
+<SurviveSeconds>94.816696</SurviveSeconds>
+<MaxCombo>405</MaxCombo>
+<StageAward>SingleDigitW2</StageAward>
 <PeakComboAward></PeakComboAward>
-<Modifiers>NoHideLights, m250, FailImmediateContinue, Overhead</Modifiers>
-<DateTime>2026-10-02 18:19:12</DateTime>
+<Modifiers>NoHideLights, m350, FailImmediateContinue, Overhead, Metal</Modifiers>
+<DateTime>2026-11-18 18:43:28</DateTime>
 <PlayerGuid>1ca745bb10cd5365</PlayerGuid>
 <MachineGuid>02200529</MachineGuid>
 <ProductID>1</ProductID>
@@ -14461,9 +14461,9 @@
 <Miss>0</Miss>
 <W5>0</W5>
 <W4>0</W4>
-<W3>1</W3>
-<W2>12</W2>
-<W1>105</W1>
+<W3>0</W3>
+<W2>3</W2>
+<W1>115</W1>
 <CheckpointHit>0</CheckpointHit>
 </TapNoteScores>
 <HoldNoteScores>
@@ -14472,11 +14472,11 @@
 <MissedHold>0</MissedHold>
 </HoldNoteScores>
 <RadarValues>
-<Stream>0.992593</Stream>
+<Stream>1.000000</Stream>
 <Voltage>1.000000</Voltage>
 <Air>1.000000</Air>
 <Freeze>0.000000</Freeze>
-<Chaos>0.974576</Chaos>
+<Chaos>0.994915</Chaos>
 <Notes>135.000000</Notes>
 <TapsAndHolds>118</TapsAndHolds>
 <Jumps>17</Jumps>
@@ -308008,7 +308008,7 @@
 <CaloriesBurned Date='2026-11-09'>430.403625</CaloriesBurned>
 <CaloriesBurned Date='2026-11-12'>266.014252</CaloriesBurned>
 <CaloriesBurned Date='2026-11-15'>7.502800</CaloriesBurned>
-<CaloriesBurned Date='2026-11-18'>6.105005</CaloriesBurned>
+<CaloriesBurned Date='2026-11-18'>29.818434</CaloriesBurned>
 </CalorieData>
 <CoinData>
 <LastDays>

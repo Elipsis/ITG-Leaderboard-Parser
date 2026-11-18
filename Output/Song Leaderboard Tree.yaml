@@ -159,10 +159,10 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '97.45'
-            grade: Tier04
-            award: OneW3
-            date: '2026-10-02 18:19:12'
+            percentage: '99.49'
+            grade: Tier02
+            award: SingleDigitW2
+            date: '2026-11-18 18:43:28'
           - player: VEC
             percentage: '50.68'
             grade: Tier17

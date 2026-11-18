@@ -215,6 +215,16 @@
     date: '2011-05-18 22:38:36'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: KUNG FU FIGHTING
+    difficulty: Medium
+    type: single
+    percentage: '99.49'
+    grade: Tier02
+    award: SingleDigitW2
+    date: '2026-11-18 18:43:28'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 5th Mix
     song: ODORU PONPOKOLIN
     difficulty: Hard
@@ -3823,16 +3833,6 @@
     grade: Tier04
     award: OneW3
     date: '2026-11-09 18:36:04'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 1st Mix
-    song: KUNG FU FIGHTING
-    difficulty: Medium
-    type: single
-    percentage: '97.45'
-    grade: Tier04
-    award: OneW3
-    date: '2026-10-02 18:19:12'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
@@ -50505,8 +50505,8 @@
   course_scores: []
 - player_name: Seitoko
   initials:
-  - SNOW
   - RAIN
+  - SNOW
   total_scores: 6
   top_scores: 0
   song_scores:

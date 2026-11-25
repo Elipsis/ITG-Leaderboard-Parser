@@ -1,8 +1,8 @@
 - player_name: Elipsis
   initials:
   - '...'
-  total_scores: 928
-  top_scores: 858
+  total_scores: 931
+  top_scores: 861
   song_scores:
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
@@ -13,6 +13,16 @@
     grade: Tier01
     award: FullComboW1
     date: '2011-08-03 21:18:19'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: KUNG FU FIGHTING
+    difficulty: Beginner
+    type: single
+    percentage: '100.00'
+    grade: Tier01
+    award: FullComboW1
+    date: '2026-11-24 20:45:42'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 1st Mix
@@ -1215,6 +1225,16 @@
     date: '2026-11-09 17:46:58'
     position: 1
   - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: KUNG FU FIGHTING
+    difficulty: Easy
+    type: single
+    percentage: '98.75'
+    grade: Tier03
+    award: SingleDigitW2
+    date: '2026-11-24 22:15:10'
+    position: 1
+  - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix
     song: Groove 2001
     difficulty: Hard
@@ -2413,6 +2433,16 @@
     grade: Tier03
     award: FullComboW3
     date: '2012-01-30 23:49:03'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution Ultramixes
+    song: Rubberneckin' Paul Oakenfold Remix Radio Edit
+    difficulty: Hard
+    type: single
+    percentage: '98.20'
+    grade: Tier03
+    award: OneW3
+    date: '2026-11-24 19:44:24'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 10th Mix
@@ -9409,7 +9439,7 @@
   initials:
   - LONE
   total_scores: 1325
-  top_scores: 511
+  top_scores: 510
   song_scores:
   - section: In The Groove
     folder: In The Groove 2
@@ -14060,7 +14090,7 @@
     grade: Tier08
     award: null
     date: '2011-09-28 21:17:26'
-    position: 1
+    position: 2
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 5th Mix
     song: TRIBAL DANCE (ALMIGHTY MIX)
@@ -28377,7 +28407,7 @@
     grade: Tier13
     award: null
     date: '2011-09-28 21:20:30'
-    position: 2
+    position: 3
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: KISS KISS KISS
@@ -50505,9 +50535,9 @@
   course_scores: []
 - player_name: Sidhe
   initials:
-  - SNOW
   - RAIN
-  total_scores: 6
+  - SNOW
+  total_scores: 10
   top_scores: 0
   song_scores:
   - section: Dance Dance Revolution
@@ -50520,6 +50550,16 @@
     award: FullComboW3
     date: '2013-01-28 12:09:46'
     position: 5
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 8th Mix
+    song: Look To The Sky (True Color Mix)
+    difficulty: Hard
+    type: single
+    percentage: '78.88'
+    grade: Tier11
+    award: null
+    date: '2026-11-24 18:45:19'
+    position: 9
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 5th Mix
     song: Radical Faith
@@ -50540,6 +50580,16 @@
     award: null
     date: '2013-01-28 11:53:30'
     position: 3
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 6th Mix
+    song: Dark Black Forest (short trip)
+    difficulty: Hard
+    type: single
+    percentage: '75.30'
+    grade: Tier12
+    award: null
+    date: '2026-11-24 18:47:30'
+    position: 9
   - section: Other
     folder: Unofficial
     song: FF7 Boss Battle
@@ -50560,6 +50610,26 @@
     award: null
     date: '2013-01-28 11:37:27'
     position: 4
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: BUTTERFLY
+    difficulty: Hard
+    type: single
+    percentage: '70.61'
+    grade: Tier13
+    award: null
+    date: '2026-11-24 19:33:34'
+    position: 3
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 5th Mix
+    song: STILL IN MY HEART
+    difficulty: Hard
+    type: single
+    percentage: '65.37'
+    grade: Tier14
+    award: null
+    date: '2026-11-24 19:29:15'
+    position: 6
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 8th Mix
     song: JET WORLD

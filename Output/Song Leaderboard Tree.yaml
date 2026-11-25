@@ -98,6 +98,11 @@
             grade: Tier10
             award: null
             date: '2011-03-26 23:35:58'
+          - player: Sidhe
+            percentage: '70.61'
+            grade: Tier13
+            award: null
+            date: '2026-11-24 19:33:34'
         Challenge (Single):
           type: single
           entries:
@@ -151,10 +156,28 @@
             date: '2011-08-07 15:30:33'
     - song_title: KUNG FU FIGHTING
       difficulties_single:
+      - Beginner
+      - Easy
       - Medium
       - Hard
       difficulties_double: []
       leaderboards:
+        Beginner (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '100.00'
+            grade: Tier01
+            award: FullComboW1
+            date: '2026-11-24 20:45:42'
+        Easy (Single):
+          type: single
+          entries:
+          - player: Elipsis
+            percentage: '98.75'
+            grade: Tier03
+            award: SingleDigitW2
+            date: '2026-11-24 22:15:10'
         Medium (Single):
           type: single
           entries:
@@ -8585,6 +8608,11 @@
             grade: Tier13
             award: null
             date: '2013-10-11 21:41:19'
+          - player: Sidhe
+            percentage: '65.37'
+            grade: Tier14
+            award: null
+            date: '2026-11-24 19:29:15'
         Hard (Double):
           type: double
           entries:
@@ -9159,6 +9187,11 @@
             grade: Tier08
             award: null
             date: '2011-05-02 19:22:13'
+          - player: Sidhe
+            percentage: '75.30'
+            grade: Tier12
+            award: null
+            date: '2026-11-24 18:47:30'
     - song_title: Do It Right
       difficulties_single:
       - Easy
@@ -16306,6 +16339,11 @@
             grade: Tier09
             award: null
             date: '2011-02-21 21:20:36'
+          - player: Sidhe
+            percentage: '78.88'
+            grade: Tier11
+            award: null
+            date: '2026-11-24 18:45:19'
     - song_title: MAXIMIZER
       difficulties_single:
       - Easy
@@ -25468,6 +25506,11 @@
         Hard (Single):
           type: single
           entries:
+          - player: Elipsis
+            percentage: '98.20'
+            grade: Tier03
+            award: OneW3
+            date: '2026-11-24 19:44:24'
           - player: LONE
             percentage: '86.80'
             grade: Tier08

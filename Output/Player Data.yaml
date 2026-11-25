@@ -37378,8 +37378,8 @@
     position: 5
 - player_name: MLS
   initials:
-  - MLS
   - MONT
+  - MLS
   total_scores: 163
   top_scores: 45
   song_scores:
@@ -50503,10 +50503,10 @@
     date: Unknown Date
     position: 2
   course_scores: []
-- player_name: Seitoko
+- player_name: Sidhe
   initials:
-  - RAIN
   - SNOW
+  - RAIN
   total_scores: 6
   top_scores: 0
   song_scores:

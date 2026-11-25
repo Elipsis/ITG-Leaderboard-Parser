@@ -27,6 +27,26 @@
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 1st Mix
     song: KUNG FU FIGHTING
+    difficulty: Easy
+    type: single
+    percentage: '100.00'
+    grade: Tier01
+    award: FullComboW1
+    date: '2026-11-24 22:41:26'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: KUNG FU FIGHTING
+    difficulty: Medium
+    type: single
+    percentage: '100.00'
+    grade: Tier01
+    award: FullComboW1
+    date: '2026-11-24 22:45:59'
+    position: 1
+  - section: Dance Dance Revolution
+    folder: Dance Dance Revolution 1st Mix
+    song: KUNG FU FIGHTING
     difficulty: Hard
     type: single
     percentage: '100.00'
@@ -223,16 +243,6 @@
     grade: Tier02
     award: FullComboW2
     date: '2011-05-18 22:38:36'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 1st Mix
-    song: KUNG FU FIGHTING
-    difficulty: Medium
-    type: single
-    percentage: '99.49'
-    grade: Tier02
-    award: SingleDigitW2
-    date: '2026-11-18 18:43:28'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 5th Mix
@@ -1223,16 +1233,6 @@
     grade: Tier03
     award: FullComboW2
     date: '2026-11-09 17:46:58'
-    position: 1
-  - section: Dance Dance Revolution
-    folder: Dance Dance Revolution 1st Mix
-    song: KUNG FU FIGHTING
-    difficulty: Easy
-    type: single
-    percentage: '98.75'
-    grade: Tier03
-    award: SingleDigitW2
-    date: '2026-11-24 22:15:10'
     position: 1
   - section: Dance Dance Revolution
     folder: Dance Dance Revolution 6th Mix

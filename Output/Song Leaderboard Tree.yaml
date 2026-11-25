@@ -174,18 +174,18 @@
           type: single
           entries:
           - player: Elipsis
-            percentage: '98.75'
-            grade: Tier03
-            award: SingleDigitW2
-            date: '2026-11-24 22:15:10'
+            percentage: '100.00'
+            grade: Tier01
+            award: FullComboW1
+            date: '2026-11-24 22:41:26'
         Medium (Single):
           type: single
           entries:
           - player: Elipsis
-            percentage: '99.49'
-            grade: Tier02
-            award: SingleDigitW2
-            date: '2026-11-18 18:43:28'
+            percentage: '100.00'
+            grade: Tier01
+            award: FullComboW1
+            date: '2026-11-24 22:45:59'
           - player: VEC
             percentage: '50.68'
             grade: Tier17
